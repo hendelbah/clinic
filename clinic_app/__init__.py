@@ -1,7 +1,5 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-
-db = SQLAlchemy()
+from models import db
 
 
 def create_app(*, testing=False, test_db=False, echo=False):
@@ -15,13 +13,17 @@ def create_app(*, testing=False, test_db=False, echo=False):
         SQLALCHEMY_TRACK_MODIFICATIONS=False,
         SQLALCHEMY_ECHO=echo
     )
+
     db.app = app
     db.init_app(app)
+
     # from high_school import api
     # app.register_blueprint(api.api_bp, url_prefix='/api/v1')
     return app
 
 
 if __name__ == '__main__':
-    my_app = create_app()
-    my_app.run()
+    my_app = create_app(testing=True, echo=True)
+    db.drop_all()
+    db.create_all()
+    # my_app.run()

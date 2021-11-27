@@ -1,29 +1,26 @@
 from flask import Flask
-from models import db
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
+from flask_migrate import Migrate
+from clinic_app.config import app_config
 
 
-def create_app(*, testing=False, test_db=False, echo=False):
+db = SQLAlchemy()
+login_manager = LoginManager()
+
+
+def create_app(config_name):
     """Create and configure an instance of the Flask application."""
     app = Flask(__name__)
-    db_uri = 'mysql+pymysql://clinic_admin:clinic_pwd@localhost/' + ('clinic_test' if test_db else 'clinic')
-    app.config.from_mapping(
-        SECRET_KEY="qwerty",
-        TESTING=testing,
-        SQLALCHEMY_DATABASE_URI=db_uri,
-        SQLALCHEMY_TRACK_MODIFICATIONS=False,
-        SQLALCHEMY_ECHO=echo
-    )
-
+    app.config.from_object(app_config[config_name])
+    import clinic_app.models
     db.app = app
     db.init_app(app)
+    login_manager.init_app(app)
+    login_manager.login_message = "You must be logged in to access this page."
+    login_manager.login_view = "auth.login"
+    Migrate(app, db)
 
     # from high_school import api
     # app.register_blueprint(api.api_bp, url_prefix='/api/v1')
     return app
-
-
-if __name__ == '__main__':
-    my_app = create_app(testing=True, echo=True)
-    db.drop_all()
-    db.create_all()
-    # my_app.run()

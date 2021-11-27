@@ -6,13 +6,14 @@ class FulfilledAppointment(BaseModel):
     __table_args__ = (
         db.UniqueConstraint('date', 'time'),
     )
-    patient_id = db.Column(db.Integer, db.ForeignKey('user.id', ondelete='SET NULL'))
-    doctor_id = db.Column(db.Integer, db.ForeignKey('doctor.id', ondelete='SET NULL'))
+    patient_id = db.Column(db.Integer, db.ForeignKey('patient.id', ondelete='SET NULL'), index=True)
+    doctor_id = db.Column(db.Integer, db.ForeignKey('doctor.id', ondelete='SET NULL'), index=True)
     date = db.Column(db.Date, nullable=False)
     time = db.Column(db.Time, nullable=False)
-    cancelled = db.Column(db.Boolean, default=True)
-    conclusion = db.Column(db.String(255), default=None)
-    prescription = db.Column(db.String(511), default=None)
+    cancelled = db.Column(db.Boolean, nullable=False)
+    conclusion = db.Column(db.String(255))
+    prescription = db.Column(db.String(511))
+    actual_cost = db.Column(db.Integer, nullable=False)
 
     patient = db.relationship('Patient', back_populates='fulfilled_appointments')
     doctor = db.relationship('Doctor', back_populates='fulfilled_appointments')

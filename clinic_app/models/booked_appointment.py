@@ -6,7 +6,7 @@ class BookedAppointment(BaseModel):
     __table_args__ = (
         db.UniqueConstraint('date', 'time'),
     )
-    patient_id = db.Column(db.Integer, db.ForeignKey('user.id', ondelete='CASCADE'), index=True, nullable=False)
+    patient_id = db.Column(db.Integer, db.ForeignKey('patient.id', ondelete='CASCADE'), index=True, nullable=False)
     doctor_id = db.Column(db.Integer, db.ForeignKey('doctor.id', ondelete='CASCADE'), index=True, nullable=False)
     date = db.Column(db.Date, nullable=False)
     time = db.Column(db.Time, nullable=False)

@@ -7,8 +7,9 @@ from .basemodel import BaseModel, db
 class Patient(BaseModel):
     __tablename__ = 'patient'
 
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False, unique=True)
-    phone_number = db.Column(db.String(20), nullable=False, unique=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id', ondelete='CASCADE'),
+                        nullable=False, unique=True, index=True)
+    phone_number = db.Column(db.String(20), nullable=False, unique=True, index=True)
     first_name = db.Column(db.String(40), nullable=False)
     last_name = db.Column(db.String(40), nullable=False)
     third_name = db.Column(db.String(40), nullable=False)

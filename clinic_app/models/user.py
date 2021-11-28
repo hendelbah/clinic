@@ -15,8 +15,8 @@ class User(BaseModel, UserMixin):
     """
     __tablename__ = 'user'
 
-    uuid = db.Column(db.String(36), nullable=False, unique=True)
-    email = db.Column(db.String(60), nullable=False, unique=True)
+    uuid = db.Column(db.String(36), nullable=False, unique=True, index=True)
+    email = db.Column(db.String(60), nullable=False, unique=True, index=True)
     password_hash = db.Column(db.String(127), nullable=False)
     is_admin = db.Column(db.Boolean, nullable=False)
     active = db.Column(db.Boolean, default=True, nullable=False)

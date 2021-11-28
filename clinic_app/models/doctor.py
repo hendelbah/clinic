@@ -11,8 +11,9 @@ class Doctor(BaseModel):
     """
     __tablename__ = 'doctor'
 
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False, unique=True)
-    medical_area_id = db.Column(db.Integer, db.ForeignKey('medical_area.id'), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id', ondelete='CASCADE'),
+                        nullable=False, unique=True, index=True)
+    medical_area_id = db.Column(db.Integer, db.ForeignKey('medical_area.id'), nullable=False, index=True)
     phone_number = db.Column(db.String(20), nullable=False, unique=True)
     full_name = db.Column(db.String(127), nullable=False)
     speciality = db.Column(db.String(127), nullable=False)

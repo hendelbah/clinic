@@ -7,7 +7,7 @@ from clinic_app.config import app_config
 
 db = SQLAlchemy()
 login_manager = LoginManager()
-
+import clinic_app.models
 
 def create_app(config_name):
     """Create and configure an instance of the Flask application."""

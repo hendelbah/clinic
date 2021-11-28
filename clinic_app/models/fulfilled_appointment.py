@@ -20,7 +20,7 @@ class FulfilledAppointment(BaseModel):
     appointed_date = db.Column(db.Date, nullable=False)
     appointed_time = db.Column(db.Time, nullable=False)
     cancelled = db.Column(db.Boolean, nullable=False)
-    conclusion = db.Column(db.String(255), nullable=False)
+    conclusion = db.Column(db.String(511), nullable=False)
     prescription = db.Column(db.String(511), nullable=False)
     actual_cost = db.Column(db.Integer, nullable=False)
 

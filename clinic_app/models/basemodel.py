@@ -13,6 +13,11 @@ class BaseModel(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
 
     def __repr__(self):
-        values = (f"{key}={repr(getattr(self, key))}" for key in self.__table__.columns.keys())
+        excluded = ('password_hash', 'about_self', 'description', 'conclusion', 'prescription')
+        values = (
+            f"{key}={repr(getattr(self, key))}"
+            for key in self.__table__.columns.keys()
+            if key not in excluded
+        )
         values_str = ", ".join(values)
         return f"<{self.__class__.__name__}({values_str})>"

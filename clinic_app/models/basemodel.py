@@ -1,7 +1,14 @@
+"""
+This module describes basic model for creating tables
+"""
 from clinic_app import db
 
 
 class BaseModel(db.Model):
+    """
+    Just custom basic model with common functionality
+    implements id primary key and __repr__
+    """
     __abstract__ = True
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
 

@@ -1,8 +1,8 @@
 """
 This module implements instance of user in database
 """
+from uuid import uuid4
 from flask_login import UserMixin
-import uuid
 from werkzeug.security import generate_password_hash, check_password_hash
 from clinic_app import login_manager
 from clinic_app.models.basemodel import BaseModel, db
@@ -22,7 +22,7 @@ class User(BaseModel, UserMixin):
 
     doctor = db.relationship('Doctor', back_populates='user')
 
-    def __init__(self, email, password, doctor_id=None, is_admin=False, *, _hash=True):
+    def __init__(self, email, password, doctor_id=None, is_admin=False):
         """
         :param str email: email of user
         :param str password: password for user's account
@@ -30,14 +30,10 @@ class User(BaseModel, UserMixin):
         :param bool is_admin: bool parameter for admins only, False by default
         """
         self.doctor_id = doctor_id
-        self.uuid = str(uuid.uuid4())
+        self.uuid = str(uuid4())
         self.email = email
         self.is_admin = is_admin
-        # Set _hash=False in case if you want to pass already hashed password
-        if _hash:
-            self.password = password
-        else:
-            self.password_hash = password
+        self.password = password
 
     def get_id(self):
         return self.uuid

@@ -15,7 +15,7 @@ class BaseModel(db.Model):
     def __repr__(self):
         excluded = ('password_hash', 'about_self', 'description', 'conclusion', 'prescription')
         values = (
-            f"{key}={repr(getattr(self, key))}"
+            f"{key}={getattr(self, key)!r}"
             for key in self.__table__.columns.keys()
             if key not in excluded
         )

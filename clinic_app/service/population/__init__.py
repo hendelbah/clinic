@@ -1,16 +1,17 @@
 """
-This module stands for populating database
+Package contains tools for database population with test data.
+This module contains main populating functions
 """
 from random import choice, randrange
 from uuid import uuid4
-from clinic_app.service.utils import random_9d_number, random_date
+from clinic_app.service.population.random_utils import random_9d_number, random_date
 from clinic_app.models import *
-from clinic_app.service.population_data import *
+from clinic_app.service.population.population_data import *
 
 
 def populate(patients_amount=100):
     """
-    Clear tables and populate database with sample data, using population_data.
+    Clear tables and populate database with sample data, using population_data and random_utils.
 
     :param patients_amount: amount of random patients to insert
     """

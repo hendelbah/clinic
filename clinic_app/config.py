@@ -16,6 +16,8 @@ class Config(object):
     """
     SECRET_KEY = os.getenv('FLASK_SECRET_KEY')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    API_AUTHORISATION_USERNAME = "FsxGCXRsyL"
+    API_AUTHORISATION_PASSWORD = "jcP507dzkXiC12F"
 
 
 class DevelopmentConfig(Config):

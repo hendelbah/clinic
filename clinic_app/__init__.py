@@ -1,19 +1,22 @@
+"""
+Package stores all source files of project.
+This module provides tools for initializing Flask-Application
+"""
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_migrate import Migrate
 from clinic_app.config import app_config
 
-
 db = SQLAlchemy()
 login_manager = LoginManager()
-import clinic_app.models
+
 
 def create_app(config_name):
     """Create and configure an instance of the Flask application."""
     app = Flask(__name__)
     app.config.from_object(app_config[config_name])
-    import clinic_app.models
+    # import clinic_app.models
     db.app = app
     db.init_app(app)
     login_manager.init_app(app)

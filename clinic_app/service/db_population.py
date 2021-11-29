@@ -23,10 +23,8 @@ def populate(patients_amount=100):
 
     db.session.bulk_insert_mappings(MedicalArea, AREAS_SRC)
     db.session.bulk_insert_mappings(Doctor, DOCTORS_SRC)
-
-    users_doctors_src = []
-    for doctor in DOCTORS_SRC:
-        user = {
+    users_doctors_src = [
+        {
             'id': doctor["id"],
             'doctor_id': doctor["id"],
             'uuid': uuid4(),
@@ -34,9 +32,14 @@ def populate(patients_amount=100):
             'password_hash': DOCTORS_PASS_HASH,  # hashing is too slow to do it for every user
             'is_admin': False
         }
-        users_doctors_src.append(user)
+        for doctor in DOCTORS_SRC
+    ]
     db.session.bulk_insert_mappings(User, users_doctors_src)
-    root_user = {'uuid': 'root_user', 'email': 'clinic_admin', 'password_hash': ADMIN_PASS_HASH, 'is_admin': True}
+    root_user = {'id': 18,
+                 'uuid': 'root_user',
+                 'email': 'clinic_admin',
+                 'password_hash': ADMIN_PASS_HASH,
+                 'is_admin': True}
     db.session.execute(db.insert(User).values(root_user))
     patients_src = []
     for i in range(1, patients_amount + 1):

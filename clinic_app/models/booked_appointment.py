@@ -2,7 +2,7 @@
 This module implements instance of booked appointment in database
 """
 from datetime import date, time
-from .basemodel import BaseModel, db
+from clinic_app.models.basemodel import BaseModel, db
 
 
 class BookedAppointment(BaseModel):

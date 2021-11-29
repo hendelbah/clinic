@@ -2,7 +2,7 @@
 This module implements instance of patient in database
 """
 from datetime import date
-from .basemodel import BaseModel, db
+from clinic_app.models.basemodel import BaseModel, db
 
 
 class Patient(BaseModel):

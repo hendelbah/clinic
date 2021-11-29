@@ -2,7 +2,7 @@
 This module implements instance of fulfilled appointment in database
 """
 from datetime import date, time
-from .basemodel import db, BaseModel
+from clinic_app.models.basemodel import db, BaseModel
 
 
 class FulfilledAppointment(BaseModel):

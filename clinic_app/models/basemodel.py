@@ -1,5 +1,5 @@
 """
-This module describes basic model for creating tables
+This module implements custom basic model class for creating all tables
 """
 from clinic_app import db
 

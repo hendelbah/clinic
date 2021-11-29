@@ -1,11 +1,11 @@
 """
 This module implements instance of user in database
 """
-from .basemodel import BaseModel, db
-from clinic_app import login_manager
 from flask_login import UserMixin
-from werkzeug.security import generate_password_hash, check_password_hash
 import uuid
+from werkzeug.security import generate_password_hash, check_password_hash
+from clinic_app import login_manager
+from clinic_app.models.basemodel import BaseModel, db
 
 
 class User(BaseModel, UserMixin):

@@ -1,7 +1,7 @@
 """
 This module implements instance of clinic's medical area in database
 """
-from .basemodel import BaseModel, db
+from clinic_app.models.basemodel import BaseModel, db
 
 
 class MedicalArea(BaseModel):

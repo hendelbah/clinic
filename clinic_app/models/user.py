@@ -30,41 +30,40 @@ class User(BaseModel, UserMixin):
         :param bool is_admin: bool parameter for admins only, False by default
         """
         self.doctor_id = doctor_id
-        self.uuid = str(uuid4())
+        self.uuid = self.generate_uuid()
         self.email = email
         self.is_admin = is_admin
-        self.password = password
+        self.password_hash = self.hash_password(password)
 
     def get_id(self):
         return self.uuid
 
-    @property
-    def password(self):
-        """
-        Prevent password from being accessed
-        """
-        raise AttributeError('password is not a readable attribute.')
-
-    @password.setter
-    def password(self, password):
-        """
-        Set password to a hashed password
-        """
-        self.password_hash = generate_password_hash(password)
-
     def check_password(self, password):
         """
         method checks equality of given password with user's
+
         :param str password: password to compare with employee's password
         :return True if given password hash is equal to password hash of employee
         """
         return check_password_hash(self.password, password)
+
+    @staticmethod
+    def hash_password(password):
+        """
+        Return hashed password
+        """
+        return generate_password_hash(password)
+
+    @staticmethod
+    def generate_uuid():
+        return str(uuid4())
 
 
 @login_manager.user_loader
 def load_user(user_uuid: str):
     """
     method gives user object for current registered user
+
     :param user_uuid: id of employee in db
     :return: employee object
     """

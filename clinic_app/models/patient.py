@@ -17,7 +17,6 @@ class Patient(BaseModel):
     name = db.Column(db.String(40), nullable=False)
     patronymic = db.Column(db.String(40), nullable=False)
     birthday = db.Column(db.Date, nullable=False)
-    time_registered = db.Column(db.DateTime, server_default=db.func.now())
 
     booked_appointments = db.relationship('BookedAppointment', back_populates='patient')
     fulfilled_appointments = db.relationship('FulfilledAppointment', back_populates='patient')

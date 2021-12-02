@@ -35,14 +35,14 @@ class RandomNumberGenerator:
 random_9d_number = RandomNumberGenerator(9)
 
 
-def random_date(year_a: int, year_b: int) -> date:
+def random_date(date_a: date, year_b: date) -> date:
     """
-    Generate random date between year_a-01-01 and year_b-12-31 (inclusively)
+    Generate random date between date_a and date_b (inclusively)
 
-    :param year_a: bottom generation bound
+    :param date_a: bottom generation bound
     :param year_b: top generation bound
     """
-    ordinal_a = date(year_a, 1, 1).toordinal()
-    ordinal_b = date(year_b, 12, 31).toordinal()
+    ordinal_a = date_a.toordinal()
+    ordinal_b = year_b.toordinal()
     ordinal_result = randint(ordinal_a, ordinal_b)
     return date.fromordinal(ordinal_result)

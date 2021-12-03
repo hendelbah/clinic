@@ -20,14 +20,17 @@ class Doctor(BaseModel):
     booked_appointments = db.relationship('BookedAppointment', back_populates='doctor')
     fulfilled_appointments = db.relationship('FulfilledAppointment', back_populates='doctor')
 
-    def __init__(self, full_name, speciality, info, experience_years):
+    def __init__(self, full_name: str, speciality: str, info: str,
+                 experience_years: int, id: int = None):
         """
-        :param str full_name: doctor's full name
-        :param str speciality: doctor's speciality
-        :param str info: some information about doctor to display on site
-        :param int experience_years: years of doctor's work experience
+        :param full_name: doctor's full name
+        :param speciality: doctor's speciality
+        :param info: some information about doctor to display on site
+        :param experience_years: years of doctor's work experience
+        :param id: doctor's id
         """
         self.full_name = full_name
         self.speciality = speciality
         self.info = info
         self.experience_years = experience_years
+        self.id = id

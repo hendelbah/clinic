@@ -1,7 +1,7 @@
 """
 This module implements instance of booked appointment in database
 """
-from datetime import date, time
+from datetime import date as date_, time as time_
 from clinic_app.models.basemodel import BaseModel, db
 
 
@@ -16,22 +16,26 @@ class BookedAppointment(BaseModel):
         db.UniqueConstraint('patient_id', 'date', 'time'),
     )
 
-    patient_id = db.Column(db.Integer, db.ForeignKey('patient.id', ondelete='CASCADE'), nullable=False, index=True)
-    doctor_id = db.Column(db.Integer, db.ForeignKey('doctor.id', ondelete='CASCADE'), nullable=False, index=True)
+    patient_id = db.Column(db.Integer, db.ForeignKey('patient.id', ondelete='CASCADE'),
+                           nullable=False, index=True)
+    doctor_id = db.Column(db.Integer, db.ForeignKey('doctor.id', ondelete='CASCADE'),
+                          nullable=False, index=True)
     date = db.Column(db.Date, nullable=False)
     time = db.Column(db.Time, nullable=False)
 
     patient = db.relationship('Patient', back_populates='booked_appointments')
     doctor = db.relationship('Doctor', back_populates='booked_appointments')
 
-    def __init__(self, patient_id, doctor_id, date_, time_):
+    def __init__(self, patient_id: int, doctor_id: int, date: date_, time: time_, id: int = None):
         """
-        :param int patient_id: id of patient from `patient` table
-        :param int doctor_id: id of doctor from `doctor` table
-        :param date date_: planned date of appointment
-        :param time time_: planned time of appointment
+        :param patient_id: id of patient from `patient` table
+        :param doctor_id: id of doctor from `doctor` table
+        :param date: planned date of appointment
+        :param time: planned time of appointment
+        :param id: id of booked appointment
         """
         self.patient_id = patient_id
         self.doctor_id = doctor_id
-        self.date = date_
-        self.time = time_
+        self.date = date
+        self.time = time
+        self.id = id

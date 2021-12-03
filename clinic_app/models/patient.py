@@ -21,16 +21,19 @@ class Patient(BaseModel):
     booked_appointments = db.relationship('BookedAppointment', back_populates='patient')
     fulfilled_appointments = db.relationship('FulfilledAppointment', back_populates='patient')
 
-    def __init__(self, phone_number, surname, name, patronymic, birthday):
+    def __init__(self, phone_number: str, surname: str, name: str,
+                 patronymic: str, birthday: date, id: int = None):
         """
-        :param str phone_number: patient's unique phone number
-        :param str surname: patient's surname
-        :param str name: patient's given name
-        :param str patronymic: patient's patronymic
-        :param date birthday: patient's date of birth
+        :param phone_number: patient's unique phone number
+        :param surname: patient's surname
+        :param name: patient's given name
+        :param patronymic: patient's patronymic
+        :param birthday: patient's date of birth
+        :param id: patient's id
         """
         self.phone_number = phone_number
         self.surname = surname
         self.name = name
         self.patronymic = patronymic
         self.birthday = birthday
+        self.id = id

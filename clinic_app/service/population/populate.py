@@ -4,7 +4,8 @@ This module contains main populating functions
 from datetime import date, time, timedelta
 from random import choice, randint
 from uuid import uuid4
-from clinic_app.models import *
+from clinic_app import db
+from clinic_app.models import BookedAppointment, FulfilledAppointment, Doctor, Patient, User
 from clinic_app.service.population.random_utils import random_9d_number, random_date
 from clinic_app.service.population.population_data import (
     DOCTORS_SRC, NAMES_SRC, SURNAMES_SRC, PATRONYMICS_SRC, ROOT_PASSWORD, DOCTORS_PASSWORD)

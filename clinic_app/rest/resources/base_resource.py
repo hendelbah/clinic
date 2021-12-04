@@ -1,17 +1,18 @@
 from flask import request
 from flask_restful import Resource, reqparse
+
 from clinic_app import ma
-from clinic_app.service import BaseService, handle_db_errors
 from clinic_app.rest.schemas import paginate_schema, validate_data
+from clinic_app.service import BaseService, handle_db_errors
 
 
-class AbstractResource(Resource):
+class ResourceTemplate(Resource):
     service: BaseService
     schema: ma.Schema
     parser: reqparse.RequestParser
 
 
-class BaseResource(AbstractResource):
+class BaseResource(ResourceTemplate):
     @classmethod
     def get(cls, id):
         schema = cls.schema()
@@ -24,8 +25,8 @@ class BaseResource(AbstractResource):
         data = request.json
         data['id'] = id
         is_new = not cls.service.exists(id)
-        opts = {'transient': True} if is_new else {'session': cls.service.db.session, 'partial': True}
-        schema = cls.schema(**opts)
+        opts = {'transient': True} if is_new else {'partial': True}
+        schema = cls.schema(session=cls.service.db.session, **opts)
         instance, errors = validate_data(schema, data)
         if not instance:
             return errors, 422
@@ -40,7 +41,7 @@ class BaseResource(AbstractResource):
         return '', 204
 
 
-class BaseListResource(AbstractResource):
+class BaseListResource(ResourceTemplate):
     @classmethod
     @handle_db_errors
     def post(cls):

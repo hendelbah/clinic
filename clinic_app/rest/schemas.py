@@ -1,6 +1,7 @@
-from clinic_app import ma
 from marshmallow import validates, ValidationError
-from clinic_app.models import Doctor, Patient, FulfilledAppointment, BookedAppointment
+
+from clinic_app import ma
+from clinic_app.models import Doctor, Patient, ServedAppointment, BookedAppointment
 
 
 class BaseSchema(ma.SQLAlchemyAutoSchema):
@@ -29,9 +30,9 @@ class BookedAppointmentSchema(BaseSchema):
         include_fk = True
 
 
-class FulfilledAppointmentSchema(BaseSchema):
+class ServedAppointmentSchema(BaseSchema):
     class Meta:
-        model = FulfilledAppointment
+        model = ServedAppointment
         load_instance = True
         include_fk = True
 
@@ -68,4 +69,4 @@ def validate_data(schema: ma.Schema, data, **kwargs):
 
 
 __all__ = [DoctorSchema, PatientSchema, BookedAppointmentSchema,
-           FulfilledAppointmentSchema, paginate_schema, validate_data]
+           ServedAppointmentSchema, paginate_schema, validate_data]

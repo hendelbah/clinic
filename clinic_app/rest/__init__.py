@@ -1,7 +1,9 @@
-from flask_restful import Api
 from flask import Blueprint
-from clinic_app.rest.resources import Doctors, DoctorsList, Patients, PatientsList, \
-    BookedAppointments, BookedAppointmentsList, FulfilledAppointments, FulfilledAppointmentsList
+from flask_restful import Api
+
+from clinic_app.rest.resources import (ServedAppointments, ServedAppointmentsList,
+                                       BookedAppointments, BookedAppointmentsList, Doctors,
+                                       DoctorsList, Patients, PatientsList, Statistics)
 
 api_blueprint = Blueprint('api', __name__, url_prefix='/api/v1')
 api = Api(api_blueprint)
@@ -12,5 +14,6 @@ api.add_resource(Patients, '/patients/<int:id>')
 api.add_resource(PatientsList, '/patients')
 api.add_resource(BookedAppointments, '/booked_appointments/<int:id>')
 api.add_resource(BookedAppointmentsList, '/booked_appointments')
-api.add_resource(FulfilledAppointments, '/fulfilled_appointments/<int:id>')
-api.add_resource(FulfilledAppointmentsList, '/fulfilled_appointments')
+api.add_resource(ServedAppointments, '/served_appointments/<int:id>')
+api.add_resource(ServedAppointmentsList, '/served_appointments')
+api.add_resource(Statistics, '/statistics')

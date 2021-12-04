@@ -4,7 +4,7 @@ This module contains all configuration data for web application
 import pathlib
 import os
 
-BASE_DIR = pathlib.Path(__file__).parent
+
 DB_USER = os.getenv('FLASK_DB_USER')
 DB_PASS = os.getenv('FLASK_DB_PASSWORD')
 DB_NAME = os.getenv('FLASK_DB_NAME')
@@ -16,6 +16,7 @@ class Config(object):
     """
     SECRET_KEY = os.getenv('FLASK_SECRET_KEY')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    BASE_DIR = pathlib.Path(__file__).parent
 
 
 class DevelopmentConfig(Config):

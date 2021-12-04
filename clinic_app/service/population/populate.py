@@ -50,7 +50,7 @@ def populate(patients_amount=100):
         sex = randint(0, 1)
         patient = {
             'id': i,
-            'phone_number': '+380' + random_9d_number(),
+            'phone_number': '380' + random_9d_number(),
             'surname': choice(SURNAMES_SRC),
             'name': choice(NAMES_SRC[sex]),
             'patronymic': choice(PATRONYMICS_SRC[sex]),

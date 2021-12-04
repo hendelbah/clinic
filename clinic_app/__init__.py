@@ -8,8 +8,8 @@ from flask import Flask, has_request_context, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_migrate import Migrate
-from clinic_app.config import app_config
 from flask_marshmallow import Marshmallow
+from clinic_app.config import app_config
 
 
 class RequestFormatter(logging.Formatter):
@@ -46,14 +46,16 @@ def create_app(config_name):
         '[%(asctime)s] %(remote_addr)s requested %(url)s\n'
         '%(levelname)s in %(module)s: %(message)s'
     )
-    file_handler = RotatingFileHandler('logs/clinic.log', maxBytes=10240, backupCount=10)
+    file_handler = RotatingFileHandler(
+        conf.BASE_DIR / 'logs' / 'clinic.log', maxBytes=10240, backupCount=10
+    )
     file_handler.setFormatter(request_formatter)
     file_handler.setLevel(logging.INFO)
     app.logger.addHandler(file_handler)
     app.logger.setLevel(logging.INFO)
     app.logger.info('App startup')
-    from rest import api_blueprint
 
+    from rest import api_blueprint
     app.register_blueprint(api_blueprint)
 
     return app

@@ -2,9 +2,11 @@
 This module implements instance of served appointment in database
 """
 from datetime import date as date_, time as time_
+
 from clinic_app.models.basemodel import db, BaseModel
 
 
+# pylint: disable=redefined-builtin
 class ServedAppointment(BaseModel):
     """
     ServedAppointment object stands for representation of data row in

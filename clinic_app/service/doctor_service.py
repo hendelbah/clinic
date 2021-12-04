@@ -2,6 +2,7 @@ from clinic_app.models import Doctor
 from clinic_app.service.base_service import BaseService
 
 
+# pylint: disable=arguments-differ
 class DoctorService(BaseService):
     model = Doctor
     order_by = (model.id,)

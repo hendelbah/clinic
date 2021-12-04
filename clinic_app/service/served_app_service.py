@@ -1,8 +1,10 @@
 from datetime import date as date_
+
 from clinic_app.models import ServedAppointment
 from clinic_app.service.base_service import BaseService
 
 
+# pylint: disable=arguments-differ
 class ServedAppointmentService(BaseService):
     model = ServedAppointment
     order_by = (model.date, model.time)
@@ -26,7 +28,9 @@ class ServedAppointmentService(BaseService):
         query = cls.model.query
         return cls._filter_by(_query=query, **kwargs).count()
 
+    # pylint: disable=no-member
     @classmethod
     def get_filtered_income(cls, **kwargs):
+
         query = cls.db.session.query(cls.db.func.sum(cls.model.bill))
         return cls._filter_by(_query=query, **kwargs).scalar()

@@ -6,6 +6,7 @@ from datetime import date
 from clinic_app.models.basemodel import BaseModel, db
 
 
+# pylint: disable=redefined-builtin
 class Patient(BaseModel):
     """
     Patient object stands for representation of data row in `patient` table.

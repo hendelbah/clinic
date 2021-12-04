@@ -1,8 +1,8 @@
 """
 This module contains all configuration data for web application
 """
-import pathlib
 import os
+import pathlib
 
 BASE_DIR = pathlib.Path(__file__).parent
 FLASK_CONFIG = os.getenv('FLASK_CONFIG')
@@ -13,7 +13,7 @@ DB_NAME = os.getenv('FLASK_DB_NAME')
 FLASK_SECRET_KEY = os.getenv('FLASK_SECRET_KEY')
 
 
-class Config(object):
+class Config:
     """
     Common configurations
     """

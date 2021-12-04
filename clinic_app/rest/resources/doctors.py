@@ -5,16 +5,16 @@ from clinic_app.rest.schemas import DoctorSchema
 from clinic_app.service import DoctorService
 
 
-class DoctorsMixin:
+class DoctorsMixIn:
     service = DoctorService
     schema = DoctorSchema
     parser = RequestParser()
     parser.add_argument('search_name', type=str)
 
 
-class Doctors(BaseResource, DoctorsMixin):
+class Doctors(BaseResource, DoctorsMixIn):
     pass
 
 
-class DoctorsList(BaseListResource, DoctorsMixin):
+class DoctorsList(BaseListResource, DoctorsMixIn):
     pass

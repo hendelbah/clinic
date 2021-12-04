@@ -1,15 +1,17 @@
-from sqlalchemy.exc import IntegrityError
 import typing as t
+
+from sqlalchemy.exc import IntegrityError
+
 from clinic_app import db
 
 
-class ServiceMixin:
+class ServiceMixIn:
     db = db
     model: db.Model
     order_by: t.Tuple[db.Column]
 
 
-class BaseService(ServiceMixin):
+class BaseService(ServiceMixIn):
     @classmethod
     def _filter_by(cls, **kwargs):
         raise NotImplementedError

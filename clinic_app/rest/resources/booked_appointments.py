@@ -7,7 +7,7 @@ from clinic_app.rest.schemas import BookedAppointmentSchema
 from clinic_app.service import BookedAppointmentService
 
 
-class BookedAppointmentMixin:
+class BookedAppointmentMixIn:
     service = BookedAppointmentService
     schema = BookedAppointmentSchema
     parser = RequestParser()
@@ -17,9 +17,9 @@ class BookedAppointmentMixin:
     parser.add_argument('past_only', type=bool)
 
 
-class BookedAppointments(BaseResource, BookedAppointmentMixin):
+class BookedAppointments(BaseResource, BookedAppointmentMixIn):
     pass
 
 
-class BookedAppointmentsList(BaseListResource, BookedAppointmentMixin):
+class BookedAppointmentsList(BaseListResource, BookedAppointmentMixIn):
     pass

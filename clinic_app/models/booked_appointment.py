@@ -2,9 +2,11 @@
 This module implements instance of booked appointment in database
 """
 from datetime import date as date_, time as time_
+
 from clinic_app.models.basemodel import BaseModel, db
 
 
+# pylint: disable=redefined-builtin
 class BookedAppointment(BaseModel):
     """
     BookedAppointment object stands for representation of data row in `booked_appointment` table.

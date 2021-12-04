@@ -5,7 +5,7 @@ from clinic_app.rest.schemas import PatientSchema
 from clinic_app.service import PatientService
 
 
-class PatientsMixin:
+class PatientsMixIn:
     service = PatientService
     schema = PatientSchema
     parser = RequestParser()
@@ -14,9 +14,9 @@ class PatientsMixin:
     parser.add_argument('surname')
 
 
-class Patients(BaseResource, PatientsMixin):
+class Patients(BaseResource, PatientsMixIn):
     pass
 
 
-class PatientsList(BaseListResource, PatientsMixin):
+class PatientsList(BaseListResource, PatientsMixIn):
     pass

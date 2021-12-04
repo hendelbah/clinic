@@ -2,13 +2,13 @@ from datetime import date
 
 from flask_restful.reqparse import RequestParser
 
-from clinic_app.service import ServedAppointmentService, handle_db_errors
-from clinic_app.rest.schemas import ServedAppointmentSchema
 from clinic_app.rest.resources.base_resource import \
     BaseResource, BaseListResource, ResourceTemplate
+from clinic_app.rest.schemas import ServedAppointmentSchema
+from clinic_app.service import ServedAppointmentService, handle_db_errors
 
 
-class ServedAppointmentMixin:
+class ServedAppointmentMixIn:
     service = ServedAppointmentService
     schema = ServedAppointmentSchema
     parser = RequestParser()
@@ -18,15 +18,15 @@ class ServedAppointmentMixin:
     parser.add_argument('date_to', type=lambda x: date.fromordinal(int(x)))
 
 
-class ServedAppointments(BaseResource, ServedAppointmentMixin):
+class ServedAppointments(BaseResource, ServedAppointmentMixIn):
     pass
 
 
-class ServedAppointmentsList(BaseListResource, ServedAppointmentMixin):
+class ServedAppointmentsList(BaseListResource, ServedAppointmentMixIn):
     pass
 
 
-class Statistics(ServedAppointmentMixin, ResourceTemplate):
+class Statistics(ServedAppointmentMixIn, ResourceTemplate):
     @classmethod
     @handle_db_errors
     def get(cls):

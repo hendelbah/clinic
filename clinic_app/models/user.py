@@ -16,7 +16,8 @@ class User(BaseModel, UserMixin):
     It is a user class for authentication
     """
     __tablename__ = 'user'
-    doctor_id = db.Column(db.Integer, db.ForeignKey('doctor.id', ondelete='CASCADE'), unique=True, index=True)
+    doctor_id = db.Column(db.Integer, db.ForeignKey('doctor.id', ondelete='CASCADE'),
+                          unique=True, index=True)
     uuid = db.Column(db.String(36), nullable=False, unique=True, index=True)
     email = db.Column(db.String(80), nullable=False, unique=True, index=True)
     password_hash = db.Column(db.String(127), nullable=False)

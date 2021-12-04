@@ -5,8 +5,9 @@ from clinic_app.models import Doctor, Patient, ServedAppointment, BookedAppointm
 
 
 class BaseSchema(ma.SQLAlchemyAutoSchema):
+    @staticmethod
     @validates('id')
-    def validate_id(self, value):
+    def validate_id(value):
         if value <= 0:
             raise ValidationError('id must be greater than 0.')
 
@@ -37,6 +38,7 @@ class ServedAppointmentSchema(BaseSchema):
         include_fk = True
 
 
+# pylint: disable=no-member
 def paginate_schema(items_schema: ma.Schema):
     """
     Return schema for flask-SQLAlchemy pagination with dynamically defined nested schema of items.
@@ -66,7 +68,3 @@ def validate_data(schema: ma.Schema, data, **kwargs):
         return schema.load(data, **kwargs), None
     except ValidationError as err:
         return None, err.messages
-
-
-__all__ = [DoctorSchema, PatientSchema, BookedAppointmentSchema,
-           ServedAppointmentSchema, paginate_schema, validate_data]

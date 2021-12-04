@@ -4,16 +4,18 @@ This module contains main populating functions
 from datetime import date, time, timedelta
 from random import choice, randint
 from uuid import uuid4
+
 from clinic_app import db
-from clinic_app.models import BookedAppointment, FulfilledAppointment, Doctor, Patient, User
-from clinic_app.service.population.random_utils import random_9d_number, random_date
+from clinic_app.models import BookedAppointment, ServedAppointment, Doctor, Patient, User
 from clinic_app.service.population.population_data import (
     DOCTORS_SRC, NAMES_SRC, SURNAMES_SRC, PATRONYMICS_SRC, ROOT_PASSWORD, DOCTORS_PASSWORD)
+from clinic_app.service.population.random_utils import random_9d_number, random_date
 
 root_pass_hash = User.hash_password(ROOT_PASSWORD)
 doctors_pass_hash = User.hash_password(DOCTORS_PASSWORD)
 
 
+# pylint: disable=no-member
 def populate(patients_amount=100):
     """
     Clear tables and populate database with sample data, using population_data and random_utils.
@@ -21,7 +23,7 @@ def populate(patients_amount=100):
     :param patients_amount: amount of random patients to insert
     """
     BookedAppointment.query.delete()
-    FulfilledAppointment.query.delete()
+    ServedAppointment.query.delete()
     Patient.query.delete()
     User.query.delete()
     Doctor.query.delete()
@@ -45,7 +47,7 @@ def populate(patients_amount=100):
     ]
     patients_src = []
     booked_apps_src = []
-    fulfilled_apps_src = []
+    served_apps_src = []
     for i in range(1, patients_amount + 1):
         sex = randint(0, 1)
         patient = {
@@ -75,11 +77,11 @@ def populate(patients_amount=100):
         }
         patients_src.append(patient)
         booked_apps_src.append(b_appointment)
-        fulfilled_apps_src.append(f_appointment)
+        served_apps_src.append(f_appointment)
 
     db.session.bulk_insert_mappings(Doctor, DOCTORS_SRC)
     db.session.bulk_insert_mappings(User, users_doctors_src)
     db.session.bulk_insert_mappings(Patient, patients_src)
     db.session.bulk_insert_mappings(BookedAppointment, booked_apps_src)
-    db.session.bulk_insert_mappings(FulfilledAppointment, fulfilled_apps_src)
+    db.session.bulk_insert_mappings(ServedAppointment, served_apps_src)
     db.session.commit()

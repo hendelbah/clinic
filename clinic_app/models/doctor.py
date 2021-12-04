@@ -4,6 +4,7 @@ This module implements instance of doctor in database
 from clinic_app.models.basemodel import BaseModel, db
 
 
+# pylint: disable=redefined-builtin
 class Doctor(BaseModel):
     """
     Doctor object stands for representation of data row in `doctor` table.

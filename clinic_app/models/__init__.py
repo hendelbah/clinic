@@ -8,4 +8,4 @@ from clinic_app.models.user import User
 from clinic_app.models.booked_appointment import BookedAppointment
 from clinic_app.models.fulfilled_appointment import FulfilledAppointment
 
-__all__ = ['BaseModel', 'BookedAppointment', 'Doctor', 'FulfilledAppointment', 'Patient', 'User']
+__all__ = [BaseModel, BookedAppointment, Doctor, FulfilledAppointment, Patient, User]

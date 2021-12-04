@@ -2,13 +2,13 @@
 This module implements instance of fulfilled appointment in database
 """
 from datetime import date as date_, time as time_
-from clinic_app.models.booked_appointment import db, BaseModel
+from clinic_app.models.basemodel import db, BaseModel
 
 
 class FulfilledAppointment(BaseModel):
     """
     FulfilledAppointment object stands for representation of data row in
-    `fulfilled_appointment` table. There are appointments that took place.
+    `fulfilled_appointment` table. Table stores appointments that took place.
     """
     __tablename__ = 'fulfilled_appointment'
     __table_args__ = (

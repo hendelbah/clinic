@@ -3,17 +3,19 @@ import typing as t
 from clinic_app import db
 
 
-class BaseService:
+class ServiceMixin:
     db = db
     model: db.Model
     order_by: t.Tuple[db.Column]
 
+
+class BaseService(ServiceMixin):
     @classmethod
-    def filter_ordered(cls, **kwargs):
+    def _filter_by(cls, **kwargs):
         raise NotImplementedError
 
     @classmethod
-    def order(cls):
+    def _order(cls):
         return cls.model.query.order_by(*cls.order_by)
 
     @classmethod
@@ -27,7 +29,7 @@ class BaseService:
 
     @classmethod
     def get_filtered_pagination(cls, **kwargs):
-        return cls.filter_ordered(**kwargs).paginate()
+        return cls._filter_by(**kwargs).paginate()
 
     @classmethod
     def delete(cls, id_: int):
@@ -46,10 +48,10 @@ class BaseService:
         return model.id
 
 
-def handle_db_errors(cls):
+def handle_db_errors(func):
     def wrapper(*args, **kwargs):
         try:
-            return cls(*args, **kwargs)
+            return func(*args, **kwargs)
         except IntegrityError as err:
             return {'message': 'Request data violates database constraints',
                     'errors': err.orig.args[1]}, 422

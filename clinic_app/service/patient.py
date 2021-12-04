@@ -7,10 +7,10 @@ class PatientService(BaseService):
     order_by = (model.id,)
 
     @classmethod
-    def filter_ordered(cls, phone: str = None, name: str = None, surname: str = None):
-        query = cls.order()
-        if phone is not None:
-            query = query.filter_by(phone_number=phone)
+    def _filter_by(cls, *, phone_number: str = None, name: str = None, surname: str = None):
+        query = cls._order()
+        if phone_number is not None:
+            query = query.filter_by(phone_number=phone_number)
         if name is not None:
             query = query.filter_by(name=name)
         if surname is not None:

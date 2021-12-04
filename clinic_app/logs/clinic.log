@@ -1,242 +1,31 @@
-[2021-12-03 15:20:46,853] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:21:46,389] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:23:04,822] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:23:44,066] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:23:59,490] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:26:29,360] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:27:45,631] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:34:50,973] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:34:59,350] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:35:30,099] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:35:30,796] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:35:41,537] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:37:45,979] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:38:46,296] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:39:23,358] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:41:29,447] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:41:30,137] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:41:44,368] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:41:47,443] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:41:53,391] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:42:23,523] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:42:24,105] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:42:32,912] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:43:17,495] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:43:18,181] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:50:06,239] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:50:06,948] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:52:20,498] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:52:21,252] None requested None
-INFO in __init__: App startup
-[2021-12-03 15:52:42,759] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:00:20,391] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:00:21,096] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:03:35,802] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:09:42,625] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:09:43,311] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:11:34,030] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:14:33,015] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:14:33,690] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:16:22,357] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:16:23,049] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:19:08,681] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:20:32,492] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:26:31,131] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:28:07,347] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:28:13,302] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:33:18,423] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:36:10,826] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:36:11,517] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:37:11,183] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:38:30,442] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:38:39,505] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:53:08,671] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:53:46,813] None requested None
-INFO in __init__: App startup
-[2021-12-03 16:55:02,839] None requested None
-INFO in __init__: App startup
-[2021-12-03 17:00:18,584] None requested None
-INFO in __init__: App startup
-[2021-12-03 17:00:39,097] None requested None
-INFO in __init__: App startup
-[2021-12-03 17:01:05,766] None requested None
-INFO in __init__: App startup
-[2021-12-03 17:01:13,348] None requested None
-INFO in __init__: App startup
-[2021-12-03 17:01:14,044] None requested None
-INFO in __init__: App startup
-[2021-12-03 17:02:01,405] None requested None
-INFO in __init__: App startup
-[2021-12-03 17:02:58,206] None requested None
-INFO in __init__: App startup
-[2021-12-03 17:03:15,545] None requested None
-INFO in __init__: App startup
-[2021-12-03 17:03:42,273] None requested None
-INFO in __init__: App startup
-[2021-12-03 17:03:52,390] None requested None
-INFO in __init__: App startup
-[2021-12-03 17:15:53,522] None requested None
-INFO in __init__: App startup
-[2021-12-03 17:18:10,879] None requested None
-INFO in __init__: App startup
-[2021-12-03 17:18:44,824] None requested None
-INFO in __init__: App startup
-[2021-12-03 17:19:32,284] None requested None
-INFO in __init__: App startup
-[2021-12-03 17:35:47,980] None requested None
-INFO in __init__: App startup
-[2021-12-03 18:44:10,268] None requested None
-INFO in __init__: App startup
-[2021-12-03 20:07:16,185] None requested None
-INFO in __init__: App startup
-[2021-12-03 20:42:00,458] None requested None
-INFO in __init__: App startup
-[2021-12-03 20:45:08,270] None requested None
-INFO in __init__: App startup
-[2021-12-03 20:52:05,047] None requested None
-INFO in __init__: App startup
-[2021-12-03 20:52:13,085] None requested None
-INFO in __init__: App startup
-[2021-12-03 20:52:13,812] None requested None
-INFO in __init__: App startup
-[2021-12-03 21:01:49,203] None requested None
-INFO in __init__: App startup
-[2021-12-03 21:01:49,947] None requested None
-INFO in __init__: App startup
-[2021-12-03 21:06:26,255] None requested None
-INFO in __init__: App startup
-[2021-12-03 21:07:55,794] None requested None
-INFO in __init__: App startup
-[2021-12-03 21:10:13,676] None requested None
-INFO in __init__: App startup
-[2021-12-03 21:12:34,286] None requested None
-INFO in __init__: App startup
-[2021-12-03 22:38:23,057] None requested None
-INFO in __init__: App startup
-[2021-12-03 22:38:38,041] None requested None
-INFO in __init__: App startup
-[2021-12-03 22:38:42,507] None requested None
-INFO in __init__: App startup
-[2021-12-03 22:43:54,732] None requested None
-INFO in __init__: App startup
-[2021-12-04 00:34:50,978] None requested None
-INFO in __init__: App startup
-[2021-12-04 00:37:31,305] None requested None
-INFO in __init__: App startup
-[2021-12-04 00:37:32,025] None requested None
-INFO in __init__: App startup
-[2021-12-04 00:41:08,919] None requested None
-INFO in __init__: App startup
-[2021-12-04 00:41:09,617] None requested None
-INFO in __init__: App startup
-[2021-12-04 00:41:42,727] None requested None
-INFO in __init__: App startup
-[2021-12-04 00:41:43,443] None requested None
-INFO in __init__: App startup
-[2021-12-04 00:47:31,462] None requested None
-INFO in __init__: App startup
-[2021-12-04 00:54:15,796] None requested None
-INFO in __init__: App startup
-[2021-12-04 00:54:16,482] None requested None
-INFO in __init__: App startup
-[2021-12-04 00:55:09,228] None requested None
-INFO in __init__: App startup
-[2021-12-04 01:04:25,565] None requested None
-INFO in __init__: App startup
-[2021-12-04 01:06:06,284] None requested None
-INFO in __init__: App startup
-[2021-12-04 01:38:43,685] None requested None
-INFO in __init__: App startup
-[2021-12-04 01:38:44,386] None requested None
-INFO in __init__: App startup
-[2021-12-04 01:53:51,133] None requested None
-INFO in __init__: App startup
-[2021-12-04 01:53:51,829] None requested None
-INFO in __init__: App startup
-[2021-12-04 01:56:23,038] None requested None
-INFO in __init__: App startup
-[2021-12-04 01:59:53,339] None requested None
-INFO in __init__: App startup
-[2021-12-04 02:04:27,156] None requested None
-INFO in __init__: App startup
-[2021-12-04 02:05:11,982] None requested None
-INFO in __init__: App startup
-[2021-12-04 02:05:12,676] None requested None
-INFO in __init__: App startup
-[2021-12-04 02:09:09,673] None requested None
-INFO in __init__: App startup
-[2021-12-04 02:09:38,903] None requested None
-INFO in __init__: App startup
-[2021-12-04 02:09:39,585] None requested None
-INFO in __init__: App startup
-[2021-12-04 03:16:47,322] None requested None
-INFO in __init__: App startup
-[2021-12-04 03:16:48,016] None requested None
-INFO in __init__: App startup
-[2021-12-04 03:18:15,792] None requested None
-INFO in __init__: App startup
-[2021-12-04 03:20:31,590] None requested None
-INFO in __init__: App startup
-[2021-12-04 03:32:57,140] None requested None
-INFO in __init__: App startup
-[2021-12-04 03:34:55,960] None requested None
-INFO in __init__: App startup
-[2021-12-04 03:35:02,007] None requested None
-INFO in __init__: App startup
-[2021-12-04 03:35:02,696] None requested None
-INFO in __init__: App startup
-[2021-12-04 03:37:03,524] None requested None
-INFO in __init__: App startup
-[2021-12-04 03:39:25,652] None requested None
-INFO in __init__: App startup
+2021-12-04 19:00:34,220 INFO clinic_app: App initialization
+2021-12-04 19:00:34,251 INFO werkzeug:  * Restarting with stat
+2021-12-04 19:00:34,785 INFO clinic_app: App initialization
+2021-12-04 19:00:34,821 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-04 19:02:00,135 INFO clinic_app: App initialization
+2021-12-04 19:02:00,369 INFO werkzeug:  * Restarting with stat
+2021-12-04 19:02:00,777 INFO clinic_app: App initialization
+2021-12-04 19:02:01,002 WARNING werkzeug:  * Debugger is active!
+2021-12-04 19:02:01,010 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-04 19:02:01,040 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-04 21:11:35,550 INFO clinic_app: App initialization
+2021-12-04 21:11:35,804 INFO werkzeug:  * Restarting with stat
+2021-12-04 21:11:36,216 INFO clinic_app: App initialization
+2021-12-04 21:11:36,447 WARNING werkzeug:  * Debugger is active!
+2021-12-04 21:11:36,450 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-04 21:11:36,487 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-04 21:27:43,204 INFO clinic_app: App initialization
+2021-12-04 21:29:06,346 INFO clinic_app: App initialization
+2021-12-04 21:31:52,273 INFO clinic_app: App initialization
+2021-12-04 21:33:33,564 INFO clinic_app: App initialization
+2021-12-04 21:33:52,629 INFO clinic_app: App initialization
+2021-12-04 21:36:29,270 INFO clinic_app: App initialization
+2021-12-04 21:37:56,088 INFO clinic_app: App initialization
+2021-12-04 21:40:12,102 INFO clinic_app: App initialization
+2021-12-04 21:48:35,353 INFO clinic_app: App initialization
+2021-12-04 21:48:47,019 INFO clinic_app: App initialization
+2021-12-04 21:48:53,829 INFO clinic_app: App initialization
+2021-12-04 22:40:14,415 INFO clinic_app: App initialization
+2021-12-04 22:40:24,131 INFO clinic_app: App initialization
+2021-12-04 22:40:32,332 INFO clinic_app: App initialization
+2021-12-04 22:41:02,718 INFO clinic_app: App initialization

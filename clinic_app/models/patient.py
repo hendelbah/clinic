@@ -2,6 +2,7 @@
 This module implements instance of patient in database
 """
 from datetime import date
+
 from clinic_app.models.basemodel import BaseModel, db
 
 
@@ -19,7 +20,7 @@ class Patient(BaseModel):
     birthday = db.Column(db.Date, nullable=False)
 
     booked_appointments = db.relationship('BookedAppointment', back_populates='patient')
-    fulfilled_appointments = db.relationship('FulfilledAppointment', back_populates='patient')
+    served_appointments = db.relationship('ServedAppointment', back_populates='patient')
 
     def __init__(self, phone_number: str, surname: str, name: str,
                  patronymic: str, birthday: date, id: int = None):

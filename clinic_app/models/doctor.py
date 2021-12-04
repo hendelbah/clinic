@@ -18,7 +18,7 @@ class Doctor(BaseModel):
 
     user = db.relationship('User', back_populates='doctor', uselist=False)
     booked_appointments = db.relationship('BookedAppointment', back_populates='doctor')
-    fulfilled_appointments = db.relationship('FulfilledAppointment', back_populates='doctor')
+    served_appointments = db.relationship('ServedAppointment', back_populates='doctor')
 
     def __init__(self, full_name: str, speciality: str, info: str,
                  experience_years: int, id: int = None):

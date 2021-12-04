@@ -1,16 +1,16 @@
 """
-This module implements instance of fulfilled appointment in database
+This module implements instance of served appointment in database
 """
 from datetime import date as date_, time as time_
 from clinic_app.models.basemodel import db, BaseModel
 
 
-class FulfilledAppointment(BaseModel):
+class ServedAppointment(BaseModel):
     """
-    FulfilledAppointment object stands for representation of data row in
-    `fulfilled_appointment` table. Table stores appointments that took place.
+    ServedAppointment object stands for representation of data row in
+    `served_appointment` table. Table stores appointments that took place.
     """
-    __tablename__ = 'fulfilled_appointment'
+    __tablename__ = 'served_appointment'
     __table_args__ = (
         db.UniqueConstraint('doctor_id', 'date', 'time'),
         db.UniqueConstraint('patient_id', 'date', 'time'),
@@ -26,8 +26,8 @@ class FulfilledAppointment(BaseModel):
     prescription = db.Column(db.String(511), nullable=False)
     bill = db.Column(db.Integer, nullable=False)
 
-    patient = db.relationship('Patient', back_populates='fulfilled_appointments')
-    doctor = db.relationship('Doctor', back_populates='fulfilled_appointments')
+    patient = db.relationship('Patient', back_populates='served_appointments')
+    doctor = db.relationship('Doctor', back_populates='served_appointments')
 
     def __init__(self, patient_id: int, doctor_id: int, date: date_, time: time_,
                  conclusion: str, prescription: str, bill: str, id: int = None):

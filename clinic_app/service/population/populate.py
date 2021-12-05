@@ -16,19 +16,25 @@ root_pass_hash = UserAccount.hash_password(ROOT_PASSWORD)
 doctors_pass_hash = UserAccount.hash_password(DOCTORS_PASSWORD)
 
 
-# pylint: disable=no-member
-def populate(patients_amount=100):
+def clear_tables():
     """
-    Clear tables and populate database with sample data, using population_data and random_utils.
-
-    :param patients_amount: amount of random patients to insert
+    Clear all tables.
     """
     BookedAppointment.query.delete()
     ServedAppointment.query.delete()
     Patient.query.delete()
     User.query.delete()
     Doctor.query.delete()
+    db.session.commit()
 
+
+# pylint: disable=no-member
+def populate(patients_amount=100):
+    """
+    Populate database with sample data, using population_data and random_utils.
+
+    :param patients_amount: amount of random patients to insert
+    """
     root_user = {'id': 1,
                  'uuid': UserAccount.generate_uuid(),
                  'email': 'root',

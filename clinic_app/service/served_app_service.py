@@ -4,7 +4,7 @@ This module defines served appointment service class:
 from datetime import date as date_
 
 from clinic_app.models import ServedAppointment
-from clinic_app.service.service_routines import ServiceRoutine
+from clinic_app.service.service_routine import ServiceRoutine
 
 
 # pylint: disable=arguments-differ
@@ -23,7 +23,7 @@ class ServedAppointmentService(ServiceRoutine):
         :param patient_id: filter served appointments having given patient_id
         :param date_from: filter served appointments having date >= given value
         :param date_to: filter served appointments having date <= given value
-        :param _query: query to override standard
+        :param _query: query to override standard one
         """
         query = cls._order() if _query is None else _query
         if doctor_id is not None:
@@ -41,7 +41,7 @@ class ServedAppointmentService(ServiceRoutine):
         """
         Return amount of served_appointments rows filtered using kwargs
 
-        :param kwargs: kwargs for _filter_by function
+        :param kwargs: kwargs for filtering function
         """
         query = cls.model.query
         return cls._filter_by(_query=query, **kwargs).count()
@@ -52,7 +52,7 @@ class ServedAppointmentService(ServiceRoutine):
         """
         Return sum of bills of served_appointments filtered using kwargs
 
-        :param kwargs: kwargs for _filter_by function
+        :param kwargs: kwargs for filtering function
         """
         query = cls.db.session.query(cls.db.func.sum(cls.model.bill))
-        return cls._filter_by(_query=query, **kwargs).scalar()
+        return int(cls._filter_by(_query=query, **kwargs).scalar())

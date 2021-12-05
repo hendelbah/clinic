@@ -12,7 +12,7 @@ from flask_restful import Resource, reqparse, abort
 
 from clinic_app import ma
 from clinic_app.rest.schemas import pagination_schema, validate_data
-from clinic_app.service import ServiceRoutine, handle_constraint_violation
+from clinic_app.service import ServiceRoutine, handle_db_errors
 
 
 class BaseResource(Resource):
@@ -42,7 +42,7 @@ class ResourceRoutine(BaseResource):
         return schema.dump(instance), 200
 
     @classmethod
-    @handle_constraint_violation
+    @handle_db_errors
     def put(cls, id):
         """Update"""
         data = cls.json_validated()
@@ -69,7 +69,7 @@ class ListResourceRoutine(BaseResource):
     """ListResource class with common routines for inheritance"""
 
     @classmethod
-    @handle_constraint_violation
+    @handle_db_errors
     def post(cls):
         """Create"""
         data = cls.json_validated()
@@ -81,7 +81,7 @@ class ListResourceRoutine(BaseResource):
         return {'id': instance.id}, 201
 
     @classmethod
-    @handle_constraint_violation
+    @handle_db_errors
     def get(cls):
         """Retrieve"""
         schema = cls.schema()

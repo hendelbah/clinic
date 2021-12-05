@@ -7,7 +7,7 @@ Subpackages:
 
 Modules:
 
-- `service_routines.py`: defines base service classes with common routines
+- `service_routine.py`: defines base service classes with common routines
 - `doctor_service.py`: defines service class for querying Doctor model
 - `patient_service.py`: defines service class for querying Patient model
 - `booked_app_service.py`: defines service class for querying BookedAppointments model
@@ -17,11 +17,9 @@ Modules:
 from clinic_app.service.booked_app_service import BookedAppointmentService
 from clinic_app.service.doctor_service import DoctorService
 from clinic_app.service.patient_service import PatientService
-from clinic_app.service.population import populate, clear_tables
 from clinic_app.service.served_app_service import ServedAppointmentService
-from clinic_app.service.service_routines import ServiceRoutine, handle_constraint_violation
+from clinic_app.service.service_routine import ServiceRoutine, handle_db_errors
 from clinic_app.service.user_service import UserService
 
-__all__ = ['ServiceRoutine', 'handle_constraint_violation', 'DoctorService', 'PatientService',
-           'BookedAppointmentService', 'ServedAppointmentService', 'UserService', 'populate',
-           'clear_tables']
+__all__ = ['ServiceRoutine', 'handle_db_errors', 'DoctorService', 'PatientService',
+           'BookedAppointmentService', 'ServedAppointmentService', 'UserService']

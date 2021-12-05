@@ -49,8 +49,8 @@ werkzeug_logger.addHandler(file_handler)
 werkzeug_logger.addHandler(console_handler)
 werkzeug_logger.setLevel(logging.DEBUG)
 
-# pylint: disable=wrong-import-position
-# pylint: disable=cyclic-import
+
+# pylint: disable=cyclic-import,wrong-import-position
 from clinic_app.rest import api_blueprint
 
 app.register_blueprint(api_blueprint)

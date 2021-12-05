@@ -1,3 +1,6 @@
+"""
+Module with some authorization utils
+"""
 from random import choices
 from string import digits, ascii_letters
 

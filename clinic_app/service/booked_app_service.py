@@ -1,17 +1,29 @@
+"""
+This module defines booked appointment service class:
+"""
 from datetime import datetime, date as date_
 
 from clinic_app.models import BookedAppointment
-from clinic_app.service.base_service import BaseService
+from clinic_app.service.service_routines import ServiceRoutine
 
 
 # pylint: disable=arguments-differ
-class BookedAppointmentService(BaseService):
+class BookedAppointmentService(ServiceRoutine):
+    """Service class for querying BookedAppointment model"""
     model = BookedAppointment
     order_by = (model.date, model.time)
 
     @classmethod
     def _filter_by(cls, *, doctor_id: int = None, patient_id: int = None,
                    date: date_ = None, past_only: bool = False):
+        """
+        Return query ordered and filtered.
+
+        :param doctor_id: filter booked appointments having given doctor_id
+        :param patient_id: filter booked appointments having given patient_id
+        :param date: filter booked appointments having given date
+        :param past_only: filter booked appointments before now
+        """
         query = cls._order()
         if doctor_id is not None:
             query = query.filter_by(doctor_id=doctor_id)

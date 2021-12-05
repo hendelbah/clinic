@@ -1,19 +1,35 @@
+"""
+This package contains modules defining REST APIs for Doctor, Patient, BookedAppointment,
+ServedAppointment and User models. Respective API endpoints are initialized here and
+everything is linked to `api_blueprint`:
+
+Subpackages:
+
+- `resources`: defines all REST API resources
+
+Modules:
+
+- `schemas.py`: contains Marshmallow schemas for serialization/deserialization of db models
+"""
 from flask import Blueprint
 from flask_restful import Api
 
-from clinic_app.rest.resources import (ServedAppointments, ServedAppointmentsList,
-                                       BookedAppointments, BookedAppointmentsList, Doctors,
-                                       DoctorsList, Patients, PatientsList, Statistics)
+from clinic_app.rest.resources import (
+    ServedAppointmentApi, ServedAppointmentListApi, BookedAppointmentApi,
+    BookedAppointmentListApi, DoctorApi, DoctorListApi, PatientApi,
+    PatientListApi, StatisticsApi, UserApi, UserListApi)
 
 api_blueprint = Blueprint('api', __name__, url_prefix='/api/v1')
 api = Api(api_blueprint)
 
-api.add_resource(Doctors, '/doctors/<int:id>')
-api.add_resource(DoctorsList, '/doctors')
-api.add_resource(Patients, '/patients/<int:id>')
-api.add_resource(PatientsList, '/patients')
-api.add_resource(BookedAppointments, '/booked_appointments/<int:id>')
-api.add_resource(BookedAppointmentsList, '/booked_appointments')
-api.add_resource(ServedAppointments, '/served_appointments/<int:id>')
-api.add_resource(ServedAppointmentsList, '/served_appointments')
-api.add_resource(Statistics, '/statistics')
+api.add_resource(DoctorApi, '/doctors/<int:id>')
+api.add_resource(DoctorListApi, '/doctors')
+api.add_resource(PatientApi, '/patients/<int:id>')
+api.add_resource(PatientListApi, '/patients')
+api.add_resource(BookedAppointmentApi, '/booked_appointments/<int:id>')
+api.add_resource(BookedAppointmentListApi, '/booked_appointments')
+api.add_resource(ServedAppointmentApi, '/served_appointments/<int:id>')
+api.add_resource(ServedAppointmentListApi, '/served_appointments')
+api.add_resource(StatisticsApi, '/served_appointments/statistics')
+api.add_resource(UserApi, '/users/<int:id>')
+api.add_resource(UserListApi, '/users')

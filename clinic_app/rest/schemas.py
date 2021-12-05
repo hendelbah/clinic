@@ -1,58 +1,115 @@
-from marshmallow import validates, ValidationError
+"""
+This module contains all marshmallow schemas for serialization/deserialization of db models,
+and some useful functions.
+
+Here are defined The following classes:
+
+- `DoctorSchema`, doctor serialization/deserialization schema
+- `PatientSchema`
+- `BookedAppointmentSchema`
+- `ServedAppointmentSchema`
+- `UserSchema`
+
+Functions:
+
+- `paginate_schema`: dynamically defines schema for serialization of flask-SQLAlchemy pagination
+- `validate_data`: validate and load data into object using given schema, handling ValidationError
+"""
+
+from marshmallow import ValidationError
 
 from clinic_app import ma
-from clinic_app.models import Doctor, Patient, ServedAppointment, BookedAppointment
+from clinic_app.models import Doctor, Patient, ServedAppointment, BookedAppointment, User
 
 
-class BaseSchema(ma.SQLAlchemyAutoSchema):
-    @staticmethod
-    @validates('id')
-    def validate_id(value):
-        if value <= 0:
-            raise ValidationError('id must be greater than 0.')
+class DoctorSchema(ma.SQLAlchemyAutoSchema):
+    """
+    Doctor serialization/deserialization schema
+    """
 
-
-class DoctorSchema(BaseSchema):
     class Meta:
+        """
+        Doctor schema metadata
+        """
         load_instance = True
         model = Doctor
 
 
-class PatientSchema(BaseSchema):
+class PatientSchema(ma.SQLAlchemyAutoSchema):
+    """
+    Patient serialization/deserialization schema
+    """
+
     class Meta:
+        """
+        Patient schema metadata
+        """
         load_instance = True
         model = Patient
 
 
-class BookedAppointmentSchema(BaseSchema):
+class BookedAppointmentSchema(ma.SQLAlchemyAutoSchema):
+    """
+    BookedAppointment serialization/deserialization schema
+    """
+
     class Meta:
+        """
+        BookedAppointment schema metadata
+        """
         model = BookedAppointment
         load_instance = True
         include_fk = True
 
 
-class ServedAppointmentSchema(BaseSchema):
+class ServedAppointmentSchema(ma.SQLAlchemyAutoSchema):
+    """
+    ServedAppointment serialization/deserialization schema
+    """
+
     class Meta:
+        """
+        ServedAppointment schema metadata
+        """
         model = ServedAppointment
         load_instance = True
         include_fk = True
 
 
-# pylint: disable=no-member
-def paginate_schema(items_schema: ma.Schema):
+class UserSchema(ma.SQLAlchemyAutoSchema):
     """
-    Return schema for flask-SQLAlchemy pagination with dynamically defined nested schema of items.
+    User serialization/deserialization schema
+    """
+
+    class Meta:
+        """
+        User schema metadata
+        """
+        model = User
+        load_instance = True
+        include_fk = True
+
+
+# pylint: disable=no-member
+def pagination_schema(items_schema: ma.Schema):
+    """
+    Return schema for serialization of flask-SQLAlchemy pagination
+    with dynamically defined schema of nested field `items`.
 
     :param items_schema: schema for Pagination.items
     """
 
-    class PaginateSchema(ma.Schema):
+    class PaginationSchema(ma.Schema):
+        """Schema for serialization of Pagination object"""
         class Meta:
+            """
+            Pagination schema metadata
+            """
             additional = ('page', 'per_page', 'pages', 'total')
 
         items = ma.Nested(items_schema, many=True)
 
-    return PaginateSchema
+    return PaginationSchema
 
 
 def validate_data(schema: ma.Schema, data, **kwargs):

@@ -10,9 +10,10 @@ from clinic_app.models import BookedAppointment, ServedAppointment, Doctor, Pati
 from clinic_app.service.population.population_data import (
     DOCTORS_SRC, NAMES_SRC, SURNAMES_SRC, PATRONYMICS_SRC, ROOT_PASSWORD, DOCTORS_PASSWORD)
 from clinic_app.service.population.random_utils import random_9d_number, random_date
+from clinic_app.views.authorization import UserAccount
 
-root_pass_hash = User.hash_password(ROOT_PASSWORD)
-doctors_pass_hash = User.hash_password(DOCTORS_PASSWORD)
+root_pass_hash = UserAccount.hash_password(ROOT_PASSWORD)
+doctors_pass_hash = UserAccount.hash_password(DOCTORS_PASSWORD)
 
 
 # pylint: disable=no-member
@@ -29,7 +30,7 @@ def populate(patients_amount=100):
     Doctor.query.delete()
 
     root_user = {'id': 1,
-                 'uuid': User.generate_uuid(),
+                 'uuid': UserAccount.generate_uuid(),
                  'email': 'root',
                  'password_hash': root_pass_hash,
                  'is_admin': True}

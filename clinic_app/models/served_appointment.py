@@ -3,11 +3,11 @@ This module implements instance of served appointment in database
 """
 from datetime import date as date_, time as time_
 
-from clinic_app.models.basemodel import db, BaseModel
+from clinic_app import db
 
 
 # pylint: disable=redefined-builtin
-class ServedAppointment(BaseModel):
+class ServedAppointment(db.Model):
     """
     ServedAppointment object stands for representation of data row in
     `served_appointment` table. Table stores appointments that took place.
@@ -18,6 +18,7 @@ class ServedAppointment(BaseModel):
         db.UniqueConstraint('patient_id', 'date', 'time'),
     )
 
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     patient_id = db.Column(db.Integer, db.ForeignKey('patient.id', ondelete='SET NULL'),
                            index=True)
     doctor_id = db.Column(db.Integer, db.ForeignKey('doctor.id', ondelete='SET NULL'),
@@ -51,3 +52,8 @@ class ServedAppointment(BaseModel):
         self.prescription = prescription
         self.bill = bill
         self.id = id
+
+    def __repr__(self):
+        keys = ('id', 'patient_id', 'doctor_id', 'date', 'time')
+        values = (f"{key}={getattr(self, key)!r}" for key in keys)
+        return f'<ServedAppointment({", ".join(values)})>'

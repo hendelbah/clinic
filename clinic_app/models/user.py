@@ -1,21 +1,18 @@
 """
 This module implements instance of user in database
 """
-from uuid import uuid4
-
-from flask_login import UserMixin
-from werkzeug.security import generate_password_hash, check_password_hash
-
-from clinic_app import login_manager
-from clinic_app.models.basemodel import BaseModel, db
+from clinic_app import db
 
 
-class User(BaseModel, UserMixin):
+# pylint: disable=redefined-builtin
+class User(db.Model):
     """
     User object stands for representation of data row in `user` table.
-    It is a user class for authentication
+    Table stores user information for authentication
     """
     __tablename__ = 'user'
+
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     doctor_id = db.Column(db.Integer, db.ForeignKey('doctor.id', ondelete='CASCADE'),
                           unique=True, index=True)
     uuid = db.Column(db.String(36), nullable=False, unique=True, index=True)
@@ -25,49 +22,24 @@ class User(BaseModel, UserMixin):
 
     doctor = db.relationship('Doctor', back_populates='user')
 
-    def __init__(self, email, password, doctor_id=None, is_admin=False):
+    def __init__(self, doctor_id: int, uuid: str, email: str, password_hash: str, is_admin,
+                 id: int = None):
         """
-        :param str email: email of user
-        :param str password: password for user's account
-        :param int doctor_id: corresponding doctor id from `doctor` table
-        :param bool is_admin: bool parameter for admins only, False by default
+        :param doctor_id: corresponding doctor id from `doctor` table
+        :param uuid: application's uuid of user
+        :param email: email of user
+        :param password_hash: user's password hash
+        :param is_admin: bool parameter for admins only, False by default
+        :param id: user's table id
         """
-        self.doctor_id = doctor_id
-        self.uuid = self.generate_uuid()
+        self.uuid = uuid
         self.email = email
+        self.password_hash = password_hash
         self.is_admin = is_admin
-        self.password_hash = self.hash_password(password)
+        self.id = id
+        self.doctor_id = doctor_id
 
-    def get_id(self):
-        return self.uuid
-
-    def check_password(self, password):
-        """
-        method checks equality of given password with user's
-
-        :param str password: password to compare with employee's password
-        :return True if given password hash is equal to password hash of employee
-        """
-        return check_password_hash(self.password, password)
-
-    @staticmethod
-    def hash_password(password):
-        """
-        Return hashed password
-        """
-        return generate_password_hash(password)
-
-    @staticmethod
-    def generate_uuid():
-        return str(uuid4())
-
-
-@login_manager.user_loader
-def load_user(user_uuid: str):
-    """
-    method gives user object for current registered user
-
-    :param user_uuid: id of employee in db
-    :return: employee object
-    """
-    return User.query.filter(User.uuid == user_uuid).first()
+    def __repr__(self):
+        keys = ('id', 'email', 'is_admin')
+        values = (f"{key}={getattr(self, key)!r}" for key in keys)
+        return f'<User({", ".join(values)})>'

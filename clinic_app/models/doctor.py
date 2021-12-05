@@ -1,17 +1,18 @@
 """
 This module implements instance of doctor in database
 """
-from clinic_app.models.basemodel import BaseModel, db
+from clinic_app import db
 
 
 # pylint: disable=redefined-builtin
-class Doctor(BaseModel):
+class Doctor(db.Model):
     """
     Doctor object stands for representation of data row in `doctor` table.
     There is information about doctors that work in this clinic
     """
     __tablename__ = 'doctor'
 
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     full_name = db.Column(db.String(127), nullable=False)
     speciality = db.Column(db.String(127), nullable=False)
     info = db.Column(db.String(1023), nullable=False)
@@ -35,3 +36,8 @@ class Doctor(BaseModel):
         self.info = info
         self.experience_years = experience_years
         self.id = id
+
+    def __repr__(self):
+        keys = ('id', 'full_name')
+        values = (f"{key}={getattr(self, key)!r}" for key in keys)
+        return f'<Doctor({", ".join(values)})>'

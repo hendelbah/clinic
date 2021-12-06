@@ -4,11 +4,11 @@ This module defines served appointment service class:
 from datetime import date as date_
 
 from clinic_app.models import ServedAppointment
-from clinic_app.service.service_routine import ServiceRoutine
+from clinic_app.service.base_service import BaseService
 
 
 # pylint: disable=arguments-differ
-class ServedAppointmentService(ServiceRoutine):
+class ServedAppointmentService(BaseService):
     """Service class for querying ServedAppointment model"""
     model = ServedAppointment
     order_by = (model.date, model.time)

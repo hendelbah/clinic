@@ -6,15 +6,15 @@ from sqlalchemy.exc import DatabaseError, IntegrityError
 from sqlalchemy.orm import Query
 from werkzeug.exceptions import NotFound
 
-from clinic_app.service import ServiceRoutine, handle_db_errors
+from clinic_app.service import BaseService, handle_db_errors
 from tests.base_test_case import BaseTestCase
 
 User = BaseTestCase.models['user']
 
 
 # pylint: disable=protected-access
-class TestServiceRoutine(BaseTestCase):
-    service = ServiceRoutine
+class TestBaseService(BaseTestCase):
+    service = BaseService
 
     @classmethod
     def setUpClass(cls):

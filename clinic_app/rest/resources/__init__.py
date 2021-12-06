@@ -3,7 +3,7 @@ This package contains modules defining all API resources.
 
 Modules:
 
-- `resource_routines.py`: defines base resource classes with common routines
+- `base_api.py`: defines base resource classes with common routines
 - `doctor_api.py`: defines resources for managing doctors
 - `patient_api.py`: defines resources for managing patients
 - `booked_appointment_api.py`: defines resources for managing booked appointments

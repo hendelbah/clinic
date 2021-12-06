@@ -7,7 +7,7 @@ Users REST API, this module defines the following classes:
 """
 from flask_restful.reqparse import RequestParser
 
-from clinic_app.rest.resources.resource_routines import ResourceRoutine, ListResourceRoutine
+from clinic_app.rest.resources.base_api import BaseResource, BaseResourceList
 from clinic_app.rest.schemas import UserSchema
 from clinic_app.service import UserService
 
@@ -22,9 +22,9 @@ class UserMixIn:
     parser.add_argument('doctor_id', type=int)
 
 
-class UserApi(ResourceRoutine, UserMixIn):
+class UserApi(BaseResource, UserMixIn):
     """User API class"""
 
 
-class UserListApi(ListResourceRoutine, UserMixIn):
+class UserListApi(BaseResourceList, UserMixIn):
     """User list API class"""

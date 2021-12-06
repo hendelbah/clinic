@@ -9,7 +9,7 @@ from datetime import date
 
 from flask_restful.reqparse import RequestParser
 
-from clinic_app.rest.resources.resource_routines import ResourceRoutine, ListResourceRoutine
+from clinic_app.rest.resources.base_api import BaseResource, BaseResourceList
 from clinic_app.rest.schemas import BookedAppointmentSchema
 from clinic_app.service import BookedAppointmentService
 
@@ -25,9 +25,9 @@ class BookedAppointmentMixIn:
     parser.add_argument('past_only', type=bool)
 
 
-class BookedAppointmentApi(ResourceRoutine, BookedAppointmentMixIn):
+class BookedAppointmentApi(BaseResource, BookedAppointmentMixIn):
     """Booked appointment API class"""
 
 
-class BookedAppointmentListApi(ListResourceRoutine, BookedAppointmentMixIn):
+class BookedAppointmentListApi(BaseResourceList, BookedAppointmentMixIn):
     """Booked appointment list API class"""

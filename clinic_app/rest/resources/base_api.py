@@ -3,28 +3,24 @@ This module contains base resource classes with common routines.
 
 Classes:
 
-- `BaseResource`: declares common class attributes
-- `ResourceRoutine` defines routines for resources with urls with `id` parameter
-- `ListResourceRoutine` defines routines for resources without url parameters
+- `BaseResource` base resource class, defines routines for resources with urls with `id` parameter
+- `BaseResourceList` base resource class, defines routines for resources with no url parameters
 """
 from flask import request
 from flask_restful import Resource, reqparse, abort
 
 from clinic_app import ma
 from clinic_app.rest.schemas import pagination_schema, validate_data
-from clinic_app.service import ServiceRoutine, handle_db_errors
-
-
-class BaseResource(Resource):
-    """Base resource class"""
-    service: ServiceRoutine
-    schema: ma.Schema
-    parser: reqparse.RequestParser
+from clinic_app.service import BaseService, handle_db_errors
 
 
 # pylint: disable=redefined-builtin
-class ResourceRoutine(BaseResource):
-    """Resource class with common routines for inheritance"""
+class BaseResource(Resource):
+    """Base Resource class with common routines for inheritance"""
+
+    service: BaseService
+    schema: ma.Schema
+    parser: reqparse.RequestParser
 
     @classmethod
     def get(cls, id):
@@ -59,8 +55,12 @@ class ResourceRoutine(BaseResource):
         return '', 204
 
 
-class ListResourceRoutine(BaseResource):
-    """ListResource class with common routines for inheritance"""
+class BaseResourceList(Resource):
+    """Base Resource class with common routines for inheritance"""
+
+    service: BaseService
+    schema: ma.Schema
+    parser: reqparse.RequestParser
 
     @classmethod
     @handle_db_errors

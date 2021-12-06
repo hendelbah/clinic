@@ -7,7 +7,7 @@ Patients REST API, this module defines the following classes:
 """
 from flask_restful.reqparse import RequestParser
 
-from clinic_app.rest.resources.resource_routines import ResourceRoutine, ListResourceRoutine
+from clinic_app.rest.resources.base_api import BaseResource, BaseResourceList
 from clinic_app.rest.schemas import PatientSchema
 from clinic_app.service import PatientService
 
@@ -22,9 +22,9 @@ class PatientMixIn:
     parser.add_argument('surname')
 
 
-class PatientApi(ResourceRoutine, PatientMixIn):
+class PatientApi(BaseResource, PatientMixIn):
     """Patient API class"""
 
 
-class PatientListApi(ListResourceRoutine, PatientMixIn):
+class PatientListApi(BaseResourceList, PatientMixIn):
     """Patient list API class"""

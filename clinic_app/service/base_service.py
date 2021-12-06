@@ -3,7 +3,7 @@ This module defines base service classes with common routines and service functi
 
 Classes:
 
-- `ServiceRoutine` defines common routines for service class
+- `BaseService` defines common routines for service class
 
 Functions:
 
@@ -17,7 +17,7 @@ from sqlalchemy.orm import Query
 from clinic_app import db
 
 
-class ServiceRoutine:
+class BaseService:
     """Base abstract service class with common routines"""
     db = db
     model: db.Model

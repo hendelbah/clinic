@@ -4,7 +4,7 @@ This module defines booked appointment service class:
 from datetime import datetime, date as date_
 
 from clinic_app.models import BookedAppointment
-from clinic_app.service.service_routines import ServiceRoutine
+from clinic_app.service.service_routine import ServiceRoutine
 
 
 # pylint: disable=arguments-differ

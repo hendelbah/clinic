@@ -13,7 +13,7 @@ from flask_restful.reqparse import RequestParser
 from clinic_app.rest.resources.resource_routines import \
     ResourceRoutine, ListResourceRoutine, BaseResource
 from clinic_app.rest.schemas import ServedAppointmentSchema
-from clinic_app.service import ServedAppointmentService, handle_constraint_violation
+from clinic_app.service import ServedAppointmentService, handle_db_errors
 
 
 class ServedAppointmentMixIn:
@@ -39,7 +39,7 @@ class StatisticsApi(ServedAppointmentMixIn, BaseResource):
     """Served appointment statistics API class"""
 
     @classmethod
-    @handle_constraint_violation
+    @handle_db_errors
     def get(cls):
         """Get rows amount and bill sum for filtered with parsed args rows"""
         args = cls.parser.parse_args()

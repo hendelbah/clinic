@@ -28,7 +28,7 @@ login_manager.login_view = "auth.login"
 
 formatter = logging.Formatter('%(asctime)s %(levelname)s %(name)s: %(message)s')
 log_path = BASE_DIR / 'logs' / 'clinic.log'
-file_handler = RotatingFileHandler(log_path, maxBytes=10240, backupCount=10)
+file_handler = RotatingFileHandler(log_path, maxBytes=1048576, backupCount=10)
 file_handler.setFormatter(formatter)
 file_handler.setLevel(logging.DEBUG)
 
@@ -41,16 +41,16 @@ logger = app.logger
 logger.handlers.clear()
 logger.addHandler(file_handler)
 logger.addHandler(console_handler)
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.INFO)
 logger.info('App initialization')
 werkzeug_logger = logging.getLogger('werkzeug')
 werkzeug_logger.handlers.clear()
 werkzeug_logger.addHandler(file_handler)
 werkzeug_logger.addHandler(console_handler)
-werkzeug_logger.setLevel(logging.DEBUG)
+werkzeug_logger.setLevel(logging.INFO)
 
-# pylint: disable=wrong-import-position
-# pylint: disable=cyclic-import
+
+# pylint: disable=cyclic-import,wrong-import-position
 from clinic_app.rest import api_blueprint
 
 app.register_blueprint(api_blueprint)

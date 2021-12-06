@@ -2,7 +2,7 @@
 This module defines patient service class:
 """
 from clinic_app.models import Patient
-from clinic_app.service.service_routines import ServiceRoutine
+from clinic_app.service.service_routine import ServiceRoutine
 
 
 # pylint: disable=arguments-differ

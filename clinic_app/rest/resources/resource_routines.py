@@ -12,7 +12,7 @@ from flask_restful import Resource, reqparse, abort
 
 from clinic_app import ma
 from clinic_app.rest.schemas import pagination_schema, validate_data
-from clinic_app.service import ServiceRoutine, handle_constraint_violation
+from clinic_app.service import ServiceRoutine, handle_db_errors
 
 
 class BaseResource(Resource):
@@ -20,14 +20,6 @@ class BaseResource(Resource):
     service: ServiceRoutine
     schema: ma.Schema
     parser: reqparse.RequestParser
-
-    @staticmethod
-    def json_validated():
-        """Get dict from request's json or get 400 error"""
-        data = request.json
-        if not isinstance(data, dict):
-            abort(400)
-        return data
 
 
 # pylint: disable=redefined-builtin
@@ -42,17 +34,19 @@ class ResourceRoutine(BaseResource):
         return schema.dump(instance), 200
 
     @classmethod
-    @handle_constraint_violation
+    @handle_db_errors
     def put(cls, id):
         """Update"""
-        data = cls.json_validated()
-        data['id'] = id
         is_new = not cls.service.exists(id)
         opts = {'transient': True} if is_new else {'partial': True}
-        schema = cls.schema(session=cls.service.db.session, **opts)
-        instance, errors = validate_data(schema, data)
-        if not instance:
+        schema = cls.schema(exclude=('id',), **opts)
+        data = request.json
+        errors = schema.validate(data)
+        if errors:
             return errors, 422
+        schema = cls.schema(session=cls.service.db.session, **opts)
+        data['id'] = id
+        instance = schema.load(data)
         cls.service.save(instance)
         return '', 204
 
@@ -60,7 +54,7 @@ class ResourceRoutine(BaseResource):
     def delete(cls, id):
         """Delete"""
         if not cls.service.exists(id):
-            return {'message': 'Resource not found'}, 404
+            abort(404)
         cls.service.delete(id)
         return '', 204
 
@@ -69,10 +63,10 @@ class ListResourceRoutine(BaseResource):
     """ListResource class with common routines for inheritance"""
 
     @classmethod
-    @handle_constraint_violation
+    @handle_db_errors
     def post(cls):
         """Create"""
-        data = cls.json_validated()
+        data = request.json
         schema = cls.schema(transient=True, exclude=('id',))
         instance, errors = validate_data(schema, data)
         if not instance:
@@ -81,7 +75,7 @@ class ListResourceRoutine(BaseResource):
         return {'id': instance.id}, 201
 
     @classmethod
-    @handle_constraint_violation
+    @handle_db_errors
     def get(cls):
         """Retrieve"""
         schema = cls.schema()

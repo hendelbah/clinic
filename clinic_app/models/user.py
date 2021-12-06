@@ -22,8 +22,8 @@ class User(db.Model):
 
     doctor = db.relationship('Doctor', back_populates='user')
 
-    def __init__(self, doctor_id: int, uuid: str, email: str, password_hash: str, is_admin,
-                 id: int = None):
+    def __init__(self, uuid: str, email: str, password_hash: str, is_admin,
+                 doctor_id: int = None, id: int = None):
         """
         :param doctor_id: corresponding doctor id from `doctor` table
         :param uuid: application's uuid of user

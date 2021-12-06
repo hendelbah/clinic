@@ -17,5 +17,5 @@ script:
   - coverage run -m unittest discover tests
   - coverage report
 
-after_success:
-  - coveralls
+#after_success:
+#  - coveralls

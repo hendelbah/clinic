@@ -5,6 +5,8 @@ from clinic_app import config, app, db
 from clinic_app.models import User, Doctor, Patient, BookedAppointment, ServedAppointment
 from clinic_app.service.population import populate, clear_tables
 
+app.config.from_object(config.DevelopmentConfig)
+
 
 class BaseTestCase(TestCase):
     db = db
@@ -16,12 +18,11 @@ class BaseTestCase(TestCase):
 
     @classmethod
     def setUpClass(cls):
+        cls.db.create_all()
         clear_tables()
         populate(100)
 
     def create_app(self):
-        app.config.from_object(config.DevelopmentConfig)
-        self.db.create_all()
         return app
 
     def tearDown(self):

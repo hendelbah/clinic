@@ -21,6 +21,3 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         pylint --rcfile=.pylintrc clinic_app
-    - name: Run unittests
-      run: |
-        python -m unittest

@@ -5,8 +5,12 @@ python:
 install:
   - pip install -r requirements.txt
 
-#before_script:
-#  - export PYTHONPATH=/home/travis/build/yhaidai/epam-python-winter-2021-final-project/department_app/
+services:
+  - mysql
+
+before_script:
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS clinic_test;'
+
 
 script:
   - pylint clinic_app

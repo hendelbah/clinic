@@ -8,7 +8,7 @@ Classes:
 - `ListResourceRoutine` defines routines for resources without url parameters
 """
 from flask import request
-from flask_restful import Resource, reqparse
+from flask_restful import Resource, reqparse, abort
 
 from clinic_app import ma
 from clinic_app.rest.schemas import pagination_schema, validate_data
@@ -54,7 +54,7 @@ class ResourceRoutine(BaseResource):
     def delete(cls, id):
         """Delete"""
         if not cls.service.exists(id):
-            return {'message': 'Resource not found'}, 404
+            abort(404)
         cls.service.delete(id)
         return '', 204
 

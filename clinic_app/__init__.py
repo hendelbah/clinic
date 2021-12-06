@@ -41,13 +41,13 @@ logger = app.logger
 logger.handlers.clear()
 logger.addHandler(file_handler)
 logger.addHandler(console_handler)
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.INFO)
 logger.info('App initialization')
 werkzeug_logger = logging.getLogger('werkzeug')
 werkzeug_logger.handlers.clear()
 werkzeug_logger.addHandler(file_handler)
 werkzeug_logger.addHandler(console_handler)
-werkzeug_logger.setLevel(logging.DEBUG)
+werkzeug_logger.setLevel(logging.INFO)
 
 
 # pylint: disable=cyclic-import,wrong-import-position

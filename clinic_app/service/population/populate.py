@@ -3,7 +3,6 @@ This module contains main populating functions
 """
 from datetime import date, time, timedelta
 from random import choice, randint
-from uuid import uuid4
 
 from clinic_app import db
 from clinic_app.models import BookedAppointment, ServedAppointment, Doctor, Patient, User
@@ -44,7 +43,7 @@ def populate(patients_amount=100):
         {
             'id': user_id,
             'doctor_id': doctor["id"],
-            'uuid': uuid4(),
+            'uuid': str(user_id * 13),
             'email': f'doctor_{doctor["id"]:0>3}@spam.ua',
             'password_hash': doctors_pass_hash,  # hashing is too slow to do it for every user
             'is_admin': False
@@ -64,22 +63,23 @@ def populate(patients_amount=100):
             'patronymic': choice(PATRONYMICS_SRC[sex]),
             'birthday': date.fromordinal(717200 + i * 10)
         }
+        doctor_id = int(i / patients_amount * (len(DOCTORS_SRC) - 1) + 1)
         b_appointment = {
             'id': i,
             'patient_id': i,
-            'doctor_id': randint(1, len(DOCTORS_SRC)),
+            'doctor_id': doctor_id,
             'date': date.today() + timedelta(days=i - 20),
             'time': time(hour=11),
         }
         f_appointment = {
             'id': i,
             'patient_id': i,
-            'doctor_id': randint(1, len(DOCTORS_SRC)),
+            'doctor_id': doctor_id,
             'date': date.today() - timedelta(days=20 + i),
             'time': time(hour=12),
             'conclusion': 'Diagnosis: common cold',
             'prescription': 'Panadol 500mg',
-            'bill': i*5,
+            'bill': i * 5,
         }
         patients_src.append(patient)
         booked_apps_src.append(b_appointment)

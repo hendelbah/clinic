@@ -8,7 +8,7 @@ Classes:
 - `ListResourceRoutine` defines routines for resources without url parameters
 """
 from flask import request
-from flask_restful import Resource, reqparse, abort
+from flask_restful import Resource, reqparse
 
 from clinic_app import ma
 from clinic_app.rest.schemas import pagination_schema, validate_data
@@ -20,14 +20,6 @@ class BaseResource(Resource):
     service: ServiceRoutine
     schema: ma.Schema
     parser: reqparse.RequestParser
-
-    @staticmethod
-    def json_validated():
-        """Get dict from request's json or get 400 error"""
-        data = request.json
-        if not isinstance(data, dict):
-            abort(400)
-        return data
 
 
 # pylint: disable=redefined-builtin
@@ -45,14 +37,16 @@ class ResourceRoutine(BaseResource):
     @handle_db_errors
     def put(cls, id):
         """Update"""
-        data = cls.json_validated()
-        data['id'] = id
         is_new = not cls.service.exists(id)
         opts = {'transient': True} if is_new else {'partial': True}
-        schema = cls.schema(session=cls.service.db.session, **opts)
-        instance, errors = validate_data(schema, data)
-        if not instance:
+        schema = cls.schema(exclude=('id',), **opts)
+        data = request.json
+        errors = schema.validate(data)
+        if errors:
             return errors, 422
+        schema = cls.schema(session=cls.service.db.session, **opts)
+        data['id'] = id
+        instance = schema.load(data)
         cls.service.save(instance)
         return '', 204
 
@@ -72,7 +66,7 @@ class ListResourceRoutine(BaseResource):
     @handle_db_errors
     def post(cls):
         """Create"""
-        data = cls.json_validated()
+        data = request.json
         schema = cls.schema(transient=True, exclude=('id',))
         instance, errors = validate_data(schema, data)
         if not instance:

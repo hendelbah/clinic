@@ -75,6 +75,9 @@ class ServedAppointmentSchema(ma.SQLAlchemyAutoSchema):
         load_instance = True
         include_fk = True
 
+    patient_id = ma.auto_field(required=True)
+    doctor_id = ma.auto_field(required=True)
+
 
 class UserSchema(ma.SQLAlchemyAutoSchema):
     """
@@ -101,6 +104,7 @@ def pagination_schema(items_schema: ma.Schema):
 
     class PaginationSchema(ma.Schema):
         """Schema for serialization of Pagination object"""
+
         class Meta:
             """
             Pagination schema metadata

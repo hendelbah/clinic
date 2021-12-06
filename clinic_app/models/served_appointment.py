@@ -19,10 +19,10 @@ class ServedAppointment(db.Model):
     )
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    patient_id = db.Column(db.Integer, db.ForeignKey('patient.id', ondelete='SET NULL'),
-                           index=True)
-    doctor_id = db.Column(db.Integer, db.ForeignKey('doctor.id', ondelete='SET NULL'),
-                          index=True)
+    patient_id = db.Column(db.Integer, db.ForeignKey('patient.id', ondelete='CASCADE'),
+                           nullable=False, index=True)
+    doctor_id = db.Column(db.Integer, db.ForeignKey('doctor.id', ondelete='CASCADE'),
+                          nullable=False, index=True)
     date = db.Column(db.Date, nullable=False, index=True)
     time = db.Column(db.Time, nullable=False)
     conclusion = db.Column(db.String(511), nullable=False)

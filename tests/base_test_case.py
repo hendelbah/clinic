@@ -6,6 +6,7 @@ from clinic_app.models import User, Doctor, Patient, BookedAppointment, ServedAp
 from clinic_app.service.population import populate, clear_tables
 
 app.config.from_object(config.DevelopmentConfig)
+app.config['SQLALCHEMY_ECHO'] = False
 
 
 class BaseTestCase(TestCase):

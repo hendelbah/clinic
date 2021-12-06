@@ -36,8 +36,8 @@ class ProductionConfig(Config):
     """
     Production configurations
     """
-    SQLALCHEMY_DATABASE_URI = f'mysql+pymysql://{DB_USER}:{DB_PASS}@{DB_SERVER}/{DB_NAME}?' \
-                              'charset=utf8mb4'
+    SQLALCHEMY_DATABASE_URI = f'mysql+pymysql://{DB_USER}:{DB_PASS}@{DB_SERVER}/{DB_NAME}' \
+                              '?charset=utf8mb4'
     DEBUG = False
 
 

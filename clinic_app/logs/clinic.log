@@ -244,3 +244,62 @@
 2021-12-06 21:17:01,656 INFO clinic_app: App initialization
 2021-12-06 21:18:26,541 INFO clinic_app: App initialization
 2021-12-06 21:27:59,910 INFO clinic_app: App initialization
+2021-12-06 21:53:20,000 INFO clinic_app: App initialization
+2021-12-06 21:54:03,536 INFO clinic_app: App initialization
+2021-12-06 21:54:59,782 INFO clinic_app: App initialization
+2021-12-06 21:58:09,176 INFO clinic_app: App initialization
+2021-12-06 21:58:13,667 INFO clinic_app: App initialization
+2021-12-06 21:58:22,962 INFO clinic_app: App initialization
+2021-12-06 21:59:36,563 INFO clinic_app: App initialization
+2021-12-06 22:03:13,691 INFO clinic_app: App initialization
+2021-12-06 22:03:13,737 INFO werkzeug:  * Restarting with stat
+2021-12-06 22:03:14,168 INFO clinic_app: App initialization
+2021-12-06 22:03:14,215 WARNING werkzeug:  * Debugger is active!
+2021-12-06 22:03:14,215 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-06 22:03:14,253 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-06 22:03:17,020 INFO werkzeug: 127.0.0.1 - - [06/Dec/2021 22:03:17] "GET /api/v1/doctors HTTP/1.1" 200 -
+2021-12-06 22:03:57,671 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\rest\\resources\\doctor_api.py', reloading
+2021-12-06 22:03:57,724 INFO werkzeug:  * Restarting with stat
+2021-12-06 22:03:58,156 INFO clinic_app: App initialization
+2021-12-06 22:03:58,187 WARNING werkzeug:  * Debugger is active!
+2021-12-06 22:03:58,203 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-06 22:03:58,225 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-06 22:04:16,783 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\rest\\resources\\doctor_api.py', reloading
+2021-12-06 22:04:16,836 INFO werkzeug:  * Restarting with stat
+2021-12-06 22:04:17,268 INFO clinic_app: App initialization
+2021-12-06 22:04:17,299 WARNING werkzeug:  * Debugger is active!
+2021-12-06 22:04:17,315 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-06 22:04:17,337 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-06 22:04:17,784 INFO werkzeug: 127.0.0.1 - - [06/Dec/2021 22:04:17] "GET /api/v1/doctors HTTP/1.1" 200 -
+2021-12-06 22:05:02,806 INFO werkzeug: 127.0.0.1 - - [06/Dec/2021 22:05:02] "GET /api/v1/booked_appointments HTTP/1.1" 200 -
+2021-12-06 22:07:38,289 INFO clinic_app: App initialization
+2021-12-06 22:07:38,690 INFO clinic_app: {'uuid': None, 'email': None, 'doctor_id': None}
+2021-12-06 22:07:38,690 INFO clinic_app: {'search_name': None, 'no_user': False}
+2021-12-06 22:07:38,705 INFO clinic_app: {'phone_number': None, 'name': None, 'surname': None}
+2021-12-06 22:07:38,705 INFO clinic_app: {'doctor_id': None, 'patient_id': None, 'date': None, 'past_only': False}
+2021-12-06 22:07:38,705 INFO clinic_app: {'doctor_id': None, 'patient_id': None, 'date_from': None, 'date_to': None}
+2021-12-06 22:09:00,745 INFO clinic_app: App initialization
+2021-12-06 22:09:01,078 INFO clinic_app: {'uuid': None, 'email': None, 'doctor_id': None}
+2021-12-06 22:09:01,078 INFO clinic_app: {'search_name': None, 'no_user': False}
+2021-12-06 22:09:01,078 INFO clinic_app: {'phone_number': None, 'name': None, 'surname': None}
+2021-12-06 22:09:01,094 INFO clinic_app: {'doctor_id': None, 'patient_id': None, 'date': None, 'past_only': False}
+2021-12-06 22:09:01,094 INFO clinic_app: {'doctor_id': None, 'patient_id': None, 'date_from': None, 'date_to': None}
+2021-12-06 22:10:56,155 INFO clinic_app: App initialization
+2021-12-06 22:10:56,207 INFO werkzeug:  * Restarting with stat
+2021-12-06 22:10:56,655 INFO clinic_app: App initialization
+2021-12-06 22:10:56,687 WARNING werkzeug:  * Debugger is active!
+2021-12-06 22:10:56,687 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-06 22:10:56,724 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-06 22:11:06,641 INFO werkzeug: 127.0.0.1 - - [06/Dec/2021 22:11:06] "GET /api/v1/doctors?no_user=true HTTP/1.1" 200 -
+2021-12-06 22:11:45,269 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\rest\\resources\\doctor_api.py', reloading
+2021-12-06 22:11:45,330 INFO werkzeug:  * Restarting with stat
+2021-12-06 22:11:45,768 INFO clinic_app: App initialization
+2021-12-06 22:11:45,812 WARNING werkzeug:  * Debugger is active!
+2021-12-06 22:11:45,812 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-06 22:11:45,853 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-06 22:11:51,283 INFO werkzeug: 127.0.0.1 - - [06/Dec/2021 22:11:51] "GET /api/v1/doctors?no_user=true HTTP/1.1" 200 -
+2021-12-06 22:12:13,081 INFO werkzeug: 127.0.0.1 - - [06/Dec/2021 22:12:13] "GET /api/v1/doctors?no_user=True HTTP/1.1" 200 -
+2021-12-06 22:12:34,675 INFO werkzeug: 127.0.0.1 - - [06/Dec/2021 22:12:34] "GET /api/v1/doctors?no_user=T HTTP/1.1" 200 -
+2021-12-06 22:12:42,758 INFO werkzeug: 127.0.0.1 - - [06/Dec/2021 22:12:42] "GET /api/v1/doctors?no_user=0 HTTP/1.1" 200 -
+2021-12-06 22:12:58,747 INFO werkzeug: 127.0.0.1 - - [06/Dec/2021 22:12:58] "GET /api/v1/doctors?no_user HTTP/1.1" 200 -
+2021-12-06 22:44:58,396 INFO clinic_app: App initialization

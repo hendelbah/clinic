@@ -80,6 +80,7 @@ class BaseResourceList(Resource):
         """Retrieve"""
         schema = cls.schema()
         args = cls.parser.parse_args()
+        print(args)
         pagination = cls.service.get_filtered_pagination(**args)
         p_schema = pagination_schema(schema)()
         return p_schema.dump(pagination), 200

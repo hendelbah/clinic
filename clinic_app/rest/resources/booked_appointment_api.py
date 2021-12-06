@@ -22,7 +22,7 @@ class BookedAppointmentMixIn:
     parser.add_argument('doctor_id', type=int)
     parser.add_argument('patient_id', type=int)
     parser.add_argument('date', type=lambda x: date.fromordinal(int(x)))
-    parser.add_argument('past_only', type=bool)
+    parser.add_argument('past_only', type=bool, default=False)
 
 
 class BookedAppointmentApi(BaseResource, BookedAppointmentMixIn):

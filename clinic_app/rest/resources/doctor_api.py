@@ -18,6 +18,7 @@ class DoctorMixIn:
     schema = DoctorSchema
     parser = RequestParser()
     parser.add_argument('search_name', type=str)
+    parser.add_argument('no_user', type=bool, default=False)
 
 
 class DoctorApi(BaseResource, DoctorMixIn):

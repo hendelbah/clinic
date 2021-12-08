@@ -2,8 +2,7 @@
 
 ## Vision
 
-"Clinic" is a web-application which allows users to record information about clients, 
-doctors and their appointments.
+"Clinic" is a web-application which allows users to record information about clients, doctors and their appointments.
 
 Application should provide:
 

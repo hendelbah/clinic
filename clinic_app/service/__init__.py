@@ -14,12 +14,12 @@ Modules:
 - `served_app_service.py`: defines service class for querying ServedAppointments model
 - `user_service.py`: defines service class for querying User model
 """
+from clinic_app.service.base_service import BaseService
 from clinic_app.service.booked_app_service import BookedAppointmentService
 from clinic_app.service.doctor_service import DoctorService
 from clinic_app.service.patient_service import PatientService
 from clinic_app.service.served_app_service import ServedAppointmentService
-from clinic_app.service.base_service import BaseService, handle_db_errors
 from clinic_app.service.user_service import UserService
 
-__all__ = ['BaseService', 'handle_db_errors', 'DoctorService', 'PatientService',
+__all__ = ['BaseService', 'DoctorService', 'PatientService',
            'BookedAppointmentService', 'ServedAppointmentService', 'UserService']

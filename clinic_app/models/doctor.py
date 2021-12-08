@@ -13,9 +13,9 @@ class Doctor(db.Model):
     __tablename__ = 'doctor'
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    full_name = db.Column(db.String(127), nullable=False)
-    speciality = db.Column(db.String(127), nullable=False)
-    info = db.Column(db.String(1023), nullable=False)
+    full_name = db.Column(db.String(127, collation='utf8mb4_unicode_ci'), nullable=False)
+    speciality = db.Column(db.String(127, collation='utf8mb4_unicode_ci'), nullable=False)
+    info = db.Column(db.String(1023, collation='utf8mb4_unicode_ci'), nullable=False)
     experience_years = db.Column(db.Integer, nullable=False)
 
     user = db.relationship('User', back_populates='doctor', uselist=False)

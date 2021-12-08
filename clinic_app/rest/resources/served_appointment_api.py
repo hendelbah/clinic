@@ -8,12 +8,12 @@ Served appointments REST API, this module defines the following classes:
 """
 from datetime import date
 
+from flask_restful import Resource
 from flask_restful.reqparse import RequestParser
 
-from clinic_app.rest.resources.resource_routines import \
-    ResourceRoutine, ListResourceRoutine, BaseResource
+from clinic_app.rest.resources.base_api import BaseResource, BaseResourceList
 from clinic_app.rest.schemas import ServedAppointmentSchema
-from clinic_app.service import ServedAppointmentService, handle_db_errors
+from clinic_app.service import ServedAppointmentService
 
 
 class ServedAppointmentMixIn:
@@ -27,19 +27,18 @@ class ServedAppointmentMixIn:
     parser.add_argument('date_to', type=lambda x: date.fromordinal(int(x)))
 
 
-class ServedAppointmentApi(ResourceRoutine, ServedAppointmentMixIn):
+class ServedAppointmentApi(BaseResource, ServedAppointmentMixIn):
     """Served appointment API class"""
 
 
-class ServedAppointmentListApi(ListResourceRoutine, ServedAppointmentMixIn):
+class ServedAppointmentListApi(BaseResourceList, ServedAppointmentMixIn):
     """Served appointment list API class"""
 
 
-class StatisticsApi(ServedAppointmentMixIn, BaseResource):
+class StatisticsApi(ServedAppointmentMixIn, Resource):
     """Served appointment statistics API class"""
 
     @classmethod
-    @handle_db_errors
     def get(cls):
         """Get rows amount and bill sum for filtered with parsed args rows"""
         args = cls.parser.parse_args()

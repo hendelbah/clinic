@@ -2,11 +2,11 @@
 This module defines user service class:
 """
 from clinic_app.models import User
-from clinic_app.service.service_routine import ServiceRoutine
+from clinic_app.service.base_service import BaseService
 
 
 # pylint: disable=arguments-differ
-class UserService(ServiceRoutine):
+class UserService(BaseService):
     """Service class for querying User model"""
     model = User
     order_by = (model.id,)

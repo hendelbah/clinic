@@ -22,6 +22,7 @@ class TestAllServices(BaseTestCase):
              [{'uuid': '91'}, 1],
              ),
             ([{'search_name': 'Геннад'}, 1],
+             [{'no_user': True}, 0],
              ),
             ([{'phone_number': '380000000012'}, 1],
              [{'name': 'giga'}, 0],

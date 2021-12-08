@@ -16,13 +16,31 @@ Functions:
 - `validate_data`: validate and load data into object using given schema, handling ValidationError
 """
 
+from flask_restful import abort
 from marshmallow import ValidationError
 
 from clinic_app import ma
 from clinic_app.models import Doctor, Patient, ServedAppointment, BookedAppointment, User
 
 
-class DoctorSchema(ma.SQLAlchemyAutoSchema):
+class BaseSchema(ma.SQLAlchemyAutoSchema):
+    """Custom base schema class"""
+
+    def load_or_422(self, data, **kwargs):
+        """
+        Return loaded data. If validation error occurs throw 422 http error.
+
+        :param data: data to validate
+        :param kwargs: kwargs to Schema.load()
+        :return: loaded_object
+        """
+        try:
+            return self.load(data, **kwargs)
+        except ValidationError as err:
+            return abort(422, errors=err.messages, message='Data is invalid')
+
+
+class DoctorSchema(BaseSchema):
     """
     Doctor serialization/deserialization schema
     """
@@ -35,7 +53,7 @@ class DoctorSchema(ma.SQLAlchemyAutoSchema):
         model = Doctor
 
 
-class PatientSchema(ma.SQLAlchemyAutoSchema):
+class PatientSchema(BaseSchema):
     """
     Patient serialization/deserialization schema
     """
@@ -48,7 +66,7 @@ class PatientSchema(ma.SQLAlchemyAutoSchema):
         model = Patient
 
 
-class BookedAppointmentSchema(ma.SQLAlchemyAutoSchema):
+class BookedAppointmentSchema(BaseSchema):
     """
     BookedAppointment serialization/deserialization schema
     """
@@ -62,7 +80,7 @@ class BookedAppointmentSchema(ma.SQLAlchemyAutoSchema):
         include_fk = True
 
 
-class ServedAppointmentSchema(ma.SQLAlchemyAutoSchema):
+class ServedAppointmentSchema(BaseSchema):
     """
     ServedAppointment serialization/deserialization schema
     """
@@ -79,7 +97,7 @@ class ServedAppointmentSchema(ma.SQLAlchemyAutoSchema):
     doctor_id = ma.auto_field(required=True)
 
 
-class UserSchema(ma.SQLAlchemyAutoSchema):
+class UserSchema(BaseSchema):
     """
     User serialization/deserialization schema
     """
@@ -114,18 +132,3 @@ def pagination_schema(items_schema: ma.Schema):
         items = ma.Nested(items_schema, many=True)
 
     return PaginationSchema
-
-
-def validate_data(schema: ma.Schema, data, **kwargs):
-    """
-    Validate data using schema.load(). If validation succeeded return loaded object.
-
-    :param schema: schema for validation
-    :param data: data to validate
-    :param kwargs: kwargs for passing to Schema.load()
-    :return: (loaded_object, None) or (None, error_messages)
-    """
-    try:
-        return schema.load(data, **kwargs), None
-    except ValidationError as err:
-        return None, err.messages

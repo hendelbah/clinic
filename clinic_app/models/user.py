@@ -22,7 +22,7 @@ class User(db.Model):
 
     doctor = db.relationship('Doctor', back_populates='user')
 
-    def __init__(self, uuid: str, email: str, password_hash: str, is_admin,
+    def __init__(self, uuid: str, email: str, password_hash: str, is_admin=False,
                  doctor_id: int = None, id: int = None):
         """
         :param doctor_id: corresponding doctor id from `doctor` table

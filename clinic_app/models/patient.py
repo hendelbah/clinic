@@ -16,9 +16,9 @@ class Patient(db.Model):
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     phone_number = db.Column(db.String(20), nullable=False, unique=True, index=True)
-    surname = db.Column(db.String(40), nullable=False, index=True)
-    name = db.Column(db.String(40), nullable=False)
-    patronymic = db.Column(db.String(40), nullable=False)
+    surname = db.Column(db.String(40, collation='utf8mb4_unicode_ci'), nullable=False, index=True)
+    name = db.Column(db.String(40, collation='utf8mb4_unicode_ci'), nullable=False)
+    patronymic = db.Column(db.String(40, collation='utf8mb4_unicode_ci'), nullable=False)
     birthday = db.Column(db.Date, nullable=False)
 
     booked_appointments = db.relationship('BookedAppointment', back_populates='patient')

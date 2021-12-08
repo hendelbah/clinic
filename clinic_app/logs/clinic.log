@@ -798,3 +798,8 @@
 2021-12-09 01:28:06,171 INFO werkzeug:  * Debugger PIN: 248-785-052
 2021-12-09 01:28:06,202 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 2021-12-09 01:29:08,001 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\views\\api_controllers.py', reloading
+2021-12-09 01:29:08,039 INFO werkzeug:  * Restarting with stat
+2021-12-09 01:29:08,504 INFO clinic_app: App initialization
+2021-12-09 01:29:08,544 WARNING werkzeug:  * Debugger is active!
+2021-12-09 01:29:08,546 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-09 01:29:08,576 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)

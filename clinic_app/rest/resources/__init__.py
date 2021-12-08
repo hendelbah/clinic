@@ -12,13 +12,12 @@ Modules:
 """
 
 from clinic_app.rest.resources.booked_appointment_api import \
-    BookedAppointmentApi, BookedAppointmentListApi
-from clinic_app.rest.resources.doctor_api import DoctorApi, DoctorListApi
-from clinic_app.rest.resources.patient_api import PatientApi, PatientListApi
+    BookedAppointmentApi, BookedAppointmentsApi
+from clinic_app.rest.resources.doctor_api import DoctorApi, DoctorsApi
+from clinic_app.rest.resources.patient_api import PatientApi, PatientsApi
 from clinic_app.rest.resources.served_appointment_api import \
-    ServedAppointmentApi, ServedAppointmentListApi, StatisticsApi
-from clinic_app.rest.resources.user_api import UserApi, UserListApi
+    ServedAppointmentApi, ServedAppointmentsApi
+from clinic_app.rest.resources.user_api import UserApi, UsersApi
 
-__all__ = ['DoctorApi', 'DoctorListApi', 'PatientApi', 'PatientListApi', 'BookedAppointmentApi',
-           'BookedAppointmentListApi', 'ServedAppointmentApi', 'ServedAppointmentListApi',
-           'StatisticsApi', 'UserApi', 'UserListApi']
+__all__ = ['DoctorApi', 'DoctorsApi', 'BookedAppointmentApi', 'BookedAppointmentsApi', 'UsersApi',
+           'PatientApi', 'PatientsApi', 'ServedAppointmentApi', 'ServedAppointmentsApi', 'UserApi']

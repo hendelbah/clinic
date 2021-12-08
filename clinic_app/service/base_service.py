@@ -4,11 +4,6 @@ This module defines base service classes with common routines and service functi
 Classes:
 
 - `BaseService` defines common routines for service class
-
-Functions:
-
-- `handle_db_errors`: decorator for request handler functions. Throw http error
-  if `sqlalchemy.exc.IntegrityError` occurs during decorated function execution
 """
 from flask_restful import abort
 from flask_sqlalchemy import Pagination

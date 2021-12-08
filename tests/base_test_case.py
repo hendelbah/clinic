@@ -7,12 +7,12 @@ from clinic_app.service.population import populate, clear_tables
 
 app.config.from_object(config.DevelopmentConfig)
 
-
-# app.config['SQLALCHEMY_ECHO'] = False
+app.config['SQLALCHEMY_ECHO'] = False
 
 
 class BaseTestCase(TestCase):
     db = db
+    api_auth = {'api_key': app.config['API_KEY']}
     models = {'user': User,
               'doctor': Doctor,
               'patient': Patient,

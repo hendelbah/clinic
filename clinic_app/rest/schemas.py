@@ -13,7 +13,6 @@ Here are defined The following classes:
 Functions:
 
 - `paginate_schema`: dynamically defines schema for serialization of flask-SQLAlchemy pagination
-- `validate_data`: validate and load data into object using given schema, handling ValidationError
 """
 
 from flask_restful import abort
@@ -26,6 +25,7 @@ from clinic_app.models import Doctor, Patient, ServedAppointment, BookedAppointm
 class BaseSchema(ma.SQLAlchemyAutoSchema):
     """Custom base schema class"""
 
+    # pylint: disable=inconsistent-return-statements
     def load_or_422(self, data, **kwargs):
         """
         Return loaded data. If validation error occurs throw 422 http error.
@@ -37,7 +37,7 @@ class BaseSchema(ma.SQLAlchemyAutoSchema):
         try:
             return self.load(data, **kwargs)
         except ValidationError as err:
-            return abort(422, errors=err.messages, message='Data is invalid')
+            abort(422, errors=err.messages, message='Data is invalid')
 
 
 class DoctorSchema(BaseSchema):

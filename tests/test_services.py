@@ -31,7 +31,7 @@ class TestAllServices(BaseTestCase):
             ([{'doctor_id': 2}, 6],
              [{'patient_id': 4}, 1],
              [{'date': date.today() + timedelta(days=20)}, 1],
-             [{'past_only': True}, 20],
+             [{'past_only': True}, 19],
              ),
             ([{'doctor_id': 5}, 7],
              [{'patient_id': 7}, 1],
@@ -60,15 +60,3 @@ class TestAllServices(BaseTestCase):
                 self.assertIsInstance(instance, model)
                 self.assertEqual(instance.id, 5)
                 self.assertTrue(repr(instance).startswith(f'<{model.__name__}('))
-
-    def test_served_app_get_filtered_count(self):
-        kwargs = {'date_from': date.today() - timedelta(days=80),
-                  'date_to': date.today() - timedelta(days=60)}
-        count = ServedAppointmentService.get_filtered_count(**kwargs)
-        self.assertEqual(count, 21)
-
-    def test_served_app_get_filtered_income(self):
-        kwargs = {'date_from': date.today() - timedelta(days=70),
-                  'date_to': date.today() - timedelta(days=30)}
-        count = ServedAppointmentService.get_filtered_income(**kwargs)
-        self.assertEqual(count, 6150)

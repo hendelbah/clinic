@@ -27,6 +27,7 @@ class DevelopmentConfig(Config):
     """
     SQLALCHEMY_DATABASE_URI = f'mysql+pymysql://{DB_USER}:{DB_PASS}@{DB_SERVER}/clinic_test' \
                               '?charset=utf8mb4'
+    API_KEY = 'qwerty'
     TESTING = True
     SQLALCHEMY_ECHO = True
     DEBUG = True
@@ -38,6 +39,7 @@ class ProductionConfig(Config):
     """
     SQLALCHEMY_DATABASE_URI = f'mysql+pymysql://{DB_USER}:{DB_PASS}@{DB_SERVER}/{DB_NAME}' \
                               '?charset=utf8mb4'
+    API_KEY = '9T5vOAnb2tDGnRuxh2fhIabi2CIfvtWmi6MrUCNumxHRytuLNZKzd2zxtawQsprV'
     DEBUG = False
 
 

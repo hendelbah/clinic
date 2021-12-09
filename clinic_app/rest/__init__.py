@@ -15,23 +15,21 @@ from flask import Blueprint
 from flask_restful import Api
 
 from clinic_app.rest.resources import (
-    ServedAppointmentApi, ServedAppointmentListApi, BookedAppointmentApi,
-    BookedAppointmentListApi, DoctorApi, DoctorListApi, PatientApi,
-    PatientListApi, StatisticsApi, UserApi, UserListApi)
+    ServedAppointmentApi, ServedAppointmentsApi, BookedAppointmentApi, BookedAppointmentsApi,
+    DoctorApi, DoctorsApi, PatientApi, PatientsApi, UserApi, UsersApi)
 
 api_blueprint = Blueprint('api', __name__, url_prefix='/api/v1')
 api = Api(api_blueprint)
 
 api.add_resource(UserApi, '/users/<int:id>', endpoint='user')
-api.add_resource(UserListApi, '/users', endpoint='users')
+api.add_resource(UsersApi, '/users', endpoint='users')
 api.add_resource(DoctorApi, '/doctors/<int:id>', endpoint='doctor')
-api.add_resource(DoctorListApi, '/doctors', endpoint='doctors')
+api.add_resource(DoctorsApi, '/doctors', endpoint='doctors')
 api.add_resource(PatientApi, '/patients/<int:id>', endpoint='patient')
-api.add_resource(PatientListApi, '/patients', endpoint='patients')
+api.add_resource(PatientsApi, '/patients', endpoint='patients')
 api.add_resource(BookedAppointmentApi, '/booked_appointments/<int:id>',
                  endpoint='booked_appointment')
-api.add_resource(BookedAppointmentListApi, '/booked_appointments', endpoint='booked_appointments')
+api.add_resource(BookedAppointmentsApi, '/booked_appointments', endpoint='booked_appointments')
 api.add_resource(ServedAppointmentApi, '/served_appointments/<int:id>',
                  endpoint='served_appointment')
-api.add_resource(ServedAppointmentListApi, '/served_appointments', endpoint='served_appointments')
-api.add_resource(StatisticsApi, '/served_appointments/statistics', endpoint='statistics')
+api.add_resource(ServedAppointmentsApi, '/served_appointments', endpoint='served_appointments')

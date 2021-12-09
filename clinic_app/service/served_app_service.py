@@ -35,24 +35,3 @@ class ServedAppointmentService(BaseService):
         if date_to is not None:
             query = query.filter(cls.model.date <= date_to)
         return query
-
-    @classmethod
-    def get_filtered_count(cls, **kwargs):
-        """
-        Return amount of served_appointments rows filtered using kwargs
-
-        :param kwargs: kwargs for filtering function
-        """
-        query = cls.model.query
-        return cls._filter_by(_query=query, **kwargs).count()
-
-    # pylint: disable=no-member
-    @classmethod
-    def get_filtered_income(cls, **kwargs):
-        """
-        Return sum of bills of served_appointments filtered using kwargs
-
-        :param kwargs: kwargs for filtering function
-        """
-        query = cls.db.session.query(cls.db.func.sum(cls.model.bill))
-        return int(cls._filter_by(_query=query, **kwargs).scalar())

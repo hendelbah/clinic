@@ -10,15 +10,23 @@ class TestApi(BaseTestCase):
     endpoints_2 = ('api.user', 'api.doctor', 'api.patient', 'api.booked_appointment',
                    'api.served_appointment')
 
+    def test_unauthorized_request(self):
+        response = self.client.get(url_for('api.users'))
+        self.assertStatus(response, 401)
+        self.assertEqual(response.json['message'], "Credentials not present in request")
+        response = self.client.get(url_for('api.users'), headers={'api-key': 'zxc'})
+        self.assertStatus(response, 401)
+        self.assertEqual(response.json['message'], "Credentials not valid")
+
     def test_all_get_200(self):
         for endpoint in self.endpoints_1:
             with self.subTest(endpoint):
-                response = self.client.get(url_for(endpoint, per_page=5))
+                response = self.client.get(url_for(endpoint, per_page=5), headers=self.api_auth)
                 self.assert200(response)
                 self.assertEqual(len(response.json['items']), 5)
-        for endpoint in self.endpoints_2 + ('api.statistics',):
+        for endpoint in self.endpoints_2:
             with self.subTest(endpoint):
-                response = self.client.get(url_for(endpoint, id=1))
+                response = self.client.get(url_for(endpoint, id=1), headers=self.api_auth)
                 self.assert200(response)
 
     def test_get_by_id(self):
@@ -31,7 +39,7 @@ class TestApi(BaseTestCase):
         )
         for endpoint, prop in zip(self.endpoints_2, properties):
             with self.subTest(endpoint):
-                response = self.client.get(url_for(endpoint, id=2))
+                response = self.client.get(url_for(endpoint, id=2), headers=self.api_auth)
                 self.assert200(response)
                 self.assertEqual(response.json['id'], 2)
                 self.assertEqual(response.json[prop[0]], prop[1])
@@ -50,12 +58,12 @@ class TestApi(BaseTestCase):
         ids = []
         for endpoint, item in zip(self.endpoints_1, data):
             with self.subTest(endpoint + ':POST'):
-                response = self.client.post(url_for(endpoint), json=item)
+                response = self.client.post(url_for(endpoint), json=item, headers=self.api_auth)
                 self.assertStatus(response, 201)
                 ids.append(response.json['id'])
         for endpoint, id_ in zip(self.endpoints_2, ids):
             with self.subTest(endpoint + ':DELETE'):
-                response = self.client.delete(url_for(endpoint, id=id_))
+                response = self.client.delete(url_for(endpoint, id=id_), headers=self.api_auth)
                 self.assertStatus(response, 204)
 
     def test_put(self):
@@ -68,17 +76,19 @@ class TestApi(BaseTestCase):
         )
         for endpoint, item in zip(self.endpoints_2, data):
             with self.subTest(endpoint):
-                response = self.client.put(url_for(endpoint, id=10), json=item)
+                response = self.client.put(url_for(endpoint, id=10), json=item,
+                                           headers=self.api_auth)
                 self.assertStatus(response, 204)
 
     def test_wrong_get_put_delete(self):
         for endpoint in self.endpoints_2:
             with self.subTest(endpoint):
-                response = self.client.get(url_for(endpoint, id=0))
+                response = self.client.get(url_for(endpoint, id=0), headers=self.api_auth)
                 self.assert404(response)
-                response = self.client.put(url_for(endpoint, id=517), json={'id': 433})
+                response = self.client.put(url_for(endpoint, id=517), json={'id': 433},
+                                           headers=self.api_auth)
                 self.assert404(response)
-                response = self.client.delete(url_for(endpoint, id=300))
+                response = self.client.delete(url_for(endpoint, id=300), headers=self.api_auth)
                 self.assert404(response)
 
     def test_post_wrong_data(self):
@@ -97,7 +107,7 @@ class TestApi(BaseTestCase):
         )
         for endpoint, case in zip(self.endpoints_1, cases):
             with self.subTest(endpoint):
-                response = self.client.post(url_for(endpoint), json=case[0])
+                response = self.client.post(url_for(endpoint), json=case[0], headers=self.api_auth)
                 self.assertStatus(response, 422)
                 errors = response.json['errors']
                 if case[1]:
@@ -121,7 +131,8 @@ class TestApi(BaseTestCase):
         )
         for endpoint, case in zip(self.endpoints_2, cases):
             with self.subTest(endpoint):
-                response = self.client.put(url_for(endpoint, id=2), json=case[0])
+                response = self.client.put(url_for(endpoint, id=2), json=case[0],
+                                           headers=self.api_auth)
                 self.assertStatus(response, 422)
                 errors = response.json['errors']
                 if case[1]:

@@ -2,14 +2,14 @@
 Booked appointments REST API, this module defines the following classes:
 
 - `BookedAppointmentMixIn`: booked appointment API mixin class
-- `BookedAppointmentListApi`: booked appointment list API class
-- `BookedAppointmentApi`: booked appointment API class
+- `BookedAppointmentsApi`: booked appointments collection resource API class
+- `BookedAppointmentApi`: booked appointment resource API class
 """
 from datetime import date
 
 from flask_restful.reqparse import RequestParser
 
-from clinic_app.rest.resources.base_api import BaseResource, BaseResourceList
+from clinic_app.rest.resources.base_api import BaseItemResource, BaseCollectionResource
 from clinic_app.rest.schemas import BookedAppointmentSchema
 from clinic_app.service import BookedAppointmentService
 
@@ -25,9 +25,9 @@ class BookedAppointmentMixIn:
     parser.add_argument('past_only', type=bool, default=False)
 
 
-class BookedAppointmentApi(BaseResource, BookedAppointmentMixIn):
+class BookedAppointmentApi(BaseItemResource, BookedAppointmentMixIn):
     """Booked appointment API class"""
 
 
-class BookedAppointmentListApi(BaseResourceList, BookedAppointmentMixIn):
+class BookedAppointmentsApi(BaseCollectionResource, BookedAppointmentMixIn):
     """Booked appointment list API class"""

@@ -60,15 +60,3 @@ class TestAllServices(BaseTestCase):
                 self.assertIsInstance(instance, model)
                 self.assertEqual(instance.id, 5)
                 self.assertTrue(repr(instance).startswith(f'<{model.__name__}('))
-
-    def test_served_app_get_filtered_count(self):
-        kwargs = {'date_from': date.today() - timedelta(days=80),
-                  'date_to': date.today() - timedelta(days=60)}
-        count = ServedAppointmentService.get_filtered_count(**kwargs)
-        self.assertEqual(count, 21)
-
-    def test_served_app_get_filtered_income(self):
-        kwargs = {'date_from': date.today() - timedelta(days=70),
-                  'date_to': date.today() - timedelta(days=30)}
-        count = ServedAppointmentService.get_filtered_income(**kwargs)
-        self.assertEqual(count, 6150)

@@ -803,3 +803,111 @@
 2021-12-09 01:29:08,544 WARNING werkzeug:  * Debugger is active!
 2021-12-09 01:29:08,546 INFO werkzeug:  * Debugger PIN: 248-785-052
 2021-12-09 01:29:08,576 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-09 13:05:08,245 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\views\\api_controllers.py', reloading
+2021-12-09 13:05:08,296 INFO werkzeug:  * Restarting with stat
+2021-12-09 13:05:08,776 INFO clinic_app: App initialization
+2021-12-09 13:05:08,822 WARNING werkzeug:  * Debugger is active!
+2021-12-09 13:05:08,825 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-09 13:05:08,859 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-09 13:07:18,902 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\views\\__init__.py', reloading
+2021-12-09 13:07:18,955 INFO werkzeug:  * Restarting with stat
+2021-12-09 13:07:19,449 INFO clinic_app: App initialization
+2021-12-09 13:07:19,489 WARNING werkzeug:  * Debugger is active!
+2021-12-09 13:07:19,499 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-09 13:07:19,530 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-09 13:07:20,924 INFO werkzeug: 127.0.0.1 - - [09/Dec/2021 13:07:20] "[33mGET /asd HTTP/1.1[0m" 404 -
+2021-12-09 13:07:42,212 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\run.py', reloading
+2021-12-09 13:07:42,268 INFO werkzeug:  * Restarting with stat
+2021-12-09 13:07:42,733 INFO clinic_app: App initialization
+2021-12-09 13:07:42,781 WARNING werkzeug:  * Debugger is active!
+2021-12-09 13:07:42,784 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-09 13:07:42,819 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-09 13:07:44,032 INFO werkzeug: 127.0.0.1 - - [09/Dec/2021 13:07:44] "[35m[1mGET /asd HTTP/1.1[0m" 500 -
+2021-12-09 13:07:44,137 INFO werkzeug: 127.0.0.1 - - [09/Dec/2021 13:07:44] "GET /asd?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2021-12-09 13:07:44,290 INFO werkzeug: 127.0.0.1 - - [09/Dec/2021 13:07:44] "GET /asd?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2021-12-09 13:07:44,603 INFO werkzeug: 127.0.0.1 - - [09/Dec/2021 13:07:44] "GET /asd?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2021-12-09 13:07:44,619 INFO werkzeug: 127.0.0.1 - - [09/Dec/2021 13:07:44] "GET /asd?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2021-12-09 13:07:44,869 INFO werkzeug: 127.0.0.1 - - [09/Dec/2021 13:07:44] "GET /asd?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2021-12-09 13:08:01,468 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\views\\__init__.py', reloading
+2021-12-09 13:08:01,516 INFO werkzeug:  * Restarting with stat
+2021-12-09 13:08:01,972 INFO clinic_app: App initialization
+2021-12-09 13:08:02,017 WARNING werkzeug:  * Debugger is active!
+2021-12-09 13:08:02,021 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-09 13:08:02,054 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-09 13:08:03,019 INFO werkzeug: 127.0.0.1 - - [09/Dec/2021 13:08:03] "GET /asd HTTP/1.1" 200 -
+2021-12-09 13:09:22,762 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\views\\api_controllers.py', reloading
+2021-12-09 13:09:22,822 INFO werkzeug:  * Restarting with stat
+2021-12-09 13:09:23,288 INFO clinic_app: App initialization
+2021-12-09 13:09:23,335 WARNING werkzeug:  * Debugger is active!
+2021-12-09 13:09:23,338 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-09 13:09:23,373 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-09 13:10:39,954 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\views\\api_controllers.py', reloading
+2021-12-09 13:10:40,008 INFO werkzeug:  * Restarting with stat
+2021-12-09 13:10:40,467 INFO clinic_app: App initialization
+2021-12-09 13:10:40,524 WARNING werkzeug:  * Debugger is active!
+2021-12-09 13:10:40,527 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-09 13:10:40,561 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-09 13:31:18,760 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\views\\__init__.py', reloading
+2021-12-09 13:31:18,807 INFO werkzeug:  * Restarting with stat
+2021-12-09 13:31:19,264 INFO clinic_app: App initialization
+2021-12-09 13:31:19,295 WARNING werkzeug:  * Debugger is active!
+2021-12-09 13:31:19,310 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-09 13:31:19,346 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-09 13:31:21,398 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\run.py', reloading
+2021-12-09 13:31:21,483 INFO werkzeug:  * Restarting with stat
+2021-12-09 13:31:21,936 INFO clinic_app: App initialization
+2021-12-09 13:31:21,973 WARNING werkzeug:  * Debugger is active!
+2021-12-09 13:31:21,973 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-09 13:31:22,005 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-09 13:45:36,304 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\tests\\test_api_controllers.py', reloading
+2021-12-09 13:45:36,361 INFO werkzeug:  * Restarting with stat
+2021-12-09 13:45:36,832 INFO clinic_app: App initialization
+2021-12-09 13:45:36,874 WARNING werkzeug:  * Debugger is active!
+2021-12-09 13:45:36,877 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-09 13:45:36,911 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-09 13:47:17,808 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\tests\\test_api_controllers.py', reloading
+2021-12-09 13:47:17,862 INFO werkzeug:  * Restarting with stat
+2021-12-09 13:47:18,301 INFO clinic_app: App initialization
+2021-12-09 13:47:18,332 WARNING werkzeug:  * Debugger is active!
+2021-12-09 13:47:18,348 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-09 13:47:18,385 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-09 13:53:05,509 INFO clinic_app: App initialization
+2021-12-09 13:53:23,053 INFO clinic_app: App initialization
+2021-12-09 13:53:41,887 INFO clinic_app: App initialization
+2021-12-09 13:53:55,688 INFO clinic_app: App initialization
+2021-12-09 13:54:06,554 INFO clinic_app: App initialization
+2021-12-09 13:55:47,172 INFO clinic_app: App initialization
+2021-12-09 13:56:12,919 INFO clinic_app: App initialization
+2021-12-09 14:01:39,794 INFO clinic_app: App initialization
+2021-12-09 14:03:00,790 INFO clinic_app: App initialization
+2021-12-09 14:03:16,257 INFO clinic_app: App initialization
+2021-12-09 14:04:38,517 INFO clinic_app: App initialization
+2021-12-09 14:05:07,049 INFO clinic_app: App initialization
+2021-12-09 14:05:24,368 INFO clinic_app: App initialization
+2021-12-09 14:08:32,919 INFO clinic_app: App initialization
+2021-12-09 14:10:32,854 INFO clinic_app: App initialization
+2021-12-09 14:10:38,252 INFO clinic_app: App initialization
+2021-12-09 14:11:45,433 INFO clinic_app: App initialization
+2021-12-09 14:37:59,939 INFO clinic_app: App initialization
+2021-12-09 14:38:39,503 INFO clinic_app: App initialization
+2021-12-09 14:40:21,599 INFO clinic_app: App initialization
+2021-12-09 14:41:08,415 INFO clinic_app: App initialization
+2021-12-09 14:41:26,272 INFO clinic_app: App initialization
+2021-12-09 14:42:18,351 INFO clinic_app: App initialization
+2021-12-09 14:43:03,490 INFO clinic_app: App initialization
+2021-12-09 14:43:11,359 INFO clinic_app: App initialization
+2021-12-09 14:43:16,751 INFO clinic_app: App initialization
+2021-12-09 14:43:45,619 INFO clinic_app: App initialization
+2021-12-09 14:43:57,515 INFO clinic_app: App initialization
+2021-12-09 14:44:25,508 INFO clinic_app: App initialization
+2021-12-09 14:47:22,758 INFO clinic_app: App initialization
+2021-12-09 14:55:09,007 INFO clinic_app: App initialization
+2021-12-09 14:57:39,529 INFO clinic_app: App initialization
+2021-12-09 15:01:22,389 INFO clinic_app: App initialization
+2021-12-09 15:01:32,294 INFO clinic_app: App initialization
+2021-12-09 15:01:44,178 INFO clinic_app: App initialization
+2021-12-09 15:03:37,194 INFO clinic_app: App initialization
+2021-12-09 15:03:55,173 INFO clinic_app: App initialization
+2021-12-09 15:09:37,588 INFO clinic_app: App initialization
+2021-12-09 15:09:53,466 INFO clinic_app: App initialization
+2021-12-09 15:12:40,819 INFO clinic_app: App initialization

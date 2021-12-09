@@ -12,6 +12,7 @@ app.config['SQLALCHEMY_ECHO'] = False
 
 class BaseTestCase(TestCase):
     db = db
+    app = app
     api_auth = {'api_key': app.config['API_KEY']}
     models = {'user': User,
               'doctor': Doctor,

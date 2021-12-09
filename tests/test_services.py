@@ -31,7 +31,7 @@ class TestAllServices(BaseTestCase):
             ([{'doctor_id': 2}, 6],
              [{'patient_id': 4}, 1],
              [{'date': date.today() + timedelta(days=20)}, 1],
-             [{'past_only': True}, 19],
+             [{'past_only': True}, 20],
              ),
             ([{'doctor_id': 5}, 7],
              [{'patient_id': 7}, 1],

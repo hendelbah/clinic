@@ -7,7 +7,7 @@ Here are defined The following classes:
 - `DoctorSchema`, doctor serialization/deserialization schema
 - `PatientSchema`
 - `BookedAppointmentSchema`
-- `ServedAppointmentSchema`
+- `AppointmentSchema`
 - `UserSchema`
 
 Functions:
@@ -19,11 +19,16 @@ from flask_restful import abort
 from marshmallow import ValidationError
 
 from clinic_app import ma
-from clinic_app.models import Doctor, Patient, ServedAppointment, BookedAppointment, User
+from clinic_app.models import Doctor, Patient, Appointment, User
 
 
 class BaseSchema(ma.SQLAlchemyAutoSchema):
     """Custom base schema class"""
+
+    def __init__(self, *args, **kwargs):
+        self.opts.exclude += ('id',)
+        self.opts.dump_only += ('uuid',)
+        super().__init__(*args, **kwargs)
 
     # pylint: disable=inconsistent-return-statements
     def load_or_422(self, data, **kwargs):
@@ -40,6 +45,22 @@ class BaseSchema(ma.SQLAlchemyAutoSchema):
             abort(422, errors=err.messages, message='Data is invalid')
 
 
+# pylint: disable=no-member
+class UserSchema(BaseSchema):
+    """
+    User serialization/deserialization schema
+    """
+
+    class Meta:
+        """
+        User schema metadata
+        """
+        model = User
+
+    doctor = ma.Nested('DoctorSchema', exclude=['user'], dump_only=True)
+    doctor_uuid = ma.String(allow_none=True, load_only=True)
+
+
 class DoctorSchema(BaseSchema):
     """
     Doctor serialization/deserialization schema
@@ -49,8 +70,9 @@ class DoctorSchema(BaseSchema):
         """
         Doctor schema metadata
         """
-        load_instance = True
         model = Doctor
+
+    user = ma.Nested('UserSchema', exclude=['doctor'], dump_only=True)
 
 
 class PatientSchema(BaseSchema):
@@ -62,59 +84,30 @@ class PatientSchema(BaseSchema):
         """
         Patient schema metadata
         """
-        load_instance = True
         model = Patient
 
 
-class BookedAppointmentSchema(BaseSchema):
+class AppointmentSchema(BaseSchema):
     """
-    BookedAppointment serialization/deserialization schema
-    """
-
-    class Meta:
-        """
-        BookedAppointment schema metadata
-        """
-        model = BookedAppointment
-        load_instance = True
-        include_fk = True
-
-
-class ServedAppointmentSchema(BaseSchema):
-    """
-    ServedAppointment serialization/deserialization schema
+    Appointment serialization/deserialization schema
     """
 
     class Meta:
         """
-        ServedAppointment schema metadata
+        Appointment schema metadata
         """
-        model = ServedAppointment
-        load_instance = True
-        include_fk = True
+        model = Appointment
 
-    patient_id = ma.auto_field(required=True)
-    doctor_id = ma.auto_field(required=True)
-
-
-class UserSchema(BaseSchema):
-    """
-    User serialization/deserialization schema
-    """
-
-    class Meta:
-        """
-        User schema metadata
-        """
-        model = User
-        load_instance = True
-        include_fk = True
+    doctor = ma.Nested('DoctorSchema', exclude=['user'], dump_only=True)
+    patient = ma.Nested('PatientSchema', dump_only=True)
+    doctor_uuid = ma.String(required=True, load_only=True)
+    patient_uuid = ma.String(required=True, load_only=True)
 
 
 # pylint: disable=no-member
 def pagination_schema(items_schema: ma.Schema):
     """
-    Return schema for serialization of flask-SQLAlchemy pagination
+    Return schema instance for serialization of flask-SQLAlchemy pagination
     with dynamically defined schema of nested field `items`.
 
     :param items_schema: schema for Pagination.items
@@ -131,4 +124,4 @@ def pagination_schema(items_schema: ma.Schema):
 
         items = ma.Nested(items_schema, many=True)
 
-    return PaginationSchema
+    return PaginationSchema()

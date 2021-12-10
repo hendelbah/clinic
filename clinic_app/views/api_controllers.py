@@ -68,8 +68,7 @@ class ItemApiController(BaseApiController):
     """
     Controller class for making requests to endpoints with single items.
     """
-    Endpoint = t.Literal['api.user', 'api.doctor', 'api.patient', 'api.booked_appointment',
-                         'api.served_appointment']
+    Endpoint = t.Literal['api.user', 'api.doctor', 'api.patient', 'api.appointment']
 
     def __init__(self, endpoint: Endpoint):
         """
@@ -77,42 +76,41 @@ class ItemApiController(BaseApiController):
         """
         super().__init__(endpoint)
 
-    def get(self, id_: int):
+    def get(self, uuid: str):
         """
         Make GET request.
 
-        :param id_: resource id
+        :param uuid: resource id
         """
-        return self._request_api('GET', {'id': id_})
+        return self._request_api('GET', {'uuid': uuid})
 
-    def put(self, id_: int, **data):
+    def put(self, uuid: str, **data):
         """
         Make PUT request.
 
-        :param id_: resource id
+        :param uuid: resource id
         :param data: resource fields to update
         :return: response
         """
         if len(data) == 1 and isinstance(data.get('data'), dict):
             data = data['data']
-        return self._request_api('PUT', {'id': id_}, json=data)
+        return self._request_api('PUT', {'uuid': uuid}, json=data)
 
-    def delete(self, id_: int):
+    def delete(self, uuid: str):
         """
         Make DELETE request.
 
-        :param id_: resource id
+        :param uuid: resource id
         :return: response
         """
-        return self._request_api('DELETE', {'id': id_})
+        return self._request_api('DELETE', {'uuid': uuid})
 
 
 class CollectionApiController(BaseApiController):
     """
     Controller class for making requests to endpoints with collections.
     """
-    Endpoint = t.Literal['api.users', 'api.doctors', 'api.patients', 'api.booked_appointments',
-                         'api.served_appointments']
+    Endpoint = t.Literal['api.users', 'api.doctors', 'api.patients', 'api.appointments']
 
     def __init__(self, endpoint: Endpoint):
         """
@@ -145,6 +143,24 @@ class CollectionApiController(BaseApiController):
         return self._request_api('POST', json=data)
 
 
+class StatisticsController(BaseApiController):
+    """
+    Controller class for making requests to api.statistics endpoint.
+    """
+
+    def __init__(self):
+        super().__init__('api.statistics')
+
+    def get(self, **filters):
+        """
+        Get statistics on appointments.
+
+        :param filters: parameters for filtering data
+        :return: response
+        """
+        return self._request_api('GET', filters)
+
+
 class ApiHelper:
     """
     Helper class for interacting with API, contains all api controllers as class attributes.
@@ -152,10 +168,9 @@ class ApiHelper:
     user = ItemApiController('api.user')
     doctor = ItemApiController('api.doctor')
     patient = ItemApiController('api.patient')
-    b_appointment = ItemApiController('api.booked_appointment')
-    s_appointment = ItemApiController('api.served_appointment')
+    appointment = ItemApiController('api.appointment')
     users = CollectionApiController('api.users')
     doctors = CollectionApiController('api.doctors')
     patients = CollectionApiController('api.patients')
-    b_appointments = CollectionApiController('api.booked_appointments')
-    s_appointments = CollectionApiController('api.served_appointments')
+    appointments = CollectionApiController('api.appointments')
+    stats = StatisticsController()

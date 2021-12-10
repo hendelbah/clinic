@@ -3,8 +3,8 @@ This module contains base resource classes with common routines.
 
 Classes:
 
-- `BaseItemResource` base resource class, defines routines for single item resources
-- `BaseCollectionResource` base resource class, defines routines for collection resources
+- `BaseResource` base resource class, defines routines for single item resources
+- `BaseListResource` base resource class, defines routines for collection resources
 
 Functions:
 
@@ -41,62 +41,59 @@ def validate_auth(func):
     return wrapper
 
 
-# pylint: disable=redefined-builtin
-class BaseItemResource(Resource):
+class BaseResource(Resource):
     """Base Resource class with common routines for inheritance"""
 
     service: BaseService
     schema: ma.Schema
-    parser: reqparse.RequestParser
 
     @classmethod
     @validate_auth
-    def get(cls, id):
+    def get(cls, uuid):
         """Retrieve"""
         schema = cls.schema()
-        instance = cls.service.get_or_404(id)
+        instance = cls.service.get_or_404(uuid)
         return schema.dump(instance), 200
 
     @classmethod
     @validate_auth
-    def put(cls, id):
+    def put(cls, uuid):
         """Update"""
-        schema = cls.schema(partial=True, load_instance=False)
+        schema = cls.schema(partial=True)
         data = schema.load_or_422(request.json)
-        cls.service.update_or_abort(id, data)
-        return {}, 204
+        instance = cls.service.update_or_abort(uuid, data)
+        return schema.dump(instance), 200
 
     @classmethod
     @validate_auth
-    def delete(cls, id):
+    def delete(cls, uuid):
         """Delete"""
-        cls.service.delete_or_404(id)
+        cls.service.delete_or_404(uuid)
         return {}, 204
 
 
-class BaseCollectionResource(Resource):
+class BaseListResource(Resource):
     """Base Resource class with common routines for inheritance"""
 
     service: BaseService
     schema: ma.Schema
-    parser: reqparse.RequestParser
+    filters_parser: reqparse.RequestParser
 
     @classmethod
     @validate_auth
     def post(cls):
         """Create"""
-        data = request.json
-        schema = cls.schema(transient=True, partial=('id',))
-        instance = schema.load_or_422(data)
-        cls.service.save_or_422(instance)
-        return {'id': instance.id}, 201
+        schema = cls.schema()
+        data = schema.load_or_422(request.json)
+        instance = cls.service.save_or_422(data)
+        return schema.dump(instance), 201
 
     @classmethod
     @validate_auth
     def get(cls):
         """Retrieve"""
         schema = cls.schema()
-        args = cls.parser.parse_args()
-        pagination = cls.service.get_filtered_pagination(**args)
-        p_schema = pagination_schema(schema)()
+        filters = cls.filters_parser.parse_args()
+        pagination = cls.service.get_pagination(**filters)
+        p_schema = pagination_schema(schema)
         return p_schema.dump(pagination), 200

@@ -7,7 +7,7 @@ Doctors REST API, this module defines the following classes:
 """
 from flask_restful.reqparse import RequestParser
 
-from clinic_app.rest.resources.base_api import BaseItemResource, BaseCollectionResource
+from clinic_app.rest.resources.base_api import BaseResource, BaseListResource
 from clinic_app.rest.schemas import DoctorSchema
 from clinic_app.service import DoctorService
 
@@ -16,14 +16,14 @@ class DoctorMixIn:
     """Mixin that provides class attribute values for doctor API's"""
     service = DoctorService
     schema = DoctorSchema
-    parser = RequestParser()
-    parser.add_argument('search_name', type=str)
-    parser.add_argument('no_user', type=bool, default=False)
+    filters_parser = RequestParser()
+    filters_parser.add_argument('search_name')
+    filters_parser.add_argument('no_user', type=bool, default=False)
 
 
-class DoctorApi(BaseItemResource, DoctorMixIn):
+class DoctorApi(BaseResource, DoctorMixIn):
     """Doctor API class"""
 
 
-class DoctorsApi(BaseCollectionResource, DoctorMixIn):
+class DoctorsApi(BaseListResource, DoctorMixIn):
     """Doctor list API class"""

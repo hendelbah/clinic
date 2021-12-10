@@ -1,7 +1,7 @@
 """
 This package contains modules defining REST APIs for Doctor, Patient, BookedAppointment,
-ServedAppointment and User models. Respective API endpoints are initialized here and
-everything is linked to `api_blueprint`:
+Appointment and User models. Respective API endpoints are initialized here and
+everything is linked to `api_bp`:
 
 Subpackages:
 
@@ -14,22 +14,18 @@ Modules:
 from flask import Blueprint
 from flask_restful import Api
 
-from clinic_app.rest.resources import (
-    ServedAppointmentApi, ServedAppointmentsApi, BookedAppointmentApi, BookedAppointmentsApi,
-    DoctorApi, DoctorsApi, PatientApi, PatientsApi, UserApi, UsersApi)
+from clinic_app.rest.resources import (AppointmentApi, AppointmentsApi, DoctorApi, DoctorsApi,
+                                       PatientApi, PatientsApi, UserApi, UsersApi, StatisticsApi)
 
-api_blueprint = Blueprint('api', __name__, url_prefix='/api/v1')
-api = Api(api_blueprint)
+api_bp = Blueprint('api', __name__, url_prefix='/api/v1')
+api = Api(api_bp)
 
-api.add_resource(UserApi, '/users/<int:id>', endpoint='user')
+api.add_resource(UserApi, '/users/<uuid>', endpoint='user')
 api.add_resource(UsersApi, '/users', endpoint='users')
-api.add_resource(DoctorApi, '/doctors/<int:id>', endpoint='doctor')
+api.add_resource(DoctorApi, '/doctors/<uuid>', endpoint='doctor')
 api.add_resource(DoctorsApi, '/doctors', endpoint='doctors')
-api.add_resource(PatientApi, '/patients/<int:id>', endpoint='patient')
+api.add_resource(PatientApi, '/patients/<uuid>', endpoint='patient')
 api.add_resource(PatientsApi, '/patients', endpoint='patients')
-api.add_resource(BookedAppointmentApi, '/booked_appointments/<int:id>',
-                 endpoint='booked_appointment')
-api.add_resource(BookedAppointmentsApi, '/booked_appointments', endpoint='booked_appointments')
-api.add_resource(ServedAppointmentApi, '/served_appointments/<int:id>',
-                 endpoint='served_appointment')
-api.add_resource(ServedAppointmentsApi, '/served_appointments', endpoint='served_appointments')
+api.add_resource(AppointmentApi, '/appointments/<uuid>', endpoint='appointment')
+api.add_resource(AppointmentsApi, '/appointments', endpoint='appointments')
+api.add_resource(StatisticsApi, '/appointments/stats', endpoint='statistics')

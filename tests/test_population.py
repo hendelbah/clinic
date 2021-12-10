@@ -10,7 +10,7 @@ class TestPopulation(BaseTestCase):
 
     def test_populate(self):
         populate()
-        counts = (18, 17, 100, 100, 100)
+        counts = (18, 17, 100, 200)
         for model, count in zip(self.models.values(), counts):
             with self.subTest(model.__name__):
                 self.assertEqual(model.query.count(), count)

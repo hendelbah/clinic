@@ -2,7 +2,7 @@
 from flask_testing import TestCase
 
 from clinic_app import config, app, db
-from clinic_app.models import User, Doctor, Patient, BookedAppointment, ServedAppointment
+from clinic_app.models import User, Doctor, Patient, Appointment
 from clinic_app.service.population import populate, clear_tables
 
 app.config.from_object(config.DevelopmentConfig)
@@ -17,8 +17,7 @@ class BaseTestCase(TestCase):
     models = {'user': User,
               'doctor': Doctor,
               'patient': Patient,
-              'booked_app': BookedAppointment,
-              'served_app': ServedAppointment}
+              'appointment': Appointment}
 
     @classmethod
     def setUpClass(cls):

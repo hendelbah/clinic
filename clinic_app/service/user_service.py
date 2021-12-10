@@ -12,19 +12,13 @@ class UserService(BaseService):
     order_by = (model.id,)
 
     @classmethod
-    def _filter_by(cls, *, email: str = None, uuid: str = None, doctor_id: int = None):
+    def _filter_by(cls, *, email: str = None):
         """
         Return query ordered and filtered.
 
         :param email: filter users having given email
-        :param uuid: filter users having given uuid
-        :param doctor_id: filter users having given doctor_id
         """
         query = cls._order()
         if email is not None:
             query = query.filter_by(email=email)
-        if uuid is not None:
-            query = query.filter_by(uuid=uuid)
-        if doctor_id is not None:
-            query = query.filter_by(doctor_id=doctor_id)
         return query

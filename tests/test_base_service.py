@@ -42,35 +42,33 @@ class TestBaseService(BaseTestCase):
             method.assert_called()
             # noinspection PyUnresolvedReferences
             exc_data = err_context.exception.data
-            self.assertEqual(exc_data.get('errors'), 'Oh no..')
+            self.assertEqual(exc_data['errors'][error.__class__.__name__], 'Oh no..')
             self.assertIsNotNone(exc_data.get('message'))
 
     def test_get_or_404(self):
-        user = self.service.get_or_404(id_=1)
+        user = self.service.get_or_404(uuid='1')
         self.assertIsInstance(user, User)
         self.assertEqual(user.id, 1)
-        self.assertRaises(NotFound, self.service.get_or_404, id_=0)
+        self.assertRaises(NotFound, self.service.get_or_404, uuid='asd')
 
     def test_update_or_422(self):
         data = {'email': 'hello'}
-        self.service.update_or_abort(7, data)
+        self.service.update_or_abort('7', data)
         email = self.db.session.query(User.email).filter_by(id=7).scalar()
         self.assertEqual(email, 'hello')
-        self.assertRaises(UnprocessableEntity, self.service.update_or_abort, 8, data)
+        self.assertRaises(UnprocessableEntity, self.service.update_or_abort, '8', data)
 
     def test_save_or_422(self):
-        user1 = User(uuid='qwerty', email='email@spam.net', password_hash='1234')
-        self.service.save_or_422(user1)
-        # same email
-        user2 = User(uuid='qwerty', email='email@spam.net', password_hash='12')
-        self.assertRaises(UnprocessableEntity, self.service.save_or_422, model_instance=user2)
+        user = {'email': 'email@spam.net', 'password_hash': '1234', 'is_admin': False}
+        self.service.save_or_422(user)
+        self.assertRaises(UnprocessableEntity, self.service.save_or_422, data=user)
 
     @patch.object(service, '_commit')
     def test_delete_or_404(self, mock):
-        self.service.delete_or_404(id_=15)
-        self.assertIsNone(User.query.get(15))
-        self.assertRaises(NotFound, self.service.delete_or_404, id_=321)
+        self.service.delete_or_404(uuid='15')
+        self.assertIsNone(User.query.filter_by(uuid='15').first())
+        self.assertRaises(NotFound, self.service.delete_or_404, uuid='15')
         mock.assert_called()
 
-    def test_get_filtered_pagination(self):
-        self.assertRaises(NotImplementedError, self.service.get_filtered_pagination)
+    def test_get_pagination(self):
+        self.assertRaises(NotImplementedError, self.service.get_pagination)

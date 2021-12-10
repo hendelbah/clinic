@@ -23,5 +23,5 @@ class DoctorService(BaseService):
         if search_name is not None:
             query = query.filter(cls.model.full_name.like('%' + search_name + '%'))
         if no_user:
-            query = query.filter(~User.query.filter(Doctor.id == User.doctor_id).exists())
+            query = query.filter(~User.query.filter_by(doctor_id=Doctor.id).exists())
         return query

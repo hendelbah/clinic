@@ -33,69 +33,77 @@ class BaseService:
     def _commit(cls):
         """Commit current session. If db error happens throw 422 http error"""
         try:
-            cls.db.session.commit()
+            db.session.commit()
             return
-        except IntegrityError as err:
+        except IntegrityError as error:
             msg = 'Request data violates database constraints'
-            errors = err.orig.args[1]
-        except DatabaseError as err:
-            msg = 'Database error'
-            errors = err.orig.args[1]
-        abort(422, message=msg, errors=errors)
-        cls.db.session.close()
+            err = error
+        except DatabaseError as error:
+            msg = 'Error occurred when committing data to database'
+            err = error
+        abort(422, message=msg, errors={err.__class__.__name__: err.orig.args[1]})
 
     @classmethod
-    def get_or_404(cls, id_: int) -> db.Model:
+    def get_or_404(cls, uuid: str) -> db.Model:
         """Get model instance or throw 404 error
 
-        :param id_:  model's database id
+        :param uuid: model's uuid
         """
-        return cls.model.query.get_or_404(id_)
+        instance = cls.model.query.filter_by(uuid=uuid).first()
+        if instance is None:
+            abort(404)
+        return instance
 
     @classmethod
-    def update_or_abort(cls, id_: int, data: dict):
+    def update_or_abort(cls, uuid: str, data: dict):
         """
         Update row with given id using data.
         If id is not found throw 404 http exception.
         In case of db conflicts throw 422 http error.
 
-        :param id_: database id in model's table.
+        :param uuid: model's uuid.
         :param data: dict with fields to update.
         """
-        instance = cls.get_or_404(id_)
+        instance = cls.get_or_404(uuid)
         for key in data:
             setattr(instance, key, data[key])
         cls._commit()
+        return instance
 
     @classmethod
-    def save_or_422(cls, model_instance: db.Model) -> int:
+    def save_or_422(cls, data: dict) -> db.Model:
         """
         Save given model instance to db and return its id.
         In case of db conflicts throw 422 http error.
 
-        :param model_instance: instance to save to db.
-        :return: id of saved instance
+        :param data: dict with fields to initialize the model
+        :return: saved model instance
         """
-        cls.db.session.add(model_instance)
+        instance = cls.model(**data)
+        db.session.add(instance)
         cls._commit()
-        return model_instance.id
+        return instance
 
     @classmethod
-    def delete_or_404(cls, id_: int):
-        """Delete row by id. Throw 404 http exception if id is not found"""
-        res = cls.model.query.filter(cls.model.id == id_).delete()
+    def delete_or_404(cls, uuid: str):
+        """
+        Delete row by id. Throw 404 http exception if id is not found
+
+        :param uuid: model's uuid.
+        """
+        res = cls.model.query.filter_by(uuid=uuid).delete()
         if not res:
             abort(404)
         cls._commit()
 
     @classmethod
-    def get_filtered_pagination(cls, page: int = None, per_page: int = None,
-                                **kwargs) -> Pagination:
+    def get_pagination(cls, page: int = None, per_page: int = None,
+                       **filters) -> Pagination:
         """
         Return Pagination object, for model instances selected and filtered using kwargs
 
         :param page: pagination page
         :param per_page: items per page for pagination
-        :param kwargs: kwargs for filtering
+        :param filters: kwargs for filtering
         """
-        return cls._filter_by(**kwargs).paginate(page=page, per_page=per_page)
+        return cls._filter_by(**filters).paginate(page=page, per_page=per_page)

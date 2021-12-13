@@ -8,10 +8,10 @@ from clinic_app import db
 from clinic_app.models import Appointment, Doctor, Patient, User
 from clinic_app.service.population.population_data import (
     DOCTORS_SRC, NAMES_SRC, SURNAMES_SRC, PATRONYMICS_SRC, ROOT_PASSWORD, DOCTORS_PASSWORD)
-from clinic_app.views.authorization import UserAccount
+from clinic_app.views.user_login import UserLogin
 
-root_pass_hash = UserAccount.hash_password(ROOT_PASSWORD)
-doctors_pass_hash = UserAccount.hash_password(DOCTORS_PASSWORD)
+root_pass_hash = UserLogin.hash_password(ROOT_PASSWORD)
+doctors_pass_hash = UserLogin.hash_password(DOCTORS_PASSWORD)
 
 
 def clear_tables():
@@ -32,22 +32,24 @@ def populate(patients_amount=100):
 
     :param patients_amount: amount of random patients to insert
     """
-    root_user = {'id': 1,
-                 'uuid': '1',
-                 'email': 'root',
-                 'password_hash': root_pass_hash,
-                 'is_admin': True}
-    users_doctors_src = [root_user] + [
+    users_doctors_src = [
+        {'id': 1,
+         'uuid': '1',
+         'email': 'root',
+         'password_hash': root_pass_hash,
+         'is_admin': True}
+    ]
+    users_doctors_src.extend(
         {
             'id': user_id,
             'uuid': str(user_id),
             'doctor_id': doctor["id"],
             'email': f'doctor_{doctor["id"]:0>3}@spam.ua',
             'password_hash': doctors_pass_hash,  # hashing is too slow to do it for every user
-            'is_admin': False
+            'is_admin': user_id == 2,
         }
         for user_id, doctor in enumerate(DOCTORS_SRC, 2)  # 1st user is root
-    ]
+    )
     patients_src = []
     appointments_1_src = []
     appointments_2_src = []

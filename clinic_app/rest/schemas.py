@@ -120,7 +120,7 @@ def pagination_schema(items_schema: ma.Schema):
             """
             Pagination schema metadata
             """
-            additional = ('page', 'per_page', 'pages', 'total')
+            additional = ('page', 'per_page', 'pages', 'total', 'has_prev', 'has_next')
 
         items = ma.Nested(items_schema, many=True)
 

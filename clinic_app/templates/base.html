@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/styles.css') }}">
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<div class="page-header controls">
+    <div class="main-menu">
+        <div class="main-menu-item">
+            <a href="{{ url_for('general.index') }}" id="home-breadcrumb"></a>
+        </div>
+        <div class="main-menu-item">
+            <a href="{{ url_for('general.doctors') }}">Doctors</a>
+        </div>
+        {% if current_user.doctor -%}
+        <div class="main-menu-item">
+            <a href="{{ url_for('general.doctors') }}">Doctor panel</a>
+        </div>
+        {%- endif -%}
+        {% if current_user.is_admin -%}
+        <div class="main-menu-item">
+            <a href="{{ url_for('general.doctors') }}">Admin panel</a>
+        </div>
+        {%- endif %}
+    </div>
+    <div class="auth">
+        {% if current_user.is_authenticated -%}
+        <div class="profile-link">
+            <a href="{{ url_for('auth.profile') }}">profile</a>
+        </div>
+        <div class="log-link" id="logout">
+            <a href="{{ url_for('auth.logout', next=request.url) }}">logout</a>
+        </div>
+        {% else -%}
+        <div class="log-link" id="login">
+            <a href="{{ url_for('auth.login') }}">login</a>
+        </div>
+        {%- endif %}
+    </div>
+</div>
+
+<div class="page-body">
+    <div class="side-menu controls">
+    {%- block side_menu -%}
+    {% endblock %}
+    </div>
+    <div class="main-container">
+        <div class="flashes">
+            {% for category, message in get_flashed_messages(True) %}
+            <div class="flash {{category}}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        <div class="content">
+        {%- block body -%}
+        {% endblock %}
+        </div>
+    </div>
+</div>
+<div class="page-tail">
+    <hr />
+    {%- block tail -%}
+    {% endblock %}
+</div>
+</body>
+</html>

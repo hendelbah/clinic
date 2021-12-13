@@ -1,0 +1,70 @@
+{% extends 'base.html' -%}
+
+{% block title -%}
+Profile
+{%- endblock %}
+
+{% block side_menu -%}
+<div class="side-menu-item">
+    <a onclick="switch_pass_change()">Change password</a>
+</div>
+{%- endblock %}
+
+{% block body -%}
+<script>
+function switch_pass_change() {
+  var x = document.getElementById("change-pass");
+  if (x.style.display === "none") {
+    x.style.display = "flex";
+  }
+  else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<div class="profile-block">
+    <div class="profile-item">
+        <label>Email: <span style="color:brown">{{ current_user.email }}</span></label>
+    </div>
+    {% if current_user.is_admin %}
+    <div class="profile-item">
+        <label style="color:green">You are an administrator.</label>
+    </div>
+    {% endif %}
+    {% if current_user.doctor %}
+    <div class="profile-item">
+        <label>You have related doctor's account:</label>
+        <table class="profile-doctor">
+            <tr>
+                <th>Full name:</th>
+                <td>{{ current_user.doctor.full_name }}</td>
+            </tr>
+            <tr>
+                <th>Experience years:</th>
+                <td>{{ current_user.doctor.experience_years }}</td>
+            </tr>
+            <tr>
+                <th>Speciality:</th>
+                <td>{{ current_user.doctor.speciality }}</td>
+            </tr>
+            <tr>
+                <th>Info:</th>
+                <td>{{ current_user.doctor.info }}</td>
+            </tr>
+        </table>
+    </div>
+    {% endif %}
+    <hr width="80%" align="left">
+    <div class="profile-item" id="change-pass" style="display:none">
+        <form method="post" class="change-pass-form">
+            {{ form.hidden_tag() }}
+            <div>{{ form.password.label() }} {{ form.password() }}</div>
+            <div>{{ form.new_pass.label() }} {{ form.new_pass() }}</div>
+            <div>{{ form.confirm.label() }} {{ form.confirm() }}</div>
+            <div>{{ form.submit() }}</div>
+        </form>
+    </div>
+</div>
+
+{%- endblock %}

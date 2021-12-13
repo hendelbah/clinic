@@ -7,11 +7,11 @@ from clinic_app.models import Appointment, Doctor, Patient
 from clinic_app.service.base_service import BaseService
 
 
-# pylint: disable=arguments-differ
+# pylint: disable=arguments-differ, no-member
 class AppointmentService(BaseService):
     """Service class for querying Appointment model"""
     model = Appointment
-    order_by = (model.date, model.time)
+    order_by = (model.date.desc(), model.time.desc())
 
     @classmethod
     def _filter_by(cls, *, doctor_uuid: str = None, patient_uuid: str = None,
@@ -60,7 +60,6 @@ class AppointmentService(BaseService):
         query = cls.model.query
         return cls._filter_by(_query=query, **filters).count()
 
-    # pylint: disable=no-member
     @classmethod
     def get_income(cls, **filters):
         """

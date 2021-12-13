@@ -1,0 +1,218 @@
+html, body {
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0px;
+}
+
+html, body, body div, body form {
+  display: flex;
+}
+
+body, .page-body, .main-container, .content, .pagination-body, .pagination-container {
+  flex: 1;
+}
+
+html, body, .page-tail, .side-menu, .main-container, .flashes, .login-form, .profile-block,
+.profile-item, .change-pass-form, .pagination, .pagination-body, .doctor-item {
+  flex-flow: column;
+}
+
+.controls a, .controls a:visited{
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-header {
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #CDFF79;
+}
+
+.page-tail {
+  align-items: center;
+  min-height: 60px;
+}
+
+.page-tail hr {
+  min-width: 100%;
+  margin-top: 0;
+  height: 15px;
+  border: none;
+  box-shadow: 0 10px 10px -10px #333 inset;
+}
+
+.main-menu { font-size: 30px; }
+
+.main-menu-item:hover { background-color: #EFFFD3; }
+
+.main-menu-item a { padding: 20px; }
+
+#home-breadcrumb {
+  padding-inline: 40px;
+  background: transparent url("/static/media/home-button.png") 45% 50% padding-box no-repeat;
+  background-size: 50%;
+}
+
+.auth {
+  justify-content: flex-end;
+  align-items: center;
+  font-size:20px;
+}
+
+.profile-link:hover { color: blue; }
+
+.log-link {
+  border-radius: 20px;
+  border: 3px solid;
+  border-color: #668E21;
+  margin-inline: 15px;
+}
+
+.log-link a {
+  padding: 8px 20px;
+
+}
+
+#login {
+  background-color: #76B900;
+  color: #EAFFC4;
+}
+
+#login:hover {
+  background-color: #619800;
+}
+
+#logout { background-color: #EDFF79; }
+
+#logout:hover {
+  background-color: #F6FFB9;
+}
+
+.side-menu {
+  min-width: 18%;
+  background-color: #ECFFCD;
+  font-size: 20px;
+  padding-right: 2px;
+}
+
+.side-menu-item {
+  background-color: #D2ECA9;
+  border: 1px solid;
+  border-color: #668E21;
+  cursor: pointer;
+}
+
+.side-menu-item:hover { background-color: #F7FFEB; }
+
+.side-menu-item a { padding: 20px; }
+
+.flashes {
+  display: flex;
+  padding: 1px;
+  margin-bottom: 20px;
+}
+
+.flash {
+  margin: 1px;
+  padding: 5px;
+  padding-left: 30px;
+  border-radius: 5px;
+}
+
+.flash.error {
+  background-color: #FFEDE4;
+  color: #742200;
+}
+
+.flash.warning {
+  background-color: #FFF7D8;
+  color: #745D00;
+}
+
+.flash.success {
+  background-color: #E1FFD8;
+  color: #145800;
+}
+
+.content h1 { margin-left: 30px; }
+
+.login-container { display: flex; }
+
+.login-form {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.login-form div {
+  margin: 10px;
+  justify-content: flex-end;
+}
+
+.login-form label { margin-right: 5px; }
+
+.profile-block {
+  padding-left: 40px;
+  font-size: 20px;
+}
+
+.profile-item { padding: 10px; }
+
+.profile-doctor {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.profile-doctor th, .profile-doctor td {
+  padding-bottom: 10px;
+  vertical-align: top;
+}
+
+.profile-doctor th {
+  white-space: nowrap;
+  text-align: right;
+  padding-right: 20px
+}
+
+#change-pass { width: 40%; }
+
+.change-pass-form { padding: 10px; }
+
+.change-pass-form div {
+  margin: 10px;
+  justify-content: flex-end;
+}
+
+.change-pass-form label { margin-right: 5px; }
+
+.pagination { align-items: center; }
+
+.pagination-tail {
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.change-page, #pages { padding: 5px 10px; }
+
+.change-page {
+  border: 1px solid black;
+}
+
+.doctor-container { flex-flow: row wrap; }
+
+.doctor-item {
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  max-width: 46%;
+}
+
+.doctor-item label {
+  padding: 5px;
+}

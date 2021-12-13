@@ -20,7 +20,7 @@ class Doctor(db.Model):
     info = db.Column(db.String(1023, collation='utf8mb4_unicode_ci'), nullable=False)
     experience_years = db.Column(db.Integer, nullable=False)
 
-    user = db.relationship('User', back_populates='doctor', uselist=False)
+    user = db.relationship('User', back_populates='doctor', uselist=False, lazy='joined')
 
     def __init__(self, full_name: str, speciality: str, info: str, experience_years: int):
         """

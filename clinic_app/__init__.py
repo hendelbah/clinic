@@ -24,6 +24,7 @@ migration = Migrate(app, db, directory=BASE_DIR / 'migrations')
 
 login_manager = LoginManager(app)
 login_manager.login_message = "You must be logged in to access this page."
+login_manager.login_message_category = "warning"
 login_manager.login_view = "auth.login"
 
 formatter = logging.Formatter('%(asctime)s %(levelname)s %(name)s: %(message)s')
@@ -51,5 +52,8 @@ werkzeug_logger.setLevel(logging.INFO)
 
 # pylint: disable=cyclic-import,wrong-import-position
 from clinic_app.rest import api_bp
+from clinic_app.views import general_bp, auth_bp
 
 app.register_blueprint(api_bp)
+app.register_blueprint(general_bp)
+app.register_blueprint(auth_bp)

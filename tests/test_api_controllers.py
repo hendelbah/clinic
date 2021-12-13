@@ -4,7 +4,7 @@ from unittest.mock import patch
 from flask import url_for
 
 from clinic_app.views.api_controllers import \
-    BaseApiController, ItemApiController, CollectionApiController, ApiHelper
+    BaseApiController, ItemApiController, CollectionApiController, StatisticsController, ApiHelper
 from tests.base_test_case import BaseTestCase
 
 
@@ -27,7 +27,7 @@ class TestApiControllers(BaseTestCase):
             controller.get('1')
             meth.assert_called_with(url_for('api.user', uuid=1), method='GET',
                                     headers={'api-key': key})
-            controller.put('1', email='asd')
+            controller.put('1', data={'email': 'asd'})
             meth.assert_called_with(url_for('api.user', uuid=1), method='PUT',
                                     headers={'api-key': key}, json={'email': 'asd'})
             controller.delete('1')
@@ -44,6 +44,12 @@ class TestApiControllers(BaseTestCase):
             controller.post(data={'email': 'asd', 'password_hash': 'zxc'})
             meth.assert_called_with(url_for('api.users'), method='POST', headers={'api-key': key},
                                     json={'email': 'asd', 'password_hash': 'zxc'})
+
+    def test_statistics_controller(self):
+        controller = StatisticsController()
+        response = controller.get(doctor_uuid='1')
+        self.assert200(response)
+        self.assertEqual(response.json, {'count': 12, 'income': 105})
 
     def test_api_helper(self):
         with patch.object(ApiHelper.user, '_request_api') as meth:

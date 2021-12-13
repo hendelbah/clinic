@@ -30,8 +30,8 @@ class Appointment(db.Model):
     prescription = db.Column(db.String(511))
     bill = db.Column(db.Integer)
 
-    doctor = db.relationship('Doctor')
-    patient = db.relationship('Patient')
+    doctor = db.relationship('Doctor', lazy='joined')
+    patient = db.relationship('Patient', lazy='joined')
     doctor_uuid = DoctorUUID()
     patient_uuid = PatientUUID()
 

@@ -1,0 +1,18 @@
+{% extends 'pagination.html' -%}
+
+{% block title -%}
+Doctors
+{%- endblock %}
+
+{% block pagination -%}
+<div class="doctor-container pagination-container">
+{% for doctor in data['items'] -%}
+    <div class="doctor-item">
+        <label style="font-size:24px">{{ doctor['full_name'] }}</label>
+        <label><b>{{ doctor['experience_years'] }}</b> лет практики</label>
+        <label style="font-weight:bold">{{ doctor['speciality'] }}</label>
+        <label>{{ doctor['info'] }}</label>
+    </div>
+{%- endfor %}
+</div>
+{%- endblock %}

@@ -22,7 +22,7 @@ class User(db.Model):
     password_hash = db.Column(db.String(127), nullable=False)
     is_admin = db.Column(db.Boolean, nullable=False)
 
-    doctor = db.relationship('Doctor', back_populates='user')
+    doctor = db.relationship('Doctor', back_populates='user', lazy='joined')
     doctor_uuid = DoctorUUID()
 
     def __init__(self, email: str, password_hash: str, is_admin: bool, doctor_uuid: str = None):

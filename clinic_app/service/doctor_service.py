@@ -9,7 +9,7 @@ from clinic_app.service.base_service import BaseService
 class DoctorService(BaseService):
     """Service class for querying Doctor model"""
     model = Doctor
-    order_by = (model.id,)
+    order_by = (model.full_name,)
 
     @classmethod
     def _filter_by(cls, *, search_name: str = None, no_user: bool = False):

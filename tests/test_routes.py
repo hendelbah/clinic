@@ -23,12 +23,11 @@ class TestRoutes(BaseTestCase):
         self.assertStatus(response, 302)
 
     def test_wrong_login_logout(self):
-        with self.client as client:
-            response = client.post(url_for('auth.login'),
-                                   json={'email': 'do@gmail.com', 'pwd': 'a', 'remember': False})
-            self.assertStatus(response, 200)
-            response = self.client.get(url_for('auth.logout'))
-            self.assertStatus(response, 302)
+        response = self.client.post(url_for('auth.login'),
+                               json={'email': 'do@gmail.com', 'pwd': 'a', 'remember': False})
+        self.assertStatus(response, 200)
+        response = self.client.get(url_for('auth.logout'))
+        self.assertStatus(response, 302)
 
     def test_unauthorized_redirect(self):
         endpoints = ('auth.profile', 'auth.logout')

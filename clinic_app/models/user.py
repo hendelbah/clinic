@@ -1,6 +1,7 @@
 """
 This module implements instance of user in database
 """
+from datetime import datetime
 from uuid import uuid4
 
 from clinic_app import db
@@ -21,6 +22,8 @@ class User(db.Model):
     email = db.Column(db.String(80), nullable=False, unique=True, index=True)
     password_hash = db.Column(db.String(127), nullable=False)
     is_admin = db.Column(db.Boolean, nullable=False)
+    last_modified = db.Column(db.TIMESTAMP(timezone=True), default=datetime.utcnow,
+                              onupdate=datetime.utcnow)
 
     doctor = db.relationship('Doctor', back_populates='user', lazy='joined')
     doctor_uuid = DoctorUUID()

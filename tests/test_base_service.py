@@ -1,4 +1,5 @@
 # pylint: disable=missing-function-docstring, missing-module-docstring, missing-class-docstring
+from datetime import datetime
 from unittest.mock import patch, Mock
 
 from sqlalchemy.exc import DatabaseError, IntegrityError
@@ -51,6 +52,11 @@ class TestBaseService(BaseTestCase):
         self.assertEqual(user.id, 1)
         self.assertRaises(NotFound, self.service.get_or_404, uuid='asd')
 
+    def test_get_item_modified(self):
+        modified = self.service.get_item_modified(uuid='1')
+        self.assertIsInstance(modified, datetime)
+        self.assertRaises(NotFound, self.service.get_item_modified, uuid='asd')
+
     def test_update_or_422(self):
         data = {'email': 'hello'}
         self.service.update_or_abort('7', data)
@@ -72,3 +78,4 @@ class TestBaseService(BaseTestCase):
 
     def test_get_pagination(self):
         self.assertRaises(NotImplementedError, self.service.get_pagination)
+        self.assertRaises(NotImplementedError, self.service.get_pagination_modified)

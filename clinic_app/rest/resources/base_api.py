@@ -14,6 +14,7 @@ from functools import wraps
 
 from flask import request, current_app
 from flask_restful import Resource, reqparse, abort
+from werkzeug.http import http_date
 
 from clinic_app import ma
 from clinic_app.rest.schemas import pagination_schema
@@ -41,6 +42,7 @@ def validate_auth(func):
     return wrapper
 
 
+# pylint: disable=missing-function-docstring
 class BaseResource(Resource):
     """Base Resource class with common routines for inheritance"""
 
@@ -49,16 +51,21 @@ class BaseResource(Resource):
 
     @classmethod
     @validate_auth
+    def head(cls, uuid):
+        modified = http_date(cls.service.get_item_modified(uuid))
+        return {}, 204, {'Last-Modified': modified}
+
+    @classmethod
+    @validate_auth
     def get(cls, uuid):
-        """Retrieve"""
         schema = cls.schema()
         instance = cls.service.get_or_404(uuid)
-        return schema.dump(instance), 200
+        modified = http_date(instance.last_modified)
+        return schema.dump(instance), 200, {'Last-Modified': modified}
 
     @classmethod
     @validate_auth
     def put(cls, uuid):
-        """Update"""
         schema = cls.schema(partial=True)
         data = schema.load_or_422(request.json)
         instance = cls.service.update_or_abort(uuid, data)
@@ -67,7 +74,6 @@ class BaseResource(Resource):
     @classmethod
     @validate_auth
     def delete(cls, uuid):
-        """Delete"""
         cls.service.delete_or_404(uuid)
         return {}, 204
 
@@ -78,22 +84,33 @@ class BaseListResource(Resource):
     service: BaseService
     schema: ma.Schema
     filters_parser: reqparse.RequestParser
+    pagination_parser = reqparse.RequestParser()
+    pagination_parser.add_argument('page', type=int, default=1)
+    pagination_parser.add_argument('per_page', type=int, default=20)
 
     @classmethod
     @validate_auth
-    def post(cls):
-        """Create"""
-        schema = cls.schema()
-        data = schema.load_or_422(request.json)
-        instance = cls.service.save_or_422(data)
-        return schema.dump(instance), 201
+    def head(cls):
+        filters = cls.filters_parser.parse_args()
+        pages = cls.pagination_parser.parse_args()
+        modified = http_date(cls.service.get_pagination_modified(**pages, **filters))
+        return {}, 204, {'Last-Modified': modified}
 
     @classmethod
     @validate_auth
     def get(cls):
-        """Retrieve"""
         schema = cls.schema()
         filters = cls.filters_parser.parse_args()
-        pagination = cls.service.get_pagination(**filters)
+        pages = cls.pagination_parser.parse_args()
+        pagination = cls.service.get_pagination(**pages, **filters)
+        modified = http_date(max(map(lambda i: i.last_modified, pagination.items)))
         p_schema = pagination_schema(schema)
-        return p_schema.dump(pagination), 200
+        return p_schema.dump(pagination), 200, {'Last-Modified': modified}
+
+    @classmethod
+    @validate_auth
+    def post(cls):
+        schema = cls.schema()
+        data = schema.load_or_422(request.json)
+        instance = cls.service.save_or_422(data)
+        return schema.dump(instance), 201

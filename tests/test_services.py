@@ -2,7 +2,7 @@
 from datetime import date, timedelta
 
 from flask_sqlalchemy import Pagination
-
+from werkzeug.exceptions import NotFound
 from clinic_app.service import DoctorService, UserService, PatientService, AppointmentService
 from tests.base_test_case import BaseTestCase
 
@@ -37,9 +37,12 @@ class TestAllServices(BaseTestCase):
         for service, bundle in zip(self.services, cases):
             for kwargs, total in bundle:
                 with self.subTest(f'{service.__name__}:{list(kwargs.keys())[0]}'):
-                    pagination = service.get_pagination(**kwargs)
-                    self.assertIsInstance(pagination, Pagination)
-                    self.assertEqual(pagination.total, total)
+                    if not total:
+                        self.assertRaises(NotFound, service.get_pagination, **kwargs)
+                    else:
+                        pagination = service.get_pagination(**kwargs)
+                        self.assertIsInstance(pagination, Pagination)
+                        self.assertEqual(pagination.total, total)
         self.assertEqual(pagination.page, 1)
         self.assertEqual(pagination.per_page, 20)
         pagination = PatientService.get_pagination(page=5, per_page=5)

@@ -1,7 +1,7 @@
 """
 This module implements appointment model for 'appointment' table in database
 """
-from datetime import date as date_, time as time_
+from datetime import date as date_, time as time_, datetime
 from uuid import uuid4
 
 from clinic_app import db
@@ -29,6 +29,8 @@ class Appointment(db.Model):
     conclusion = db.Column(db.String(511))
     prescription = db.Column(db.String(511))
     bill = db.Column(db.Integer)
+    last_modified = db.Column(db.TIMESTAMP(timezone=True), default=datetime.utcnow,
+                              onupdate=datetime.utcnow)
 
     doctor = db.relationship('Doctor', lazy='joined')
     patient = db.relationship('Patient', lazy='joined')

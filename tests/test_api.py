@@ -16,6 +16,12 @@ class TestApi(BaseTestCase):
         self.assertStatus(response, 401)
         self.assertEqual(response.json['message'], "Credentials not valid")
 
+    def test_head(self):
+        response = self.client.head(url_for('api.users', per_page=5), headers=self.api_auth)
+        self.assertStatus(response, 204)
+        response = self.client.head(url_for('api.user', uuid='1'), headers=self.api_auth)
+        self.assertStatus(response, 204)
+
     def test_all_get_200(self):
         for endpoint in self.endpoints_1:
             with self.subTest(endpoint):

@@ -6,7 +6,6 @@ Classes:
 - `BaseService` defines common routines for service class
 """
 from flask_restful import abort
-from flask_sqlalchemy import Pagination
 from sqlalchemy.exc import IntegrityError, DatabaseError
 from sqlalchemy.orm import Query
 
@@ -45,7 +44,8 @@ class BaseService:
 
     @classmethod
     def get_or_404(cls, uuid: str) -> db.Model:
-        """Get model instance or throw 404 error
+        """
+        Return model instance or throw 404 error
 
         :param uuid: model's uuid
         """
@@ -53,6 +53,18 @@ class BaseService:
         if instance is None:
             abort(404)
         return instance
+
+    @classmethod
+    def get_item_modified(cls, uuid: str):
+        """
+        Return last modified datetime of item with given uuid or throw 404
+
+        :param uuid: model's uuid
+        """
+        modified = db.session.query(cls.model.last_modified).filter_by(uuid=uuid).scalar()
+        if modified is None:
+            abort(404)
+        return modified
 
     @classmethod
     def update_or_abort(cls, uuid: str, data: dict):
@@ -97,13 +109,32 @@ class BaseService:
         cls._commit()
 
     @classmethod
-    def get_pagination(cls, page: int = None, per_page: int = None,
-                       **filters) -> Pagination:
+    def get_pagination(cls, page: int = 1, per_page: int = 20, **filters):
         """
-        Return Pagination object, for model instances selected and filtered using kwargs
+        Return Pagination object, for model instances selected and filtered using kwargs.
+        If there is no items throw 404 http error
 
         :param page: pagination page
         :param per_page: items per page for pagination
         :param filters: kwargs for filtering
         """
-        return cls._filter_by(**filters).paginate(page=page, per_page=per_page)
+        pagination = cls._filter_by(**filters).paginate(page=page, per_page=per_page)
+        if not pagination.items:
+            abort(404)
+        return pagination
+
+    # pylint: disable=no-member
+    @classmethod
+    def get_pagination_modified(cls, page: int = 1, per_page: int = 20, **filters):
+        """
+        Return datetime of last modification of filtered collection.
+        If there is no items throw 404 http error.
+
+        :param page: pagination page
+        :param per_page: items per page for pagination
+        :param filters: kwargs for filtering
+        """
+        offset = (page - 1) * per_page
+        subquery = cls._filter_by(**filters).limit(per_page).offset(offset).subquery()
+        aliased_model = db.aliased(cls.model, subquery)
+        return db.session.query(db.func.max(aliased_model.last_modified)).scalar() or abort(404)

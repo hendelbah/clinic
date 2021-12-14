@@ -26,7 +26,7 @@ class BaseSchema(ma.SQLAlchemyAutoSchema):
     """Custom base schema class"""
 
     def __init__(self, *args, **kwargs):
-        self.opts.exclude += ('id',)
+        self.opts.exclude += ('id', 'last_modified')
         self.opts.dump_only += ('uuid',)
         super().__init__(*args, **kwargs)
 

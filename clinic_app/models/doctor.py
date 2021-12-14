@@ -1,6 +1,7 @@
 """
 This module implements instance of doctor in database
 """
+from datetime import datetime
 from uuid import uuid4
 
 from clinic_app import db
@@ -19,6 +20,8 @@ class Doctor(db.Model):
     speciality = db.Column(db.String(127, collation='utf8mb4_unicode_ci'), nullable=False)
     info = db.Column(db.String(1023, collation='utf8mb4_unicode_ci'), nullable=False)
     experience_years = db.Column(db.Integer, nullable=False)
+    last_modified = db.Column(db.TIMESTAMP(timezone=True), default=datetime.utcnow,
+                              onupdate=datetime.utcnow)
 
     user = db.relationship('User', back_populates='doctor', uselist=False, lazy='joined')
 

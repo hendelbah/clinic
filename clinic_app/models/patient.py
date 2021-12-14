@@ -1,7 +1,7 @@
 """
 This module implements instance of patient in database
 """
-from datetime import date
+from datetime import date, datetime
 from uuid import uuid4
 
 from clinic_app import db
@@ -21,6 +21,8 @@ class Patient(db.Model):
     name = db.Column(db.String(40, collation='utf8mb4_unicode_ci'), nullable=False)
     patronymic = db.Column(db.String(40, collation='utf8mb4_unicode_ci'), nullable=False)
     birthday = db.Column(db.Date, nullable=False)
+    last_modified = db.Column(db.TIMESTAMP(timezone=True), default=datetime.utcnow,
+                              onupdate=datetime.utcnow)
 
     def __init__(self, phone_number: str, surname: str, name: str, patronymic: str, birthday: date):
         """

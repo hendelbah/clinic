@@ -17,10 +17,12 @@ class TestRoutes(BaseTestCase):
         response = self.client.post(url_for('auth.login'),
                                     json={'email': 'root', 'pwd': ROOT_PASSWORD, 'remember': False})
         self.assertRedirects(response, url_for('general.index'))
+        self.assertMessageFlashed('You successfully logged in', 'success')
         response = self.client.get(url_for('auth.profile'))
         self.assertStatus(response, 200)
         response = self.client.get(url_for('auth.logout'))
         self.assertRedirects(response, url_for('general.index'))
+        self.assertMessageFlashed('You successfully logged out', 'success')
 
     def test_wrong_login_logout(self):
         response = self.client.post(url_for('auth.login'),

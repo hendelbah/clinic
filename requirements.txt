@@ -1,6 +1,7 @@
 alembic==1.7.5
 aniso8601==9.0.1
 astroid==2.9.0
+blinker==1.4
 certifi==2021.10.8
 cffi==1.15.0
 charset-normalizer==2.0.9

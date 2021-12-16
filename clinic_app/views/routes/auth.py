@@ -24,7 +24,6 @@ def login():
         if user and user.check_password(form.pwd.data):
             login_user(user, remember=form.remember.data)
             flash('You successfully logged in', 'success')
-
             return redirect(request.args.get('next') or url_for('general.index'))
         flash('Wrong email or password', 'error')
     return render_template('login.html', form=form)

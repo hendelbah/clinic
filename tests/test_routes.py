@@ -13,20 +13,45 @@ class TestRoutes(BaseTestCase):
                 response = self.client.get(url_for(endpoint=endpoint))
                 self.assert200(response)
 
-    def test_login_logout(self):
+    def test_login_profile_logout(self):
+        # successful login
         response = self.client.post(url_for('auth.login'),
                                     json={'email': 'root', 'pwd': ROOT_PASSWORD, 'remember': False})
         self.assertRedirects(response, url_for('general.index'))
         self.assertMessageFlashed('You successfully logged in', 'success')
+        # log in again when already logged
+        response = self.client.get(url_for('auth.login'))
+        self.assertRedirects(response, url_for('general.index'))
+        # get profile page
         response = self.client.get(url_for('auth.profile'))
         self.assertStatus(response, 200)
+        # change pass with wrong current pass
+        response = self.client.post(
+            url_for('auth.profile'),
+            json={'password': '123456', 'new_pass': '123456', 'confirm': '123456'}
+        )
+        self.assertRedirects(response, url_for('auth.profile'))
+        self.assertMessageFlashed('Wrong current password', 'error')
+        # successful password change
+        response = self.client.post(
+            url_for('auth.profile'),
+            json={'password': ROOT_PASSWORD, 'new_pass': '123456', 'confirm': '123456'}
+        )
+        self.assertRedirects(response, url_for('auth.profile'))
+        self.assertMessageFlashed('Your password was changed', 'success')
+        # successful logout
         response = self.client.get(url_for('auth.logout'))
         self.assertRedirects(response, url_for('general.index'))
         self.assertMessageFlashed('You successfully logged out', 'success')
 
     def test_wrong_login_logout(self):
+        response = self.client.post(
+            url_for('auth.login'),
+            json={'email': 'do@gmail.com', 'pwd': '123456', 'remember': False}
+        )
+        self.assertStatus(response, 200)
         response = self.client.post(url_for('auth.login'),
-                                    json={'email': 'do@gmail.com', 'pwd': 'a', 'remember': False})
+                                    json={'email': 'root', 'pwd': '123456', 'remember': False})
         self.assertStatus(response, 200)
         response = self.client.get(url_for('auth.logout'))
         self.assertRedirects(response, url_for('general.index'))

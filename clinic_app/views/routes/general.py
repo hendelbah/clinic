@@ -16,12 +16,8 @@ def index():
 
 @general_bp.route('/doctors')
 def doctors():
-    try:
-        page = request.args.get('page', default=1, type=int)
-        per_page = request.args.get('per_page', default=8, type=int)
-    except ValueError:
-        page = 1
-        per_page = 8
+    page = request.args.get('page', default=1, type=int)
+    per_page = request.args.get('per_page', default=8, type=int)
     pagination = DoctorService.get_pagination(page=page, per_page=per_page)
     if len(pagination.items) == 0 < pagination.total:
         return redirect(url_for('general.doctors'))

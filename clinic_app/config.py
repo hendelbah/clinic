@@ -31,6 +31,7 @@ class TestingConfig(Config):
     SQLALCHEMY_ECHO = False
     DEBUG = True
     WTF_CSRF_ENABLED = False
+    PRESERVE_CONTEXT_ON_EXCEPTION = False
 
 
 class DevelopmentConfig(Config):

@@ -10,7 +10,7 @@ DB_USER = os.getenv('FLASK_DB_USER', default='root')
 DB_PASS = os.getenv('FLASK_DB_PASSWORD', default='')
 DB_SERVER = os.environ.get('FLASK_DB_SERVER', default='localhost')
 DB_NAME = os.getenv('FLASK_DB_NAME', default='clinic_test')
-FLASK_SECRET_KEY = os.getenv('FLASK_SECRET_KEY')
+FLASK_SECRET_KEY = os.getenv('FLASK_SECRET_KEY', default='super-secret')
 
 
 class Config:

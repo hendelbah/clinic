@@ -19,8 +19,12 @@ class TestApi(BaseTestCase):
     def test_head(self):
         response = self.client.head(url_for('api.users', per_page=5), headers=self.api_auth)
         self.assertStatus(response, 204)
+        response = self.client.head(url_for('api.users', email='zxc'), headers=self.api_auth)
+        self.assert404(response)
         response = self.client.head(url_for('api.user', uuid='1'), headers=self.api_auth)
         self.assertStatus(response, 204)
+        response = self.client.head(url_for('api.user', uuid='qaz'), headers=self.api_auth)
+        self.assert404(response)
 
     def test_all_get_200(self):
         for endpoint in self.endpoints_1:
@@ -82,6 +86,18 @@ class TestApi(BaseTestCase):
                                            headers=self.api_auth)
                 self.assertStatus(response, 200)
 
+    def test_get_filtered_404(self):
+        filters = (
+            {'email': 'zxc'},
+            {'no_user': True},
+            {'name': 'amogus'},
+            {'doctor_uuid': 'poppa'}
+        )
+        for endpoint, data in zip(self.endpoints_1, filters):
+            with self.subTest(endpoint):
+                response = self.client.get(url_for(endpoint, **data), headers=self.api_auth)
+                self.assert404(response)
+
     def test_wrong_get_put_delete(self):
         for endpoint in self.endpoints_2:
             with self.subTest(endpoint):
@@ -115,13 +131,13 @@ class TestApi(BaseTestCase):
 
     def test_put_wrong_data(self):
         cases = (
-            ({'id': 1, 'uuid': 'Somebody', 'email': 'once'},
-             ['id', 'uuid']),
-            ({'fu': 'the world', 'spe': 'is gonna'},
+            ({'doctor_uuid': 'Somebody', 'email': 'once', 'password_hash': 'told me'},
+             ['ValueError']),
+            ({'fu': 'the world', 'spe': 'is gonna', 'info': 'roll me'},
              ['fu', 'spe']),
             ({'phone_number': '380000000003', 'name': 'Slave'},
              ['IntegrityError']),
-            ({'doctor_uuid': '0', 'date': '013-10-10', 'time': '75:00:00', 'aoa': 'oao'},
+            ({'doctor_uuid': '1', 'date': '013-10-10', 'time': '75:00:00', 'aoa': 'oao'},
              ['aoa', 'date', 'time']),
         )
         for endpoint, case in zip(self.endpoints_2, cases):

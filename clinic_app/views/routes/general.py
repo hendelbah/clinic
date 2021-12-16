@@ -1,9 +1,9 @@
 """
 General routes
 """
-from flask import Blueprint, render_template, redirect, url_for, request, flash
+from flask import Blueprint, render_template, redirect, url_for, request
 
-from clinic_app.views.api_controllers import ApiHelper
+from clinic_app.service import DoctorService
 
 general_bp = Blueprint('general', __name__)
 
@@ -16,15 +16,13 @@ def index():
 
 @general_bp.route('/doctors')
 def doctors():
-    page = request.args.get('page')
-    per_page = request.args.get('per_page', default=8)
-    response = ApiHelper.doctors.get(page=page, per_page=per_page)
-    if response.status_code == 200:
-        data = response.json
-    else:
-        data = {'page': 1, 'per_page': 10, 'pages': 1, 'has_prev': False,
-                'has_next': False, 'total': 0, 'items': []}
-        flash('API error', 'error')
-    if len(data['items']) == 0 < data['total']:
+    try:
+        page = request.args.get('page', default=1, type=int)
+        per_page = request.args.get('per_page', default=8, type=int)
+    except ValueError:
+        page = 1
+        per_page = 8
+    pagination = DoctorService.get_pagination(page=page, per_page=per_page)
+    if len(pagination.items) == 0 < pagination.total:
         return redirect(url_for('general.doctors'))
-    return render_template('doctors.html', data=data)
+    return render_template('doctors.html', data=pagination)

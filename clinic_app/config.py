@@ -21,6 +21,18 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
+class TestingConfig(Config):
+    """
+    Configuration for running tests.
+    """
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///:memory:'
+    API_KEY = 'qwerty'
+    TESTING = True
+    SQLALCHEMY_ECHO = False
+    DEBUG = True
+    WTF_CSRF_ENABLED = False
+
+
 class DevelopmentConfig(Config):
     """
     Development configurations
@@ -44,6 +56,7 @@ class ProductionConfig(Config):
 
 
 config_name = {
+    'testing': TestingConfig,
     'development': DevelopmentConfig,
     'production': ProductionConfig
 }

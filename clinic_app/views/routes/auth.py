@@ -4,9 +4,11 @@ Authentication routes
 from flask import Blueprint, render_template, redirect, url_for, flash, request
 from flask_login import current_user, login_user, logout_user, login_required
 
-from clinic_app.views.api_controllers import ApiHelper
+from clinic_app import login_manager
+from clinic_app.service import UserService
 from clinic_app.views.forms import LoginForm, ChangePassForm
-from clinic_app.views.user_login import UserLogin
+
+login_manager.user_loader(UserService.get)
 
 auth_bp = Blueprint('auth', __name__)
 
@@ -18,7 +20,7 @@ def login():
         return redirect(url_for('general.index'))
     form = LoginForm()
     if form.validate_on_submit():
-        user = UserLogin.load_by_email(form.email.data)
+        user = UserService.get_by_email(form.email.data)
         if user and user.check_password(form.pwd.data):
             login_user(user, remember=form.remember.data)
             flash('You successfully logged in', 'success')
@@ -43,10 +45,9 @@ def profile():
     form = ChangePassForm()
     if form.is_submitted():
         if form.validate() and current_user.check_password(form.password.data):
-            pass_hash = UserLogin.hash_password(form.password.data)
-            data = {'password_hash': pass_hash}
-            response = ApiHelper.user.put(current_user.uuid, data=data)
-            if response.status_code == 200:
+            current_user.set_password(form.password.data)
+            errors = UserService.save_instance(current_user)
+            if errors is None:
                 flash('Your password was changed', 'success')
             else:
                 flash('Password change failed', 'error')

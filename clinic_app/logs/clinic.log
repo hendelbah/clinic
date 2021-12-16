@@ -4391,3 +4391,333 @@
 2021-12-14 03:49:17,610 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 2021-12-14 03:49:19,712 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:49:19] "[35m[1mHEAD /api/v1/users/1 HTTP/1.1[0m" 204 -
 2021-12-14 03:51:25,636 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\tests\\test_base_service.py', reloading
+2021-12-14 03:51:25,696 INFO werkzeug:  * Restarting with stat
+2021-12-14 03:51:26,128 INFO clinic_app: App initialization
+2021-12-14 03:51:26,229 WARNING werkzeug:  * Debugger is active!
+2021-12-14 03:51:26,239 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-14 03:51:26,279 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-14 03:54:11,726 INFO clinic_app: App initialization
+2021-12-14 03:54:11,810 INFO werkzeug:  * Restarting with stat
+2021-12-14 03:54:12,227 INFO clinic_app: App initialization
+2021-12-14 03:54:12,311 WARNING werkzeug:  * Debugger is active!
+2021-12-14 03:54:12,327 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-14 03:54:12,367 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-14 03:54:39,182 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:54:39] "POST /login HTTP/1.1" 200 -
+2021-12-14 03:54:39,299 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:54:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-14 03:54:39,434 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:54:39] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-14 03:54:41,475 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:54:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-12-14 03:54:41,483 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:54:41] "GET / HTTP/1.1" 200 -
+2021-12-14 03:54:41,594 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:54:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-14 03:54:44,046 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:54:44] "GET /doctors HTTP/1.1" 200 -
+2021-12-14 03:54:44,060 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:54:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-14 03:54:45,055 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:54:45] "GET /doctors HTTP/1.1" 200 -
+2021-12-14 03:54:45,358 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:54:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-14 03:54:47,821 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:54:47] "GET /doctors?page=2&per_page=8 HTTP/1.1" 200 -
+2021-12-14 03:54:47,842 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:54:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-14 03:54:49,290 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:54:49] "GET /doctors?page=3&per_page=8 HTTP/1.1" 200 -
+2021-12-14 03:54:49,590 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:54:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-14 03:54:58,960 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:54:58] "GET /doctors?page=2&per_page=8 HTTP/1.1" 200 -
+2021-12-14 03:54:58,984 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:54:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-14 03:55:01,547 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:55:01] "GET /doctors HTTP/1.1" 200 -
+2021-12-14 03:55:01,852 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:55:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-14 03:55:06,323 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:55:06] "GET / HTTP/1.1" 200 -
+2021-12-14 03:55:06,355 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:55:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-14 03:55:07,708 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:55:07] "GET /profile HTTP/1.1" 200 -
+2021-12-14 03:55:08,009 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:55:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-14 03:55:24,953 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:55:24] "GET /doctors HTTP/1.1" 200 -
+2021-12-14 03:55:24,975 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:55:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-14 03:55:25,923 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:55:25] "GET /doctors HTTP/1.1" 200 -
+2021-12-14 03:55:26,222 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:55:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-14 03:55:33,854 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:55:33] "GET /profile HTTP/1.1" 200 -
+2021-12-14 03:55:33,872 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:55:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-14 03:59:32,757 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:59:32] "GET /profile HTTP/1.1" 200 -
+2021-12-14 03:59:32,770 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:59:32] "GET /static/css/styles.css HTTP/1.1" 200 -
+2021-12-14 03:59:33,007 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 03:59:33] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-14 04:00:50,105 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 04:00:50] "GET /doctors HTTP/1.1" 200 -
+2021-12-14 04:00:50,136 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 04:00:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-14 04:00:50,353 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 04:00:50] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-14 04:00:57,294 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 04:00:57] "GET /profile HTTP/1.1" 200 -
+2021-12-14 04:00:57,308 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 04:00:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-14 04:00:57,545 INFO werkzeug: 127.0.0.1 - - [14/Dec/2021 04:00:57] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-14 22:45:12,089 INFO clinic_app: App initialization
+2021-12-14 22:46:41,798 INFO clinic_app: App initialization
+2021-12-14 22:47:17,997 INFO clinic_app: App initialization
+2021-12-14 22:47:27,951 INFO clinic_app: App initialization
+2021-12-14 22:47:37,441 INFO clinic_app: App initialization
+2021-12-14 22:47:48,975 INFO clinic_app: App initialization
+2021-12-14 22:48:01,208 INFO clinic_app: App initialization
+2021-12-15 00:30:54,667 INFO clinic_app: App initialization
+2021-12-15 00:30:54,803 INFO werkzeug:  * Restarting with stat
+2021-12-15 00:30:55,297 INFO clinic_app: App initialization
+2021-12-15 00:30:55,413 WARNING werkzeug:  * Debugger is active!
+2021-12-15 00:30:55,416 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-15 00:30:55,457 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-15 00:40:24,522 INFO clinic_app: App initialization
+2021-12-15 00:40:24,646 INFO werkzeug:  * Restarting with stat
+2021-12-15 00:40:25,114 INFO clinic_app: App initialization
+2021-12-15 00:40:25,223 WARNING werkzeug:  * Debugger is active!
+2021-12-15 00:40:25,227 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-15 00:40:25,266 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-15 00:40:29,184 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:40:29] "GET / HTTP/1.1" 200 -
+2021-12-15 00:40:29,303 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:40:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-15 00:40:29,441 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:40:29] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-15 00:40:49,164 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:40:49] "GET /profile HTTP/1.1" 200 -
+2021-12-15 00:40:49,185 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:40:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-15 00:40:49,407 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:40:49] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-15 00:40:51,083 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:40:51] "GET /doctors HTTP/1.1" 200 -
+2021-12-15 00:40:51,102 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:40:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-15 00:40:52,635 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:40:52] "[35m[1mGET /doctors?page=2&per_page=8 HTTP/1.1[0m" 500 -
+2021-12-15 00:40:52,971 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:40:52] "GET /doctors?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2021-12-15 00:40:52,976 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:40:52] "GET /doctors?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2021-12-15 00:40:53,318 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:40:53] "GET /doctors?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2021-12-15 00:40:53,336 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:40:53] "GET /doctors?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2021-12-15 00:40:53,566 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:40:53] "GET /doctors?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2021-12-15 00:48:38,790 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\views\\__init__.py', reloading
+2021-12-15 00:48:38,861 INFO werkzeug:  * Restarting with stat
+2021-12-15 00:48:39,337 INFO clinic_app: App initialization
+2021-12-15 00:48:39,473 WARNING werkzeug:  * Debugger is active!
+2021-12-15 00:48:39,476 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-15 00:48:39,516 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-15 00:52:23,882 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\views\\routes\\general.py', reloading
+2021-12-15 00:52:23,936 INFO werkzeug:  * Restarting with stat
+2021-12-15 00:52:24,412 INFO clinic_app: App initialization
+2021-12-15 00:52:24,528 WARNING werkzeug:  * Debugger is active!
+2021-12-15 00:52:24,531 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-15 00:52:24,570 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-15 00:52:24,700 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:52:24] "GET /doctors?page=2&per_page=8 HTTP/1.1" 200 -
+2021-12-15 00:52:24,806 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:52:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-15 00:52:24,891 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:52:24] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-15 00:52:26,906 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:52:26] "GET /doctors?page=&per_page=8 HTTP/1.1" 200 -
+2021-12-15 00:52:26,920 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:52:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-15 00:52:32,435 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:52:32] "GET /doctors?page=&per_page=8 HTTP/1.1" 200 -
+2021-12-15 00:52:32,731 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:52:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-15 00:52:34,884 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:52:34] "GET /doctors?page=&per_page=8 HTTP/1.1" 200 -
+2021-12-15 00:52:34,899 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:52:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-15 00:52:36,667 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:52:36] "GET /doctors?page=&per_page=8 HTTP/1.1" 200 -
+2021-12-15 00:52:36,970 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:52:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-15 00:52:54,141 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:52:54] "GET /doctors?page=&per_page=8 HTTP/1.1" 200 -
+2021-12-15 00:52:54,153 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:52:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-15 00:53:03,858 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:53:03] "GET /doctors?page=2&per_page=8 HTTP/1.1" 200 -
+2021-12-15 00:53:04,155 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:53:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-15 00:53:05,953 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:53:05] "GET /doctors?page=3&per_page=8 HTTP/1.1" 200 -
+2021-12-15 00:53:05,973 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:53:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-15 00:53:07,382 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:53:07] "GET /doctors?page=2&per_page=8 HTTP/1.1" 200 -
+2021-12-15 00:53:07,680 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:53:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-15 00:53:09,051 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:53:09] "GET /doctors HTTP/1.1" 200 -
+2021-12-15 00:53:09,072 INFO werkzeug: 127.0.0.1 - - [15/Dec/2021 00:53:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-16 15:30:37,029 INFO clinic_app: App initialization
+2021-12-16 15:46:25,885 INFO clinic_app: App initialization
+2021-12-16 15:48:43,985 INFO clinic_app: App initialization
+2021-12-16 15:58:35,183 INFO clinic_app: App initialization
+2021-12-16 15:59:01,490 INFO clinic_app: App initialization
+2021-12-16 15:59:42,758 INFO clinic_app: App initialization
+2021-12-16 16:00:47,876 INFO clinic_app: App initialization
+2021-12-16 16:06:30,259 INFO clinic_app: App initialization
+2021-12-16 16:08:48,456 INFO clinic_app: App initialization
+2021-12-16 16:09:08,075 INFO clinic_app: App initialization
+2021-12-16 16:10:15,068 INFO clinic_app: App initialization
+2021-12-16 16:11:21,594 INFO clinic_app: App initialization
+2021-12-16 16:15:12,940 INFO clinic_app: App initialization
+2021-12-16 16:24:56,296 INFO clinic_app: App initialization
+2021-12-16 16:25:19,964 INFO clinic_app: App initialization
+2021-12-16 16:25:31,678 INFO clinic_app: App initialization
+2021-12-16 16:26:50,716 INFO clinic_app: App initialization
+2021-12-16 16:28:12,069 INFO clinic_app: App initialization
+2021-12-16 16:30:30,431 INFO clinic_app: App initialization
+2021-12-16 16:31:15,787 INFO clinic_app: App initialization
+2021-12-16 16:31:51,495 INFO clinic_app: App initialization
+2021-12-16 16:34:48,350 INFO clinic_app: App initialization
+2021-12-16 16:46:23,254 INFO clinic_app: App initialization
+2021-12-16 16:46:44,342 INFO clinic_app: App initialization
+2021-12-16 16:48:40,136 INFO clinic_app: App initialization
+2021-12-16 16:52:19,917 INFO clinic_app: App initialization
+2021-12-16 16:53:21,584 INFO clinic_app: App initialization
+2021-12-16 16:54:52,038 INFO clinic_app: App initialization
+2021-12-16 16:59:11,854 INFO clinic_app: App initialization
+2021-12-16 17:01:38,473 INFO clinic_app: App initialization
+2021-12-16 17:06:47,097 INFO clinic_app: App initialization
+2021-12-16 17:10:33,729 INFO clinic_app: App initialization
+2021-12-16 17:10:44,350 INFO clinic_app: App initialization
+2021-12-16 17:14:15,747 INFO clinic_app: App initialization
+2021-12-16 17:14:29,510 INFO clinic_app: App initialization
+2021-12-16 17:19:22,972 INFO clinic_app: App initialization
+2021-12-16 17:39:30,339 INFO clinic_app: App initialization
+2021-12-16 17:39:30,496 INFO werkzeug:  * Restarting with stat
+2021-12-16 17:39:30,948 INFO clinic_app: App initialization
+2021-12-16 17:39:31,057 WARNING werkzeug:  * Debugger is active!
+2021-12-16 17:39:31,061 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-16 17:39:31,137 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-16 17:57:06,108 INFO clinic_app: App initialization
+2021-12-16 18:08:01,059 INFO clinic_app: App initialization
+2021-12-16 18:08:37,445 INFO clinic_app: App initialization
+2021-12-16 18:08:44,931 INFO clinic_app: App initialization
+2021-12-16 18:08:53,477 INFO clinic_app: App initialization
+2021-12-16 18:08:58,962 INFO clinic_app: App initialization
+2021-12-16 18:11:05,217 INFO clinic_app: App initialization
+2021-12-16 18:13:31,568 INFO clinic_app: App initialization
+2021-12-16 18:15:21,585 INFO clinic_app: App initialization
+2021-12-16 18:21:59,731 INFO clinic_app: App initialization
+2021-12-16 18:23:58,078 INFO clinic_app: App initialization
+2021-12-16 18:42:23,798 INFO clinic_app: App initialization
+2021-12-16 18:46:17,900 INFO clinic_app: App initialization
+2021-12-16 18:47:42,659 INFO clinic_app: App initialization
+2021-12-16 18:47:53,262 INFO clinic_app: App initialization
+2021-12-16 18:52:18,976 INFO clinic_app: App initialization
+2021-12-16 18:52:30,110 INFO clinic_app: App initialization
+2021-12-16 18:58:36,346 INFO clinic_app: App initialization
+2021-12-16 18:59:25,033 INFO clinic_app: App initialization
+2021-12-16 19:01:58,749 INFO clinic_app: App initialization
+2021-12-16 19:03:14,283 INFO clinic_app: App initialization
+2021-12-16 19:06:16,865 INFO clinic_app: App initialization
+2021-12-16 19:11:59,547 INFO clinic_app: App initialization
+2021-12-16 19:13:14,285 INFO clinic_app: App initialization
+2021-12-16 19:15:21,648 INFO clinic_app: App initialization
+2021-12-16 19:20:19,468 INFO clinic_app: App initialization
+2021-12-16 19:21:46,253 INFO clinic_app: App initialization
+2021-12-16 19:22:16,505 INFO clinic_app: App initialization
+2021-12-16 19:31:10,046 INFO clinic_app: App initialization
+2021-12-16 19:52:07,465 INFO clinic_app: App initialization
+2021-12-16 19:53:16,287 INFO clinic_app: App initialization
+2021-12-16 19:54:26,401 INFO clinic_app: App initialization
+2021-12-16 19:55:22,118 INFO clinic_app: App initialization
+2021-12-16 19:57:16,915 INFO clinic_app: App initialization
+2021-12-16 19:57:46,683 INFO clinic_app: App initialization
+2021-12-16 20:02:36,161 INFO clinic_app: App initialization
+2021-12-16 20:02:54,801 INFO clinic_app: App initialization
+2021-12-16 20:11:41,800 INFO clinic_app: App initialization
+2021-12-16 20:12:23,161 INFO clinic_app: App initialization
+2021-12-16 20:16:09,675 INFO clinic_app: App initialization
+2021-12-16 20:16:20,627 INFO clinic_app: App initialization
+2021-12-16 20:18:01,796 INFO clinic_app: App initialization
+2021-12-16 20:18:11,163 INFO clinic_app: App initialization
+2021-12-16 20:19:36,969 INFO clinic_app: App initialization
+2021-12-16 20:21:53,615 INFO clinic_app: App initialization
+2021-12-16 20:22:43,580 INFO clinic_app: App initialization
+2021-12-16 20:23:21,172 INFO clinic_app: App initialization
+2021-12-16 20:24:07,422 INFO clinic_app: App initialization
+2021-12-16 20:26:17,354 INFO clinic_app: App initialization
+2021-12-16 20:26:23,947 INFO clinic_app: App initialization
+2021-12-16 20:26:46,715 INFO clinic_app: App initialization
+2021-12-16 20:33:52,465 INFO clinic_app: App initialization
+2021-12-16 20:36:42,409 INFO clinic_app: App initialization
+2021-12-16 20:37:52,507 INFO clinic_app: App initialization
+2021-12-16 20:41:26,128 INFO clinic_app: App initialization
+2021-12-16 20:41:51,847 INFO clinic_app: App initialization
+2021-12-16 20:42:42,305 INFO clinic_app: App initialization
+2021-12-16 20:46:51,264 INFO clinic_app: App initialization
+2021-12-16 20:48:45,566 INFO clinic_app: App initialization
+2021-12-16 20:49:58,475 INFO clinic_app: App initialization
+2021-12-16 20:53:55,315 INFO clinic_app: App initialization
+2021-12-16 20:53:55,781 INFO clinic_app: Thu, 16 Dec 2021 18:53:56 GMT
+2021-12-16 20:53:55,784 INFO clinic_app: Thu, 16 Dec 2021 18:53:55 GMT
+2021-12-16 20:54:16,473 INFO clinic_app: App initialization
+2021-12-16 20:54:16,933 INFO clinic_app: {'email': None}
+2021-12-16 20:54:16,936 INFO clinic_app: {'email': 'zxc'}
+2021-12-16 20:55:19,504 INFO clinic_app: App initialization
+2021-12-16 20:57:52,314 INFO clinic_app: App initialization
+2021-12-16 20:57:52,948 INFO clinic_app: 2021-12-16 18:57:53
+2021-12-16 20:57:52,951 INFO clinic_app: None
+2021-12-16 20:59:11,777 INFO clinic_app: App initialization
+2021-12-16 20:59:29,181 INFO clinic_app: App initialization
+2021-12-16 21:07:14,154 INFO clinic_app: App initialization
+2021-12-16 21:08:35,280 INFO clinic_app: App initialization
+2021-12-16 21:08:50,851 INFO clinic_app: App initialization
+2021-12-16 21:11:10,528 INFO clinic_app: App initialization
+2021-12-16 21:11:44,431 INFO clinic_app: App initialization
+2021-12-16 21:15:43,531 INFO clinic_app: App initialization
+2021-12-16 21:18:36,033 INFO clinic_app: App initialization
+2021-12-16 21:18:36,483 INFO clinic_app: (sqlite3.IntegrityError) UNIQUE constraint failed: user.email
+[SQL: INSERT INTO user (uuid, doctor_id, email, password_hash, is_admin, last_modified) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('c0afe3c8-774e-497e-97b0-6715f07c5db6', None, 'doctor_001@spam.ua', 'asd', 0, '2021-12-16 19:18:36.483975')]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2021-12-16 21:18:36,515 INFO clinic_app: Invalid doctor_uuid
+2021-12-16 21:18:36,517 INFO clinic_app: (sqlite3.IntegrityError) UNIQUE constraint failed: patient.phone_number
+[SQL: UPDATE patient SET phone_number=?, name=?, last_modified=? WHERE patient.id = ?]
+[parameters: ('380000000003', 'Slave', '2021-12-16 19:18:36.517004', 3)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2021-12-16 21:18:36,555 INFO clinic_app: (unittest.mock.Mock) <Mock id='3123669149920'>
+(Background on this error at: https://sqlalche.me/e/14/4xp6)
+2021-12-16 21:18:36,555 INFO clinic_app: (unittest.mock.Mock) <Mock id='3123669149920'>
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2021-12-16 21:18:36,557 INFO clinic_app: (sqlite3.IntegrityError) UNIQUE constraint failed: user.email
+[SQL: INSERT INTO user (uuid, doctor_id, email, password_hash, is_admin, last_modified) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('816b666a-956a-43a6-9df0-f102ed0a76ec', None, 'email@spam.net', '1234', 0, '2021-12-16 19:18:36.557041')]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2021-12-16 21:18:36,573 INFO clinic_app: (sqlite3.IntegrityError) UNIQUE constraint failed: user.doctor_id
+[SQL: UPDATE user SET doctor_id=?, last_modified=? WHERE user.id = ?]
+[parameters: (1, '2021-12-16 19:18:36.573055', 8)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2021-12-16 21:19:06,128 INFO clinic_app: App initialization
+2021-12-16 21:19:06,586 INFO clinic_app: {'code': 'gkpj', 'statement': 'INSERT INTO user (uuid, doctor_id, email, password_hash, is_admin, last_modified) VALUES (?, ?, ?, ?, ?, ?)', 'params': ('579ec9b1-7685-4712-bdd5-1cafa7ecde56', None, 'doctor_001@spam.ua', 'asd', 0, '2021-12-16 19:19:06.586535'), 'orig': IntegrityError('UNIQUE constraint failed: user.email'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:19:06,618 INFO clinic_app: {}
+2021-12-16 21:19:06,621 INFO clinic_app: {'code': 'gkpj', 'statement': 'UPDATE patient SET phone_number=?, name=?, last_modified=? WHERE patient.id = ?', 'params': ('380000000003', 'Slave', '2021-12-16 19:19:06.621567', 3), 'orig': IntegrityError('UNIQUE constraint failed: patient.phone_number'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:19:06,656 INFO clinic_app: {'statement': 0, 'params': 0, 'orig': <Mock id='2414713011360'>, 'ismulti': None, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:19:06,657 INFO clinic_app: {'statement': 0, 'params': 0, 'orig': <Mock id='2414713011360'>, 'ismulti': None, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:19:06,659 INFO clinic_app: {'code': 'gkpj', 'statement': 'INSERT INTO user (uuid, doctor_id, email, password_hash, is_admin, last_modified) VALUES (?, ?, ?, ?, ?, ?)', 'params': ('53429c44-83e8-4c25-970c-14482a2e23e4', None, 'email@spam.net', '1234', 0, '2021-12-16 19:19:06.658600'), 'orig': IntegrityError('UNIQUE constraint failed: user.email'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:19:06,674 INFO clinic_app: {'code': 'gkpj', 'statement': 'UPDATE user SET doctor_id=?, last_modified=? WHERE user.id = ?', 'params': (1, '2021-12-16 19:19:06.674615', 8), 'orig': IntegrityError('UNIQUE constraint failed: user.doctor_id'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:19:22,716 INFO clinic_app: App initialization
+2021-12-16 21:19:53,905 INFO clinic_app: App initialization
+2021-12-16 21:20:41,398 INFO clinic_app: App initialization
+2021-12-16 21:21:40,698 INFO clinic_app: App initialization
+2021-12-16 21:21:41,130 INFO clinic_app: {'code': 'gkpj', 'statement': 'INSERT INTO user (uuid, doctor_id, email, password_hash, is_admin, last_modified) VALUES (?, ?, ?, ?, ?, ?)', 'params': ('6b9db91b-5b0a-4d45-9c16-2268a4234f89', None, 'doctor_001@spam.ua', 'asd', 0, '2021-12-16 19:21:41.130484'), 'orig': IntegrityError('UNIQUE constraint failed: user.email'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:21:41,151 INFO clinic_app: {}
+2021-12-16 21:21:41,154 INFO clinic_app: {'code': 'gkpj', 'statement': 'UPDATE patient SET phone_number=?, name=?, last_modified=? WHERE patient.id = ?', 'params': ('380000000003', 'Slave', '2021-12-16 19:21:41.154506', 3), 'orig': IntegrityError('UNIQUE constraint failed: patient.phone_number'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:21:41,185 INFO clinic_app: {'statement': 0, 'params': 0, 'orig': <Mock id='1718345438304'>, 'ismulti': None, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:21:41,195 INFO clinic_app: {'code': 'gkpj', 'statement': 'INSERT INTO user (uuid, doctor_id, email, password_hash, is_admin, last_modified) VALUES (?, ?, ?, ?, ?, ?)', 'params': ('a0616c73-0592-4a96-b7e3-3a560a3b7bc1', None, 'email@spam.net', '1234', 0, '2021-12-16 19:21:41.195543'), 'orig': IntegrityError('UNIQUE constraint failed: user.email'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:21:41,216 INFO clinic_app: {'code': 'gkpj', 'statement': 'UPDATE user SET doctor_id=?, last_modified=? WHERE user.id = ?', 'params': (1, '2021-12-16 19:21:41.216562', 8), 'orig': IntegrityError('UNIQUE constraint failed: user.doctor_id'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:22:30,780 INFO clinic_app: App initialization
+2021-12-16 21:22:31,226 INFO clinic_app: {'code': 'gkpj', 'statement': 'INSERT INTO user (uuid, doctor_id, email, password_hash, is_admin, last_modified) VALUES (?, ?, ?, ?, ?, ?)', 'params': ('62903581-82c6-492d-b30a-afbfe5eda2b2', None, 'doctor_001@spam.ua', 'asd', 0, '2021-12-16 19:22:31.226610'), 'orig': IntegrityError('UNIQUE constraint failed: user.email'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:22:31,244 INFO clinic_app: {}
+2021-12-16 21:22:31,246 INFO clinic_app: {'code': 'gkpj', 'statement': 'UPDATE patient SET phone_number=?, name=?, last_modified=? WHERE patient.id = ?', 'params': ('380000000003', 'Slave', '2021-12-16 19:22:31.246628', 3), 'orig': IntegrityError('UNIQUE constraint failed: patient.phone_number'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:22:31,280 INFO clinic_app: {'statement': 0, 'params': 0, 'orig': <Mock id='1975381214688'>, 'ismulti': None, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:22:31,281 INFO clinic_app: {'statement': 0, 'params': 0, 'orig': <Mock id='1975381214688'>, 'ismulti': None, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:22:31,282 INFO clinic_app: {'code': 'gkpj', 'statement': 'INSERT INTO user (uuid, doctor_id, email, password_hash, is_admin, last_modified) VALUES (?, ?, ?, ?, ?, ?)', 'params': ('9e10ec9a-1d95-448f-bf17-7e1600b753b6', None, 'email@spam.net', '1234', 0, '2021-12-16 19:22:31.282655'), 'orig': IntegrityError('UNIQUE constraint failed: user.email'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:22:31,298 INFO clinic_app: {'code': 'gkpj', 'statement': 'UPDATE user SET doctor_id=?, last_modified=? WHERE user.id = ?', 'params': (1, '2021-12-16 19:22:31.298617', 8), 'orig': IntegrityError('UNIQUE constraint failed: user.doctor_id'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:23:35,781 INFO clinic_app: App initialization
+2021-12-16 21:23:36,235 INFO clinic_app: {'code': 'gkpj', 'statement': 'INSERT INTO user (uuid, doctor_id, email, password_hash, is_admin, last_modified) VALUES (?, ?, ?, ?, ?, ?)', 'params': ('afd916aa-aade-4e2f-8b1e-caa115b5761a', None, 'doctor_001@spam.ua', 'asd', 0, '2021-12-16 19:23:36.235500'), 'orig': IntegrityError('UNIQUE constraint failed: user.email'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:23:36,254 INFO clinic_app: {}
+2021-12-16 21:23:36,257 INFO clinic_app: {'code': 'gkpj', 'statement': 'UPDATE patient SET phone_number=?, name=?, last_modified=? WHERE patient.id = ?', 'params': ('380000000003', 'Slave', '2021-12-16 19:23:36.257516', 3), 'orig': IntegrityError('UNIQUE constraint failed: patient.phone_number'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:23:36,289 INFO clinic_app: {'statement': 0, 'params': 0, 'orig': <Mock id='2499188639392'>, 'ismulti': None, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:23:36,290 INFO clinic_app: {'statement': 0, 'params': 0, 'orig': <Mock id='2499188639392'>, 'ismulti': None, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:23:36,292 INFO clinic_app: {'code': 'gkpj', 'statement': 'INSERT INTO user (uuid, doctor_id, email, password_hash, is_admin, last_modified) VALUES (?, ?, ?, ?, ?, ?)', 'params': ('ce8f6770-d2c9-4aac-84ee-02fd7b4f270f', None, 'email@spam.net', '1234', 0, '2021-12-16 19:23:36.291548'), 'orig': IntegrityError('UNIQUE constraint failed: user.email'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:23:36,292 INFO clinic_app: {}
+2021-12-16 21:23:36,305 INFO clinic_app: {'code': 'gkpj', 'statement': 'UPDATE user SET doctor_id=?, last_modified=? WHERE user.id = ?', 'params': (1, '2021-12-16 19:23:36.305560', 8), 'orig': IntegrityError('UNIQUE constraint failed: user.doctor_id'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:24:27,582 INFO clinic_app: App initialization
+2021-12-16 21:24:28,023 INFO clinic_app: {'code': 'gkpj', 'statement': 'INSERT INTO user (uuid, doctor_id, email, password_hash, is_admin, last_modified) VALUES (?, ?, ?, ?, ?, ?)', 'params': ('665c22a0-c9ed-425f-93e0-8cb504320c45', None, 'doctor_001@spam.ua', 'asd', 0, '2021-12-16 19:24:28.023379'), 'orig': IntegrityError('UNIQUE constraint failed: user.email'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:24:28,041 INFO clinic_app: {}
+2021-12-16 21:24:28,044 INFO clinic_app: {'code': 'gkpj', 'statement': 'UPDATE patient SET phone_number=?, name=?, last_modified=? WHERE patient.id = ?', 'params': ('380000000003', 'Slave', '2021-12-16 19:24:28.044306', 3), 'orig': IntegrityError('UNIQUE constraint failed: patient.phone_number'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:24:28,077 INFO clinic_app: {'statement': 0, 'params': 0, 'orig': <Mock id='3026033607680'>, 'ismulti': None, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:24:28,077 INFO clinic_app: {'statement': 0, 'params': 0, 'orig': <Mock id='3026033607680'>, 'ismulti': None, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:24:28,079 INFO clinic_app: {'code': 'gkpj', 'statement': 'INSERT INTO user (uuid, doctor_id, email, password_hash, is_admin, last_modified) VALUES (?, ?, ?, ?, ?, ?)', 'params': ('5e25672c-5f66-4dab-ad26-fe957e8dc4ff', None, 'email@spam.net', '1234', 0, '2021-12-16 19:24:28.079201'), 'orig': IntegrityError('UNIQUE constraint failed: user.email'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:24:28,079 INFO clinic_app: {}
+2021-12-16 21:24:28,090 INFO clinic_app: {'code': 'gkpj', 'statement': 'UPDATE user SET doctor_id=?, last_modified=? WHERE user.id = ?', 'params': (1, '2021-12-16 19:24:28.090694', 8), 'orig': IntegrityError('UNIQUE constraint failed: user.doctor_id'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:25:07,407 INFO clinic_app: App initialization
+2021-12-16 21:25:07,859 INFO clinic_app: {'code': 'gkpj', 'statement': 'INSERT INTO user (uuid, doctor_id, email, password_hash, is_admin, last_modified) VALUES (?, ?, ?, ?, ?, ?)', 'params': ('4cbebaa6-402d-48bd-bcbc-c9e3e135e016', None, 'doctor_001@spam.ua', 'asd', 0, '2021-12-16 19:25:07.859818'), 'orig': IntegrityError('UNIQUE constraint failed: user.email'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:25:07,878 INFO clinic_app: {}
+2021-12-16 21:25:07,880 INFO clinic_app: {'code': 'gkpj', 'statement': 'UPDATE patient SET phone_number=?, name=?, last_modified=? WHERE patient.id = ?', 'params': ('380000000003', 'Slave', '2021-12-16 19:25:07.880838', 3), 'orig': IntegrityError('UNIQUE constraint failed: patient.phone_number'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:25:07,913 INFO clinic_app: {'statement': 0, 'params': 0, 'orig': <Mock id='2587076755664'>, 'ismulti': None, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:25:07,914 INFO clinic_app: {'statement': 0, 'params': 0, 'orig': <Mock id='2587076755664'>, 'ismulti': None, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:25:07,915 INFO clinic_app: {'code': 'gkpj', 'statement': 'INSERT INTO user (uuid, doctor_id, email, password_hash, is_admin, last_modified) VALUES (?, ?, ?, ?, ?, ?)', 'params': ('15bc0384-b566-4096-ae6e-b2b7ebb36cea', None, 'email@spam.net', '1234', 0, '2021-12-16 19:25:07.915868'), 'orig': IntegrityError('UNIQUE constraint failed: user.email'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:25:07,916 INFO clinic_app: {}
+2021-12-16 21:25:07,928 INFO clinic_app: {'code': 'gkpj', 'statement': 'UPDATE user SET doctor_id=?, last_modified=? WHERE user.id = ?', 'params': (1, '2021-12-16 19:25:07.928881', 8), 'orig': IntegrityError('UNIQUE constraint failed: user.doctor_id'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:25:35,104 INFO clinic_app: App initialization
+2021-12-16 21:25:35,844 INFO clinic_app: {'code': 'gkpj', 'statement': 'INSERT INTO user (uuid, doctor_id, email, password_hash, is_admin, last_modified) VALUES (%(uuid)s, %(doctor_id)s, %(email)s, %(password_hash)s, %(is_admin)s, %(last_modified)s)', 'params': {'uuid': 'f7f11ab4-b926-4277-8b64-8ebf78ef7877', 'doctor_id': None, 'email': 'doctor_001@spam.ua', 'password_hash': 'asd', 'is_admin': 0, 'last_modified': datetime.datetime(2021, 12, 16, 19, 25, 35, 828711)}, 'orig': IntegrityError(1062, "Duplicate entry 'doctor_001@spam.ua' for key 'ix_user_email'"), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:25:35,914 INFO clinic_app: {}
+2021-12-16 21:25:35,924 INFO clinic_app: {'code': 'gkpj', 'statement': 'UPDATE patient SET phone_number=%(phone_number)s, name=%(name)s, last_modified=%(last_modified)s WHERE patient.id = %(patient_id)s', 'params': {'phone_number': '380000000003', 'name': 'Slave', 'last_modified': datetime.datetime(2021, 12, 16, 19, 25, 35, 918791), 'patient_id': 3}, 'orig': IntegrityError(1062, "Duplicate entry '380000000003' for key 'ix_patient_phone_number'"), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:25:35,992 INFO clinic_app: {'statement': 0, 'params': 0, 'orig': <Mock id='1242593994736'>, 'ismulti': None, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:25:35,992 INFO clinic_app: {'statement': 0, 'params': 0, 'orig': <Mock id='1242593994736'>, 'ismulti': None, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:25:36,019 INFO clinic_app: {'code': 'gkpj', 'statement': 'INSERT INTO user (uuid, doctor_id, email, password_hash, is_admin, last_modified) VALUES (%(uuid)s, %(doctor_id)s, %(email)s, %(password_hash)s, %(is_admin)s, %(last_modified)s)', 'params': {'uuid': 'fcbeb4bd-a67b-4318-9bf2-71f33bd07a91', 'doctor_id': None, 'email': 'email@spam.net', 'password_hash': '1234', 'is_admin': 0, 'last_modified': datetime.datetime(2021, 12, 16, 19, 25, 36, 5871)}, 'orig': IntegrityError(1062, "Duplicate entry 'email@spam.net' for key 'ix_user_email'"), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:25:36,019 INFO clinic_app: {}
+2021-12-16 21:25:36,067 INFO clinic_app: {'code': 'gkpj', 'statement': 'UPDATE user SET doctor_id=%(doctor_id)s, last_modified=%(last_modified)s WHERE user.id = %(user_id)s', 'params': {'doctor_id': 1, 'last_modified': datetime.datetime(2021, 12, 16, 19, 25, 36, 59920), 'user_id': 8}, 'orig': IntegrityError(1062, "Duplicate entry '1' for key 'ix_user_doctor_id'"), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:29:02,843 INFO clinic_app: App initialization
+2021-12-16 21:29:03,297 INFO clinic_app: {'code': 'gkpj', 'statement': 'INSERT INTO user (uuid, doctor_id, email, password_hash, is_admin, last_modified) VALUES (?, ?, ?, ?, ?, ?)', 'params': ('6246b15e-11b2-44ee-8f8c-9b46512247db', None, 'doctor_001@spam.ua', 'asd', 0, '2021-12-16 19:29:03.297246'), 'orig': IntegrityError('UNIQUE constraint failed: user.email'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:29:03,315 INFO clinic_app: {}
+2021-12-16 21:29:03,317 INFO clinic_app: {'code': 'gkpj', 'statement': 'UPDATE patient SET phone_number=?, name=?, last_modified=? WHERE patient.id = ?', 'params': ('380000000003', 'Slave', '2021-12-16 19:29:03.317264', 3), 'orig': IntegrityError('UNIQUE constraint failed: patient.phone_number'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:29:03,351 INFO clinic_app: {'statement': 0, 'params': 0, 'orig': <Mock id='2300019110768'>, 'ismulti': None, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:29:03,351 INFO clinic_app: {'statement': 0, 'params': 0, 'orig': <Mock id='2300019110768'>, 'ismulti': None, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:29:03,353 INFO clinic_app: {'code': 'gkpj', 'statement': 'INSERT INTO user (uuid, doctor_id, email, password_hash, is_admin, last_modified) VALUES (?, ?, ?, ?, ?, ?)', 'params': ('e0b6f126-4ac4-4b4c-8c8b-7ef03af062a9', None, 'email@spam.net', '1234', 0, '2021-12-16 19:29:03.353285'), 'orig': IntegrityError('UNIQUE constraint failed: user.email'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:29:03,353 INFO clinic_app: {}
+2021-12-16 21:29:03,365 INFO clinic_app: {'code': 'gkpj', 'statement': 'UPDATE user SET doctor_id=?, last_modified=? WHERE user.id = ?', 'params': (1, '2021-12-16 19:29:03.365936', 8), 'orig': IntegrityError('UNIQUE constraint failed: user.doctor_id'), 'ismulti': False, 'hide_parameters': False, 'detail': [], 'connection_invalidated': False}
+2021-12-16 21:33:52,821 INFO clinic_app: App initialization
+2021-12-16 21:35:26,374 INFO clinic_app: App initialization
+2021-12-16 21:36:14,151 INFO clinic_app: App initialization

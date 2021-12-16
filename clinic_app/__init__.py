@@ -57,3 +57,5 @@ from clinic_app.views import general_bp, auth_bp
 app.register_blueprint(api_bp)
 app.register_blueprint(general_bp)
 app.register_blueprint(auth_bp)
+
+app.before_first_request(db.create_all)

@@ -29,15 +29,13 @@ def validate_auth(func):
     :param func: function with request context
     """
 
-    # pylint: disable=inconsistent-return-statements
     @wraps(func)
     def wrapper(*args, **kwargs):
         if 'api-key' not in request.headers:
-            abort(401, message="Credentials not present in request")
-        elif request.headers['api-key'] != current_app.config['API_KEY']:
-            abort(401, message="Credentials not valid")
-        else:
-            return func(*args, **kwargs)
+            return abort(401, message="Credentials not present in request")
+        if request.headers['api-key'] != current_app.config['API_KEY']:
+            return abort(401, message="Credentials not valid")
+        return func(*args, **kwargs)
 
     return wrapper
 
@@ -52,14 +50,18 @@ class BaseResource(Resource):
     @classmethod
     @validate_auth
     def head(cls, uuid):
-        modified = http_date(cls.service.get_item_modified(uuid))
-        return {}, 204, {'Last-Modified': modified}
+        modified = cls.service.get_modified(uuid)
+        if modified is None:
+            return abort(404)
+        return {}, 204, {'Last-Modified': http_date(modified)}
 
     @classmethod
     @validate_auth
     def get(cls, uuid):
         schema = cls.schema()
-        instance = cls.service.get_or_404(uuid)
+        instance = cls.service.get(uuid)
+        if instance is None:
+            return abort(404)
         modified = http_date(instance.last_modified)
         return schema.dump(instance), 200, {'Last-Modified': modified}
 
@@ -68,14 +70,17 @@ class BaseResource(Resource):
     def put(cls, uuid):
         schema = cls.schema(partial=True)
         data = schema.load_or_422(request.json)
-        instance = cls.service.update_or_abort(uuid, data)
-        return schema.dump(instance), 200
+        data, code = cls.service.update(uuid, data)
+        if code >= 400:
+            return abort(code, **data)
+        return schema.dump(data), code
 
     @classmethod
     @validate_auth
     def delete(cls, uuid):
-        cls.service.delete_or_404(uuid)
-        return {}, 204
+        if cls.service.delete(uuid):
+            return {}, 204
+        return abort(404)
 
 
 class BaseListResource(Resource):
@@ -83,26 +88,30 @@ class BaseListResource(Resource):
 
     service: BaseService
     schema: ma.Schema
-    filters_parser: reqparse.RequestParser
-    pagination_parser = reqparse.RequestParser()
-    pagination_parser.add_argument('page', type=int, default=1)
-    pagination_parser.add_argument('per_page', type=int, default=20)
+    filters: reqparse.RequestParser
+    pages = reqparse.RequestParser()
+    pages.add_argument('page', type=int, default=1)
+    pages.add_argument('per_page', type=int, default=20)
 
     @classmethod
     @validate_auth
     def head(cls):
-        filters = cls.filters_parser.parse_args()
-        pages = cls.pagination_parser.parse_args()
-        modified = http_date(cls.service.get_pagination_modified(**pages, **filters))
-        return {}, 204, {'Last-Modified': modified}
+        filters = cls.filters.parse_args()
+        pages = cls.pages.parse_args()
+        modified = cls.service.get_pagination_modified(**pages, **filters)
+        if modified is None:
+            return abort(404)
+        return {}, 204, {'Last-Modified': http_date(modified)}
 
     @classmethod
     @validate_auth
     def get(cls):
         schema = cls.schema()
-        filters = cls.filters_parser.parse_args()
-        pages = cls.pagination_parser.parse_args()
+        filters = cls.filters.parse_args()
+        pages = cls.pages.parse_args()
         pagination = cls.service.get_pagination(**pages, **filters)
+        if not pagination.items:
+            return abort(404)
         modified = http_date(max(map(lambda i: i.last_modified, pagination.items)))
         p_schema = pagination_schema(schema)
         return p_schema.dump(pagination), 200, {'Last-Modified': modified}
@@ -112,5 +121,7 @@ class BaseListResource(Resource):
     def post(cls):
         schema = cls.schema()
         data = schema.load_or_422(request.json)
-        instance = cls.service.save_or_422(data)
-        return schema.dump(instance), 201
+        data, code = cls.service.create(data)
+        if code >= 400:
+            return abort(code, **data)
+        return schema.dump(data), code

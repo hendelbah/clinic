@@ -1,6 +1,8 @@
 """
 This module defines patient service class:
 """
+from sqlalchemy.orm import Query
+
 from clinic_app.models import Patient
 from clinic_app.service.base_service import BaseService
 
@@ -13,7 +15,7 @@ class PatientService(BaseService):
 
     @classmethod
     def _filter_by(cls, *, phone: str = None, name: str = None, surname: str = None,
-                   patronymic: str = None):
+                   patronymic: str = None) -> Query:
         """
         Return query ordered and filtered.
 

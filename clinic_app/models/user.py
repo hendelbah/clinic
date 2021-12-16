@@ -1,14 +1,17 @@
 """
-This module implements instance of user in database
+This module contains User model class, that also is a class for authorization in web app
 """
 from datetime import datetime
 from uuid import uuid4
+
+from flask_login import UserMixin
+from werkzeug.security import generate_password_hash, check_password_hash
 
 from clinic_app import db
 from clinic_app.models.descriptors import DoctorUUID
 
 
-class User(db.Model):
+class User(db.Model, UserMixin):
     """
     User object stands for representation of data row in `user` table.
     Table stores user information for authentication
@@ -28,20 +31,44 @@ class User(db.Model):
     doctor = db.relationship('Doctor', back_populates='user', lazy='joined')
     doctor_uuid = DoctorUUID()
 
-    def __init__(self, email: str, password_hash: str, is_admin: bool, doctor_uuid: str = None):
+    def __init__(self, email: str, password_hash: str, is_admin: bool, doctor_uuid: str = None, *,
+                 password_raw: bool = False) -> None:
         """
         :param email: email of user
-        :param password_hash: user's password hash
+        :param password_hash: user's password hash(of raw password if password_raw is set to True)
         :param is_admin: bool parameter for admins only, False by default
         :param doctor_uuid: uuid of related doctor
+        :param password_raw: if True, assume that password_hash value is a raw not hashed password
         """
         self.email = email
-        self.password_hash = password_hash
+        if password_raw:
+            self.set_password(password_hash)
+        else:
+            self.password_hash = password_hash
         self.is_admin = is_admin
         self.uuid = str(uuid4())
         self.doctor_uuid = doctor_uuid
 
     def __repr__(self):
-        keys = ('id', 'email', 'is_admin')
-        values = (f"{key}={getattr(self, key)!r}" for key in keys)
-        return f'<User({", ".join(values)})>'
+        return f'<User(email={self.email!r}, is_admin={self.is_admin}, uuid={self.uuid!r})>'
+
+    def set_password(self, password: str) -> None:
+        """
+        Set user's password_hash to hash of given password
+
+        :param password: new user's password
+        """
+        self.password_hash = generate_password_hash(password)
+
+    def check_password(self, password: str) -> bool:
+        """
+        Check equality of given password with user's
+
+        :param password: password to compare with employee's password
+        :return: True if given password hash is equal to password hash of user
+        """
+        return check_password_hash(self.password_hash, password)
+
+    def get_id(self) -> str:
+        """Get user's identifier for authorization"""
+        return self.uuid

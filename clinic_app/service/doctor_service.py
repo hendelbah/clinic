@@ -1,18 +1,20 @@
 """
 This module defines doctor service class:
 """
+from sqlalchemy.orm import Query
+
 from clinic_app.models import Doctor, User
 from clinic_app.service.base_service import BaseService
 
 
-# pylint: disable=arguments-differ
+# pylint: disable=arguments-differ, no-member
 class DoctorService(BaseService):
     """Service class for querying Doctor model"""
     model = Doctor
     order_by = (model.full_name,)
 
     @classmethod
-    def _filter_by(cls, *, search_name: str = None, no_user: bool = False):
+    def _filter_by(cls, *, search_name: str = None, no_user: bool = False) -> Query:
         """
         Return query ordered and filtered.
 

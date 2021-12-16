@@ -26,7 +26,7 @@ class TestSchemas(BaseTestCase):
             ['birthday', 'name', 'patronymic', 'phone_number', 'surname', 'uuid'],
             ['bill', 'conclusion', 'date', 'doctor', 'patient', 'prescription', 'time', 'uuid'],
         )
-        for case, schema, model in zip(cases, schemas, self.models.values()):
+        for case, schema, model in zip(cases, schemas, self.models):
             with self.subTest(schema.__name__):
                 schema = schema()
                 instance = model.query.get(1)

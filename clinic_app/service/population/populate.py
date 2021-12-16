@@ -4,14 +4,15 @@ This module contains main populating functions
 from datetime import date, time, timedelta
 from random import choice, randint
 
+from werkzeug.security import generate_password_hash
+
 from clinic_app import db
 from clinic_app.models import Appointment, Doctor, Patient, User
 from clinic_app.service.population.population_data import (
     DOCTORS_SRC, NAMES_SRC, SURNAMES_SRC, PATRONYMICS_SRC, ROOT_PASSWORD, DOCTORS_PASSWORD)
-from clinic_app.views.user_login import UserLogin
 
-root_pass_hash = UserLogin.hash_password(ROOT_PASSWORD)
-doctors_pass_hash = UserLogin.hash_password(DOCTORS_PASSWORD)
+root_pass_hash = generate_password_hash(ROOT_PASSWORD)
+doctors_pass_hash = generate_password_hash(DOCTORS_PASSWORD)
 
 
 def clear_tables():

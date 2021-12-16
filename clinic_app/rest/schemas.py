@@ -8,7 +8,6 @@ Here are defined The following classes:
 - `PatientSchema`
 - `BookedAppointmentSchema`
 - `AppointmentSchema`
-- `UserSchema`
 
 Functions:
 
@@ -19,7 +18,7 @@ from flask_restful import abort
 from marshmallow import ValidationError
 
 from clinic_app import ma
-from clinic_app.models import Doctor, Patient, Appointment, User
+from clinic_app.models import User, Doctor, Patient, Appointment
 
 
 class BaseSchema(ma.SQLAlchemyAutoSchema):

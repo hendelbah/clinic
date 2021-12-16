@@ -11,12 +11,12 @@ class TestPopulation(BaseTestCase):
     def test_populate(self):
         populate()
         counts = (18, 17, 100, 200)
-        for model, count in zip(self.models.values(), counts):
+        for model, count in zip(self.models, counts):
             with self.subTest(model.__name__):
                 self.assertEqual(model.query.count(), count)
 
     def test_clear_tables(self):
         clear_tables()
-        for model in self.models.values():
+        for model in self.models:
             with self.subTest(model.__name__):
                 self.assertEqual(model.query.count(), 0)

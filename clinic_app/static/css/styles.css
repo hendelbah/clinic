@@ -97,6 +97,8 @@ html, body, .page-tail, .side-menu, .main-container, .flashes, .login-form, .pro
 }
 
 .side-menu-item {
+  flex-flow: column;
+  align-items: stretch;
   background-color: #D2ECA9;
   border: 1px solid;
   border-color: #668E21;

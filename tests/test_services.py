@@ -1,17 +1,23 @@
 # pylint: disable=missing-function-docstring, missing-module-docstring, missing-class-docstring
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 
 from flask_sqlalchemy import Pagination
-from werkzeug.exceptions import NotFound
-from clinic_app.service import DoctorService, UserService, PatientService, AppointmentService
+from sqlalchemy.orm import Query
+
+from clinic_app.models import User
+from clinic_app.service import UserService, DoctorService, PatientService, AppointmentService
 from tests.base_test_case import BaseTestCase
 
+services = (UserService, DoctorService, PatientService, AppointmentService)
 
+
+# pylint: disable=protected-access
 class TestAllServices(BaseTestCase):
-    services = (UserService,
-                DoctorService,
-                PatientService,
-                AppointmentService,)
+
+    def test_filter_by(self):
+        for service in services:
+            with self.subTest(service.__name__):
+                self.assertIsInstance(service._filter_by(), Query)
 
     def test_get_pagination(self):
         today = date.today()
@@ -34,27 +40,29 @@ class TestAllServices(BaseTestCase):
              [{'unfilled': True}, 20],
              ),
         )
-        for service, bundle in zip(self.services, cases):
+        for service, bundle in zip(services, cases):
             for kwargs, total in bundle:
                 with self.subTest(f'{service.__name__}:{list(kwargs.keys())[0]}'):
-                    if not total:
-                        self.assertRaises(NotFound, service.get_pagination, **kwargs)
+                    pagination = service.get_pagination(**kwargs)
+                    self.assertIsInstance(pagination, Pagination)
+                    self.assertEqual(pagination.total, total)
+                    modified = service.get_pagination_modified(**kwargs)
+                    if total:
+                        self.assertIsInstance(modified, datetime)
                     else:
-                        pagination = service.get_pagination(**kwargs)
-                        self.assertIsInstance(pagination, Pagination)
-                        self.assertEqual(pagination.total, total)
+                        self.assertIsNone(modified)
         self.assertEqual(pagination.page, 1)
         self.assertEqual(pagination.per_page, 20)
         pagination = PatientService.get_pagination(page=5, per_page=5)
         self.assertEqual(len(pagination.items), 5)
         self.assertEqual(pagination.page, 5)
 
-    def test_get_instance(self):
-        for service, model in zip(self.services, self.models.values()):
+    def test_get(self):
+        for service, model in zip(services, self.models):
             with self.subTest(service.__name__):
-                instance = service.get_or_404('5')
+                instance = service.get('5')
                 self.assertIsInstance(instance, model)
-                self.assertEqual(instance.id, 5)
+                self.assertEqual(instance.uuid, '5')
                 self.assertTrue(repr(instance).startswith(f'<{model.__name__}('))
 
     def test_appointment_get_count(self):
@@ -68,3 +76,17 @@ class TestAllServices(BaseTestCase):
                   'date_to': date.today() - timedelta(days=30)}
         count = AppointmentService.get_income(**kwargs)
         self.assertEqual(count, 6150)
+
+    def test_user_get_by_email(self):
+        user = UserService.get_by_email('root')
+        self.assertIsNotNone(user)
+        user = UserService.get_by_email('zxcv')
+        self.assertIsNone(user)
+
+    def test_user_save_instance(self):
+        user = User('email@mail.com', '1234', False, password_raw=True)
+        errors = UserService.save_instance(user)
+        self.assertIsNone(errors)
+        user = User('email@mail.com', '12345', True, password_raw=True)
+        errors = UserService.save_instance(user)
+        self.assertIsInstance(errors, str)

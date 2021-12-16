@@ -17,9 +17,9 @@ class Patient(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     uuid = db.Column(db.String(36), nullable=False, unique=True, index=True)
     phone_number = db.Column(db.String(20), nullable=False, unique=True, index=True)
-    surname = db.Column(db.String(40, collation='utf8mb4_unicode_ci'), nullable=False, index=True)
-    name = db.Column(db.String(40, collation='utf8mb4_unicode_ci'), nullable=False)
-    patronymic = db.Column(db.String(40, collation='utf8mb4_unicode_ci'), nullable=False)
+    surname = db.Column(db.String(40), nullable=False, index=True)
+    name = db.Column(db.String(40), nullable=False)
+    patronymic = db.Column(db.String(40), nullable=False)
     birthday = db.Column(db.Date, nullable=False)
     last_modified = db.Column(db.TIMESTAMP(timezone=True), default=datetime.utcnow,
                               onupdate=datetime.utcnow)

@@ -24,7 +24,7 @@ class TestRoutes(BaseTestCase):
 
     def test_wrong_login_logout(self):
         response = self.client.post(url_for('auth.login'),
-                               json={'email': 'do@gmail.com', 'pwd': 'a', 'remember': False})
+                                    json={'email': 'do@gmail.com', 'pwd': 'a', 'remember': False})
         self.assertStatus(response, 200)
         response = self.client.get(url_for('auth.logout'))
         self.assertStatus(response, 302)

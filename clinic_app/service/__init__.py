@@ -19,4 +19,4 @@ from clinic_app.service.doctor_service import DoctorService
 from clinic_app.service.patient_service import PatientService
 from clinic_app.service.user_service import UserService
 
-__all__ = ['BaseService', 'DoctorService', 'PatientService', 'AppointmentService', 'UserService']
+__all__ = ['BaseService', 'UserService', 'DoctorService', 'PatientService', 'AppointmentService']

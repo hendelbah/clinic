@@ -3,6 +3,8 @@ This module defines appointment service class:
 """
 from datetime import date as date_
 
+from sqlalchemy.orm import Query
+
 from clinic_app.models import Appointment, Doctor, Patient
 from clinic_app.service.base_service import BaseService
 
@@ -16,7 +18,7 @@ class AppointmentService(BaseService):
     @classmethod
     def _filter_by(cls, *, doctor_uuid: str = None, patient_uuid: str = None,
                    date_from: date_ = None, date_to: date_ = None,
-                   unfilled: bool = False, _query=None):
+                   unfilled: bool = False, _query=None) -> Query:
         """
         Return query ordered and filtered.
 
@@ -51,7 +53,7 @@ class AppointmentService(BaseService):
         return query
 
     @classmethod
-    def get_count(cls, **filters):
+    def get_count(cls, **filters) -> int:
         """
         Return amount of appointments rows filtered using kwargs
 
@@ -61,7 +63,7 @@ class AppointmentService(BaseService):
         return cls._filter_by(_query=query, **filters).count()
 
     @classmethod
-    def get_income(cls, **filters):
+    def get_income(cls, **filters) -> int:
         """
         Return sum of bills of appointments filtered using kwargs
 

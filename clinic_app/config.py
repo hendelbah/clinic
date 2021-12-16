@@ -25,7 +25,8 @@ class TestingConfig(Config):
     """
     Configuration for running tests.
     """
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///:memory:'
+    # SQLALCHEMY_DATABASE_URI = 'sqlite:///:memory:'
+    SQLALCHEMY_DATABASE_URI = f'mysql+pymysql://{DB_USER}:{DB_PASS}@{DB_SERVER}/clinic_test'
     API_KEY = 'qwerty'
     TESTING = True
     SQLALCHEMY_ECHO = False

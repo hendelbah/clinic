@@ -153,6 +153,7 @@ html, body, .page-tail, .side-menu, .main-container, .flashes, .login-form, .pro
 
 .login-form div {
   margin: 10px;
+  margin-bottom:5px;
   justify-content: flex-end;
 }
 
@@ -217,4 +218,19 @@ html, body, .page-tail, .side-menu, .main-container, .flashes, .login-form, .pro
 
 .doctor-item label {
   padding: 5px;
+}
+
+.invalid-container {
+  flex-flow: column;
+  align-items: flex-end;
+}
+
+.invalid-input {
+  background-color: #FFDCD2;
+}
+
+.invalid-feedback {
+  color: red;
+  display: flex;
+  font-size: 14px;
 }

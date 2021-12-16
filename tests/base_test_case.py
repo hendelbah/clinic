@@ -17,11 +17,8 @@ class BaseTestCase(TestCase):
 
     @classmethod
     def setUpClass(cls):
-        populate(100)
-
-    @classmethod
-    def tearDownClass(cls) -> None:
         clear_tables()
+        populate(100)
 
     def create_app(self):
         return app

@@ -1,0 +1,20 @@
+{% macro validated_input(field) -%}
+<div>
+    {{ field.label() }}
+
+    {%- if field.errors -%}
+    {{ field(class='invalid-input') }}
+    {%- else -%}
+    {{ field() }}
+    {%- endif -%}
+</div>
+{%- if field.errors -%}
+<div class="invalid-container" style="margin-block:unset">
+    {% for e in field.errors -%}
+    <label class="invalid-feedback">
+        {{ e }}
+    </label>
+    {%- endfor %}
+</div>
+{%- endif -%}
+{%- endmacro -%}

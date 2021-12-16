@@ -24,6 +24,7 @@ def login():
         if user and user.check_password(form.pwd.data):
             login_user(user, remember=form.remember.data)
             flash('You successfully logged in', 'success')
+
             return redirect(request.args.get('next') or url_for('general.index'))
         flash('Wrong email or password', 'error')
     return render_template('login.html', form=form)
@@ -43,14 +44,15 @@ def logout():
 @login_required
 def profile():
     form = ChangePassForm()
-    if form.is_submitted():
-        if form.validate() and current_user.check_password(form.password.data):
+    if form.validate_on_submit():
+        if current_user.check_password(form.password.data):
             current_user.set_password(form.password.data)
             errors = UserService.save_instance(current_user)
             if errors is None:
                 flash('Your password was changed', 'success')
-            else:
-                flash('Password change failed', 'error')
-        else:
-            flash('Wrong password or new passwords don\'t match', 'error')
+                return redirect(url_for('auth.profile'))
+            flash('Password change failed', 'error')
+            return redirect(url_for('auth.profile'))
+        flash('Wrong current password', 'error')
+        return redirect(url_for('auth.profile'))
     return render_template('profile.html', form=form)

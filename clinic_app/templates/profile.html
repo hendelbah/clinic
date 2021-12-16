@@ -1,5 +1,7 @@
 {% extends 'base.html' -%}
 
+{%- from 'macros.html' import validated_input -%}
+
 {% block title -%}
 Profile
 {%- endblock %}
@@ -56,12 +58,12 @@ function switch_pass_change() {
     </div>
     {% endif %}
     <hr width="80%" align="left">
-    <div class="profile-item" id="change-pass" style="display:none">
+    <div class="profile-item" id="change-pass" {% if not form.is_submitted() %}style="display:none"{% endif %}>
         <form method="post" class="change-pass-form">
             {{ form.hidden_tag() }}
-            <div>{{ form.password.label() }} {{ form.password() }}</div>
-            <div>{{ form.new_pass.label() }} {{ form.new_pass() }}</div>
-            <div>{{ form.confirm.label() }} {{ form.confirm() }}</div>
+            {{ validated_input(form.password) }}
+            {{ validated_input(form.new_pass) }}
+            {{ validated_input(form.confirm) }}
             <div>{{ form.submit() }}</div>
         </form>
     </div>

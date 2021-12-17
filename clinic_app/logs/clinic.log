@@ -5244,3 +5244,56 @@
 2021-12-17 01:39:41,705 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 2021-12-17 01:39:45,824 INFO clinic_app: App initialization
 2021-12-17 01:41:02,977 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\tests\\test_routes.py', reloading
+2021-12-17 01:41:03,034 INFO werkzeug:  * Restarting with stat
+2021-12-17 01:41:03,504 INFO clinic_app: App initialization
+2021-12-17 01:41:03,615 WARNING werkzeug:  * Debugger is active!
+2021-12-17 01:41:03,618 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-17 01:41:03,658 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-17 01:46:01,641 INFO clinic_app: App initialization
+2021-12-17 01:46:24,740 INFO clinic_app: App initialization
+2021-12-17 01:47:47,584 INFO clinic_app: App initialization
+2021-12-17 14:27:57,797 INFO clinic_app: App initialization
+2021-12-17 14:27:58,149 INFO clinic_app: testing
+2021-12-17 14:34:45,913 INFO clinic_app: App initialization
+2021-12-17 14:36:21,001 INFO clinic_app: App initialization
+2021-12-17 14:36:21,001 INFO clinic_app: TestingConfig
+2021-12-17 14:38:26,934 INFO clinic_app: App initialization
+2021-12-17 14:38:27,030 INFO werkzeug:  * Restarting with stat
+2021-12-17 14:38:27,843 INFO clinic_app: App initialization
+2021-12-17 14:38:27,933 WARNING werkzeug:  * Debugger is active!
+2021-12-17 14:38:27,936 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-17 14:38:27,975 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-17 14:40:34,722 INFO clinic_app: App initialization
+2021-12-17 14:42:59,217 INFO clinic_app: App initialization
+2021-12-17 14:42:59,335 INFO clinic_app: setup
+2021-12-17 14:44:56,544 INFO clinic_app: App initialization
+2021-12-17 14:45:05,962 INFO clinic_app: App initialization
+2021-12-17 14:47:21,487 INFO clinic_app: App initialization
+2021-12-17 14:47:38,290 INFO clinic_app: App initialization
+2021-12-17 14:47:38,722 INFO werkzeug:  * Restarting with stat
+2021-12-17 14:47:39,179 INFO clinic_app: App initialization
+2021-12-17 14:47:39,596 WARNING werkzeug:  * Debugger is active!
+2021-12-17 14:47:39,598 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-17 14:47:39,638 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-17 14:54:13,696 INFO clinic_app: App initialization
+2021-12-17 14:59:04,252 INFO clinic_app: App initialization
+2021-12-17 14:59:09,365 INFO clinic_app: App initialization
+2021-12-17 14:59:09,774 INFO werkzeug:  * Restarting with stat
+2021-12-17 14:59:10,245 INFO clinic_app: App initialization
+2021-12-17 14:59:10,678 WARNING werkzeug:  * Debugger is active!
+2021-12-17 14:59:10,681 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-17 14:59:10,722 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-17 14:59:20,503 INFO clinic_app: App initialization
+2021-12-17 14:59:20,951 INFO werkzeug:  * Restarting with stat
+2021-12-17 14:59:21,427 INFO clinic_app: App initialization
+2021-12-17 14:59:21,860 WARNING werkzeug:  * Debugger is active!
+2021-12-17 14:59:21,862 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-17 14:59:21,902 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-17 15:00:35,786 INFO clinic_app: App initialization
+2021-12-17 15:02:58,643 INFO clinic_app: App initialization
+2021-12-17 15:02:59,104 INFO werkzeug:  * Restarting with stat
+2021-12-17 15:02:59,596 INFO clinic_app: App initialization
+2021-12-17 15:03:00,015 WARNING werkzeug:  * Debugger is active!
+2021-12-17 15:03:00,018 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-17 15:03:00,059 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-17 15:03:07,348 INFO clinic_app: App initialization

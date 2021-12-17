@@ -2,6 +2,7 @@
 Package stores all source files of project.
 This module stands for app initialization and configuring
 """
+# pylint: disable=cyclic-import,wrong-import-position
 import logging
 import sys
 from logging.handlers import RotatingFileHandler
@@ -50,7 +51,6 @@ werkzeug_logger.addHandler(file_handler)
 werkzeug_logger.addHandler(console_handler)
 werkzeug_logger.setLevel(logging.INFO)
 
-# pylint: disable=cyclic-import,wrong-import-position
 from clinic_app.rest import api_bp
 from clinic_app.views import general_bp, auth_bp
 
@@ -58,4 +58,4 @@ app.register_blueprint(api_bp)
 app.register_blueprint(general_bp)
 app.register_blueprint(auth_bp)
 
-app.before_first_request(db.create_all)
+CurrentConfig.setup()

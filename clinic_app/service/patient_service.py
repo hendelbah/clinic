@@ -14,19 +14,19 @@ class PatientService(BaseService):
     order_by = (model.name, model.surname, model.patronymic)
 
     @classmethod
-    def _filter_by(cls, *, phone: str = None, name: str = None, surname: str = None,
+    def _filter_by(cls, *, search_phone: str = None, name: str = None, surname: str = None,
                    patronymic: str = None) -> Query:
         """
         Return query ordered and filtered.
 
-        :param phone: filter patients having this phone number
+        :param search_phone: filter patients with phone number like this one
         :param name: filter patients having this name
         :param surname: filter patients having this surname
         :param surname: filter patients having this patronymic
         """
         query = cls._order()
-        if phone is not None:
-            query = query.filter_by(phone_number=phone)
+        if search_phone is not None:
+            query = query.filter(cls.model.phone_number.like(f'%{search_phone}%'))
         if name is not None:
             query = query.filter_by(name=name)
         if surname is not None:

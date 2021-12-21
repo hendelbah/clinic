@@ -52,10 +52,11 @@ werkzeug_logger.addHandler(console_handler)
 werkzeug_logger.setLevel(logging.INFO)
 
 from clinic_app.rest import api_bp
-from clinic_app.views import general_bp, auth_bp
+from clinic_app.views import general_bp, auth_bp, admin_bp
 
 app.register_blueprint(api_bp)
 app.register_blueprint(general_bp)
 app.register_blueprint(auth_bp)
+app.register_blueprint(admin_bp)
 
 CurrentConfig.setup()

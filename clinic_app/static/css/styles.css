@@ -8,19 +8,28 @@ html, body, body div, body form {
   display: flex;
 }
 
-body, .page-body, .main-container, .content, .pagination-body, .pagination-container {
+body, .page-body, .main-container, .pagination-body, .pagination-container {
   flex: 1;
 }
 
-html, body, .page-tail, .side-menu, .main-container, .flashes, .login-form, .profile-block,
-.profile-item, .change-pass-form, .pagination, .pagination-body, .doctor-item {
-  flex-flow: column;
+.flex-col { flex-flow: column; }
+
+a { text-decoration: none; }
+
+.controls a, .controls a:visited{ color: black; }
+
+.controls a:hover { color: grey; }
+
+.links a, .links a:visited{ color: blue; }
+
+.links a:hover { color: lightblue; }
+
+h1, h2 {
+  margin-block: 15px;
+  margin-left: 30px;
 }
 
-.controls a, .controls a:visited{
-  color: inherit;
-  text-decoration: none;
-}
+hr { min-width: 100%; }
 
 .page-header {
   flex-flow: row;
@@ -44,7 +53,7 @@ html, body, .page-tail, .side-menu, .main-container, .flashes, .login-form, .pro
 
 .main-menu { font-size: 30px; }
 
-.main-menu-item:hover { background-color: #EFFFD3; }
+.main-menu-item:hover { background-color: #E2FFB2; }
 
 .main-menu-item a { padding: 20px; }
 
@@ -69,10 +78,7 @@ html, body, .page-tail, .side-menu, .main-container, .flashes, .login-form, .pro
   margin-inline: 15px;
 }
 
-.log-link a {
-  padding: 8px 20px;
-
-}
+.log-link a { padding: 8px 20px; }
 
 #login {
   background-color: #76B900;
@@ -90,7 +96,7 @@ html, body, .page-tail, .side-menu, .main-container, .flashes, .login-form, .pro
 }
 
 .side-menu {
-  min-width: 18%;
+  min-width: 250px;
   background-color: #ECFFCD;
   font-size: 20px;
   padding-right: 2px;
@@ -103,11 +109,17 @@ html, body, .page-tail, .side-menu, .main-container, .flashes, .login-form, .pro
   border: 1px solid;
   border-color: #668E21;
   cursor: pointer;
+  text-align: center;
 }
 
-.side-menu-item:hover { background-color: #F7FFEB; }
+.side-menu-item a:hover { background-color: #F7FFEB; }
 
-.side-menu-item a { padding: 20px; }
+.side-menu-item-active {
+  background-color: #F7FFEB;
+  border-right: none;
+}
+
+.side-menu-item a, .side-menu-item label { padding: 20px; }
 
 .flashes {
   display: flex;
@@ -137,11 +149,8 @@ html, body, .page-tail, .side-menu, .main-container, .flashes, .login-form, .pro
   color: #145800;
 }
 
-.content h1 { margin-left: 30px; }
-
-.login-container { display: flex; }
-
 .login-form {
+  flex-flow: column;
   position: absolute;
   top: 40%;
   left: 50%;
@@ -159,12 +168,52 @@ html, body, .page-tail, .side-menu, .main-container, .flashes, .login-form, .pro
 
 .login-form label { margin-right: 5px; }
 
-.profile-block {
-  padding-left: 40px;
+.info-block {
+  flex-flow: column;
+  padding-inline: 40px;
   font-size: 20px;
 }
 
-.profile-item { padding: 10px; }
+.info-item {
+  flex-flow: column;
+  padding: 10px;
+}
+
+.common-form {
+  flex-flow: column;
+  padding: 10px;
+  width: max-content;
+}
+
+.common-form > div { margin: 10px; }
+
+.common-form textarea {
+  width: 80%;
+  height: 100px;
+}
+
+.submit-in-end { justify-content: flex-end; }
+
+.validated-field { flex-flow: column; }
+
+.field-container { justify-content: space-between; }
+
+.field-container label { margin-right: 20px; }
+
+.invalid-container {
+  flex-flow: column;
+  align-items: flex-end;
+}
+
+.invalid-input {
+  background-color: #FFDCD2;
+}
+
+.invalid-feedback {
+  color: red;
+  display: flex;
+  font-size: 14px;
+}
 
 .profile-doctor {
   margin-top: 20px;
@@ -182,18 +231,7 @@ html, body, .page-tail, .side-menu, .main-container, .flashes, .login-form, .pro
   padding-right: 20px
 }
 
-#change-pass { width: 40%; }
-
-.change-pass-form { padding: 10px; }
-
-.change-pass-form div {
-  margin: 10px;
-  justify-content: flex-end;
-}
-
 .change-pass-form label { margin-right: 5px; }
-
-.pagination { align-items: center; }
 
 .pagination-tail {
   justify-content: center;
@@ -207,9 +245,10 @@ html, body, .page-tail, .side-menu, .main-container, .flashes, .login-form, .pro
   border: 1px solid black;
 }
 
-.doctor-container { flex-flow: row wrap; }
+.doctors-container { flex-flow: row wrap; }
 
 .doctor-item {
+  flex-flow: column;
   align-items: center;
   text-align: center;
   padding: 20px;
@@ -220,17 +259,98 @@ html, body, .page-tail, .side-menu, .main-container, .flashes, .login-form, .pro
   padding: 5px;
 }
 
-.invalid-container {
+.center-text { text-align: center; }
+
+.admin-controls {
+  padding: 10px;
+  align-items: center;
+}
+
+.admin-header {
+  background-color: #A6CB6C;
+  border-width: 3px;
+}
+
+.new-record {
+  border-radius: 20px;
+  border: 3px solid;
+  border-color: #668E21;
+  margin-inline: 20px;
+}
+
+.new-record a { padding: 8px 20px; }
+
+.filters {
+  align-items: center;
+  border: 1px solid;
+  padding-inline: 10px;
+  padding-block: 5px;
+}
+
+.filters-field {
   flex-flow: column;
-  align-items: flex-end;
+  margin: 10px;
 }
 
-.invalid-input {
-  background-color: #FFDCD2;
+.records-table {
+  margin-block: 10px;
+  margin-inline: 30px;
+  border-collapse: collapse;
 }
 
-.invalid-feedback {
-  color: red;
-  display: flex;
-  font-size: 14px;
+.records-table td, .records-table th {
+  padding: 5px;
+  border: 1px solid #222;
+}
+
+td.center-text.controls { min-width: 100px; }
+
+.action-link {
+  border-radius: 10px;
+  border: 1px solid;
+  padding-inline: 5%;
+  cursor: pointer;
+}
+
+td .action-link { margin-inline: 5px; }
+
+.edit-link {
+  border-color: #C3B933;
+  background-color: #FFFCD7;
+}
+
+.edit-link:hover { background-color: white; }
+
+.del-link {
+  border-color: #8E3B21;
+  background-color: #FFE4DC;
+}
+
+.del-link:hover { background-color: white; }
+
+.tooltip {
+  max-width: 100px;
+}
+
+.tooltip div {
+  min-height: 18px;
+  position: relative;
+}
+
+.tooltip span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.tooltip:hover span {
+  position: absolute;
+  background-color: white;
+  border: 1px solid;
+  width: 300px;
+  white-space: normal;
+  z-index: 2;
+  padding: 10px;
+  top: -10px;
+  left: -10px;
 }

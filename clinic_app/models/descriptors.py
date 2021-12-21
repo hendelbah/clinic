@@ -12,20 +12,32 @@ class DoctorUUID:
     Proxy descriptor for setting doctor_id foreign key using doctor's uuid
     """
 
-    def __set__(self, instance, value: str):
+    def __set__(self, obj, value: str):
         """
         Set instance's doctor_id attribute to id of doctor with given uuid.
+        Also update doctor relationship.
         If value is None - set doctor_id to None
 
         :raise ValueError: if doctor is not found
         """
         if value is None:
-            instance.doctor_id = None
+            obj.doctor = None
+            obj.doctor_id = None
         else:
-            doctor_id = db.session.query(Doctor.id).filter_by(uuid=value).scalar()
-            if doctor_id is None:
+            with db.session.no_autoflush as session:
+                doctor = session.query(Doctor).filter_by(uuid=value).first()
+            if doctor is None:
                 raise ValueError('Invalid doctor_uuid')
-            instance.doctor_id = doctor_id
+            obj.doctor = doctor
+            obj.doctor_id = doctor.id
+
+    def __get__(self, obj, obj_type=None):
+        """
+        Return uuid of doctor from relationship, None if doctor is None
+        """
+        if obj.doctor is None:
+            return None
+        return obj.doctor.uuid
 
 
 class PatientUUID:
@@ -33,17 +45,29 @@ class PatientUUID:
     Proxy descriptor for setting patient_id foreign key using patient's uuid
     """
 
-    def __set__(self, instance, value: str):
+    def __set__(self, obj, value: str):
         """
         Set instance's patient_id attribute to id of patient with given uuid.
+        Also update patient relationship.
         If value is None - set patient_id to None
 
         :raise ValueError: if patient is not found
         """
         if value is None:
-            instance.patient_id = None
+            obj.patient = None
+            obj.patient_id = None
         else:
-            patient_id = db.session.query(Patient.id).filter_by(uuid=value).scalar()
-            if patient_id is None:
+            with db.session.no_autoflush as session:
+                patient = session.query(Patient).filter_by(uuid=value).first()
+            if patient is None:
                 raise ValueError('Invalid patient_uuid')
-            instance.patient_id = patient_id
+            obj.patient = patient
+            obj.patient_id = patient.id
+
+    def __get__(self, obj, obj_type=None):
+        """
+        Return uuid of patient from relationship, None if patient is None
+        """
+        if obj.patient is None:
+            return None
+        return obj.patient.uuid

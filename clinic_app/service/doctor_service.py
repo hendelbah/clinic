@@ -18,12 +18,12 @@ class DoctorService(BaseService):
         """
         Return query ordered and filtered.
 
-        :param search_name: filter doctors with full_name containing search_name
+        :param search_name: filter doctors with full name like this one
         :param no_user: filter doctors with no associated user accounts
         """
         query = cls._order()
         if search_name is not None:
-            query = query.filter(cls.model.full_name.like('%' + search_name + '%'))
+            query = query.filter(cls.model.full_name.like(f'%{search_name}%'))
         if no_user:
             query = query.filter(~User.query.filter_by(doctor_id=Doctor.id).exists())
         return query

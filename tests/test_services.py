@@ -21,13 +21,14 @@ class TestAllServices(BaseTestCase):
 
     def test_get_pagination(self):
         today = date.today()
+        # noinspection SpellCheckingInspection
         cases = (
-            ([{'email': 'doctor_001@spam.ua'}, 1],
+            ([{'search_email': 'doctor_00'}, 9],
              ),
             ([{'search_name': 'Геннад'}, 1],
              [{'no_user': True}, 0],
              ),
-            ([{'phone': '380000000012'}, 1],
+            ([{'search_phone': '380000000012'}, 1],
              [{'name': 'giga'}, 0],
              [{'surname': 'chad'}, 0],
              [{'patronymic': 'orewa'}, 0],
@@ -46,6 +47,7 @@ class TestAllServices(BaseTestCase):
                     pagination = service.get_pagination(**kwargs)
                     self.assertIsInstance(pagination, Pagination)
                     self.assertEqual(pagination.total, total)
+                    self.assertEqual(pagination.filters, kwargs)
                     modified = service.get_pagination_modified(**kwargs)
                     if total:
                         self.assertIsInstance(modified, datetime)

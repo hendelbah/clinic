@@ -17,7 +17,7 @@ class Doctor(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     uuid = db.Column(db.String(36), nullable=False, unique=True, index=True)
     full_name = db.Column(db.String(127), nullable=False)
-    speciality = db.Column(db.String(127), nullable=False)
+    speciality = db.Column(db.String(255), nullable=False)
     info = db.Column(db.String(1023), nullable=False)
     experience_years = db.Column(db.Integer, nullable=False)
     last_modified = db.Column(db.TIMESTAMP(timezone=True), default=datetime.utcnow,

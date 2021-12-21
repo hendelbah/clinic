@@ -3,7 +3,6 @@ This module defines user service class:
 """
 import typing as t
 
-from sqlalchemy.exc import DatabaseError
 from sqlalchemy.orm import Query
 
 from clinic_app.models import User
@@ -17,15 +16,15 @@ class UserService(BaseService):
     order_by = (model.id,)
 
     @classmethod
-    def _filter_by(cls, *, email: str = None) -> Query:
+    def _filter_by(cls, *, search_email: str = None) -> Query:
         """
         Return query ordered and filtered.
 
-        :param email: filter users having given email
+        :param search_email: filter with email like this one
         """
         query = cls._order()
-        if email is not None:
-            query = query.filter_by(email=email)
+        if search_email is not None:
+            query = query.filter(cls.model.email.like(f'%{search_email}%'))
         return query
 
     @classmethod
@@ -36,16 +35,3 @@ class UserService(BaseService):
         :param email: user's email
         """
         return cls.model.query.filter_by(email=email).first()
-
-    @classmethod
-    def save_instance(cls, user: User) -> t.Optional[str]:
-        """
-        Save User instance to database. If db error happens return
-        error message, else return None.
-        """
-        try:
-            cls.db.session.add(user)
-            cls.db.session.commit()
-        except DatabaseError as error:
-            return error.orig.args[-1]
-        return None

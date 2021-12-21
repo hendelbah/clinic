@@ -1,12 +1,17 @@
-{% extends 'pagination.html' -%}
+{% set title='Doctors' -%}
 
-{% block title -%}
-Doctors
+{% extends 'base.html' -%}
+
+{%- from 'macros.html' import pagination -%}
+
+{%- block header -%}
+Our doctors
 {%- endblock %}
 
-{% block pagination -%}
-<div class="doctor-container pagination-container">
-{% for doctor in data['items'] -%}
+{%- block body %}
+{%- call pagination(data) %}
+<div class="doctors-container pagination-container">
+{%- for doctor in data['items'] %}
     <div class="doctor-item">
         <label style="font-size:24px">{{ doctor['full_name'] }}</label>
         <label><b>{{ doctor['experience_years'] }}</b> лет практики</label>
@@ -15,4 +20,5 @@ Doctors
     </div>
 {%- endfor %}
 </div>
-{%- endblock %}
+{%- endcall %}
+{%- endblock -%}

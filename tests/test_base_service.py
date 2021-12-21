@@ -60,13 +60,13 @@ class TestBaseService(BaseTestCase):
         self.assertEqual(email, data['email'])
         # unknown uuid
         result, code = BaseService.update('qwe', data)
-        self.assertEqual(result, {})
         self.assertEqual(code, 404)
+        self.assertEqual(result, {})
         # duplicate 'doctor_uuid' filed
-        result, code = BaseService.update('8', {'doctor_uuid': '1'})
+        result, code = BaseService.update('8', {'doctor_uuid': '8'})
+        self.assertEqual(code, 422)
         self.assertIn('IntegrityError', result['errors'])
         self.assertEqual(result['message'], 'Request data violates database constraints')
-        self.assertEqual(code, 422)
 
     def test_create(self):
         data = {'email': 'email@spam.net', 'password_hash': '1234', 'is_admin': False}

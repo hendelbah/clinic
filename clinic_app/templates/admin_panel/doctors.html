@@ -1,0 +1,24 @@
+{%- extends 'admin_panel/base.html' %}
+
+{%- from 'macros.html' import paginated_table, admin_filters %}
+
+{%- block header -%}
+List of doctors
+{%- endblock %}
+
+{%- block body %}
+{%- call admin_filters(form, endpoints)%}
+<div class="filters-field">
+    {{ form.search_name.label() }}
+    {{ form.search_name() }}
+</div>
+{%- endcall %}
+
+{%- call(item) paginated_table(data, ('Full name', 'Speciality', 'Experience', 'Info', 'Email'), endpoints, 'full_name') %}
+<td>{{ item.full_name }}</td>
+<td class="tooltip"><div><span>{{ item.speciality }}</span></div></td>
+<td>{{ item.experience_years }} years</td>
+<td class="tooltip"><div><span>{{ item.info }}</span></div></td>
+<td>{{ item.user.email }}</td>
+{% endcall %}
+{% endblock %}

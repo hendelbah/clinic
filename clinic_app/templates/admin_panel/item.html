@@ -1,0 +1,29 @@
+{% extends 'admin_panel/base.html' -%}
+
+{%- from 'macros.html' import render_field -%}
+ 
+{%- block header %}
+{{ 'Create' if item is none else 'Edit'}} {{ item_name }}
+{%- endblock %}
+
+{%- block body %}
+<div class="info-block">
+    <div class="info-item">
+        <form method="post" class="common-form">
+            {{ form.hidden_tag() }}
+            {%- for field in form if field.name not in ('submit', 'csrf_token') %}
+            {{ render_field(field, {'readonly': ''} if item is not none and field.name in readonly else {}) }}
+            {%- endfor %}
+            <div class="submit-in-end">{{ form.submit(value='Create') if item is none else form.submit() }}</div>
+            {% if item is not none %}
+            <div class="submit-in-end">
+                 <a class="del-link action-link"
+                    onclick="confirmPostEmpty('Delete {{item_name}}?', '{{url_for(endpoints['delete'], uuid=item.uuid)}}')">
+                     delete
+                 </a>
+            </div>
+            {% endif %}
+        </form>
+    </div>
+</div>
+{% endblock %}

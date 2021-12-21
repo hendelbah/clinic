@@ -1,9 +1,10 @@
 """
 General routes
 """
-from flask import Blueprint, render_template, redirect, url_for, request
+from flask import Blueprint, render_template, redirect, url_for
 
 from clinic_app.service import DoctorService
+from clinic_app.views.utils import get_pagination_args
 
 general_bp = Blueprint('general', __name__)
 
@@ -16,9 +17,8 @@ def index():
 
 @general_bp.route('/doctors')
 def doctors():
-    page = request.args.get('page', default=1, type=int)
-    per_page = request.args.get('per_page', default=8, type=int)
-    pagination = DoctorService.get_pagination(page=page, per_page=per_page)
+    pages = get_pagination_args(8)
+    pagination = DoctorService.get_pagination(*pages)
     if len(pagination.items) == 0 < pagination.total:
         return redirect(url_for('general.doctors'))
     return render_template('doctors.html', data=pagination)

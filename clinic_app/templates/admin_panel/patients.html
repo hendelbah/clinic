@@ -1,0 +1,32 @@
+{%- extends 'admin_panel/base.html' %}
+
+{%- from 'macros.html' import paginated_table, admin_filters %}
+
+{%- block header -%}
+List of users
+{%- endblock %}
+
+{%- block body %}
+{%- call admin_filters(form, endpoints)%}
+<div class="filters-field">
+    {{ form.search_phone.label() }}
+    {{ form.search_phone() }}
+</div>
+<div class="filters-field">
+    {{ form.surname.label() }}
+    {{ form.surname() }}
+</div>
+<div class="filters-field">
+    {{ form.name.label() }}
+    {{ form.name() }}
+</div>
+{%- endcall %}
+
+{%- call(item) paginated_table(data, ('Phone number', 'Surname', 'Name', 'Patronymic', 'Birthday'), endpoints, 'surname') %}
+<td class="center-text">{{ item.phone_number }}</td>
+<td>{{ item.surname }}</td>
+<td>{{ item.name }}</td>
+<td>{{ item.patronymic }}</td>
+<td class="center-text">{{ item.birthday }}</td>
+{% endcall %}
+{% endblock %}

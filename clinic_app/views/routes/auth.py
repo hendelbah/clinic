@@ -4,11 +4,8 @@ Authentication routes
 from flask import Blueprint, render_template, redirect, url_for, flash, request
 from flask_login import current_user, login_user, logout_user, login_required
 
-from clinic_app import login_manager
 from clinic_app.service import UserService
 from clinic_app.views.forms import LoginForm, ChangePassForm
-
-login_manager.user_loader(UserService.get)
 
 auth_bp = Blueprint('auth', __name__)
 

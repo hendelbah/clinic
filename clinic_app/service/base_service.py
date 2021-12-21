@@ -141,7 +141,9 @@ class BaseService:
         :param per_page: items per page for pagination
         :param filters: kwargs for filtering
         """
-        return cls._filter_by(**filters).paginate(page=page, per_page=per_page)
+        pagination = cls._filter_by(**filters).paginate(page=page, per_page=per_page)
+        pagination.filters = filters
+        return pagination
 
     # pylint: disable=no-member
     @classmethod
@@ -159,3 +161,16 @@ class BaseService:
         subquery = cls._filter_by(**filters).limit(per_page).offset(offset).subquery()
         aliased_model = db.aliased(cls.model, subquery)
         return db.session.query(db.func.max(aliased_model.last_modified)).scalar()
+
+    @staticmethod
+    def save_instance(instance: db.Model) -> t.Optional[str]:
+        """
+        Save instance to database. If db error happens return
+        error message, else return None.
+        """
+        try:
+            db.session.add(instance)
+            db.session.commit()
+        except DatabaseError as error:
+            return error.orig.args[-1]
+        return None

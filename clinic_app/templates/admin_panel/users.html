@@ -1,0 +1,28 @@
+{%- extends 'admin_panel/base.html' %}
+
+{%- from 'macros.html' import paginated_table, admin_filters %}
+
+{%- block header -%}
+List of users
+{%- endblock %}
+
+{%- block body %}
+{%- call admin_filters(form, endpoints)%}
+<div class="filters-field">
+    {{ form.search_email.label() }}
+    {{ form.search_email() }}
+</div>
+{%- endcall %}
+
+{%- call(item) paginated_table(data, ('Email', 'Is admin', 'Related doctor'), endpoints, 'email') %}
+<td>{{ item.email }}</td>
+<td class="center-text" style="color:{% if item.is_admin %}red{% else %}orange{% endif %}">{{ item.is_admin }}</td>
+<td class="links">
+    {%- if item.doctor -%}
+    <a href="{{ url_for('admin.doctor', uuid=item.doctor.uuid) }}">
+        {{- item.doctor.full_name -}}
+    </a>
+    {%- endif %}
+</td>
+{% endcall %}
+{% endblock %}

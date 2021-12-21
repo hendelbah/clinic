@@ -33,7 +33,7 @@ class UserListApi(BaseListResource):
     service = UserService
     schema = UserSchema
     filters = RequestParser()
-    filters.add_argument('email')
+    filters.add_argument('search_email')
 
 
 class DoctorApi(BaseResource):
@@ -62,7 +62,7 @@ class PatientListApi(BaseListResource):
     service = PatientService
     schema = PatientSchema
     filters = RequestParser()
-    filters.add_argument('phone')
+    filters.add_argument('search_phone')
     filters.add_argument('name')
     filters.add_argument('surname')
     filters.add_argument('patronymic')

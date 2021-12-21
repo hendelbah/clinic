@@ -1,41 +1,46 @@
+{% set title='Profile' -%}
+
 {% extends 'base.html' -%}
 
-{%- from 'macros.html' import validated_input -%}
-
-{% block title -%}
-Profile
-{%- endblock %}
+{%- from 'macros.html' import render_field -%}
 
 {% block side_menu -%}
-<div class="side-menu-item">
+<div class="side-menu-item {% if form.is_submitted() %}side-menu-item-active{% endif %}" id="change-pass-button">
     <a onclick="switch_pass_change()">Change password</a>
 </div>
+{%- endblock %}
+
+{%- block header -%}
+Profile
 {%- endblock %}
 
 {% block body -%}
 <script>
 function switch_pass_change() {
-  var x = document.getElementById("change-pass");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
+  var pass_form = document.getElementById("change-pass");
+  var pass_button = document.getElementById("change-pass-button");
+  if (pass_form.style.display === "none") {
+    pass_form.style.display = "flex";
+    pass_button.classList.add('side-menu-item-active');
   }
   else {
-    x.style.display = "none";
+    pass_form.style.display = "none";
+    pass_button.classList.remove('side-menu-item-active');
   }
 }
 </script>
 
-<div class="profile-block">
-    <div class="profile-item">
+<div class="info-block flex-col">
+    <div class="info-item">
         <label>Email: <span style="color:brown">{{ current_user.email }}</span></label>
     </div>
     {% if current_user.is_admin %}
-    <div class="profile-item">
+    <div class="info-item">
         <label style="color:green">You are an administrator.</label>
     </div>
     {% endif %}
     {% if current_user.doctor %}
-    <div class="profile-item">
+    <div class="info-item">
         <label>You have related doctor's account:</label>
         <table class="profile-doctor">
             <tr>
@@ -58,13 +63,13 @@ function switch_pass_change() {
     </div>
     {% endif %}
     <hr width="80%" align="left">
-    <div class="profile-item" id="change-pass" {% if not form.is_submitted() %}style="display:none"{% endif %}>
-        <form method="post" class="change-pass-form">
+    <div class="info-item" {% if not form.is_submitted() %}style="display:none"{% endif %}>
+        <form method="post" class="common-form">
             {{ form.hidden_tag() }}
-            {{ validated_input(form.password) }}
-            {{ validated_input(form.new_pass) }}
-            {{ validated_input(form.confirm) }}
-            <div>{{ form.submit() }}</div>
+            {{ render_field(form.password) }}
+            {{ render_field(form.new_pass) }}
+            {{ render_field(form.confirm) }}
+            <div class="submit-in-end">{{ form.submit() }}</div>
         </form>
     </div>
 </div>

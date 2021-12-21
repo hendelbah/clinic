@@ -19,7 +19,7 @@ class TestApi(BaseTestCase):
     def test_head(self):
         response = self.client.head(url_for('api.users', per_page=5), headers=self.api_auth)
         self.assertStatus(response, 204)
-        response = self.client.head(url_for('api.users', email='zxc'), headers=self.api_auth)
+        response = self.client.head(url_for('api.users', search_email='zxc'), headers=self.api_auth)
         self.assert404(response)
         response = self.client.head(url_for('api.user', uuid='1'), headers=self.api_auth)
         self.assertStatus(response, 204)
@@ -88,8 +88,8 @@ class TestApi(BaseTestCase):
 
     def test_get_filtered_404(self):
         filters = (
-            {'email': 'zxc'},
-            {'no_user': True},
+            {'search_email': 'zxc'},
+            {'search_name': 'cocojambo'},
             {'name': 'amogus'},
             {'doctor_uuid': 'poppa'}
         )

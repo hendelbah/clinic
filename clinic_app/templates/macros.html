@@ -1,20 +1,121 @@
-{% macro validated_input(field) -%}
-<div>
-    {{ field.label() }}
-
+{% macro render_field(field, kwargs={}) -%}
+<div class="validated-field">
+    <div class="field-container">
+        {{ field.label() }}
+        {%- if field.errors -%}
+        {{ field(class='invalid-input') }}
+        {%- else -%}
+        {{ field(**kwargs) }}
+        {%- endif -%}
+    </div>
     {%- if field.errors -%}
-    {{ field(class='invalid-input') }}
-    {%- else -%}
-    {{ field() }}
+    <div class="invalid-container">
+        {% for e in field.errors -%}
+        <label class="invalid-feedback" style="margin-block:unset">
+            {{ e }}
+        </label>
+        {%- endfor %}
+    </div>
     {%- endif -%}
 </div>
-{%- if field.errors -%}
-<div class="invalid-container" style="margin-block:unset">
-    {% for e in field.errors -%}
-    <label class="invalid-feedback">
-        {{ e }}
-    </label>
-    {%- endfor %}
+{%- endmacro -%}
+
+
+
+{%- macro pagination(data) -%}
+<div class="pagination flex-col">
+    <div class="pagination-body flex-col">
+        {%- if data.items %}
+        {{ caller() }}
+        {% else %}
+        <label style="align-self:center">Nothing...</label>
+        {%- endif %}
+    </div>
+    <hr />
+    <div class="pagination-tail controls">
+        {% if data.has_prev -%}
+        {% if data.page == 2 -%}
+        {% set prev = url_for(request.endpoint, **data.filters) %}
+        {%- else -%}
+        {% set prev = url_for(request.endpoint, page=data.page - 1, per_page=data.per_page, **data.filters) %}
+        {%- endif -%}
+        <a href="{{ prev }}" class="change-page" style="visibility:visible"><< Prev</a>
+        {%- else -%}
+        <a class="change-page" style="visibility:hidden"><< Prev</a>
+        {%- endif %}
+        <label id="pages">
+            Page <b>{{data.page}}</b> of <b>{{data.pages}}</b>
+            ({{data.items|length}} of {{data.total}} items)
+        </label>
+        {% if data.has_next -%}
+        {% set next = url_for(request.endpoint, page=data.page + 1, per_page=data.per_page, **data.filters) -%}
+        <a href="{{ next }}" class="change-page" style="visibility:visible">Next >></a>
+        {%- else -%}
+        <a class="change-page" style="visibility:hidden">Next >></a>
+        {%- endif %}
+    </div>
 </div>
-{%- endif -%}
+{%- endmacro %}
+
+
+
+{%- macro paginated_table(data, table_headers, endpoints, key_attr = None) -%}
+
+{%- set pagination_content %}
+<table class="records-table">
+    <tr class="table-header">
+        <th>№</th>
+        {%- for header in table_headers %}
+        <th>{{ header }}</th>
+        {%- endfor %}
+        <th>action</th>
+    </tr>
+    {%- for item in data.items %}
+    <tr>
+        <td>{{ (data.page - 1) * data.per_page + loop.index }}</td>
+        {{ caller(item) }}
+        <td class="center-text controls">
+            <a class="edit-link action-link" href="{{ url_for(endpoints['item'], uuid=item.uuid) }}">edit</a>
+            <a class="del-link action-link"
+               onclick="confirmPostEmpty('Delete {{item|attr(key_attr)}}?',
+               '{{url_for(endpoints['delete'], uuid=item.uuid)}}')">delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{%- endset %}
+
+{%- call pagination(data) %}
+{{ pagination_content }}
+{%- endcall %}
+
+{%- endmacro %}
+
+
+
+{%- macro side_menu_item(active, name, link) -%}
+
+<div class="side-menu-item{% if active %} side-menu-item-active{% endif %}">
+    <a href="{{ link }}">{{ name }}</a>
+</div>
+
+{%- endmacro %}
+
+
+
+{% macro admin_filters(form, endpoints) -%}
+<div class="admin-controls controls">
+    <div class="new-record">
+        <a href="{{ url_for(endpoints['item'], uuid='new') }}">Create new</a>
+    </div>
+    <form method="post" class="filters">
+        <label class="filters-field" style="font-size:20px">Filters:</label>
+        {{ form.hidden_tag() }}
+        {{ caller() }}
+        <div class="filters-field">
+        {{ form.submit() }}
+        </div>
+        <a href="{{ url_for(endpoints['list']) }}" class="filters-field">Clear</a>
+    </form>
+</div>
 {%- endmacro -%}

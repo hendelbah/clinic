@@ -10,7 +10,7 @@ class TestSchemas(BaseTestCase):
         cases = (
             ['email', 'is_admin', 'password_hash'],
             ['experience_years', 'full_name', 'info', 'speciality'],
-            ['birthday', 'name', 'patronymic', 'phone_number', 'surname'],
+            ['birthday', 'full_name', 'phone_number'],
             ['date', 'doctor_uuid', 'patient_uuid', 'time'],
         )
         for case, schema in zip(cases, schemas):
@@ -23,7 +23,7 @@ class TestSchemas(BaseTestCase):
         cases = (
             ['doctor', 'email', 'is_admin', 'password_hash', 'uuid'],
             ['experience_years', 'full_name', 'info', 'speciality', 'user', 'uuid'],
-            ['birthday', 'name', 'patronymic', 'phone_number', 'surname', 'uuid'],
+            ['birthday', 'full_name', 'phone_number', 'uuid'],
             ['bill', 'conclusion', 'date', 'doctor', 'patient', 'prescription', 'time', 'uuid'],
         )
         for case, schema, model in zip(cases, schemas, self.models):

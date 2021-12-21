@@ -303,7 +303,9 @@ hr { min-width: 100%; }
   border: 1px solid #222;
 }
 
-td.center-text.controls { min-width: 100px; }
+td.action-1 { min-width: 100px; }
+
+td.action-2 { min-width: 160px; }
 
 .action-link {
   border-radius: 10px;

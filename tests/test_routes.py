@@ -1,7 +1,10 @@
 # pylint: disable=missing-function-docstring, missing-module-docstring, missing-class-docstring
+from unittest.mock import patch
+
 from flask import url_for
 
 from clinic_app.service.population.population_data import ROOT_PASSWORD
+from clinic_app.views.utils import random_password, get_pagination_args
 from tests.base_test_case import BaseTestCase
 
 
@@ -63,3 +66,21 @@ class TestRoutes(BaseTestCase):
             with self.subTest(endpoint):
                 response = self.client.get(url_for(endpoint=endpoint))
                 self.assertRedirects(response, redirect)
+
+
+class TestUtils(BaseTestCase):
+    @patch('clinic_app.views.utils.choice', return_value='a')
+    def test_random_password(self, mock):
+        pwd = random_password(10)
+        self.assertEqual(pwd, 'aaaaaaaaaa')
+        self.assertEqual(mock.call_count, 10)
+
+    def test_pagination_args(self):
+        with self.app.test_request_context():
+            page, per_page = get_pagination_args()
+            self.assertEqual(page, 1)
+            self.assertEqual(per_page, 20)
+        with self.app.test_request_context(path='/?page=3&per_page=23'):
+            page, per_page = get_pagination_args()
+            self.assertEqual(page, 3)
+            self.assertEqual(per_page, 23)

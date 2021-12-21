@@ -3,7 +3,7 @@ Admin panel routes
 """
 from datetime import date
 
-from flask import Blueprint, render_template, abort, redirect, url_for, flash
+from flask import Blueprint, render_template, abort, redirect, url_for, flash, request
 from flask_login import current_user, login_required
 
 from clinic_app.models import User, Doctor, Patient
@@ -119,6 +119,7 @@ def delete_user(uuid):
 @admin_bp.route('/doctors', methods=['GET', 'POST'])
 def doctors():
     form = FilterDoctors()
+    filters = {'patient': request.args.get('patient')}
     if form.validate_on_submit():
         filters = extract_filters(['search_name'], form)
         return redirect(url_for('admin.doctors', **filters))
@@ -168,9 +169,9 @@ def delete_doctor(uuid):
 def patients():
     form = FilterPatients()
     if form.validate_on_submit():
-        filters = extract_filters(['search_phone', 'surname', 'name'], form)
+        filters = extract_filters(['search_phone', 'search_name'], form)
         return redirect(url_for('admin.patients', **filters))
-    kwargs_list = [{'key': 'search_phone'}, {'key': 'surname'}, {'key': 'name'}]
+    kwargs_list = [{'key': 'search_phone'}, {'key': 'search_name'}]
     filters = parse_filters(kwargs_list, form)
     pages = get_pagination_args()
     data = PatientService.get_pagination(*pages, **filters)
@@ -191,7 +192,7 @@ def patient(uuid):
     form = EditPatient(obj=patient_)
     if form.validate_on_submit():
         if uuid == 'new':
-            patient_ = Patient('', '', '', '', date(1, 1, 1))
+            patient_ = Patient('', '', date(1, 1, 1))
         form.populate_obj(patient_)
         error = DoctorService.save_instance(patient_)
         if error is None:

@@ -59,7 +59,7 @@
 
 
 
-{%- macro paginated_table(data, table_headers, endpoints, key_attr = None) -%}
+{%- macro paginated_table(data, table_headers, endpoints, key_attr = None, make_app_link = None) -%}
 
 {%- set pagination_content %}
 <table class="records-table">
@@ -74,7 +74,7 @@
     <tr>
         <td>{{ (data.page - 1) * data.per_page + loop.index }}</td>
         {{ caller(item) }}
-        <td class="center-text controls">
+        <td class="{{'action-2 ' if make_app_link else 'action-1 '}}center-text controls">
             <a class="edit-link action-link" href="{{ url_for(endpoints['item'], uuid=item.uuid) }}">edit</a>
             <a class="del-link action-link"
                onclick="confirmPostEmpty('Delete {{item|attr(key_attr)}}?',

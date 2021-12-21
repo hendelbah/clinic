@@ -63,9 +63,7 @@ class PatientListApi(BaseListResource):
     schema = PatientSchema
     filters = RequestParser()
     filters.add_argument('search_phone')
-    filters.add_argument('name')
-    filters.add_argument('surname')
-    filters.add_argument('patronymic')
+    filters.add_argument('search_name')
 
 
 app_filters = RequestParser()

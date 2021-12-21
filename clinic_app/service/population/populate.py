@@ -56,13 +56,12 @@ def populate(patients_amount=100):
     appointments_2_src = []
     for i in range(1, patients_amount + 1):
         sex = randint(0, 1)
+        name = f'{choice(SURNAMES_SRC)} {choice(NAMES_SRC[sex])} {choice(PATRONYMICS_SRC[sex])}'
         patient = {
             'id': i,
             'uuid': str(i),
             'phone_number': f'380{i * 3:0>9}',
-            'surname': choice(SURNAMES_SRC),
-            'name': choice(NAMES_SRC[sex]),
-            'patronymic': choice(PATRONYMICS_SRC[sex]),
+            'full_name': name,
             'birthday': date.fromordinal(717200 + i * 10)
         }
         doctor_id = int(i / patients_amount * (len(DOCTORS_SRC) - 1) + 1)

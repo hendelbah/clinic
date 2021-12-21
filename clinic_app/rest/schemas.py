@@ -15,7 +15,7 @@ Functions:
 """
 
 from flask_restful import abort
-from marshmallow import ValidationError
+from marshmallow import ValidationError, validate
 
 from clinic_app import ma
 from clinic_app.models import User, Doctor, Patient, Appointment
@@ -71,6 +71,7 @@ class DoctorSchema(BaseSchema):
         """
         model = Doctor
 
+    full_name = ma.auto_field(validate=validate.Regexp(r'^\w{2,}( \w{2,}){1,2}$'))
     user = ma.Nested('UserSchema', exclude=['doctor'], dump_only=True)
 
 
@@ -84,6 +85,8 @@ class PatientSchema(BaseSchema):
         Patient schema metadata
         """
         model = Patient
+
+    full_name = ma.auto_field(validate=validate.Regexp(r'^\w{2,}( \w{2,}){1,2}$'))
 
 
 class AppointmentSchema(BaseSchema):

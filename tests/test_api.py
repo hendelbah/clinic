@@ -54,11 +54,10 @@ class TestApi(BaseTestCase):
 
     def test_post_and_delete(self):
         data = (
-            {'email': 'once', 'password_hash': 'told me', 'is_admin': True},
+            {'email': 'Somebody once', 'password_hash': 'told me', 'is_admin': True},
             {'full_name': 'the world', 'speciality': 'is gonna', 'info': 'roll me',
              'experience_years': 100},
-            {'phone_number': '88005553535', 'name': 'Slave', 'surname': 'Ass',
-             'patronymic': '300$', 'birthday': '2012-12-12'},
+            {'phone_number': '88005553535', 'full_name': 'Slave Ass 300', 'birthday': '2012-12-12'},
             {'patient_uuid': '4', 'doctor_uuid': '5', 'date': '2013-10-10', 'time': '10:00:01',
              'conclusion': 'will die soon', 'prescription': 'submit', 'bill': 5000},
         )
@@ -77,7 +76,7 @@ class TestApi(BaseTestCase):
         data = (
             {'password_hash': 'cocos_olia_jojoba', 'email': 'cocojambo'},
             {'full_name': 'Артем Петрович', 'experience_years': 1488},
-            {'name': 'McDonald\'s', 'birthday': '1940-05-15'},
+            {'full_name': 'McDonalds ltd', 'birthday': '1940-05-15'},
             {'date': '2025-01-01', 'time': '07:00:00', 'conclusion': 'very well'},
         )
         for endpoint, item in zip(self.endpoints_2, data):
@@ -90,7 +89,7 @@ class TestApi(BaseTestCase):
         filters = (
             {'search_email': 'zxc'},
             {'search_name': 'cocojambo'},
-            {'name': 'amogus'},
+            {'search_name': 'amogus'},
             {'doctor_uuid': 'poppa'}
         )
         for endpoint, data in zip(self.endpoints_1, filters):
@@ -113,10 +112,10 @@ class TestApi(BaseTestCase):
         cases = (
             ({'email': 'doctor_001@spam.ua', 'is_admin': False, 'password_hash': 'asd'},
              ['IntegrityError']),
-            ({'full_name': 'the world', 'speciality': 'is gonna'},
-             ['experience_years', 'info']),
-            ({'name': 'S', 'surname': 'A', 'patronymic': 'a', 'birthday': '20123-10-10'},
-             ['birthday', 'phone_number']),
+            ({'full_name': 'the   world', 'speciality': 'is gonna'},
+             ['experience_years', 'full_name', 'info']),
+            ({'full_name': 'A', 'birthday': '20123-10-10'},
+             ['birthday', 'full_name', 'phone_number']),
             ({'id': 365, 'patient_uuid': '4', 'date': '013-10-10', 'prescription': 'a', 'bill': 5},
              ['date', 'doctor_uuid', 'id', 'time']),
 
@@ -135,7 +134,7 @@ class TestApi(BaseTestCase):
              ['ValueError']),
             ({'fu': 'the world', 'spe': 'is gonna', 'info': 'roll me'},
              ['fu', 'spe']),
-            ({'phone_number': '380000000003', 'name': 'Slave'},
+            ({'phone_number': '380000000003', 'full_name': 'palmolive gel'},
              ['IntegrityError']),
             ({'doctor_uuid': '1', 'date': '013-10-10', 'time': '75:00:00', 'aoa': 'oao'},
              ['aoa', 'date', 'time']),

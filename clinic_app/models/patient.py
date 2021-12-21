@@ -17,29 +17,23 @@ class Patient(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     uuid = db.Column(db.String(36), nullable=False, unique=True, index=True)
     phone_number = db.Column(db.String(20), nullable=False, unique=True, index=True)
-    surname = db.Column(db.String(40), nullable=False, index=True)
-    name = db.Column(db.String(40), nullable=False)
-    patronymic = db.Column(db.String(40), nullable=False)
+    full_name = db.Column(db.String(127), nullable=False)
     birthday = db.Column(db.Date, nullable=False)
     last_modified = db.Column(db.TIMESTAMP(timezone=True), default=datetime.utcnow,
                               onupdate=datetime.utcnow)
 
-    def __init__(self, phone_number: str, surname: str, name: str, patronymic: str, birthday: date):
+    def __init__(self, phone_number: str, full_name: str, birthday: date):
         """
         :param phone_number: patient's unique phone number
-        :param surname: patient's surname
-        :param name: patient's given name
-        :param patronymic: patient's patronymic
+        :param full_name: patient's full name
         :param birthday: patient's date of birth
         """
         self.phone_number = phone_number
-        self.surname = surname
-        self.name = name
-        self.patronymic = patronymic
+        self.full_name = full_name
         self.birthday = birthday
         self.uuid = str(uuid4())
 
     def __repr__(self):
-        keys = ('id', 'surname', 'name', 'patronymic')
+        keys = ('id', 'full_name', 'birthday')
         values = (f"{key}={getattr(self, key)!r}" for key in keys)
         return f'<Patient({", ".join(values)})>'

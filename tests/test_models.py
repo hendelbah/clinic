@@ -27,7 +27,9 @@ class TestModels(BaseTestCase):
             test_obj = GuineaPig()
             test_obj.uuid = None
             self.assertIsNone(getattr(test_obj, key))
+            self.assertIsNone(test_obj.uuid)
             test_obj.uuid = '1'
+            self.assertEqual(test_obj.uuid, '1')
             self.assertEqual(getattr(test_obj, key), 1)
             with self.assertRaises(ValueError):
                 test_obj.uuid = 'asd'

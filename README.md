@@ -43,7 +43,7 @@ MYSQL_DATABASE=<your_mysql_database_name>
 FLASK_APP=clinic_app
 ```
 
-- #####Optionally set:
+- ##### Optionally set:
 
 ```
 FLASK_SECRET_KEY=<your_secure_key>
@@ -90,8 +90,8 @@ Also, all collection resources accept `page` and `per_page` GET parameters
 
 #### After population, to log in you can use following email - password:
 
-- #####`root` - `root1234`: admin user
-- #####`doctor_001@spam.ua` - `doctor1234`: admin and doctor user
+- ##### `root` - `root1234`: admin user
+- ##### `doctor_001@spam.ua` - `doctor1234`: admin and doctor user
 
 #### Routes:
 ```

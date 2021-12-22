@@ -85,14 +85,21 @@ class TestRoutes(BaseTestCase):
             {'full_name': 'the world', 'speciality': 'is gonna', 'info': 'roll me',
              'experience_years': 100},
             {'phone_number': '88005553535', 'full_name': 'Slave Ass 300', 'birthday': '2012-12-12'},
-            {'date': '2013-10-10', 'time': '10:00', 'conclusion': 'will die soon',
-             'prescription': 'submit', 'bill': 5000},
+            {'date': '2013-10-10', 'time': '10:00'},
+        )
+        filters_data = (
+            {'search_email': 'asd'},
+            {'search_name': 'qwe'},
+            {'search_phone': 'aboba', 'search_name': 'bobak'},
+            {'doctor_name': 'amogus', 'date_from': '2012-12-12'},
         )
         i = 0
-        for endpoints, data in zip(endpoints_bundle, post_data):
+        for endpoints, data, filters in zip(endpoints_bundle, post_data, filters_data):
             with self.subTest(str(i := i + 1)):
                 response = self.client.get(url_for(endpoints['list']))
                 self.assert200(response)
+                response = self.client.post(url_for(endpoints['list']), json=filters)
+                self.assertRedirects(response, url_for(endpoints['list'], **filters))
                 response = self.client.get(url_for(endpoints['item'], uuid='10'))
                 self.assert200(response)
                 response = self.client.get(url_for(endpoints['item'], uuid='new'))
@@ -109,6 +116,10 @@ class TestRoutes(BaseTestCase):
                 self.assert200(response)
                 response = self.client.post(url_for(endpoints['delete'], uuid='10'))
                 self.assertRedirects(response, url_for(endpoints['list']))
+        data = {'date': '2013-10-10', 'time': '10:00', 'conclusion': 'oao',
+                'prescription': 'kek', 'bill': 5}
+        response = self.client.post(url_for('admin.appointment', uuid='11'), json=data)
+        self.assertRedirects(response, url_for('admin.appointment', uuid='11'))
 
 
 class TestUtils(BaseTestCase):

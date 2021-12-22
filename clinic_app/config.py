@@ -6,7 +6,7 @@ import pathlib
 
 BASE_DIR = pathlib.Path(__file__).parent
 
-FLASK_CONFIG = os.getenv('FLASK_CONFIG', default='production')
+FLASK_CONFIG = os.getenv('FLASK_CONFIG', default='development')
 FLASK_SECRET_KEY = os.getenv('FLASK_SECRET_KEY', default='super-secret')
 
 MYSQL_USER = os.getenv('FLASK_DB_USER', default='root')

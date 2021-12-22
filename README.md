@@ -35,20 +35,26 @@ pip install -r requirements.txt
 
 - #### Set the following environment variables:
 
+- Flask app:
+```
+FLASK_APP=clinic_app
+```
+
+- Database:
 ```
 MYSQL_USER=<your_mysql_user>
 MYSQL_PASSWORD=<your_mysql_user_password>
 MYSQL_SERVER=<your_mysql_server>
 MYSQL_DATABASE=<your_mysql_database_name>
-FLASK_APP=clinic_app
 ```
 
-- ##### Optionally set:
-
+- Optional:
 ```
 FLASK_SECRET_KEY=<your_secure_key>
-FLASK_CONFIG=production
+FLASK_CONFIG=[production|development]
 ```
+*You can set these in .env file in the application root directory as the project uses dotenv module to load 
+environment variables(except `FLASK_APP` ofcourse)*
 
 - #### Run migrations to create database infrastructure:
 

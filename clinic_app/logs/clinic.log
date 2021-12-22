@@ -2089,3 +2089,8 @@ Cookie: Pycharm-53a8c095=77153f53-2584-405e-8a2b-0faa20f59ad5; session=.eJwljktq
 2021-12-22 02:56:23,195 INFO werkzeug:  * Debugger PIN: 248-785-052
 2021-12-22 02:56:23,233 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 2021-12-22 02:58:55,191 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\tests\\test_routes.py', reloading
+2021-12-22 02:58:55,250 INFO werkzeug:  * Restarting with stat
+2021-12-22 02:58:55,710 INFO clinic_app: App initialization
+2021-12-22 02:58:55,837 WARNING werkzeug:  * Debugger is active!
+2021-12-22 02:58:55,840 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-22 02:58:55,880 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)

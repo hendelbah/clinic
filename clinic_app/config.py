@@ -6,13 +6,13 @@ import pathlib
 
 BASE_DIR = pathlib.Path(__file__).parent
 
-FLASK_CONFIG = 'development'  # os.getenv('FLASK_CONFIG', default='testing')
+FLASK_CONFIG = os.getenv('FLASK_CONFIG', default='production')
 FLASK_SECRET_KEY = os.getenv('FLASK_SECRET_KEY', default='super-secret')
 
 MYSQL_USER = os.getenv('FLASK_DB_USER', default='root')
 MYSQL_PASSWORD = os.getenv('FLASK_DB_PASSWORD', default='')
 MYSQL_SERVER = os.environ.get('FLASK_DB_SERVER', default='localhost')
-MYSQL_DATABASE = os.getenv('FLASK_DB_NAME', default='clinic_test')
+MYSQL_DATABASE = os.getenv('FLASK_DB_NAME', default='clinic')
 
 
 class Config:

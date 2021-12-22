@@ -1,6 +1,8 @@
 """
 This module defines patient service class:
 """
+from sqlalchemy.orm import Query
+
 from clinic_app.models import Patient
 from clinic_app.service.base_service import BaseService
 
@@ -9,22 +11,19 @@ from clinic_app.service.base_service import BaseService
 class PatientService(BaseService):
     """Service class for querying Patient model"""
     model = Patient
-    order_by = (model.id,)
+    order_by = (model.full_name,)
 
     @classmethod
-    def _filter_by(cls, *, phone_number: str = None, name: str = None, surname: str = None):
+    def _filter_by(cls, *, search_phone: str = None, search_name: str = None) -> Query:
         """
         Return query ordered and filtered.
 
-        :param phone_number: filter patients having given phone number
-        :param name: filter patients having given name
-        :param surname: filter patients having given surname
+        :param search_phone: filter patients with phone number like this one
+        :param search_name: filter patients with full name like this one
         """
         query = cls._order()
-        if phone_number is not None:
-            query = query.filter_by(phone_number=phone_number)
-        if name is not None:
-            query = query.filter_by(name=name)
-        if surname is not None:
-            query = query.filter_by(surname=surname)
+        if search_phone is not None:
+            query = query.filter(cls.model.phone_number.like(f'%{search_phone}%'))
+        if search_name is not None:
+            query = query.filter(cls.model.full_name.like(f'%{search_name}%'))
         return query

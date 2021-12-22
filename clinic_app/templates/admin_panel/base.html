@@ -1,0 +1,36 @@
+{% extends 'base.html' -%}
+
+{%- if active_menu_item is not defined -%}
+{%- set active_menu_item = 0 %}
+{%- endif %}
+
+{%- from 'macros.html' import side_menu_item -%}
+
+{% block title -%}
+{% if title is defined -%}
+Admin panel - {{ title }}
+{%- else -%}
+Admin panel
+{%- endif %}
+{%- endblock %}
+
+{% block side_menu -%}
+<script>
+    function confirmPostEmpty(message, url) {
+        if (confirm(message) == true) {
+            var form = document.createElement('form');
+            form.setAttribute('method', 'post');
+            form.setAttribute('action', url);
+            document.body.appendChild(form);
+            form.submit();
+        }
+    }
+</script>
+<div  class="side-menu-item admin-header">
+    <label>Administrator panel</label>
+</div>
+{{ side_menu_item(active_menu_item == 1, 'Users', url_for('admin.users')) }}
+{{ side_menu_item(active_menu_item == 2, 'Doctors', url_for('admin.doctors')) }}
+{{ side_menu_item(active_menu_item == 3, 'Patients', url_for('admin.patients')) }}
+{{ side_menu_item(active_menu_item == 4, 'Appointments', url_for('admin.appointments')) }}
+{%- endblock %}

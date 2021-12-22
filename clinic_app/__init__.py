@@ -2,6 +2,7 @@
 Package stores all source files of project.
 This module stands for app initialization and configuring
 """
+# pylint: disable=cyclic-import,wrong-import-position
 import logging
 import sys
 from logging.handlers import RotatingFileHandler
@@ -24,6 +25,7 @@ migration = Migrate(app, db, directory=BASE_DIR / 'migrations')
 
 login_manager = LoginManager(app)
 login_manager.login_message = "You must be logged in to access this page."
+login_manager.login_message_category = "warning"
 login_manager.login_view = "auth.login"
 
 formatter = logging.Formatter('%(asctime)s %(levelname)s %(name)s: %(message)s')
@@ -49,7 +51,10 @@ werkzeug_logger.addHandler(file_handler)
 werkzeug_logger.addHandler(console_handler)
 werkzeug_logger.setLevel(logging.INFO)
 
-# pylint: disable=cyclic-import,wrong-import-position
-from clinic_app.rest import api_blueprint
+from clinic_app.rest import api_bp
+from clinic_app.views import general_bp, auth_bp, admin_bp
 
-app.register_blueprint(api_blueprint)
+app.register_blueprint(api_bp)
+app.register_blueprint(general_bp)
+app.register_blueprint(auth_bp)
+app.register_blueprint(admin_bp)

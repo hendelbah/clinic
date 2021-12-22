@@ -1,8 +1,7 @@
 [MASTER]
 
-# Add files or directories matching the regex patterns to the blacklist. The
-# regex matches against base names, not paths.
-ignore-patterns=migrations,env.py
+
+ignore-paths=.*/migrations
 
 # List of plugins (as comma separated values of python modules names) to load,
 # usually to register additional checkers.

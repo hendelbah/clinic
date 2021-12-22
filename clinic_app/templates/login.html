@@ -9,7 +9,7 @@ Login
 {%- endblock %}
 
 {%- block body -%}
-<form class="login-form" method="post">
+<form method="post" class="login-form">
     {{ form.hidden_tag() }}
     {{ render_field(form.email) }}
     {{ render_field(form.pwd) }}

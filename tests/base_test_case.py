@@ -9,7 +9,6 @@ from clinic_app.service.populate import populate, clear_tables
 app.config.from_object(TestingConfig)
 db.create_all()
 
-
 class BaseTestCase(TestCase):
     db = db
     app = app

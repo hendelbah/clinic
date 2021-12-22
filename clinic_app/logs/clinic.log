@@ -1952,3 +1952,49 @@ Cookie: Pycharm-53a8c095=77153f53-2584-405e-8a2b-0faa20f59ad5; session=.eJwljktq
 2021-12-22 02:05:15,926 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:05:15] "GET /admin-panel/users HTTP/1.1" 200 -
 2021-12-22 02:05:15,950 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:05:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
 2021-12-22 02:12:31,032 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\views\\routes\\__init__.py', reloading
+2021-12-22 02:12:31,116 INFO werkzeug:  * Restarting with stat
+2021-12-22 02:12:31,579 INFO clinic_app: App initialization
+2021-12-22 02:12:31,712 WARNING werkzeug:  * Debugger is active!
+2021-12-22 02:12:31,714 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-22 02:12:31,754 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-22 02:16:00,329 INFO clinic_app: App initialization
+2021-12-22 02:22:33,887 INFO clinic_app: App initialization
+2021-12-22 02:25:28,961 INFO clinic_app: App initialization
+2021-12-22 02:25:29,292 INFO clinic_app: sqlite:///:memory:
+2021-12-22 02:26:25,889 INFO clinic_app: App initialization
+2021-12-22 02:26:26,023 INFO werkzeug:  * Restarting with stat
+2021-12-22 02:26:26,478 INFO clinic_app: App initialization
+2021-12-22 02:26:26,601 WARNING werkzeug:  * Debugger is active!
+2021-12-22 02:26:26,604 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-22 02:26:26,641 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-22 02:26:26,740 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:26:26] "[32mGET /logout?next=http%3A%2F%2Flocalhost%3A5000%2Fadmin-panel%2Fusers HTTP/1.1[0m" 302 -
+2021-12-22 02:26:26,750 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:26:26] "GET / HTTP/1.1" 200 -
+2021-12-22 02:26:27,071 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:26:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-22 02:26:27,393 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:26:27] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-22 02:26:29,443 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:26:29] "GET /login HTTP/1.1" 200 -
+2021-12-22 02:26:29,718 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:26:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-22 02:27:26,371 INFO clinic_app: App initialization
+2021-12-22 02:27:26,502 INFO werkzeug:  * Restarting with stat
+2021-12-22 02:27:26,974 INFO clinic_app: App initialization
+2021-12-22 02:27:27,095 WARNING werkzeug:  * Debugger is active!
+2021-12-22 02:27:27,095 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-22 02:27:27,135 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-22 02:27:37,944 INFO clinic_app: App initialization
+2021-12-22 02:27:45,416 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:27:45] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-12-22 02:27:45,430 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:27:45] "GET / HTTP/1.1" 200 -
+2021-12-22 02:27:45,613 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:27:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-22 02:27:45,928 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:27:45] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-22 02:27:48,417 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:27:48] "[32mGET /logout?next=http%3A%2F%2Flocalhost%3A5000%2F HTTP/1.1[0m" 302 -
+2021-12-22 02:27:48,721 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:27:48] "GET / HTTP/1.1" 200 -
+2021-12-22 02:27:49,047 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:27:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-22 02:27:49,864 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:27:49] "GET /login HTTP/1.1" 200 -
+2021-12-22 02:27:50,155 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:27:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-22 02:27:58,450 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:27:58] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-12-22 02:27:58,456 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:27:58] "GET / HTTP/1.1" 200 -
+2021-12-22 02:27:58,604 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:27:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-22 02:27:58,932 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:27:58] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-22 02:28:00,983 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:28:00] "GET / HTTP/1.1" 200 -
+2021-12-22 02:28:01,292 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:28:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-22 02:28:03,358 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:28:03] "GET /admin-panel/ HTTP/1.1" 200 -
+2021-12-22 02:28:03,373 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 02:28:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-22 02:28:11,931 INFO clinic_app: App initialization

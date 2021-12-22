@@ -67,6 +67,8 @@ class PatientListApi(BaseListResource):
 
 
 app_filters = RequestParser()
+app_filters.add_argument('doctor_uuid')
+app_filters.add_argument('patient_uuid')
 app_filters.add_argument('doctor_name')
 app_filters.add_argument('patient_name')
 app_filters.add_argument('date_from', type=lambda x: date.fromordinal(int(x)))

@@ -20,13 +20,9 @@ List of doctors{% if doctor %} - Book appointment for patient {{ patient.full_na
 {%- set headers =  ('Full name', 'Speciality', 'Experience', 'Info', 'Email') %}
 {%- call(item) paginated_table(data, headers, endpoints, 'full_name', 'doctor', {'patient':patient.uuid or None}) %}
 <td>{{ item.full_name }}</td>
-<td class="tooltip">
-    <div><span>{{ item.speciality }}</span></div>
-</td>
+<td class="tooltip"><div><span>{{ item.speciality }}</span></div></td>
 <td>{{ item.experience_years }} years</td>
-<td class="tooltip">
-    <div><span>{{ item.info }}</span></div>
-</td>
+<td class="tooltip"><div><span>{{ item.info }}</span></div></td>
 <td class="links">
     {%- if item.user -%}
     <a href="{{ url_for('admin.user', uuid=item.user.uuid) }}">

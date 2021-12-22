@@ -1,7 +1,7 @@
 [MASTER]
 
 
-ignore-paths=.*/migrations
+ignore-paths=.*/migrations, *.conf*
 
 # List of plugins (as comma separated values of python modules names) to load,
 # usually to register additional checkers.

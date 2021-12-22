@@ -1,13 +1,13 @@
 # pylint: disable=missing-module-docstring, missing-class-docstring, wrong-import-position
-import os
-
 from flask_testing import TestCase
 
-os.environ['FLASK_CONFIG'] = 'testing'
-
 from clinic_app import app, db
+from clinic_app.config import TestingConfig
 from clinic_app.models import User, Doctor, Patient, Appointment
-from clinic_app.service.population import populate, clear_tables
+from clinic_app.service.populate import populate, clear_tables
+
+app.config.from_object(TestingConfig)
+db.create_all()
 
 
 class BaseTestCase(TestCase):

@@ -22,12 +22,12 @@ def get_pagination_args(default_per_page: int = 20) -> tuple[int, int]:
 
 def parse_filters(kwargs_list: list[dict], form: FlaskForm) -> dict:
     """
-    Parse GET parameters(filters for get request), using list of kwargs for dict.get() function.
+    Parse GET parameters(filters for get request), using list of kwargs args.get() function.
     Kwargs have to contain at least 'key' key.
     Put retrieved values into dict with corresponding keys,
     and patch form fields(with name == kwargs['key']) with these values.
 
-    :param kwargs_list: list of dicts, each dict is used as kwargs for dict.get()
+    :param kwargs_list: list of dicts, each dict is used as kwargs for args.get()
     :param form: flask-WTForm to patch with filters data
     :return: filters dict
     """

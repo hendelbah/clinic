@@ -58,5 +58,3 @@ app.register_blueprint(api_bp)
 app.register_blueprint(general_bp)
 app.register_blueprint(auth_bp)
 app.register_blueprint(admin_bp)
-
-CurrentConfig.setup()

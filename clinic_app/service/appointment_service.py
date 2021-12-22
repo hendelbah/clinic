@@ -16,15 +16,12 @@ class AppointmentService(BaseService):
     order_by = (model.date.desc(), model.time.desc())
 
     @classmethod
-    def _filter_by(cls, *, doctor_uuid: str = None, patient_uuid: str = None,
-                   doctor_name: str = None, patient_name: str = None,
+    def _filter_by(cls, *, doctor_name: str = None, patient_name: str = None,
                    date_from: date_ = None, date_to: date_ = None,
                    unfilled: bool = False, _query=None) -> Query:
         """
         Return query ordered and filtered.
 
-        :param doctor_uuid: filter appointments related to doctor with this uuid
-        :param patient_uuid: filter appointments related to patients with this uuid
         :param doctor_name: filter appointments related to doctor with full name like this
         :param patient_name: filter appointments related to patient with full name like this
         :param date_from: filter appointments having date >= given value
@@ -33,14 +30,6 @@ class AppointmentService(BaseService):
         :param _query: query to override standard one
         """
         query = cls._order() if _query is None else _query
-        if doctor_uuid is not None:
-            query = query.filter_by(
-                doctor_id=
-                cls.db.session.query(Doctor.id).filter_by(uuid=doctor_uuid).scalar_subquery())
-        if patient_uuid is not None:
-            query = query.filter_by(
-                patient_id=
-                cls.db.session.query(Patient.id).filter_by(uuid=patient_uuid).scalar_subquery())
         if doctor_name is not None:
             query = query.filter(Doctor.query
                                  .filter(Doctor.full_name.like(f'%{doctor_name}%'))

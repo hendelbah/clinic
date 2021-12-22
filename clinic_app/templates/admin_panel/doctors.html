@@ -1,12 +1,15 @@
+{% set animated = True if patient else False %}
+
 {%- extends 'admin_panel/base.html' %}
 
 {%- from 'macros.html' import paginated_table, admin_filters %}
 
 {%- block header -%}
-List of doctors
+List of doctors{% if doctor %} - Book appointment for patient {{ patient.full_name }}{% endif %}
 {%- endblock %}
 
 {%- block body %}
+
 {%- call admin_filters(form, endpoints)%}
 <div class="filters-field">
     {{ form.search_name.label() }}
@@ -14,11 +17,23 @@ List of doctors
 </div>
 {%- endcall %}
 
-{%- call(item) paginated_table(data, ('Full name', 'Speciality', 'Experience', 'Info', 'Email'), endpoints, 'full_name') %}
+{%- set headers =  ('Full name', 'Speciality', 'Experience', 'Info', 'Email') %}
+{%- call(item) paginated_table(data, headers, endpoints, 'full_name', 'doctor', {'patient':patient.uuid or None}) %}
 <td>{{ item.full_name }}</td>
-<td class="tooltip"><div><span>{{ item.speciality }}</span></div></td>
+<td class="tooltip">
+    <div><span>{{ item.speciality }}</span></div>
+</td>
 <td>{{ item.experience_years }} years</td>
-<td class="tooltip"><div><span>{{ item.info }}</span></div></td>
-<td>{{ item.user.email }}</td>
+<td class="tooltip">
+    <div><span>{{ item.info }}</span></div>
+</td>
+<td class="links">
+    {%- if item.user -%}
+    <a href="{{ url_for('admin.user', uuid=item.user.uuid) }}">
+        {{- item.user.email -}}
+    </a>
+    {%- endif %}
+</td>
 {% endcall %}
+
 {% endblock %}

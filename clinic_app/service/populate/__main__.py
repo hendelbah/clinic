@@ -8,7 +8,7 @@ from werkzeug.security import generate_password_hash
 
 from clinic_app import db
 from clinic_app.models import Appointment, Doctor, Patient, User
-from clinic_app.service.population.population_data import (
+from clinic_app.service.populate.population_data import (
     DOCTORS_SRC, NAMES_SRC, SURNAMES_SRC, PATRONYMICS_SRC, ROOT_PASSWORD, DOCTORS_PASSWORD)
 
 root_pass_hash = generate_password_hash(ROOT_PASSWORD)
@@ -94,3 +94,8 @@ def populate(patients_amount=100):
     db.session.bulk_insert_mappings(Appointment, appointments_1_src)
     db.session.bulk_insert_mappings(Appointment, appointments_2_src)
     db.session.commit()
+
+
+if __name__ == '__main__':
+    clear_tables()
+    populate()

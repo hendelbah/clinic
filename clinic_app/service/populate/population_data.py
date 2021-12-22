@@ -220,8 +220,8 @@ DOCTORS_SRC = (
     }
 )
 
-ROOT_PASSWORD = 'yBU6nWPoVRLTtUl'
-DOCTORS_PASSWORD = 'cepjaKotDsM5PnG'
+ROOT_PASSWORD = 'root'
+DOCTORS_PASSWORD = 'doctor'
 
 NAMES_SRC = (
     ('Александр', 'Алексей', 'Андрей', 'Артем', 'Богдан',

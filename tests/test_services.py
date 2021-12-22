@@ -33,6 +33,8 @@ class TestAllServices(BaseTestCase):
              ),
             ([{'doctor_uuid': '2'}, 12],
              [{'patient_uuid': '4'}, 2],
+             [{'doctor_name': 'тарас'}, 0],
+             [{'patient_name': 'oao'}, 0],
              [{'date_from': today}, 81],
              [{'date_to': today}, 120],
              [{'date_from': today, 'date_to': today}, 1],

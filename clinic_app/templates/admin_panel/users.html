@@ -7,6 +7,7 @@ List of users
 {%- endblock %}
 
 {%- block body %}
+
 {%- call admin_filters(form, endpoints)%}
 <div class="filters-field">
     {{ form.search_email.label() }}
@@ -14,7 +15,8 @@ List of users
 </div>
 {%- endcall %}
 
-{%- call(item) paginated_table(data, ('Email', 'Is admin', 'Related doctor'), endpoints, 'email') %}
+{%- set headers =  ('Email', 'Is admin', 'Related doctor') %}
+{%- call(item) paginated_table(data, headers, endpoints, 'email', 'user') %}
 <td>{{ item.email }}</td>
 <td class="center-text" style="color:{% if item.is_admin %}red{% else %}orange{% endif %}">{{ item.is_admin }}</td>
 <td class="links">
@@ -25,4 +27,5 @@ List of users
     {%- endif %}
 </td>
 {% endcall %}
+
 {% endblock %}

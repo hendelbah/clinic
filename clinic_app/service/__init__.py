@@ -3,7 +3,7 @@ Package contain helper service classes and functions to work with database.
 
 Subpackages:
 
-- `population`: contains tools for populating database with test data
+- `populate`: contains tools for populating database with test data
 
 Modules:
 

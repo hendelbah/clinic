@@ -1,7 +1,7 @@
 # pylint: disable=missing-function-docstring, missing-module-docstring, missing-class-docstring
 from clinic_app.models import User
 from clinic_app.models.descriptors import DoctorUUID, PatientUUID
-from clinic_app.service.population.population_data import ROOT_PASSWORD
+from clinic_app.service.populate.population_data import ROOT_PASSWORD
 from tests.base_test_case import BaseTestCase
 
 

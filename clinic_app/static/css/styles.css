@@ -183,6 +183,7 @@ hr { min-width: 100%; }
   flex-flow: column;
   padding: 10px;
   width: max-content;
+  max-width: 80%;
 }
 
 .common-form > div { margin: 10px; }
@@ -303,9 +304,18 @@ hr { min-width: 100%; }
   border: 1px solid #222;
 }
 
-td.action-1 { min-width: 100px; }
+td.action { min-width: 100px; }
 
-td.action-2 { min-width: 160px; }
+td.action div { min-width: 100%; }
+
+td > .actions { flex-flow: column; }
+
+td > .actions > div {
+  padding-block: 2px;
+  justify-content: center;
+}
+
+td .action-link { margin-inline: 5px; }
 
 .action-link {
   border-radius: 10px;
@@ -314,7 +324,26 @@ td.action-2 { min-width: 160px; }
   cursor: pointer;
 }
 
-td .action-link { margin-inline: 5px; }
+.animated td.action {
+  animation: blink 3s;
+}
+
+@keyframes blink {
+  20%, 60%, 100% {
+    background-color: #FFFF00;
+  }
+  40%, 80% {
+    background-color: #fff;
+  }
+}
+
+.select-link {
+  border-color: #52C333;
+  background-color: #DCFFD7;
+}
+
+.select-link:hover { background-color: white; }
+
 
 .edit-link {
   border-color: #C3B933;
@@ -356,3 +385,12 @@ td .action-link { margin-inline: 5px; }
   top: -10px;
   left: -10px;
 }
+
+.income {
+  margin-block: 10px;
+  margin-inline: 30px;
+  padding: 5px;
+  border: 1px solid;
+}
+
+.income label { margin-inline: 5px; }

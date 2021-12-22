@@ -4,7 +4,7 @@ Module contains form classes for posting data on app's web pages.
 
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, SearchField, \
-    SelectField, IntegerField, TextAreaField, TelField, DateField
+    SelectField, IntegerField, TextAreaField, TelField, DateField, TimeField
 
 from wtforms.validators import InputRequired, Email, Length, EqualTo, Optional, NumberRange, Regexp
 
@@ -91,4 +91,25 @@ class EditPatient(FlaskForm):
     phone_number = TelField('Phone number:', validators=[InputRequired(), Length(max=20)])
     full_name = StringField('Full name:', validators=[InputRequired(), Length(max=127), full_name])
     birthday = DateField('Date of birth:', validators=[InputRequired()])
+    submit = SubmitField('Save changes')
+
+
+class FilterAppointments(FlaskForm):
+    """Form for filtering doctors"""
+    doctor_name = SearchField('Search by doctor\'s name:', validators=[Optional(), Length(max=127)],
+                              filters=[lambda x: x or None])
+    patient_name = SearchField('Search by patient\'s name:',
+                               validators=[Optional(), Length(max=127)],
+                               filters=[lambda x: x or None])
+    date_from = DateField('Filter by date:', validators=[Optional()])
+    submit = SubmitField('Filter')
+
+
+class EditAppointment(FlaskForm):
+    """Form for updating and creating doctors"""
+    date = DateField('Date:', validators=[InputRequired()])
+    time = TimeField('Time:', validators=[InputRequired()])
+    conclusion = TextAreaField('Conclusion:', validators=[Optional(), Length(max=511)])
+    prescription = TextAreaField('Prescription:', validators=[Optional(), Length(max=511)])
+    bill = IntegerField('Bill:', validators=[Optional(), NumberRange(min=0)])
     submit = SubmitField('Save changes')

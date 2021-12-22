@@ -1,11 +1,17 @@
 # pylint: disable=missing-function-docstring, missing-module-docstring, missing-class-docstring
-from unittest.mock import patch
+from unittest.mock import patch, Mock
 
-from flask import url_for
+from flask import url_for, request
+from werkzeug.datastructures import TypeConversionDict
 
-from clinic_app.service.population.population_data import ROOT_PASSWORD
-from clinic_app.views.utils import random_password, get_pagination_args
+from clinic_app.service.populate.population_data import ROOT_PASSWORD
+from clinic_app.views.routes.admin import user_endpoints, doctor_endpoints, patient_endpoints, \
+    appointment_endpoints
+from clinic_app.views.utils import random_password, get_pagination_args, extract_filters, \
+    parse_filters
 from tests.base_test_case import BaseTestCase
+
+endpoints_bundle = [user_endpoints, doctor_endpoints, patient_endpoints, appointment_endpoints]
 
 
 class TestRoutes(BaseTestCase):
@@ -67,6 +73,43 @@ class TestRoutes(BaseTestCase):
                 response = self.client.get(url_for(endpoint=endpoint))
                 self.assertRedirects(response, redirect)
 
+    def test_admin_routes(self):
+        response = self.client.post(url_for('auth.login'),
+                                    json={'email': 'root', 'pwd': ROOT_PASSWORD, 'remember': False})
+        self.assertRedirects(response, url_for('general.index'))
+        self.assertMessageFlashed('You successfully logged in', 'success')
+        response = self.client.get(url_for('admin.index'))
+        self.assert200(response)
+        post_data = (
+            {'email': 'cocojambo@gmail.com', 'is_admin': False, 'doctor_uuid': ''},
+            {'full_name': 'the world', 'speciality': 'is gonna', 'info': 'roll me',
+             'experience_years': 100},
+            {'phone_number': '88005553535', 'full_name': 'Slave Ass 300', 'birthday': '2012-12-12'},
+            {'date': '2013-10-10', 'time': '10:00', 'conclusion': 'will die soon',
+             'prescription': 'submit', 'bill': 5000},
+        )
+        i = 0
+        for endpoints, data in zip(endpoints_bundle, post_data):
+            with self.subTest(str(i := i + 1)):
+                response = self.client.get(url_for(endpoints['list']))
+                self.assert200(response)
+                response = self.client.get(url_for(endpoints['item'], uuid='10'))
+                self.assert200(response)
+                response = self.client.get(url_for(endpoints['item'], uuid='new'))
+                if i == 4:
+                    self.assertRedirects(response, url_for('admin.doctors', act=1))
+                    args = {'doctor': '3', 'patient': '5'}
+                else:
+                    self.assert200(response)
+                    args = {}
+                response = self.client.post(
+                    url_for(endpoints['item'], uuid='new', **args), json=data)
+                self.assertStatus(response, 302)
+                response = self.client.post(url_for(endpoints['item'], uuid='10'))
+                self.assert200(response)
+                response = self.client.post(url_for(endpoints['delete'], uuid='10'))
+                self.assertRedirects(response, url_for(endpoints['list']))
+
 
 class TestUtils(BaseTestCase):
     @patch('clinic_app.views.utils.choice', return_value='a')
@@ -84,3 +127,17 @@ class TestUtils(BaseTestCase):
             page, per_page = get_pagination_args()
             self.assertEqual(page, 3)
             self.assertEqual(per_page, 23)
+
+    def test_parse_filters(self):
+        form = Mock()
+        with self.app.test_request_context(), \
+                patch.object(request, 'args', TypeConversionDict({'a': 1, 'b': 'z'})):
+            res = parse_filters([{'key': 'a', 'type': int}, {'key': 'b'}], form)
+            self.assertEqual(res, {'a': 1, 'b': 'z'})
+
+    def test_extract_filters(self):
+        field1 = Mock(data=3)
+        field2 = Mock(data='a')
+        form = Mock(a=field1, b=field2)
+        res = extract_filters(['a', 'b'], form)
+        self.assertEqual(res, {'a': 3, 'b': 'a'})

@@ -32,8 +32,8 @@ class Appointment(db.Model):
     last_modified = db.Column(db.TIMESTAMP(timezone=True), default=datetime.utcnow,
                               onupdate=datetime.utcnow)
 
-    doctor = db.relationship('Doctor', lazy='joined')
-    patient = db.relationship('Patient', lazy='joined')
+    doctor = db.relationship('Doctor')
+    patient = db.relationship('Patient')
     doctor_uuid = DoctorUUID()
     patient_uuid = PatientUUID()
 

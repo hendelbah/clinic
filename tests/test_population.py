@@ -1,9 +1,5 @@
 # pylint: disable=missing-function-docstring, missing-module-docstring, missing-class-docstring
-from unittest import TestCase
-from unittest.mock import patch
-
-from clinic_app.config import DevelopmentConfig
-from clinic_app.service.population import clear_tables, populate
+from clinic_app.service.populate import clear_tables, populate
 from tests.base_test_case import BaseTestCase
 
 
@@ -13,6 +9,7 @@ class TestPopulation(BaseTestCase):
         pass
 
     def test_populate(self):
+        clear_tables()
         populate()
         counts = (18, 17, 100, 200)
         for model, count in zip(self.models, counts):
@@ -24,12 +21,3 @@ class TestPopulation(BaseTestCase):
         for model in self.models:
             with self.subTest(model.__name__):
                 self.assertEqual(model.query.count(), 0)
-
-
-class TestConfig(TestCase):
-    @patch('clinic_app.service.population.clear_tables')
-    @patch('clinic_app.service.population.populate')
-    def test_setup(self, mock_populate, mock_clear):
-        DevelopmentConfig.setup()
-        mock_populate.assert_called()
-        self.assertEqual(mock_clear.call_count, 1)

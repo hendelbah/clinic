@@ -2115,3 +2115,27 @@ Cookie: Pycharm-53a8c095=77153f53-2584-405e-8a2b-0faa20f59ad5; session=.eJwljktq
 2021-12-22 04:29:18,289 WARNING werkzeug:  * Debugger is active!
 2021-12-22 04:29:18,291 INFO werkzeug:  * Debugger PIN: 248-785-052
 2021-12-22 04:29:18,330 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-22 20:43:32,715 INFO clinic_app: App initialization
+2021-12-22 20:57:40,839 INFO clinic_app: App initialization
+2021-12-22 21:00:11,217 INFO clinic_app: App initialization
+2021-12-22 21:00:22,982 INFO clinic_app: App initialization
+2021-12-22 21:03:53,733 INFO clinic_app: App initialization
+2021-12-22 21:04:03,028 INFO clinic_app: App initialization
+2021-12-22 21:19:27,914 INFO clinic_app: App initialization
+2021-12-22 21:19:43,531 INFO clinic_app: App initialization
+2021-12-22 21:20:12,994 INFO clinic_app: App initialization
+2021-12-22 21:22:18,534 INFO clinic_app: App initialization
+2021-12-22 21:22:29,290 INFO clinic_app: App initialization
+2021-12-22 21:25:46,641 INFO clinic_app: App initialization
+2021-12-22 21:25:51,348 INFO clinic_app: App initialization
+2021-12-22 21:25:55,627 INFO clinic_app: App initialization
+2021-12-22 21:26:25,814 INFO clinic_app: App initialization
+2021-12-22 21:26:26,256 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-22 21:26:26,257 INFO werkzeug:  * Restarting with stat
+2021-12-22 21:26:27,176 INFO clinic_app: App initialization
+2021-12-22 21:26:27,990 WARNING werkzeug:  * Debugger is active!
+2021-12-22 21:26:28,033 INFO werkzeug:  * Debugger PIN: 117-685-522
+2021-12-22 21:26:56,546 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 21:26:56] "GET / HTTP/1.1" 200 -
+2021-12-22 21:26:58,429 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 21:26:58] "GET /static/css/styles.css HTTP/1.1" 200 -
+2021-12-22 21:26:58,917 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 21:26:58] "GET /static/media/home-button.png HTTP/1.1" 200 -
+2021-12-22 21:26:59,056 INFO werkzeug: 127.0.0.1 - - [22/Dec/2021 21:26:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

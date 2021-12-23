@@ -1,17 +1,17 @@
 """
 Admin panel routes
 """
-from datetime import date, time
+from datetime import date
 
 from flask import Blueprint, render_template, abort, redirect, url_for, flash, request
 from flask_login import current_user, login_required
+from werkzeug.security import generate_password_hash
 
-from clinic_app.models import User, Doctor, Patient, Appointment
 from clinic_app.service import UserService, DoctorService, PatientService, AppointmentService
 from clinic_app.views.forms import FilterUsers, EditUser, FilterDoctors, EditDoctor, \
     FilterPatients, EditPatient, FilterAppointments, EditAppointment
 from clinic_app.views.utils import get_pagination_args, random_password, parse_filters, \
-    extract_filters
+    extract_filters, process_form_submit
 
 admin_bp = Blueprint('admin', __name__, url_prefix='/admin-panel')
 
@@ -74,6 +74,8 @@ def users():
 @admin_bp.route('/users/<uuid>', methods=['GET', 'POST'])
 def user(uuid):
     choices = [('', '<None>')]
+    pagination = DoctorService.get_pagination(per_page=100, no_user=True)
+    choices.extend((doc.uuid, doc.full_name) for doc in pagination.items)
     if uuid == 'new':
         title = 'New user'
         user_ = None
@@ -85,24 +87,14 @@ def user(uuid):
             choices.append((user_.doctor.uuid, user_.doctor.full_name))
         title = f'{user_.email}'
     form = EditUser(obj=user_)
-    pagination = DoctorService.get_pagination(per_page=100, no_user=True)
-    choices.extend((doc.uuid, doc.full_name) for doc in pagination.items)
     form.doctor_uuid.choices = choices
     if form.validate_on_submit():
-        if uuid == 'new':
-            user_ = User('', '', False)
-            password = random_password()
-            user_.set_password(password)
-        form.populate_obj(user_)
-        error = UserService.save_instance(user_)
-        if error is None:
-            flash('Data saved successfully', 'success')
-            if 'uuid' == 'new':
-                pass
-                # :TODO: send password to the email of new user
-        else:
-            flash(f'Error: {error}', 'error')
-        return redirect(url_for('admin.users'))
+        password = random_password()
+        new_pwd = generate_password_hash(password)
+        response, code = process_form_submit(form, UserService, uuid, 'user', password_hash=new_pwd)
+        if code == 201:
+            flash(f'New user\'s password: {password}', 'warning')
+        return response
     return render_template(
         'admin_panel/item.html', item=user_, form=form, item_name='user', title=title,
         active_menu_item=1, readonly=('email',), endpoints=user_endpoints)
@@ -137,6 +129,10 @@ def doctors():
 
 @admin_bp.route('/doctors/<uuid>', methods=['GET', 'POST'])
 def doctor(uuid):
+    form = EditDoctor()
+    if form.validate_on_submit():
+        response, _ = process_form_submit(form, DoctorService, uuid, 'doctor')
+        return response
     if uuid == 'new':
         title = 'New doctor'
         doctor_ = None
@@ -146,16 +142,6 @@ def doctor(uuid):
             abort(404)
         title = f'{doctor_.full_name}'
     form = EditDoctor(obj=doctor_)
-    if form.validate_on_submit():
-        if uuid == 'new':
-            doctor_ = Doctor('', '', '', 0)
-        form.populate_obj(doctor_)
-        error = DoctorService.save_instance(doctor_)
-        if error is None:
-            flash('Data saved successfully', 'success')
-        else:
-            flash(f'Error: {error}', 'error')
-        return redirect(url_for('admin.doctors'))
     return render_template(
         'admin_panel/item.html', item=doctor_, form=form, item_name='doctor', title=title,
         active_menu_item=2, readonly=(), endpoints=doctor_endpoints)
@@ -191,6 +177,10 @@ def patients():
 
 @admin_bp.route('/patients/<uuid>', methods=['GET', 'POST'])
 def patient(uuid):
+    form = EditPatient()
+    if form.validate_on_submit():
+        response, _ = process_form_submit(form, PatientService, uuid, 'patient')
+        return response
     if uuid == 'new':
         title = 'New patient'
         patient_ = None
@@ -200,16 +190,6 @@ def patient(uuid):
             abort(404)
         title = f'{patient_.full_name}'
     form = EditPatient(obj=patient_)
-    if form.validate_on_submit():
-        if uuid == 'new':
-            patient_ = Patient('', '', date(1, 1, 1))
-        form.populate_obj(patient_)
-        error = DoctorService.save_instance(patient_)
-        if error is None:
-            flash('Data saved successfully', 'success')
-            return redirect(url_for('admin.patient', uuid=patient_.uuid))
-        flash(f'Error: {error}', 'error')
-        return redirect(url_for('admin.patients'))
     return render_template(
         'admin_panel/item.html', item=patient_, form=form, item_name='patient', title=title,
         active_menu_item=3, readonly=(), endpoints=patient_endpoints)
@@ -253,20 +233,15 @@ def new_appointment():
     if not patient_uuid:
         flash('Please, select a patient', 'success')
         return redirect(url_for('admin.patients', doctor=doctor_uuid, act=1))
+    form = EditAppointment()
+    if form.validate_on_submit():
+        response, _ = process_form_submit(form, AppointmentService, 'new', 'appointment',
+                                             doctor_uuid=doctor_uuid, patient_uuid=patient_uuid)
+        return response
     doctor_ = DoctorService.get(doctor_uuid)
     patient_ = PatientService.get(patient_uuid)
     if not doctor_ or not patient_:
         flash('Error: doctor or patient is not found', 'error')
-        return redirect(url_for('admin.appointments'))
-    form = EditAppointment()
-    if form.validate_on_submit():
-        appointment_ = Appointment(doctor_uuid, patient_uuid, date(1, 1, 1), time())
-        form.populate_obj(appointment_)
-        error = AppointmentService.save_instance(appointment_)
-        if error is None:
-            flash('Appointment booked successfully', 'success')
-            return redirect(url_for('admin.appointment', uuid=appointment_.uuid))
-        flash(f'Error: {error}', 'error')
         return redirect(url_for('admin.appointments'))
     return render_template(
         'admin_panel/item.html', form=form, item_name='appointment', title='New appointment',
@@ -276,18 +251,14 @@ def new_appointment():
 
 @admin_bp.route('/appointments/<uuid>', methods=['GET', 'POST'])
 def appointment(uuid):
+    form = EditAppointment()
+    if form.validate_on_submit():
+        response, _ = process_form_submit(form, AppointmentService, uuid, 'appointment')
+        return response
     appointment_ = AppointmentService.get(uuid)
     if appointment_ is None:
         abort(404)
     form = EditAppointment(obj=appointment_)
-    if form.validate_on_submit():
-        form.populate_obj(appointment_)
-        error = AppointmentService.save_instance(appointment_)
-        if error is None:
-            flash('Data saved successfully', 'success')
-            return redirect(url_for('admin.appointment', uuid=appointment_.uuid))
-        flash(f'Error: {error}', 'error')
-        return redirect(url_for('admin.appointments'))
     return render_template(
         'admin_panel/item.html', item=appointment_, form=form, item_name='appointment',
         title='Edit appointment', active_menu_item=4, readonly=(),

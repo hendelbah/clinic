@@ -7,13 +7,6 @@ from tests.base_test_case import BaseTestCase
 
 class TestModels(BaseTestCase):
 
-    def test_user_set_password(self):
-        user = User.query.get(3)
-        p_hash = user.password_hash
-        user.set_password('12345')
-        self.assertNotEqual(p_hash, user.password_hash)
-        self.assertEqual(len(user.password_hash), 102)
-
     def test_user_check_password(self):
         user = User.query.get(1)
         self.assertTrue(user.check_password(ROOT_PASSWORD))

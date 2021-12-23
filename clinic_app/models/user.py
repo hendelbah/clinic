@@ -5,7 +5,7 @@ from datetime import datetime
 from uuid import uuid4
 
 from flask_login import UserMixin
-from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.security import check_password_hash
 
 from clinic_app import db
 from clinic_app.models.descriptors import DoctorUUID
@@ -47,14 +47,6 @@ class User(db.Model, UserMixin):
 
     def __repr__(self):
         return f'<User(email={self.email!r}, is_admin={self.is_admin}, uuid={self.uuid!r})>'
-
-    def set_password(self, password: str) -> None:
-        """
-        Set user's password_hash to hash of given password
-
-        :param password: new user's password
-        """
-        self.password_hash = generate_password_hash(password)
 
     def check_password(self, password: str) -> bool:
         """

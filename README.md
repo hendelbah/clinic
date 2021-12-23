@@ -74,6 +74,13 @@ python -m clinic_app/service/populate
 python -m flask run
 ```
 
+- #### Also, you can run project on gunicorn:
+
+```
+gunicorn clinic_app:app
+```
+You can set gunicorn options in `gunicorn.conf.py` file in app's root directory.
+
 ## Now you should be able to access the web service and web application:
 
 ### Web Service (API):
@@ -92,7 +99,7 @@ localhost:5000/api/appointments/stats?<same filters as for appointments>
 
 Also, all collection resources accept `page` and `per_page` GET parameters
 
-#### Web Service endpoints are documented with SwaggerUI at:
+#### Web Service endpoints are documented with Flasgger at:
 ```
 localhost:5000/apidocs/
 ```

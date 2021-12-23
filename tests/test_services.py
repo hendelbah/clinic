@@ -4,7 +4,6 @@ from datetime import date, datetime, timedelta
 from flask_sqlalchemy import Pagination
 from sqlalchemy.orm import Query
 
-from clinic_app.models import User
 from clinic_app.service import UserService, DoctorService, PatientService, AppointmentService
 from tests.base_test_case import BaseTestCase
 
@@ -84,11 +83,3 @@ class TestAllServices(BaseTestCase):
         self.assertIsNotNone(user)
         user = UserService.get_by_email('zxcv')
         self.assertIsNone(user)
-
-    def test_user_save_instance(self):
-        user = User('email@mail.com', '1234', False, password_raw=True)
-        errors = UserService.save_instance(user)
-        self.assertIsNone(errors)
-        user = User('email@mail.com', '12345', True, password_raw=True)
-        errors = UserService.save_instance(user)
-        self.assertIsInstance(errors, str)

@@ -2329,3 +2329,302 @@ Cookie: Pycharm-53a8c095=77153f53-2584-405e-8a2b-0faa20f59ad5; session=.eJwljktq
 2021-12-23 04:27:04,596 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 04:27:04] "[32mPOST /admin-panel/doctors/cf401a20-feda-4964-84c8-6d4ae9a4909f/delete HTTP/1.1[0m" 302 -
 2021-12-23 04:27:04,607 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 04:27:04] "GET /admin-panel/doctors HTTP/1.1" 200 -
 2021-12-23 04:27:05,036 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 04:27:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 15:57:29,510 INFO clinic_app: App initialization
+2021-12-23 15:57:29,538 INFO clinic_app: App initialization
+2021-12-23 15:57:29,538 INFO clinic_app: App initialization
+2021-12-23 15:57:29,553 INFO clinic_app: App initialization
+2021-12-23 15:57:29,553 INFO clinic_app: App initialization
+2021-12-23 15:57:29,553 INFO clinic_app: App initialization
+2021-12-23 15:57:29,569 INFO clinic_app: App initialization
+2021-12-23 15:59:19,122 INFO clinic_app: App initialization
+2021-12-23 15:59:19,137 INFO clinic_app: App initialization
+2021-12-23 15:59:19,137 INFO clinic_app: App initialization
+2021-12-23 15:59:19,153 INFO clinic_app: App initialization
+2021-12-23 15:59:19,153 INFO clinic_app: App initialization
+2021-12-23 15:59:19,153 INFO clinic_app: App initialization
+2021-12-23 15:59:19,169 INFO clinic_app: App initialization
+2021-12-23 15:59:38,654 INFO clinic_app: App initialization
+2021-12-23 15:59:38,682 INFO clinic_app: App initialization
+2021-12-23 15:59:38,684 INFO clinic_app: App initialization
+2021-12-23 15:59:38,684 INFO clinic_app: App initialization
+2021-12-23 15:59:38,694 INFO clinic_app: App initialization
+2021-12-23 15:59:38,694 INFO clinic_app: App initialization
+2021-12-23 15:59:38,704 INFO clinic_app: App initialization
+2021-12-23 16:00:33,557 INFO clinic_app: App initialization
+2021-12-23 16:11:03,680 INFO clinic_app: App initialization
+2021-12-23 16:12:40,810 INFO clinic_app: App initialization
+2021-12-23 16:13:04,166 INFO clinic_app: App initialization
+2021-12-23 16:18:43,591 INFO clinic_app: App initialization
+2021-12-23 16:19:05,263 INFO clinic_app: App initialization
+2021-12-23 16:19:36,393 INFO clinic_app: App initialization
+2021-12-23 16:25:30,303 INFO clinic_app: App initialization
+2021-12-23 16:26:30,129 INFO clinic_app: App initialization
+2021-12-23 18:09:39,708 INFO clinic_app: App initialization
+2021-12-23 18:09:40,151 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-23 18:09:49,691 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:09:49] "GET /admin-panel/users HTTP/1.1" 200 -
+2021-12-23 18:09:49,815 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:09:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:09:49,920 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:09:49] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-23 18:09:52,259 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:09:52] "GET /admin-panel/users/new HTTP/1.1" 200 -
+2021-12-23 18:09:52,284 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:09:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:09:56,929 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:09:56] "GET /admin-panel/doctors HTTP/1.1" 200 -
+2021-12-23 18:09:57,213 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:09:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:10:07,018 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:10:07] "GET /admin-panel/doctors/new HTTP/1.1" 200 -
+2021-12-23 18:10:07,043 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:10:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:10:08,511 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:10:08] "GET /admin-panel/users HTTP/1.1" 200 -
+2021-12-23 18:10:08,816 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:10:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:10:09,668 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:10:09] "GET /admin-panel/users/new HTTP/1.1" 200 -
+2021-12-23 18:10:09,690 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:10:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:10:19,518 ERROR clinic_app: Exception on /admin-panel/users/new [POST]
+Traceback (most recent call last):
+  File "E:\Desktop\прогромирование\py\epam\clinic\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\Desktop\прогромирование\py\epam\clinic\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\Desktop\прогромирование\py\epam\clinic\venv\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "E:\Desktop\прогромирование\py\epam\clinic\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\Desktop\прогромирование\py\epam\clinic\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "E:\Desktop\прогромирование\py\epam\clinic\clinic_app\views\routes\admin.py", line 77, in user
+    if form.validate_on_submit():
+  File "E:\Desktop\прогромирование\py\epam\clinic\venv\lib\site-packages\flask_wtf\form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "E:\Desktop\прогромирование\py\epam\clinic\venv\lib\site-packages\wtforms\form.py", line 330, in validate
+    return super().validate(extra)
+  File "E:\Desktop\прогромирование\py\epam\clinic\venv\lib\site-packages\wtforms\form.py", line 147, in validate
+    if not field.validate(self, extra):
+  File "E:\Desktop\прогромирование\py\epam\clinic\venv\lib\site-packages\wtforms\fields\core.py", line 231, in validate
+    self.pre_validate(form)
+  File "E:\Desktop\прогромирование\py\epam\clinic\venv\lib\site-packages\wtforms\fields\choices.py", line 136, in pre_validate
+    raise TypeError(self.gettext("Choices cannot be None."))
+TypeError: Choices cannot be None.
+2021-12-23 18:10:19,520 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:10:19] "[35m[1mPOST /admin-panel/users/new HTTP/1.1[0m" 500 -
+2021-12-23 18:10:54,785 INFO clinic_app: App initialization
+2021-12-23 18:10:55,271 INFO werkzeug:  * Restarting with stat
+2021-12-23 18:10:55,737 INFO clinic_app: App initialization
+2021-12-23 18:10:56,179 WARNING werkzeug:  * Debugger is active!
+2021-12-23 18:10:56,179 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-23 18:10:56,233 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-23 18:10:57,719 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:10:57] "[35m[1mPOST /admin-panel/users/new HTTP/1.1[0m" 500 -
+2021-12-23 18:10:57,865 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:10:57] "GET /admin-panel/users/new?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2021-12-23 18:10:58,037 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:10:58] "GET /admin-panel/users/new?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2021-12-23 18:10:58,367 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:10:58] "GET /admin-panel/users/new?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2021-12-23 18:10:58,374 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:10:58] "GET /admin-panel/users/new?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2021-12-23 18:10:58,604 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:10:58] "GET /admin-panel/users/new?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2021-12-23 18:14:04,264 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\views\\routes\\admin.py', reloading
+2021-12-23 18:14:04,336 INFO werkzeug:  * Restarting with stat
+2021-12-23 18:14:04,822 INFO clinic_app: App initialization
+2021-12-23 18:14:05,341 WARNING werkzeug:  * Debugger is active!
+2021-12-23 18:14:05,344 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-23 18:14:05,388 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-23 18:14:05,691 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:14:05] "[32mPOST /admin-panel/users/new HTTP/1.1[0m" 302 -
+2021-12-23 18:14:05,730 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:14:05] "GET /admin-panel/users/beca7e3c-a6cb-4107-a3ff-c9f56c9e45d3 HTTP/1.1" 200 -
+2021-12-23 18:14:05,902 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:14:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:14:06,220 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:14:06] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-23 18:14:11,281 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:14:11] "[32mPOST /admin-panel/users/beca7e3c-a6cb-4107-a3ff-c9f56c9e45d3/delete HTTP/1.1[0m" 302 -
+2021-12-23 18:14:11,585 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:14:11] "GET /admin-panel/users HTTP/1.1" 200 -
+2021-12-23 18:14:11,900 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:14:11] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:27:41,112 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\service\\base_service.py', reloading
+2021-12-23 18:27:41,181 INFO werkzeug:  * Restarting with stat
+2021-12-23 18:27:41,644 INFO clinic_app: App initialization
+2021-12-23 18:27:42,169 WARNING werkzeug:  * Debugger is active!
+2021-12-23 18:27:42,169 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-23 18:27:42,215 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-23 18:28:24,193 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:24] "GET /admin-panel/users/new HTTP/1.1" 200 -
+2021-12-23 18:28:24,305 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:28:24,405 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:24] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-23 18:28:29,958 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:29] "[32mPOST /admin-panel/users/new HTTP/1.1[0m" 302 -
+2021-12-23 18:28:29,971 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:29] "GET /admin-panel/users/2ee39658-a698-4967-bdc1-f7c9718e16b7 HTTP/1.1" 200 -
+2021-12-23 18:28:30,080 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:28:33,887 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:33] "[32mPOST /admin-panel/users/2ee39658-a698-4967-bdc1-f7c9718e16b7/delete HTTP/1.1[0m" 302 -
+2021-12-23 18:28:33,903 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:33] "GET /admin-panel/users HTTP/1.1" 200 -
+2021-12-23 18:28:34,135 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:28:36,407 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:36] "GET /admin-panel/users/3 HTTP/1.1" 200 -
+2021-12-23 18:28:36,436 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:28:39,955 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:39] "[32mPOST /admin-panel/users/3 HTTP/1.1[0m" 302 -
+2021-12-23 18:28:40,218 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:40] "GET /admin-panel/users/3 HTTP/1.1" 200 -
+2021-12-23 18:28:40,542 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:28:42,073 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:42] "GET /admin-panel/users HTTP/1.1" 200 -
+2021-12-23 18:28:42,364 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:28:44,872 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:44] "GET /admin-panel/users/new HTTP/1.1" 200 -
+2021-12-23 18:28:44,895 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:28:50,481 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:50] "[32mPOST /admin-panel/users/new HTTP/1.1[0m" 302 -
+2021-12-23 18:28:50,688 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:50] "GET /admin-panel/users/75dba3a2-3259-449a-8832-ee072bb2ee11 HTTP/1.1" 200 -
+2021-12-23 18:28:51,012 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:28:53,181 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:53] "[32mPOST /admin-panel/users/75dba3a2-3259-449a-8832-ee072bb2ee11/delete HTTP/1.1[0m" 302 -
+2021-12-23 18:28:53,485 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:53] "GET /admin-panel/users HTTP/1.1" 200 -
+2021-12-23 18:28:53,814 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:28:54,370 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:54] "GET /admin-panel/doctors HTTP/1.1" 200 -
+2021-12-23 18:28:54,665 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:28:55,579 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:55] "GET /admin-panel/patients HTTP/1.1" 200 -
+2021-12-23 18:28:55,605 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:28:56,171 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:56] "GET /admin-panel/appointments HTTP/1.1" 200 -
+2021-12-23 18:28:56,420 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:28:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:29:00,585 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:00] "[32mGET /admin-panel/appointments/new HTTP/1.1[0m" 302 -
+2021-12-23 18:29:00,595 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:00] "GET /admin-panel/doctors?act=1 HTTP/1.1" 200 -
+2021-12-23 18:29:00,851 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:29:10,323 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:10] "[32mGET /admin-panel/appointments/new?doctor=17 HTTP/1.1[0m" 302 -
+2021-12-23 18:29:10,333 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:10] "GET /admin-panel/patients?doctor=17&act=1 HTTP/1.1" 200 -
+2021-12-23 18:29:10,590 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:29:12,742 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:12] "GET /admin-panel/appointments/new?doctor=17&patient=78 HTTP/1.1" 200 -
+2021-12-23 18:29:12,765 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:29:25,285 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:25] "[32mPOST /admin-panel/appointments/new?doctor=17&patient=78 HTTP/1.1[0m" 302 -
+2021-12-23 18:29:25,521 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:25] "GET /admin-panel/appointments/1caaa103-95a7-448b-9b78-0164b347bbe5 HTTP/1.1" 200 -
+2021-12-23 18:29:25,856 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:29:30,706 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:30] "[32mPOST /admin-panel/appointments/1caaa103-95a7-448b-9b78-0164b347bbe5 HTTP/1.1[0m" 302 -
+2021-12-23 18:29:31,016 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:31] "GET /admin-panel/appointments/1caaa103-95a7-448b-9b78-0164b347bbe5 HTTP/1.1" 200 -
+2021-12-23 18:29:31,341 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:29:38,248 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:38] "[32mPOST /admin-panel/appointments/1caaa103-95a7-448b-9b78-0164b347bbe5/delete HTTP/1.1[0m" 302 -
+2021-12-23 18:29:38,549 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:38] "GET /admin-panel/appointments HTTP/1.1" 200 -
+2021-12-23 18:29:38,876 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:29:44,312 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:44] "GET /admin-panel/users HTTP/1.1" 200 -
+2021-12-23 18:29:44,604 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:29:47,705 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:47] "GET /admin-panel/users/new HTTP/1.1" 200 -
+2021-12-23 18:29:47,726 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:29:52,882 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:52] "[32mPOST /admin-panel/users/new HTTP/1.1[0m" 302 -
+2021-12-23 18:29:53,076 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:53] "GET /admin-panel/users HTTP/1.1" 200 -
+2021-12-23 18:29:53,416 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 18:29:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 18:30:20,090 INFO clinic_app: App initialization
+2021-12-23 18:46:07,582 INFO clinic_app: App initialization
+2021-12-23 18:47:47,042 INFO clinic_app: App initialization
+2021-12-23 18:48:03,645 INFO clinic_app: App initialization
+2021-12-23 18:48:22,998 INFO clinic_app: App initialization
+2021-12-23 18:49:01,278 INFO clinic_app: App initialization
+2021-12-23 19:18:21,924 INFO clinic_app: App initialization
+2021-12-23 20:05:37,802 INFO clinic_app: App initialization
+2021-12-23 20:07:13,882 INFO clinic_app: App initialization
+2021-12-23 20:12:38,347 INFO clinic_app: App initialization
+2021-12-23 20:13:23,607 INFO clinic_app: App initialization
+2021-12-23 20:13:24,676 INFO clinic_app: {'email': 'cocojambo@gmail.com', 'is_admin': False, 'doctor_uuid': None, 'submit': False}
+2021-12-23 20:13:24,696 INFO clinic_app: {'full_name': 'the world', 'experience_years': 100, 'speciality': 'is gonna', 'info': 'roll me', 'submit': False}
+2021-12-23 20:13:24,706 INFO clinic_app: {'phone_number': '88005553535', 'full_name': 'Slave Ass 300', 'birthday': datetime.date(2012, 12, 12), 'submit': False}
+2021-12-23 20:13:24,736 INFO clinic_app: {'date': datetime.date(2013, 10, 10), 'time': datetime.time(10, 0), 'conclusion': None, 'prescription': None, 'bill': None, 'submit': False}
+2021-12-23 20:13:24,736 INFO clinic_app: {'date': datetime.date(2013, 10, 10), 'time': datetime.time(10, 0), 'conclusion': 'oao', 'prescription': 'kek', 'bill': 5, 'submit': False}
+2021-12-23 20:15:00,467 INFO clinic_app: App initialization
+2021-12-23 20:17:58,311 INFO clinic_app: App initialization
+2021-12-23 20:22:36,429 INFO clinic_app: App initialization
+2021-12-23 20:22:36,970 INFO werkzeug:  * Restarting with stat
+2021-12-23 20:22:37,509 INFO clinic_app: App initialization
+2021-12-23 20:22:37,952 WARNING werkzeug:  * Debugger is active!
+2021-12-23 20:22:37,952 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-23 20:22:38,005 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-23 20:22:39,347 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 20:22:39] "[31m[1mPOST /api/v1/users HTTP/1.1[0m" 422 -
+2021-12-23 20:23:53,773 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 20:23:53] "[31m[1mPOST /api/v1/users HTTP/1.1[0m" 422 -
+2021-12-23 20:24:35,731 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 20:24:35] "[31m[1mPOST /api/v1/users HTTP/1.1[0m" 422 -
+2021-12-23 21:46:41,978 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 21:46:41] "GET /api/v1/patients/1 HTTP/1.1" 200 -
+2021-12-23 22:28:54,920 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:28:54] "GET /admin-panel/users/new HTTP/1.1" 200 -
+2021-12-23 22:28:55,863 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:28:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 22:28:55,881 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:28:55] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-23 22:29:00,437 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:29:00] "[32mPOST /admin-panel/users/new HTTP/1.1[0m" 302 -
+2021-12-23 22:29:00,452 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:29:00] "GET /admin-panel/users HTTP/1.1" 200 -
+2021-12-23 22:29:00,584 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:29:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 22:29:00,900 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:29:00] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-23 22:29:57,305 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\views\\utils.py', reloading
+2021-12-23 22:29:57,381 INFO werkzeug:  * Restarting with stat
+2021-12-23 22:29:57,953 INFO clinic_app: App initialization
+2021-12-23 22:29:58,428 WARNING werkzeug:  * Debugger is active!
+2021-12-23 22:29:58,430 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-23 22:29:58,475 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-23 22:29:59,797 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:29:59] "[32mPOST /admin-panel/users/new HTTP/1.1[0m" 302 -
+2021-12-23 22:29:59,839 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:29:59] "GET /admin-panel/users/b5760628-f8e5-4440-bd9c-476c557a4874 HTTP/1.1" 200 -
+2021-12-23 22:30:00,263 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:30:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 22:30:00,441 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:30:00] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-23 22:30:25,701 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:30:25] "[32mPOST /admin-panel/users/b5760628-f8e5-4440-bd9c-476c557a4874/delete HTTP/1.1[0m" 302 -
+2021-12-23 22:30:26,011 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:30:26] "GET /admin-panel/users HTTP/1.1" 200 -
+2021-12-23 22:30:26,344 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:30:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 22:30:26,610 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:30:26] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-23 22:30:29,747 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:30:29] "GET /admin-panel/users/new HTTP/1.1" 200 -
+2021-12-23 22:30:30,050 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:30:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 22:30:30,361 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:30:30] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-23 22:30:32,724 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:30:32] "[32mPOST /admin-panel/users/new HTTP/1.1[0m" 302 -
+2021-12-23 22:30:32,914 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:30:32] "GET /admin-panel/users/09659f1a-62e6-4c6e-8df4-f91d062ec18a HTTP/1.1" 200 -
+2021-12-23 22:30:33,252 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:30:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 22:30:38,247 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:30:38] "[32mPOST /admin-panel/users/09659f1a-62e6-4c6e-8df4-f91d062ec18a/delete HTTP/1.1[0m" 302 -
+2021-12-23 22:30:38,552 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:30:38] "GET /admin-panel/users HTTP/1.1" 200 -
+2021-12-23 22:30:38,877 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:30:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 22:33:36,984 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 22:33:36] "GET /api/v1/appointments/1 HTTP/1.1" 200 -
+2021-12-23 22:41:05,147 INFO clinic_app: App initialization
+2021-12-23 22:41:34,077 INFO clinic_app: App initialization
+2021-12-23 22:41:34,184 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\rest\\schemas.py', reloading
+2021-12-23 22:41:34,263 INFO werkzeug:  * Restarting with stat
+2021-12-23 22:41:34,809 INFO clinic_app: App initialization
+2021-12-23 22:41:35,354 WARNING werkzeug:  * Debugger is active!
+2021-12-23 22:41:35,357 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-23 22:41:35,400 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-23 23:07:44,652 INFO clinic_app: App initialization
+2021-12-23 23:07:56,178 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:07:56] "GET /apidocs/ HTTP/1.1" 200 -
+2021-12-23 23:07:56,300 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:07:56] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2021-12-23 23:07:56,533 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:07:56] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2021-12-23 23:07:56,590 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:07:56] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2021-12-23 23:07:56,598 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:07:56] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2021-12-23 23:07:56,648 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:07:56] "GET /flasgger_static/swagger-ui.css.map HTTP/1.1" 200 -
+2021-12-23 23:07:56,915 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:07:56] "GET /apispec_1.json HTTP/1.1" 200 -
+2021-12-23 23:07:56,998 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:07:56] "GET /flasgger_static/swagger-ui-bundle.js.map HTTP/1.1" 200 -
+2021-12-23 23:07:57,022 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:07:57] "GET /flasgger_static/swagger-ui-standalone-preset.js.map HTTP/1.1" 200 -
+2021-12-23 23:08:07,203 INFO clinic_app: App initialization
+2021-12-23 23:08:07,808 INFO werkzeug:  * Restarting with stat
+2021-12-23 23:08:08,340 INFO clinic_app: App initialization
+2021-12-23 23:08:08,857 WARNING werkzeug:  * Debugger is active!
+2021-12-23 23:08:08,860 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-23 23:08:08,906 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-23 23:08:10,612 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:08:10] "GET /apidocs/ HTTP/1.1" 200 -
+2021-12-23 23:08:10,717 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:08:10] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2021-12-23 23:08:10,849 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:08:10] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2021-12-23 23:08:10,929 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:08:10] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2021-12-23 23:08:10,930 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:08:10] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2021-12-23 23:08:11,043 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:08:11] "GET /apispec_1.json HTTP/1.1" 200 -
+2021-12-23 23:08:11,259 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:08:11] "GET /flasgger_static/swagger-ui.css.map HTTP/1.1" 200 -
+2021-12-23 23:08:11,272 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:08:11] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2021-12-23 23:08:11,291 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:08:11] "GET /flasgger_static/swagger-ui-bundle.js.map HTTP/1.1" 200 -
+2021-12-23 23:08:11,291 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:08:11] "GET /flasgger_static/swagger-ui-standalone-preset.js.map HTTP/1.1" 200 -
+2021-12-23 23:12:23,036 INFO clinic_app: App initialization
+2021-12-23 23:12:23,659 INFO werkzeug:  * Restarting with stat
+2021-12-23 23:12:24,202 INFO clinic_app: App initialization
+2021-12-23 23:12:24,700 WARNING werkzeug:  * Debugger is active!
+2021-12-23 23:12:24,703 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-23 23:12:24,746 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-23 23:12:27,028 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:12:27] "GET /apidocs/ HTTP/1.1" 200 -
+2021-12-23 23:12:27,135 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:12:27] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2021-12-23 23:12:27,254 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:12:27] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2021-12-23 23:12:27,350 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:12:27] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2021-12-23 23:12:27,351 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:12:27] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2021-12-23 23:12:27,462 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:12:27] "GET /apispec_1.json HTTP/1.1" 200 -
+2021-12-23 23:12:27,601 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:12:27] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2021-12-23 23:12:27,665 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:12:27] "GET /flasgger_static/swagger-ui.css.map HTTP/1.1" 200 -
+2021-12-23 23:12:27,698 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:12:27] "GET /flasgger_static/swagger-ui-bundle.js.map HTTP/1.1" 200 -
+2021-12-23 23:12:27,698 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:12:27] "GET /flasgger_static/swagger-ui-standalone-preset.js.map HTTP/1.1" 200 -
+2021-12-23 23:26:36,491 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\views\\utils.py', reloading
+2021-12-23 23:26:36,576 INFO werkzeug:  * Restarting with stat
+2021-12-23 23:26:36,859 INFO clinic_app: App initialization
+2021-12-23 23:26:37,198 INFO clinic_app: App initialization
+2021-12-23 23:26:37,790 WARNING werkzeug:  * Debugger is active!
+2021-12-23 23:26:37,790 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-23 23:26:37,836 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-23 23:26:45,076 INFO clinic_app: App initialization
+2021-12-23 23:26:45,187 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\tests\\test_models.py', reloading
+2021-12-23 23:26:45,257 INFO werkzeug:  * Restarting with stat
+2021-12-23 23:26:45,797 INFO clinic_app: App initialization
+2021-12-23 23:26:46,349 WARNING werkzeug:  * Debugger is active!
+2021-12-23 23:26:46,349 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-23 23:26:46,390 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-23 23:28:26,342 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:28:26] "[33mGET /admin-panel/users/09659f1a-62e6-4c6e-8df4-f91d062ec18a HTTP/1.1[0m" 404 -
+2021-12-23 23:28:26,629 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:28:26] "GET /admin-panel/users/new HTTP/1.1" 200 -
+2021-12-23 23:28:29,263 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:28:29] "GET /admin-panel/users HTTP/1.1" 200 -
+2021-12-23 23:35:46,259 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\views\\routes\\admin.py', reloading
+2021-12-23 23:35:46,327 INFO werkzeug:  * Restarting with stat
+2021-12-23 23:35:46,874 INFO clinic_app: App initialization
+2021-12-23 23:35:47,483 WARNING werkzeug:  * Debugger is active!
+2021-12-23 23:35:47,486 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-23 23:35:47,529 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-23 23:35:59,029 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:35:59] "GET /admin-panel/users/new HTTP/1.1" 200 -
+2021-12-23 23:35:59,159 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:35:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 23:35:59,238 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:35:59] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-23 23:36:02,623 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:36:02] "[32mPOST /admin-panel/users/new HTTP/1.1[0m" 302 -
+2021-12-23 23:36:02,632 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:36:02] "GET /admin-panel/users/89e64ad5-4c44-4f48-b656-a33c783d7c18 HTTP/1.1" 200 -
+2021-12-23 23:36:02,739 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:36:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 23:36:03,049 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:36:03] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-23 23:36:07,962 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:36:07] "[32mPOST /admin-panel/users/89e64ad5-4c44-4f48-b656-a33c783d7c18/delete HTTP/1.1[0m" 302 -
+2021-12-23 23:36:08,270 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:36:08] "GET /admin-panel/users HTTP/1.1" 200 -
+2021-12-23 23:36:08,600 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:36:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-23 23:36:08,869 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:36:08] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -

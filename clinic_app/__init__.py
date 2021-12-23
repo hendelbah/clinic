@@ -7,12 +7,13 @@ import logging
 import sys
 from logging.handlers import RotatingFileHandler
 
+from flasgger import Swagger
 from flask import Flask
 from flask_login import LoginManager
 from flask_marshmallow import Marshmallow
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
-from flasgger import Swagger
+
 from clinic_app.config import CurrentConfig, BASE_DIR
 
 app = Flask(__name__)

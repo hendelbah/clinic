@@ -99,6 +99,7 @@ class AppointmentSchema(BaseSchema):
         Appointment schema metadata
         """
         model = Appointment
+        partial = ['conclusion', 'prescription', 'bill']
 
     doctor = ma.Nested('DoctorSchema', exclude=['user'], dump_only=True)
     patient = ma.Nested('PatientSchema', dump_only=True)

@@ -3,6 +3,7 @@ Authentication routes
 """
 from flask import Blueprint, render_template, redirect, url_for, flash, request
 from flask_login import current_user, login_user, logout_user, login_required
+from werkzeug.security import generate_password_hash
 
 from clinic_app.service import UserService
 from clinic_app.views.forms import LoginForm, ChangePassForm
@@ -42,13 +43,13 @@ def profile():
     form = ChangePassForm()
     if form.validate_on_submit():
         if current_user.check_password(form.password.data):
-            current_user.set_password(form.password.data)
-            errors = UserService.save_instance(current_user)
-            if errors is None:
+            password_hash = generate_password_hash(form.password.data)
+            _, code = UserService.update(current_user.uuid, {'password_hash': password_hash})
+            if code == 200:
                 flash('Your password was changed', 'success')
-                return redirect(url_for('auth.profile'))
-            flash('Password change failed', 'error')
-            return redirect(url_for('auth.profile'))
-        flash('Wrong current password', 'error')
+            else:
+                flash('Password change failed', 'error')
+        else:
+            flash('Wrong current password', 'error')
         return redirect(url_for('auth.profile'))
     return render_template('profile.html', form=form)

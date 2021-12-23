@@ -12,7 +12,7 @@ from flask_login import LoginManager
 from flask_marshmallow import Marshmallow
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
-
+from flasgger import Swagger
 from clinic_app.config import CurrentConfig, BASE_DIR
 
 app = Flask(__name__)
@@ -43,13 +43,13 @@ logger = app.logger
 logger.handlers.clear()
 logger.addHandler(file_handler)
 logger.addHandler(console_handler)
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.DEBUG)
 logger.info('App initialization')
 werkzeug_logger = logging.getLogger('werkzeug')
 werkzeug_logger.handlers.clear()
 werkzeug_logger.addHandler(file_handler)
 werkzeug_logger.addHandler(console_handler)
-werkzeug_logger.setLevel(logging.INFO)
+werkzeug_logger.setLevel(logging.DEBUG)
 
 from clinic_app.rest import api_bp
 from clinic_app.views import general_bp, auth_bp, admin_bp
@@ -58,3 +58,5 @@ app.register_blueprint(api_bp)
 app.register_blueprint(general_bp)
 app.register_blueprint(auth_bp)
 app.register_blueprint(admin_bp)
+
+Swagger(app, template_file='static/openapi.yaml')

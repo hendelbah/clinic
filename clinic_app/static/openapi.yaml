@@ -1,0 +1,235 @@
+openapi: 3.0.2
+info:
+  title: Clinic Web Application
+  version: 1.0.0
+  description: Api for accessing clinic's data
+servers:
+  - url: /api/v1
+    description: api base path
+paths:
+  /users:
+    get:
+      parameters:
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/per_page'
+        - in: query
+          name: search_email
+          description: Filter users by matching their email
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Filtered and paginated list of users
+          headers:
+            Last-Modified:
+              description: The UTC date/time at which the current collection
+                was last modified.
+              schema:
+                type: string
+                example: 'Wed, 22 Dec 2021 21:52:10 GMT'
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/pagination'
+                  - type: object
+                    properties:
+                      items:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/user_ext'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /users/{uuid}:
+    parameters:
+      - $ref: '#/components/parameters/uuid'
+
+
+components:
+  parameters:
+    uuid:
+      name: uuid
+      in: path
+      description: Resource uuid
+      required: true
+      schema:
+        $ref: '#/components/schemas/uuid'
+    page:
+      name: page
+      in: query
+      description: Page number for pagination
+      schema:
+        type: integer
+        minimum: 1
+        default: 1
+    per_page:
+      name: per_page
+      in: query
+      description: Items per page number for pagination
+      schema:
+        type: integer
+        minimum: 1
+        default: 20
+
+    full_name:
+      name: search_name
+      in: query
+      description: Filter doctors or patients by matching their full name
+      schema:
+        type: string
+    no_user:
+      name: no_user
+      in: query
+      description: Filter doctors with no associated user account
+      schema:
+        type: boolean
+    phone:
+      name: search_phone
+      in: query
+      description: Filter patients by matching their phone number
+      schema:
+        type: string
+
+
+  responses:
+    NotFound:
+      description: Resource not found or empty collection
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+                example: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+  schemas:
+    uuid:
+      type: string
+      maxLength: 36
+      readOnly: true
+      example: 'cf401a20-feda-4964-84c8-6d4ae9a4909f'
+      description: uuid of resource
+    pagination:
+      type: object
+      description: Paginated representation of a collection of objects. Part of
+        that collection is stored in `items` property.
+      readOnly: true
+      properties:
+        page:
+          type: integer
+          minimum: 1
+          example: 6
+          description: current page number
+        per_page:
+          type: integer
+          minimum: 1
+          example: 10
+          description: number of items per one page
+        pages:
+          type: integer
+          minimum: 1
+          example: 6
+          description: amount of avaliable pages
+        total:
+          type: integer
+          minimum: 1
+          example: 53
+          description: total amount of items in given collection
+        has_prev:
+          type: boolean
+          example: true
+          description: true if previous page is avaliable(page > 1)
+        has_next:
+          type: boolean
+          example: false
+          description: true if next page is avaliable(page < pages)
+    user:
+      type: object
+      description: User object
+      properties:
+        uuid:
+          $ref: '#/components/schemas/uuid'
+        email:
+          type: string
+          format: email
+          maxLength: 80
+          description: user's email
+        password_hash:
+          type: string
+          maxLength: 127
+          example: 'pbkdf2:sha256:260000$rdRtSdZwesxOlHxj$10ed542631a07f6fd3a11523dc774b4de8207abb1891967fda8dc5bcce9f15e6'
+          description: hash of user's password
+        is_admin:
+          type: boolean
+          example: false
+          description: whether user has admin privileges
+        doctor_uuid:
+          type: string
+          maxLength: 36
+          nullable: true
+          writeOnly: true
+          example: 'cf401a20-feda-4964-84c8-6d4ae9a4909f'
+          description: uuid of related doctor
+    user_ext:
+      allOf:
+        - $ref: '#/components/schemas/user'
+        - type: object
+          properties:
+            doctor:
+              allOf:
+                - readOnly: true
+                - $ref: '#/components/schemas/doctor'
+          required:
+            - email
+            - password_hash
+            - is_admin
+    doctor:
+      type: object
+      description: Doctor object
+      properties:
+        uuid:
+          $ref: '#/components/schemas/uuid'
+        full_name:
+          type: string
+          maxLength: 127
+          example: 'Andrew James Smith'
+          description: doctor's full name
+        speciality:
+          type: string
+          maxLength: 255
+          example: 'Therapist'
+          description: description of doctor's speciality
+        info:
+          type: string
+          maxLength: 1023
+          description: information for patients about doctor
+        experience_years:
+          type: integer
+          example: 15
+          description: years of doctor's work experience
+    doctor_ext:
+      allOf:
+        - $ref: '#/components/schemas/doctor'
+        - type: object
+          properties:
+            user:
+              allOf:
+                - readOnly: true
+                - $ref: '#/components/schemas/user'
+          required:
+            - full_name
+            - speciality
+            - info
+            - experience_years
+
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: api-key
+      in: header
+      description: API key to authorize requests. If running app with
+        development config, you can use `qwerty`
+security:
+  - api_key: [ ]

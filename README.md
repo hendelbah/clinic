@@ -92,6 +92,11 @@ localhost:5000/api/appointments/stats?<same filters as for appointments>
 
 Also, all collection resources accept `page` and `per_page` GET parameters
 
+#### Web Service endpoints are documented with SwaggerUI at:
+```
+localhost:5000/apidocs/
+```
+
 ### Web Application:
 
 #### After population, to log in you can use following email - password:

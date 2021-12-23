@@ -28,6 +28,10 @@ class ProductionConfig:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_DATABASE_URI = (f'mysql+pymysql://{MYSQL_USER}:{MYSQL_PASSWORD}'
                                f'@{MYSQL_SERVER}/{MYSQL_DATABASE}?charset=utf8mb4')
+    SWAGGER = {
+        'uiversion': 3,
+        'openapi': '3.0.2'
+    }
 
 
 class TestingConfig(ProductionConfig):
@@ -37,6 +41,7 @@ class TestingConfig(ProductionConfig):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///:memory:'
     TESTING = True
     DEBUG = True
+    SQLALCHEMY_ECHO = False
     WTF_CSRF_ENABLED = False
     PRESERVE_CONTEXT_ON_EXCEPTION = False
 

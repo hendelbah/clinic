@@ -31,20 +31,16 @@ class User(db.Model, UserMixin):
     doctor = db.relationship('Doctor', back_populates='user', lazy='joined')
     doctor_uuid = DoctorUUID()
 
-    def __init__(self, email: str, password_hash: str, is_admin: bool, doctor_uuid: str = None, *,
-                 password_raw: bool = False) -> None:
+    def __init__(self, email: str, password_hash: str, is_admin: bool,
+                 doctor_uuid: str = None) -> None:
         """
         :param email: email of user
         :param password_hash: user's password hash(of raw password if password_raw is set to True)
         :param is_admin: bool parameter for admins only, False by default
         :param doctor_uuid: uuid of related doctor
-        :param password_raw: if True, assume that password_hash value is a raw not hashed password
         """
         self.email = email
-        if password_raw:
-            self.set_password(password_hash)
-        else:
-            self.password_hash = password_hash
+        self.password_hash = password_hash
         self.is_admin = is_admin
         self.uuid = str(uuid4())
         self.doctor_uuid = doctor_uuid

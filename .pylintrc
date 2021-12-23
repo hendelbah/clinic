@@ -1,7 +1,9 @@
 [MASTER]
 
+ignore=
+ignore-paths=.*/migrations, .*/gunicorn.conf.py
 
-ignore-paths=.*/migrations
+
 
 # List of plugins (as comma separated values of python modules names) to load,
 # usually to register additional checkers.
@@ -11,7 +13,7 @@ load-plugins=pylint_flask, pylint_flask_sqlalchemy
 [BASIC]
 
 # Good variable names which should always be accepted, separated by a comma
-good-names=i,id
+good-names=i
 
 
 [TYPECHECK]

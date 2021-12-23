@@ -1,4 +1,5 @@
 # pylint: disable=missing-function-docstring, missing-module-docstring, missing-class-docstring
+# pylint: disable=protected-access
 from datetime import datetime
 from unittest.mock import patch, Mock
 
@@ -7,12 +8,32 @@ from sqlalchemy.orm import Query
 
 from clinic_app.models import User
 from clinic_app.service import BaseService
+from clinic_app.service.base_service import _handle_errors
 from tests.base_test_case import BaseTestCase
 
 
-# pylint: disable=protected-access
 @patch.object(BaseService, 'model', User, create=True)
 class TestBaseService(BaseTestCase):
+    def test_handle_errors(self):
+        # 'orig' object for DatabaseError initialization
+        orig = Mock(args=(0, 'Oh no..'))
+        errors = (ValueError('Oh no..'), TypeError('Oh no..'), DatabaseError(0, 0, orig),
+                  IntegrityError(0, 0, orig))
+        messages = (
+            'Error occurred during processing request data',
+            'Error occurred during processing request data',
+            'Error occurred when committing transaction',
+            'Request data violates database constraints',
+        )
+        for error, message in zip(errors, messages):
+            with self.subTest(error.__class__.__name__):
+                func = Mock(side_effect=error)
+                result, code = _handle_errors(func)()
+                self.assertEqual(code, 422)
+                self.assertEqual(result, {'message': message,
+                                          'errors': {error.__class__.__name__: 'Oh no..'}})
+        func = Mock(side_effect=Exception())
+        self.assertRaises(Exception, _handle_errors(func))
 
     def test_filter_by(self):
         self.assertRaises(NotImplementedError, BaseService._filter_by)
@@ -21,21 +42,6 @@ class TestBaseService(BaseTestCase):
         self.assertRaises(AttributeError, BaseService._order)
         BaseService.order_by = ()
         self.assertIsInstance(BaseService._order(), Query)
-
-    def test_commit(self):
-        with patch.object(BaseTestCase.db.session, 'commit') as method:
-            result = BaseService._commit()
-        self.assertIsNone(result)
-        method.assert_called()
-        # 'orig' object for DatabaseError initialization
-        orig = Mock(args=(0, 'Oh no..'))
-        errors = (DatabaseError(0, 0, orig), IntegrityError(0, 0, orig))
-        for error in errors:
-            with patch.object(BaseTestCase.db.session, 'commit', side_effect=error) as method:
-                result = BaseService._commit()
-            method.assert_called()
-            self.assertEqual(result['errors'][error.__class__.__name__], 'Oh no..')
-            self.assertIsNotNone(result.get('message'))
 
     def test_get(self):
         user = BaseService.get(uuid='1')
@@ -61,7 +67,7 @@ class TestBaseService(BaseTestCase):
         # unknown uuid
         result, code = BaseService.update('qwe', data)
         self.assertEqual(code, 404)
-        self.assertEqual(result, {})
+        self.assertEqual(result, {'errors': {'uuid': 'Resource not found'}})
         # duplicate 'doctor_uuid' filed
         result, code = BaseService.update('8', {'doctor_uuid': '8'})
         self.assertEqual(code, 422)
@@ -83,7 +89,7 @@ class TestBaseService(BaseTestCase):
         # missing fields
         result, code = BaseService.create({'email': 'email@spam.net', 'password_hash': '1234'})
         self.assertEqual(code, 422)
-        self.assertEqual(result['message'], 'Wrong data')
+        self.assertEqual(result['message'], 'Error occurred during processing request data')
         self.assertIn('TypeError', result['errors'])
 
     @patch.object(BaseTestCase.db.session, 'commit')

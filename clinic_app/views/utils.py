@@ -4,6 +4,7 @@ Useful tools for keeping views DRY.
 from secrets import choice
 from string import ascii_letters, digits
 
+from flask import redirect, url_for, flash
 from flask import request
 from flask_wtf import FlaskForm
 
@@ -62,3 +63,37 @@ def random_password(length=15) -> str:
     """
     alphabet = ascii_letters + digits
     return ''.join(choice(alphabet) for _ in range(length))
+
+
+def process_form_submit(form, service, uuid, name, **kwargs):
+    """
+    Process form submission at item endpoints of admin blueprint.
+    Save form data to database, flash corresponding messages and return
+    redirect response with status code as tuple.
+
+    :param form: submitted and validated form
+    :param service: service for db operations
+    :param uuid: uuid of resource, 'new' for create operation
+    :param name: name of item
+    :param kwargs: additional fields that are absent in form and should be submitted to database.
+    :return: redirect response
+    """
+    data = form.data
+    data.pop('submit')
+    if data.get('csrf_token'):
+        data.pop('csrf_token')
+    data.update(kwargs)
+    if uuid == 'new':
+        result, code = service.create(data)
+        if code == 201:
+            flash(f'{name.capitalize()} created successfully', 'success')
+    else:
+        result, code = service.update(uuid, data)
+        if code == 200:
+            flash(f'{name.capitalize()} updated successfully', 'success')
+    if code in (200, 201):
+        return redirect(url_for(f'admin.{name}', uuid=result.uuid)), code
+    errors = result.get('errors') and ' ,'.join(
+        f'{key}: {value}' for key, value in result['errors'].items())
+    flash(f'{errors}', 'error')
+    return redirect(url_for(f'admin.{name}s')), code

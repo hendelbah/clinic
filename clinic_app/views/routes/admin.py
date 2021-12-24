@@ -44,7 +44,7 @@ def admins_only():
     Checks if user is logged in and has admin privileges
     before all requests for this blueprint.
     """
-    if response := login_required(lambda: None)() is not None:
+    if (response := login_required(lambda: None)()) is not None:
         return response
     if not current_user.is_admin:
         return abort(403)
@@ -62,7 +62,7 @@ def users():
     form = FilterUsers()
     if form.validate_on_submit():
         filters = extract_filters(['search_email'], form)
-        return redirect(url_for('admin.users', **filters))
+        return redirect(url_for('.users', **filters))
     filters = parse_filters([{'key': 'search_email'}], form)
     pages = get_pagination_args()
     data = UserService.get_pagination(*pages, **filters)
@@ -107,7 +107,7 @@ def delete_user(uuid):
         flash('User deleted successfully', 'success')
     else:
         flash('Can\'t delete: user not found', 'error')
-    return redirect(url_for('admin.users'))
+    return redirect(url_for('.users'))
 
 
 @admin_bp.route('/doctors', methods=['GET', 'POST'])
@@ -118,7 +118,7 @@ def doctors():
     if form.validate_on_submit():
         filters = extract_filters(['search_name'], form)
         filters['act'] = request.args.get('act') or None
-        return redirect(url_for('admin.doctors', **filters, patient=patient_uuid))
+        return redirect(url_for('.doctors', **filters, patient=patient_uuid))
     filters = parse_filters([{'key': 'search_name'}], form)
     pages = get_pagination_args()
     data = DoctorService.get_pagination(*pages, **filters)
@@ -154,7 +154,7 @@ def delete_doctor(uuid):
         flash('Doctor deleted successfully', 'success')
     else:
         flash('Can\'t delete: doctor not found', 'error')
-    return redirect(url_for('admin.doctors'))
+    return redirect(url_for('.doctors'))
 
 
 @admin_bp.route('/patients', methods=['GET', 'POST'])
@@ -165,7 +165,7 @@ def patients():
     if form.validate_on_submit():
         filters = extract_filters(['search_phone', 'search_name'], form)
         filters['act'] = request.args.get('act') or None
-        return redirect(url_for('admin.patients', **filters, doctor=doctor_uuid))
+        return redirect(url_for('.patients', **filters, doctor=doctor_uuid))
     kwargs_list = [{'key': 'search_phone'}, {'key': 'search_name'}]
     filters = parse_filters(kwargs_list, form)
     pages = get_pagination_args()
@@ -202,7 +202,7 @@ def delete_patient(uuid):
         flash('Patient deleted successfully', 'success')
     else:
         flash('Can\'t delete: patient not found', 'error')
-    return redirect(url_for('admin.patients'))
+    return redirect(url_for('.patients'))
 
 
 @admin_bp.route('/appointments', methods=['GET', 'POST'])
@@ -210,7 +210,7 @@ def appointments():
     form = FilterAppointments()
     if form.validate_on_submit():
         filters = extract_filters(['doctor_name', 'patient_name', 'date_from'], form)
-        return redirect(url_for('admin.appointments', **filters))
+        return redirect(url_for('.appointments', **filters))
     kwargs_list = [{'key': 'doctor_name'}, {'key': 'patient_name'},
                    {'key': 'date_from', 'type': date.fromisoformat}]
     filters = parse_filters(kwargs_list, form)
@@ -229,20 +229,20 @@ def new_appointment():
     patient_uuid = request.args.get('patient')
     if not doctor_uuid:
         flash('Please, select a doctor', 'success')
-        return redirect(url_for('admin.doctors', patient=patient_uuid, act=1))
+        return redirect(url_for('.doctors', patient=patient_uuid, act=1))
     if not patient_uuid:
         flash('Please, select a patient', 'success')
-        return redirect(url_for('admin.patients', doctor=doctor_uuid, act=1))
+        return redirect(url_for('.patients', doctor=doctor_uuid, act=1))
     form = EditAppointment()
     if form.validate_on_submit():
         response, _ = process_form_submit(form, AppointmentService, 'new', 'appointment',
-                                             doctor_uuid=doctor_uuid, patient_uuid=patient_uuid)
+                                          doctor_uuid=doctor_uuid, patient_uuid=patient_uuid)
         return response
     doctor_ = DoctorService.get(doctor_uuid)
     patient_ = PatientService.get(patient_uuid)
     if not doctor_ or not patient_:
         flash('Error: doctor or patient is not found', 'error')
-        return redirect(url_for('admin.appointments'))
+        return redirect(url_for('.appointments'))
     return render_template(
         'admin_panel/item.html', form=form, item_name='appointment', title='New appointment',
         readonly=('conclusion', 'prescription', 'bill'), active_menu_item=4,
@@ -272,4 +272,4 @@ def delete_appointment(uuid):
         flash('Appointment deleted successfully', 'success')
     else:
         flash('Can\'t delete: appointment not found', 'error')
-    return redirect(url_for('admin.appointments'))
+    return redirect(url_for('.appointments'))

@@ -65,7 +65,7 @@ flask db upgrade
 - #### Optionally populate the database with sample data
 
 ```
-python -m clinic_app/service/populate
+python -m clinic_app.service.populate
 ```
 
 - #### Run the project locally:

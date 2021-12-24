@@ -2629,3 +2629,184 @@ TypeError: Choices cannot be None.
 2021-12-23 23:36:08,600 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:36:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
 2021-12-23 23:36:08,869 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:36:08] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
 2021-12-24 02:20:06,247 INFO clinic_app: App initialization
+2021-12-24 02:30:19,811 INFO clinic_app: App initialization
+2021-12-24 02:32:34,864 INFO clinic_app: App initialization
+2021-12-24 02:33:24,423 INFO clinic_app: App initialization
+2021-12-24 02:33:56,796 INFO clinic_app: App initialization
+2021-12-24 02:34:37,013 INFO clinic_app: App initialization
+2021-12-24 02:38:29,865 INFO clinic_app: App initialization
+2021-12-24 02:38:47,547 INFO clinic_app: App initialization
+2021-12-24 02:39:56,749 INFO clinic_app: App initialization
+2021-12-24 02:40:27,792 INFO clinic_app: App initialization
+2021-12-24 02:41:12,144 INFO clinic_app: App initialization
+2021-12-24 02:42:06,045 INFO clinic_app: App initialization
+2021-12-24 02:42:30,111 INFO clinic_app: App initialization
+2021-12-24 02:43:06,949 INFO clinic_app: App initialization
+2021-12-24 02:44:04,446 INFO clinic_app: App initialization
+2021-12-24 02:45:56,457 INFO clinic_app: App initialization
+2021-12-24 02:49:39,680 INFO clinic_app: App initialization
+2021-12-24 02:53:51,242 INFO clinic_app: App initialization
+2021-12-24 02:58:43,284 INFO clinic_app: App initialization
+2021-12-24 02:58:58,370 INFO clinic_app: App initialization
+2021-12-24 03:00:57,550 INFO clinic_app: App initialization
+2021-12-24 03:01:45,983 INFO clinic_app: App initialization
+2021-12-24 03:01:47,550 INFO werkzeug:  * Restarting with stat
+2021-12-24 03:01:48,092 INFO clinic_app: App initialization
+2021-12-24 03:01:48,573 WARNING werkzeug:  * Debugger is active!
+2021-12-24 03:01:48,576 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-24 03:01:48,668 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-24 03:01:50,937 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:01:50] "[32mGET /logout?next=http%3A%2F%2Flocalhost%3A5000%2Fadmin-panel%2Fusers HTTP/1.1[0m" 302 -
+2021-12-24 03:01:50,948 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:01:50] "GET / HTTP/1.1" 200 -
+2021-12-24 03:01:51,292 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:01:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-24 03:01:51,600 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:01:51] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-24 03:01:55,038 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:01:55] "[35m[1mGET /admin-panel/ HTTP/1.1[0m" 500 -
+2021-12-24 03:01:55,382 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:01:55] "GET /admin-panel/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2021-12-24 03:01:55,383 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:01:55] "GET /admin-panel/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2021-12-24 03:01:55,703 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:01:55] "GET /admin-panel/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2021-12-24 03:01:55,725 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:01:55] "GET /admin-panel/?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2021-12-24 03:01:55,942 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:01:55] "GET /admin-panel/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2021-12-24 03:04:13,361 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\venv\\lib\\site-packages\\flask_login\\utils.py', reloading
+2021-12-24 03:04:13,438 INFO werkzeug:  * Restarting with stat
+2021-12-24 03:04:14,009 INFO clinic_app: App initialization
+2021-12-24 03:04:14,515 WARNING werkzeug:  * Debugger is active!
+2021-12-24 03:04:14,518 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-24 03:04:14,561 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-24 03:04:14,726 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:04:14] "[35m[1mGET /admin-panel/ HTTP/1.1[0m" 500 -
+2021-12-24 03:04:14,831 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:04:14] "GET /admin-panel/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2021-12-24 03:04:14,972 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:04:14] "GET /admin-panel/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2021-12-24 03:04:15,278 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:04:15] "GET /admin-panel/?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2021-12-24 03:04:15,286 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:04:15] "GET /admin-panel/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2021-12-24 03:04:15,531 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:04:15] "GET /admin-panel/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2021-12-24 03:04:45,810 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\views\\routes\\admin.py', reloading
+2021-12-24 03:04:45,880 INFO werkzeug:  * Restarting with stat
+2021-12-24 03:04:46,422 INFO clinic_app: App initialization
+2021-12-24 03:04:46,891 WARNING werkzeug:  * Debugger is active!
+2021-12-24 03:04:46,893 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-24 03:04:46,938 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-24 03:04:47,092 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:04:47] "[35m[1mGET /admin-panel/ HTTP/1.1[0m" 500 -
+2021-12-24 03:04:47,196 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:04:47] "GET /admin-panel/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2021-12-24 03:04:47,338 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:04:47] "GET /admin-panel/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2021-12-24 03:04:47,646 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:04:47] "GET /admin-panel/?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2021-12-24 03:04:47,654 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:04:47] "GET /admin-panel/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2021-12-24 03:04:47,897 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:04:47] "GET /admin-panel/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2021-12-24 03:05:23,442 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\views\\routes\\admin.py', reloading
+2021-12-24 03:05:23,516 INFO werkzeug:  * Restarting with stat
+2021-12-24 03:05:24,095 INFO clinic_app: App initialization
+2021-12-24 03:05:24,636 WARNING werkzeug:  * Debugger is active!
+2021-12-24 03:05:24,639 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-24 03:05:24,682 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-24 03:05:24,695 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:05:24] "[32mGET /admin-panel/ HTTP/1.1[0m" 302 -
+2021-12-24 03:05:24,724 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:05:24] "GET /login?next=%2Fadmin-panel%2F HTTP/1.1" 200 -
+2021-12-24 03:05:25,036 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:05:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2021-12-24 03:05:25,344 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 03:05:25] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-24 03:05:42,438 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\clinic_app\\views\\routes\\admin.py', reloading
+2021-12-24 03:05:42,512 INFO werkzeug:  * Restarting with stat
+2021-12-24 03:05:42,892 INFO clinic_app: App initialization
+2021-12-24 03:05:43,045 INFO clinic_app: App initialization
+2021-12-24 03:05:43,540 WARNING werkzeug:  * Debugger is active!
+2021-12-24 03:05:43,542 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-24 03:05:43,592 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-24 03:06:56,290 INFO clinic_app: App initialization
+2021-12-24 03:06:56,548 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\tests\\test_routes.py', reloading
+2021-12-24 03:06:56,611 INFO werkzeug:  * Restarting with stat
+2021-12-24 03:06:57,152 INFO clinic_app: App initialization
+2021-12-24 03:06:57,681 WARNING werkzeug:  * Debugger is active!
+2021-12-24 03:06:57,684 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-24 03:06:57,727 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-24 03:09:46,750 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\tests\\test_routes.py', reloading
+2021-12-24 03:09:46,825 INFO werkzeug:  * Restarting with stat
+2021-12-24 03:09:47,406 INFO clinic_app: App initialization
+2021-12-24 03:09:48,139 WARNING werkzeug:  * Debugger is active!
+2021-12-24 03:09:48,142 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-24 03:09:48,197 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-24 03:10:07,021 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\tests\\test_routes.py', reloading
+2021-12-24 03:10:07,103 INFO werkzeug:  * Restarting with stat
+2021-12-24 03:10:07,594 INFO clinic_app: App initialization
+2021-12-24 03:10:07,672 INFO clinic_app: App initialization
+2021-12-24 03:10:08,197 WARNING werkzeug:  * Debugger is active!
+2021-12-24 03:10:08,200 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-24 03:10:08,247 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-24 03:12:24,618 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\tests\\test_routes.py', reloading
+2021-12-24 03:12:24,701 INFO werkzeug:  * Restarting with stat
+2021-12-24 03:12:25,257 INFO clinic_app: App initialization
+2021-12-24 03:12:25,727 WARNING werkzeug:  * Debugger is active!
+2021-12-24 03:12:25,730 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-24 03:12:25,774 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-24 03:12:38,293 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\tests\\test_routes.py', reloading
+2021-12-24 03:12:38,369 INFO werkzeug:  * Restarting with stat
+2021-12-24 03:12:38,580 INFO clinic_app: App initialization
+2021-12-24 03:12:38,942 INFO clinic_app: App initialization
+2021-12-24 03:12:39,455 WARNING werkzeug:  * Debugger is active!
+2021-12-24 03:12:39,458 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-24 03:12:39,505 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-24 03:12:47,626 INFO clinic_app: App initialization
+2021-12-24 03:16:37,792 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\tests\\test_routes.py', reloading
+2021-12-24 03:16:37,876 INFO werkzeug:  * Restarting with stat
+2021-12-24 03:16:38,445 INFO clinic_app: App initialization
+2021-12-24 03:16:39,004 WARNING werkzeug:  * Debugger is active!
+2021-12-24 03:16:39,008 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-24 03:16:39,062 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-24 03:17:38,232 INFO clinic_app: App initialization
+2021-12-24 03:17:38,439 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\tests\\test_routes.py', reloading
+2021-12-24 03:17:38,507 INFO werkzeug:  * Restarting with stat
+2021-12-24 03:17:39,063 INFO clinic_app: App initialization
+2021-12-24 03:17:39,610 WARNING werkzeug:  * Debugger is active!
+2021-12-24 03:17:39,614 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-24 03:17:39,658 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-24 03:18:27,621 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\tests\\test_routes.py', reloading
+2021-12-24 03:18:27,693 INFO werkzeug:  * Restarting with stat
+2021-12-24 03:18:28,028 INFO clinic_app: App initialization
+2021-12-24 03:18:28,266 INFO clinic_app: App initialization
+2021-12-24 03:18:28,755 WARNING werkzeug:  * Debugger is active!
+2021-12-24 03:18:28,758 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-24 03:18:28,805 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-24 03:20:38,967 INFO clinic_app: App initialization
+2021-12-24 03:20:39,014 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\tests\\test_routes.py', reloading
+2021-12-24 03:20:39,089 INFO werkzeug:  * Restarting with stat
+2021-12-24 03:20:39,656 INFO clinic_app: App initialization
+2021-12-24 03:20:40,171 WARNING werkzeug:  * Debugger is active!
+2021-12-24 03:20:40,174 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-24 03:20:40,228 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-24 03:20:47,989 INFO clinic_app: App initialization
+2021-12-24 03:21:43,566 INFO clinic_app: App initialization
+2021-12-24 03:21:43,735 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\tests\\test_routes.py', reloading
+2021-12-24 03:21:43,810 INFO werkzeug:  * Restarting with stat
+2021-12-24 03:21:44,363 INFO clinic_app: App initialization
+2021-12-24 03:21:44,916 WARNING werkzeug:  * Debugger is active!
+2021-12-24 03:21:44,918 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-24 03:21:44,967 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-24 03:21:51,516 INFO clinic_app: App initialization
+2021-12-24 03:24:53,404 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\tests\\test_routes.py', reloading
+2021-12-24 03:24:53,487 INFO werkzeug:  * Restarting with stat
+2021-12-24 03:24:54,068 INFO clinic_app: App initialization
+2021-12-24 03:24:54,624 WARNING werkzeug:  * Debugger is active!
+2021-12-24 03:24:54,626 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-24 03:24:54,671 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-24 03:26:59,612 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\tests\\base_test_case.py', reloading
+2021-12-24 03:26:59,689 INFO werkzeug:  * Restarting with stat
+2021-12-24 03:27:00,252 INFO clinic_app: App initialization
+2021-12-24 03:27:00,793 WARNING werkzeug:  * Debugger is active!
+2021-12-24 03:27:00,796 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-24 03:27:00,838 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-24 03:27:06,101 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\tests\\base_test_case.py', reloading
+2021-12-24 03:27:06,186 INFO werkzeug:  * Restarting with stat
+2021-12-24 03:27:06,635 INFO clinic_app: App initialization
+2021-12-24 03:27:06,747 INFO clinic_app: App initialization
+2021-12-24 03:27:07,269 WARNING werkzeug:  * Debugger is active!
+2021-12-24 03:27:07,271 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-24 03:27:07,317 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-24 03:27:27,114 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\tests\\base_test_case.py', reloading
+2021-12-24 03:27:27,182 INFO werkzeug:  * Restarting with stat
+2021-12-24 03:27:27,747 INFO clinic_app: App initialization
+2021-12-24 03:27:28,255 WARNING werkzeug:  * Debugger is active!
+2021-12-24 03:27:28,257 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-24 03:27:28,306 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-24 03:29:40,764 INFO clinic_app: App initialization
+2021-12-24 03:31:53,901 INFO werkzeug:  * Detected change in 'E:\\Desktop\\прогромирование\\py\\epam\\clinic\\tests\\test_population.py', reloading
+2021-12-24 03:31:53,984 INFO werkzeug:  * Restarting with stat
+2021-12-24 03:31:54,367 INFO clinic_app: App initialization
+2021-12-24 03:31:54,533 INFO clinic_app: App initialization
+2021-12-24 03:31:55,044 WARNING werkzeug:  * Debugger is active!
+2021-12-24 03:31:55,047 INFO werkzeug:  * Debugger PIN: 248-785-052
+2021-12-24 03:31:55,090 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-24 03:32:06,657 INFO clinic_app: App initialization

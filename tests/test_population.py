@@ -1,5 +1,6 @@
 # pylint: disable=missing-function-docstring, missing-module-docstring, missing-class-docstring
-from clinic_app.service.populate import clear_tables, populate
+from clinic_app.service.populate import clear_tables
+from clinic_app.service.populate.__main__ import main
 from tests.base_test_case import BaseTestCase
 
 
@@ -9,8 +10,7 @@ class TestPopulation(BaseTestCase):
         pass
 
     def test_populate(self):
-        clear_tables()
-        populate()
+        main()
         counts = (18, 17, 100, 200)
         for model, count in zip(self.models, counts):
             with self.subTest(model.__name__):

@@ -2628,3 +2628,4 @@ TypeError: Choices cannot be None.
 2021-12-23 23:36:08,270 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:36:08] "GET /admin-panel/users HTTP/1.1" 200 -
 2021-12-23 23:36:08,600 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:36:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
 2021-12-23 23:36:08,869 INFO werkzeug: 127.0.0.1 - - [23/Dec/2021 23:36:08] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2021-12-24 02:20:06,247 INFO clinic_app: App initialization

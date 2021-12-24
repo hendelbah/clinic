@@ -32,10 +32,7 @@ paths:
           description: Filtered with query filters and paginated collection of users
           headers:
             Last-Modified:
-              description: The UTC date/time at which the current collection was modified.
-              schema:
-                type: string
-                example: 'Wed, 22 Dec 2021 21:52:10 GMT'
+              $ref: '#/components/headers/Last-Modified'
           content:
             application/json:
               schema:
@@ -88,10 +85,7 @@ paths:
           description: User object
           headers:
             Last-Modified:
-              description: The UTC date/time at which object was modified.
-              schema:
-                type: string
-                example: 'Wed, 22 Dec 2021 21:52:10 GMT'
+              $ref: '#/components/headers/Last-Modified'
           content:
             application/json:
               schema:
@@ -154,10 +148,7 @@ paths:
           description: Filtered with query filters and paginated collection of doctors
           headers:
             Last-Modified:
-              description: The UTC date/time at which the current collection was modified.
-              schema:
-                type: string
-                example: 'Wed, 22 Dec 2021 21:52:10 GMT'
+              $ref: '#/components/headers/Last-Modified'
           content:
             application/json:
               schema:
@@ -210,10 +201,7 @@ paths:
           description: Doctor object
           headers:
             Last-Modified:
-              description: The UTC date/time at which object was modified.
-              schema:
-                type: string
-                example: 'Wed, 22 Dec 2021 21:52:10 GMT'
+              $ref: '#/components/headers/Last-Modified'
           content:
             application/json:
               schema:
@@ -276,10 +264,7 @@ paths:
           description: Filtered with query filters and paginated collection of patients
           headers:
             Last-Modified:
-              description: The UTC date/time at which the current collection was modified.
-              schema:
-                type: string
-                example: 'Wed, 22 Dec 2021 21:52:10 GMT'
+              $ref: '#/components/headers/Last-Modified'
           content:
             application/json:
               schema:
@@ -337,10 +322,7 @@ paths:
           description: Patient object
           headers:
             Last-Modified:
-              description: The UTC date/time at which object was modified.
-              schema:
-                type: string
-                example: 'Wed, 22 Dec 2021 21:52:10 GMT'
+              $ref: '#/components/headers/Last-Modified'
           content:
             application/json:
               schema:
@@ -411,10 +393,7 @@ paths:
           description: Filtered with query filters and paginated collection of doctor-patient appointments
           headers:
             Last-Modified:
-              description: The UTC date/time at which the current collection was modified.
-              schema:
-                type: string
-                example: 'Wed, 22 Dec 2021 21:52:10 GMT'
+              $ref: '#/components/headers/Last-Modified'
           content:
             application/json:
               schema:
@@ -473,10 +452,7 @@ paths:
           description: The object representing patient's appointment with a doctor
           headers:
             Last-Modified:
-              description: The UTC date/time at which object was modified.
-              schema:
-                type: string
-                example: 'Wed, 22 Dec 2021 21:52:10 GMT'
+              $ref: '#/components/headers/Last-Modified'
           content:
             application/json:
               schema:
@@ -545,6 +521,12 @@ paths:
                     minimum: 0
                     example: 5600
 components:
+  headers:
+    Last-Modified:
+      description: The UTC date/time at which the current object or collection was modified.
+      schema:
+        type: string
+        example: 'Wed, 22 Dec 2021 21:52:10 GMT'
   parameters:
     uuid:
       name: uuid
@@ -658,10 +640,7 @@ components:
       description: Headers of resource, includes Last-modified
       headers:
         Last-Modified:
-          description: The UTC date/time at which the current object or collection was modified.
-          schema:
-            type: string
-            example: 'Wed, 22 Dec 2021 21:52:10 GMT'
+          $ref: '#/components/headers/Last-Modified'
     notFound:
       description: Resource not found
       content:
@@ -921,7 +900,6 @@ components:
       type: apiKey
       name: api-key
       in: header
-      description: API key to authorize requests. If running app with
-        development config, you can use `qwerty`
+      description: API key to authorize requests. If running app with development config, you can use `qwerty`
 security:
   - apiKey: [ ]

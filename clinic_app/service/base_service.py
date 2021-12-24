@@ -21,10 +21,10 @@ MODEL = t.Union[User, Doctor, Patient, Appointment]
 
 def _handle_errors(func):
     """
-    Wrapper for handling errors in service class methods. If error occurs return dict with error
+    Decorator for handling errors in service class methods. If error occurs return dict with error
     description and 422 code
 
-    :param func: function to wrap, designed for methods `update` and `create`
+    :param func: function to wrap, designed for BaseService methods `update` and `create`
     :return: tuple of error description and status code
     """
 

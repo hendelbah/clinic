@@ -96,6 +96,11 @@ def populate(patients_amount=100):
     db.session.commit()
 
 
-if __name__ == '__main__':
+def main():
+    """main"""
     clear_tables()
     populate()
+
+
+if __name__ == '__main__':
+    main()

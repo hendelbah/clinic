@@ -63,7 +63,7 @@ function switch_pass_change() {
     </div>
     {% endif %}
     <hr width="80%" align="left">
-    <div class="info-item" {% if not form.is_submitted() %}style="display:none"{% endif %}>
+    <div class="info-item" id="change-pass" {% if not form.is_submitted() %}style="display:none"{% endif %}>
         <form method="post" class="common-form">
             {{ form.hidden_tag() }}
             {{ render_field(form.password) }}

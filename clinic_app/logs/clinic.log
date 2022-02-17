@@ -3118,3 +3118,1188 @@ TypeError: Choices cannot be None.
 2021-12-24 20:28:09,701 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 20:28:09] "GET /admin-panel/appointments HTTP/1.1" 200 -
 2021-12-24 20:28:09,808 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 20:28:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
 2021-12-24 20:28:09,857 INFO werkzeug: 127.0.0.1 - - [24/Dec/2021 20:28:09] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 18:23:47,994 INFO clinic_app: App initialization
+2022-02-14 18:23:50,059 INFO werkzeug:  * Restarting with stat
+2022-02-14 18:23:50,567 INFO clinic_app: App initialization
+2022-02-14 18:23:51,077 WARNING werkzeug:  * Debugger is active!
+2022-02-14 18:23:51,080 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-14 18:23:51,122 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-14 18:24:55,749 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:24:55] "GET / HTTP/1.1" 200 -
+2022-02-14 18:24:55,863 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:24:55] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-14 18:24:55,999 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:24:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-02-14 18:24:56,205 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:24:56] "GET /static/media/home-button.png HTTP/1.1" 200 -
+2022-02-14 18:24:58,387 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:24:58] "GET /login HTTP/1.1" 200 -
+2022-02-14 18:24:58,399 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:24:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:25:00,292 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:25:00] "[32mPOST /login HTTP/1.1[0m" 302 -
+2022-02-14 18:25:00,448 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:25:00] "GET / HTTP/1.1" 200 -
+2022-02-14 18:25:00,775 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:25:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:25:02,450 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:25:02] "GET / HTTP/1.1" 200 -
+2022-02-14 18:25:02,751 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:25:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:25:03,760 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:25:03] "GET /admin-panel/ HTTP/1.1" 200 -
+2022-02-14 18:25:03,776 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:25:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:25:08,105 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:25:08] "GET /admin-panel/users HTTP/1.1" 200 -
+2022-02-14 18:25:08,400 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:25:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:25:12,500 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:25:12] "GET / HTTP/1.1" 200 -
+2022-02-14 18:25:12,516 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:25:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:26:45,205 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-14 18:26:45,269 INFO werkzeug:  * Restarting with stat
+2022-02-14 18:26:45,796 INFO clinic_app: App initialization
+2022-02-14 18:26:46,384 WARNING werkzeug:  * Debugger is active!
+2022-02-14 18:26:46,387 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-14 18:26:46,430 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-14 18:35:36,462 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-14 18:35:36,528 INFO werkzeug:  * Restarting with stat
+2022-02-14 18:35:37,169 INFO clinic_app: App initialization
+2022-02-14 18:35:37,680 WARNING werkzeug:  * Debugger is active!
+2022-02-14 18:35:37,683 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-14 18:35:37,724 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-14 18:35:40,147 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:35:40] "GET /admin-panel/ HTTP/1.1" 200 -
+2022-02-14 18:35:40,250 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:35:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:35:40,356 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:35:40] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 18:35:44,992 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:35:44] "[32mGET /logout?next=http%3A%2F%2Flocalhost%3A5000%2Fadmin-panel%2F HTTP/1.1[0m" 302 -
+2022-02-14 18:35:44,997 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:35:44] "GET / HTTP/1.1" 200 -
+2022-02-14 18:35:45,255 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:35:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:35:47,622 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:35:47] "GET /login HTTP/1.1" 200 -
+2022-02-14 18:35:47,639 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:35:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:35:53,658 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:35:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2022-02-14 18:35:53,834 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:35:53] "GET / HTTP/1.1" 200 -
+2022-02-14 18:35:54,160 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:35:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:35:59,156 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:35:59] "GET / HTTP/1.1" 200 -
+2022-02-14 18:35:59,464 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:35:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:36:05,852 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:36:05] "[31m[1mGET /admin-panel/ HTTP/1.1[0m" 403 -
+2022-02-14 18:36:55,385 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-14 18:36:55,451 INFO werkzeug:  * Restarting with stat
+2022-02-14 18:36:55,979 INFO clinic_app: App initialization
+2022-02-14 18:36:56,491 WARNING werkzeug:  * Debugger is active!
+2022-02-14 18:36:56,494 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-14 18:36:56,536 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-14 18:36:59,896 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:36:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:36:59,910 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:36:59] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 18:37:01,174 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:37:01] "[32mGET /logout?next=http%3A%2F%2Flocalhost%3A5000%2F HTTP/1.1[0m" 302 -
+2022-02-14 18:37:01,185 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:37:01] "GET / HTTP/1.1" 200 -
+2022-02-14 18:37:01,432 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:37:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:37:01,748 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:37:01] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 18:37:02,041 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:37:02] "GET /login HTTP/1.1" 200 -
+2022-02-14 18:37:02,054 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:37:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:37:07,775 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:37:07] "[32mPOST /login HTTP/1.1[0m" 302 -
+2022-02-14 18:37:07,780 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:37:07] "GET / HTTP/1.1" 200 -
+2022-02-14 18:37:07,920 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:37:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:37:09,725 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:37:09] "GET /admin-panel/ HTTP/1.1" 200 -
+2022-02-14 18:37:09,739 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:37:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:37:11,054 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:37:11] "GET /admin-panel/users HTTP/1.1" 200 -
+2022-02-14 18:37:11,342 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:37:11] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:38:09,703 INFO clinic_app: App initialization
+2022-02-14 18:49:19,157 INFO clinic_app: App initialization
+2022-02-14 18:49:19,717 INFO werkzeug:  * Restarting with stat
+2022-02-14 18:49:20,222 INFO clinic_app: App initialization
+2022-02-14 18:49:20,712 WARNING werkzeug:  * Debugger is active!
+2022-02-14 18:49:20,715 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-14 18:49:20,757 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-14 18:49:24,737 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:49:24] "GET /admin-panel/users HTTP/1.1" 200 -
+2022-02-14 18:49:24,843 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:49:24] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-14 18:49:24,943 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:49:24] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 18:49:30,028 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:49:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:50:30,926 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:50:30] "GET /admin-panel/users HTTP/1.1" 200 -
+2022-02-14 18:50:30,938 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:50:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:50:34,893 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:50:34] "GET /admin-panel/users HTTP/1.1" 200 -
+2022-02-14 18:50:35,201 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:50:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:51:27,859 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:51:27] "GET /admin-panel/users HTTP/1.1" 200 -
+2022-02-14 18:51:27,872 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:51:27] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-14 18:51:28,103 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:51:28] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 18:53:28,473 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:53:28] "GET /admin-panel/users HTTP/1.1" 200 -
+2022-02-14 18:53:28,486 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:53:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:53:28,715 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:53:28] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 18:55:38,421 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:55:38] "[35m[1mGET /admin-panel/users HTTP/1.1[0m" 500 -
+2022-02-14 18:55:38,434 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:55:38] "GET /admin-panel/users?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-02-14 18:55:38,619 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:55:38] "GET /admin-panel/users?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-02-14 18:55:38,962 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:55:38] "GET /admin-panel/users?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2022-02-14 18:55:38,965 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:55:38] "GET /admin-panel/users?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-14 18:55:39,215 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:55:39] "GET /admin-panel/users?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-14 18:58:01,861 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\__init__.py', reloading
+2022-02-14 18:58:01,940 INFO werkzeug:  * Restarting with stat
+2022-02-14 18:58:02,495 INFO clinic_app: App initialization
+2022-02-14 18:58:02,996 WARNING werkzeug:  * Debugger is active!
+2022-02-14 18:58:02,999 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-14 18:58:03,041 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-14 18:58:03,114 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:58:03] "GET /admin-panel/users HTTP/1.1" 200 -
+2022-02-14 18:58:03,221 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:58:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:58:03,323 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:58:03] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 18:58:05,820 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:58:05] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-14 18:58:05,837 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:58:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 18:58:41,226 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:58:41] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-14 18:58:41,522 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 18:58:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:08:07,567 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:08:07] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-14 19:08:07,579 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:08:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:08:07,813 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:08:07] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 19:13:43,760 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-14 19:13:43,837 INFO werkzeug:  * Restarting with stat
+2022-02-14 19:13:44,358 INFO clinic_app: App initialization
+2022-02-14 19:13:44,949 WARNING werkzeug:  * Debugger is active!
+2022-02-14 19:13:44,952 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-14 19:13:44,995 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-14 19:13:45,351 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:13:45] "GET /admin-panel/ HTTP/1.1" 200 -
+2022-02-14 19:13:45,459 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:13:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:13:45,575 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:13:45] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 19:13:47,213 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:13:47] "GET /admin-panel/appointments HTTP/1.1" 200 -
+2022-02-14 19:13:47,230 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:13:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:13:47,415 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:13:47] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 19:13:58,879 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:13:58] "[32mPOST /admin-panel/appointments HTTP/1.1[0m" 302 -
+2022-02-14 19:13:58,935 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:13:58] "GET /admin-panel/appointments HTTP/1.1" 200 -
+2022-02-14 19:13:59,137 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:13:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:13:59,449 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:13:59] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 19:14:01,703 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:14:01] "[32mPOST /admin-panel/appointments HTTP/1.1[0m" 302 -
+2022-02-14 19:14:02,017 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:14:02] "GET /admin-panel/appointments?date_from=2022-02-14 HTTP/1.1" 200 -
+2022-02-14 19:14:02,352 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:14:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:14:02,619 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:14:02] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 19:18:43,182 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\forms.py', reloading
+2022-02-14 19:18:43,257 INFO werkzeug:  * Restarting with stat
+2022-02-14 19:18:43,792 INFO clinic_app: App initialization
+2022-02-14 19:18:44,320 WARNING werkzeug:  * Debugger is active!
+2022-02-14 19:18:44,323 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-14 19:18:44,366 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-14 19:18:44,712 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:18:44] "GET /admin-panel/appointments?date_from=2022-02-14 HTTP/1.1" 200 -
+2022-02-14 19:18:44,817 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:18:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:18:44,884 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:18:44] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 19:20:22,519 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:20:22] "GET /admin-panel/appointments?date=2022-02-14 HTTP/1.1" 200 -
+2022-02-14 19:20:22,535 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:20:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:20:22,765 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:20:22] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 19:20:26,447 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:20:26] "GET /admin-panel/appointments HTTP/1.1" 200 -
+2022-02-14 19:20:26,460 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:20:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:20:26,636 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:20:26] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 19:20:29,976 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:20:29] "[32mPOST /admin-panel/appointments HTTP/1.1[0m" 302 -
+2022-02-14 19:20:29,988 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:20:29] "GET /admin-panel/appointments?date=2022-02-14 HTTP/1.1" 200 -
+2022-02-14 19:20:30,241 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:20:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:20:30,560 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:20:30] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 19:24:32,742 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\forms.py', reloading
+2022-02-14 19:24:32,810 INFO werkzeug:  * Restarting with stat
+2022-02-14 19:24:33,340 INFO clinic_app: App initialization
+2022-02-14 19:24:33,876 WARNING werkzeug:  * Debugger is active!
+2022-02-14 19:24:33,879 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-14 19:24:33,920 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-14 19:25:36,782 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\forms.py', reloading
+2022-02-14 19:25:36,848 INFO werkzeug:  * Restarting with stat
+2022-02-14 19:25:37,378 INFO clinic_app: App initialization
+2022-02-14 19:25:37,871 WARNING werkzeug:  * Debugger is active!
+2022-02-14 19:25:37,874 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-14 19:25:37,917 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-14 19:25:39,541 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:25:39] "GET /admin-panel/appointments?date=2022-02-14 HTTP/1.1" 200 -
+2022-02-14 19:25:39,644 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:25:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:25:39,745 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:25:39] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 19:25:44,019 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:25:44] "GET /admin-panel/appointments?date=2022-02-14 HTTP/1.1" 200 -
+2022-02-14 19:25:44,032 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:25:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:33:17,334 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-14 19:33:17,400 INFO werkzeug:  * Restarting with stat
+2022-02-14 19:33:17,920 INFO clinic_app: App initialization
+2022-02-14 19:33:18,454 WARNING werkzeug:  * Debugger is active!
+2022-02-14 19:33:18,456 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-14 19:33:18,499 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-14 19:33:18,572 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:18] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-14 19:33:18,684 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:33:18,798 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:18] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 19:33:20,913 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:20] "GET /admin-panel/doctors HTTP/1.1" 200 -
+2022-02-14 19:33:20,932 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:33:24,031 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:24] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-14 19:33:24,331 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:33:27,822 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:27] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-14 19:33:27,834 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:33:35,353 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:35] "[32mGET /logout?next=http%3A%2F%2Flocalhost%3A5000%2Fdoctor-panel%2F HTTP/1.1[0m" 302 -
+2022-02-14 19:33:35,666 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:35] "GET / HTTP/1.1" 200 -
+2022-02-14 19:33:35,994 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:33:37,162 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:37] "GET /login HTTP/1.1" 200 -
+2022-02-14 19:33:37,470 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:33:42,913 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:42] "[32mPOST /login HTTP/1.1[0m" 302 -
+2022-02-14 19:33:42,918 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:42] "GET / HTTP/1.1" 200 -
+2022-02-14 19:33:43,055 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:33:48,881 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:48] "[31m[1mGET /doctor-panel/ HTTP/1.1[0m" 403 -
+2022-02-14 19:33:50,291 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:33:53,177 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:53] "[32mGET /logout?next=http%3A%2F%2Flocalhost%3A5000%2F HTTP/1.1[0m" 302 -
+2022-02-14 19:33:53,478 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:53] "GET / HTTP/1.1" 200 -
+2022-02-14 19:33:53,803 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:33:54,321 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:54] "GET /login HTTP/1.1" 200 -
+2022-02-14 19:33:54,625 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:33:59,640 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:59] "[32mPOST /login HTTP/1.1[0m" 302 -
+2022-02-14 19:33:59,645 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:59] "GET / HTTP/1.1" 200 -
+2022-02-14 19:33:59,766 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:33:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:34:01,996 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:34:01] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-14 19:34:02,015 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:34:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:39:51,938 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-14 19:39:52,020 INFO werkzeug:  * Restarting with stat
+2022-02-14 19:39:52,544 INFO clinic_app: App initialization
+2022-02-14 19:39:53,082 WARNING werkzeug:  * Debugger is active!
+2022-02-14 19:39:53,085 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-14 19:39:53,128 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-14 19:40:43,972 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:40:43] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-14 19:40:44,076 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:40:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:40:44,197 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:40:44] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 19:42:15,894 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:42:15] "[35m[1mGET /doctor-panel/archived_appointments HTTP/1.1[0m" 500 -
+2022-02-14 19:42:15,910 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:42:15] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-02-14 19:42:16,096 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:42:16] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-02-14 19:42:16,410 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:42:16] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2022-02-14 19:42:16,411 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:42:16] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-14 19:42:16,664 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:42:16] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-14 19:58:30,672 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:58:30] "[35m[1mGET /doctor-panel/archived_appointments HTTP/1.1[0m" 500 -
+2022-02-14 19:58:30,687 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:58:30] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-02-14 19:58:30,879 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:58:30] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-02-14 19:58:31,194 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:58:31] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2022-02-14 19:58:31,194 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:58:31] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-14 19:58:31,460 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:58:31] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-14 19:58:48,626 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:58:48] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-14 19:58:48,917 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:58:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 19:58:49,225 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:58:49] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 19:59:26,425 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 19:59:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 20:03:04,088 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:03:04] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-14 20:03:04,100 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:03:04] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-14 20:03:04,334 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:03:04] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 20:04:07,903 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:04:07] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-14 20:04:07,916 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:04:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 20:04:08,151 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:04:08] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 20:04:32,357 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:04:32] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-14 20:04:32,370 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:04:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 20:04:32,592 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:04:32] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 20:04:52,242 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:04:52] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-14 20:04:52,254 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:04:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 20:04:52,462 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:04:52] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 20:05:34,213 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:05:34] "[35m[1mPOST /doctor-panel/archived_appointments HTTP/1.1[0m" 500 -
+2022-02-14 20:05:34,225 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:05:34] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-02-14 20:05:34,452 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:05:34] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-02-14 20:05:34,767 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:05:34] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2022-02-14 20:05:34,788 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:05:34] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-14 20:05:35,035 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:05:35] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-14 20:06:24,325 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-14 20:06:24,404 INFO werkzeug:  * Restarting with stat
+2022-02-14 20:06:24,948 INFO clinic_app: App initialization
+2022-02-14 20:06:25,452 WARNING werkzeug:  * Debugger is active!
+2022-02-14 20:06:25,455 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-14 20:06:25,497 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-14 20:06:25,708 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:06:25] "[32mPOST /doctor-panel/archived_appointments HTTP/1.1[0m" 302 -
+2022-02-14 20:06:25,758 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:06:25] "GET /doctor-panel/archived_appointments?date_from=2022-01-21 HTTP/1.1" 200 -
+2022-02-14 20:06:26,048 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:06:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 20:06:26,370 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:06:26] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 20:06:29,438 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:06:29] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-14 20:06:29,734 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:06:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 20:06:30,048 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:06:30] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 20:06:36,369 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:06:36] "[32mPOST /doctor-panel/archived_appointments HTTP/1.1[0m" 302 -
+2022-02-14 20:06:36,695 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:06:36] "GET /doctor-panel/archived_appointments?date_from=2022-01-27 HTTP/1.1" 200 -
+2022-02-14 20:06:37,027 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:06:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 20:06:37,295 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:06:37] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-14 20:06:38,820 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:06:38] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-14 20:06:39,113 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:06:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-14 20:06:39,431 INFO werkzeug: 127.0.0.1 - - [14/Feb/2022 20:06:39] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-15 18:49:06,813 INFO clinic_app: App initialization
+2022-02-15 18:49:07,353 INFO werkzeug:  * Restarting with stat
+2022-02-15 18:49:07,884 INFO clinic_app: App initialization
+2022-02-15 18:49:08,377 WARNING werkzeug:  * Debugger is active!
+2022-02-15 18:49:08,379 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-15 18:49:08,421 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-15 18:49:09,362 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:49:09] "GET /admin-panel/ HTTP/1.1" 200 -
+2022-02-15 18:49:09,480 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:49:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 18:49:09,583 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:49:09] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-15 18:49:11,899 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:49:11] "GET /admin-panel/appointments HTTP/1.1" 200 -
+2022-02-15 18:49:11,918 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:49:11] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 18:49:16,942 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:49:16] "[32mPOST /admin-panel/appointments HTTP/1.1[0m" 302 -
+2022-02-15 18:49:17,249 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:49:17] "GET /admin-panel/appointments?date=2022-01-12 HTTP/1.1" 200 -
+2022-02-15 18:49:17,577 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:49:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 18:49:25,009 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:49:25] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-15 18:49:25,307 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:49:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 18:49:28,548 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:49:28] "[35m[1mGET /doctor-panel/archived_appointments HTTP/1.1[0m" 500 -
+2022-02-15 18:49:28,572 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:49:28] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-02-15 18:49:28,797 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:49:28] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-02-15 18:49:29,127 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:49:29] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-15 18:49:29,128 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:49:29] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2022-02-15 18:49:29,378 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:49:29] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-15 18:50:16,641 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-15 18:50:16,710 INFO werkzeug:  * Restarting with stat
+2022-02-15 18:50:17,245 INFO clinic_app: App initialization
+2022-02-15 18:50:17,791 WARNING werkzeug:  * Debugger is active!
+2022-02-15 18:50:17,794 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-15 18:50:17,836 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-15 18:50:18,050 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:50:18] "[35m[1mGET /doctor-panel/archived_appointments HTTP/1.1[0m" 500 -
+2022-02-15 18:50:18,158 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:50:18] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-02-15 18:50:18,237 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:50:18] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-02-15 18:50:18,556 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:50:18] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2022-02-15 18:50:18,556 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:50:18] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-15 18:50:18,808 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:50:18] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-15 18:50:54,197 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:50:54] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-15 18:50:54,488 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 18:50:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 19:06:58,559 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:06:58] "GET /admin-panel/ HTTP/1.1" 200 -
+2022-02-15 19:06:58,578 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:06:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 19:06:58,790 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:06:58] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-15 19:06:59,910 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:06:59] "[35m[1mGET /admin-panel/appointments HTTP/1.1[0m" 500 -
+2022-02-15 19:06:59,928 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:06:59] "GET /admin-panel/appointments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-02-15 19:07:00,140 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:07:00] "GET /admin-panel/appointments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-02-15 19:07:00,457 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:07:00] "GET /admin-panel/appointments?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2022-02-15 19:07:00,458 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:07:00] "GET /admin-panel/appointments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-15 19:07:00,712 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:07:00] "GET /admin-panel/appointments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-15 19:09:00,898 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:09:00] "[35m[1mGET /admin-panel/appointments HTTP/1.1[0m" 500 -
+2022-02-15 19:09:00,911 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:09:00] "GET /admin-panel/appointments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-02-15 19:09:01,072 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:09:01] "GET /admin-panel/appointments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-02-15 19:09:01,387 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:09:01] "GET /admin-panel/appointments?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2022-02-15 19:09:01,387 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:09:01] "GET /admin-panel/appointments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-15 19:09:01,656 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:09:01] "GET /admin-panel/appointments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-15 19:10:37,836 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:10:37] "GET /admin-panel/appointments HTTP/1.1" 200 -
+2022-02-15 19:10:37,849 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:10:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 19:10:38,021 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:10:38] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-15 19:14:19,783 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:14:19] "GET /admin-panel/appointments HTTP/1.1" 200 -
+2022-02-15 19:14:19,798 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:14:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 19:14:19,986 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:14:19] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-15 19:14:20,615 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:14:20] "GET /admin-panel/patients HTTP/1.1" 200 -
+2022-02-15 19:14:20,635 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:14:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 19:14:21,479 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:14:21] "GET /admin-panel/doctors HTTP/1.1" 200 -
+2022-02-15 19:14:21,768 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:14:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 19:14:23,051 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:14:23] "GET /admin-panel/users HTTP/1.1" 200 -
+2022-02-15 19:14:23,072 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:14:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 19:14:24,192 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:14:24] "GET /admin-panel/doctors HTTP/1.1" 200 -
+2022-02-15 19:14:24,490 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:14:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 19:14:25,406 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:14:25] "[32mGET /admin-panel/appointments/new?doctor=2 HTTP/1.1[0m" 302 -
+2022-02-15 19:14:25,418 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:14:25] "GET /admin-panel/patients?doctor=2&act=1 HTTP/1.1" 200 -
+2022-02-15 19:14:25,665 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:14:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 19:14:28,046 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:14:28] "GET /admin-panel/appointments/new?doctor=2&patient=29 HTTP/1.1" 200 -
+2022-02-15 19:14:28,065 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:14:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 19:14:36,089 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:14:36] "GET /admin-panel/appointments HTTP/1.1" 200 -
+2022-02-15 19:14:36,341 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:14:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 19:16:04,487 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:16:04] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-15 19:16:04,505 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:16:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 19:16:05,235 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:16:05] "[35m[1mGET /doctor-panel/archived_appointments HTTP/1.1[0m" 500 -
+2022-02-15 19:16:05,514 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:16:05] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-02-15 19:16:05,560 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:16:05] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-02-15 19:16:05,878 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:16:05] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2022-02-15 19:16:05,878 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:16:05] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-15 19:16:06,132 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:16:06] "GET /doctor-panel/archived_appointments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-15 19:16:21,273 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:16:21] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-15 19:16:21,563 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:16:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 19:16:30,858 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:16:30] "GET /admin-panel/patients/6 HTTP/1.1" 200 -
+2022-02-15 19:16:30,877 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:16:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 19:16:35,322 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:16:35] "GET /admin-panel/appointments HTTP/1.1" 200 -
+2022-02-15 19:16:35,574 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:16:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 19:16:44,560 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:16:44] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-15 19:16:44,583 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:16:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 19:16:46,837 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:16:46] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-15 19:16:47,128 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:16:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 19:17:44,802 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:17:44] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-15 19:17:44,814 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 19:17:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 20:13:58,668 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\service\\appointment_service.py', reloading
+2022-02-15 20:13:58,747 INFO werkzeug:  * Restarting with stat
+2022-02-15 20:13:59,318 INFO clinic_app: App initialization
+2022-02-15 20:13:59,843 WARNING werkzeug:  * Debugger is active!
+2022-02-15 20:13:59,846 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-15 20:13:59,888 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-15 20:14:00,763 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:14:00] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-15 20:14:00,906 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:14:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 20:14:00,977 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:14:00] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-15 20:14:51,329 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\service\\appointment_service.py', reloading
+2022-02-15 20:14:51,396 INFO werkzeug:  * Restarting with stat
+2022-02-15 20:14:51,938 INFO clinic_app: App initialization
+2022-02-15 20:14:52,515 WARNING werkzeug:  * Debugger is active!
+2022-02-15 20:14:52,518 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-15 20:14:52,561 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-15 20:14:52,858 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:14:52] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-15 20:14:52,966 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:14:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 20:14:53,043 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:14:53] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-15 20:15:13,561 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\service\\appointment_service.py', reloading
+2022-02-15 20:15:13,627 INFO werkzeug:  * Restarting with stat
+2022-02-15 20:15:14,175 INFO clinic_app: App initialization
+2022-02-15 20:15:14,673 WARNING werkzeug:  * Debugger is active!
+2022-02-15 20:15:14,676 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-15 20:15:14,742 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-15 20:15:35,749 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\service\\appointment_service.py', reloading
+2022-02-15 20:15:35,829 INFO werkzeug:  * Restarting with stat
+2022-02-15 20:15:36,356 INFO clinic_app: App initialization
+2022-02-15 20:15:36,849 WARNING werkzeug:  * Debugger is active!
+2022-02-15 20:15:36,852 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-15 20:15:36,895 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-15 20:15:37,711 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:15:37] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-15 20:15:37,818 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:15:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 20:15:37,915 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:15:37] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-15 20:16:30,430 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\service\\appointment_service.py', reloading
+2022-02-15 20:16:30,497 INFO werkzeug:  * Restarting with stat
+2022-02-15 20:16:31,148 INFO clinic_app: App initialization
+2022-02-15 20:16:31,698 WARNING werkzeug:  * Debugger is active!
+2022-02-15 20:16:31,700 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-15 20:16:31,742 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-15 20:17:54,671 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\service\\appointment_service.py', reloading
+2022-02-15 20:17:54,743 INFO werkzeug:  * Restarting with stat
+2022-02-15 20:17:55,269 INFO clinic_app: App initialization
+2022-02-15 20:17:55,814 WARNING werkzeug:  * Debugger is active!
+2022-02-15 20:17:55,817 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-15 20:17:55,859 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-15 20:17:57,732 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:17:57] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-15 20:17:57,840 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:17:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 20:17:57,938 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:17:57] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-15 20:20:46,683 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\service\\appointment_service.py', reloading
+2022-02-15 20:20:46,774 INFO werkzeug:  * Restarting with stat
+2022-02-15 20:20:47,315 INFO clinic_app: App initialization
+2022-02-15 20:20:47,948 WARNING werkzeug:  * Debugger is active!
+2022-02-15 20:20:47,951 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-15 20:20:47,994 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-15 20:28:23,388 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\service\\appointment_service.py', reloading
+2022-02-15 20:28:23,453 INFO werkzeug:  * Restarting with stat
+2022-02-15 20:28:23,994 INFO clinic_app: App initialization
+2022-02-15 20:28:24,513 WARNING werkzeug:  * Debugger is active!
+2022-02-15 20:28:24,516 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-15 20:28:24,559 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-15 20:28:25,870 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:28:25] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-15 20:28:25,977 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:28:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 20:28:26,057 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:28:26] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-15 20:28:35,038 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-15 20:28:35,116 INFO werkzeug:  * Restarting with stat
+2022-02-15 20:28:35,641 INFO clinic_app: App initialization
+2022-02-15 20:28:36,149 WARNING werkzeug:  * Debugger is active!
+2022-02-15 20:28:36,151 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-15 20:28:36,194 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-15 20:28:36,268 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:28:36] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-15 20:28:36,568 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:28:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 20:28:36,574 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:28:36] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-15 20:29:44,389 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\service\\appointment_service.py', reloading
+2022-02-15 20:29:44,459 INFO werkzeug:  * Restarting with stat
+2022-02-15 20:29:44,998 INFO clinic_app: App initialization
+2022-02-15 20:29:45,542 WARNING werkzeug:  * Debugger is active!
+2022-02-15 20:29:45,545 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-15 20:29:45,587 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-15 20:29:48,497 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:29:48] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-15 20:29:48,603 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:29:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 20:29:48,695 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:29:48] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-15 20:30:29,037 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:30:29] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-15 20:30:29,050 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:30:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 20:30:29,300 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:30:29] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-15 20:30:49,538 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\service\\appointment_service.py', reloading
+2022-02-15 20:30:49,606 INFO werkzeug:  * Restarting with stat
+2022-02-15 20:30:50,135 INFO clinic_app: App initialization
+2022-02-15 20:30:50,712 WARNING werkzeug:  * Debugger is active!
+2022-02-15 20:30:50,715 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-15 20:30:50,758 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-15 20:30:51,036 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:30:51] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-15 20:30:51,139 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:30:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 20:30:51,260 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 20:30:51] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-15 22:14:11,272 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\service\\appointment_service.py', reloading
+2022-02-15 22:14:11,375 INFO werkzeug:  * Restarting with stat
+2022-02-15 22:14:11,990 INFO clinic_app: App initialization
+2022-02-15 22:14:12,562 WARNING werkzeug:  * Debugger is active!
+2022-02-15 22:14:12,565 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-15 23:22:39,519 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-15 23:22:51,837 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:22:51] "GET /admin-panel/ HTTP/1.1" 200 -
+2022-02-15 23:22:51,946 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:22:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:22:52,068 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:22:52] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-15 23:22:53,040 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:22:53] "GET /admin-panel/appointments HTTP/1.1" 200 -
+2022-02-15 23:22:53,064 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:22:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:22:57,187 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:22:57] "[32mPOST /admin-panel/appointments HTTP/1.1[0m" 302 -
+2022-02-15 23:22:57,495 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:22:57] "GET /admin-panel/appointments?date=2022-02-15 HTTP/1.1" 200 -
+2022-02-15 23:22:57,837 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:22:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:23:16,525 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:23:16] "GET /admin-panel/appointments HTTP/1.1" 200 -
+2022-02-15 23:23:16,792 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:23:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:23:33,956 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:23:33] "GET /admin-panel/appointments?page=2&per_page=20 HTTP/1.1" 200 -
+2022-02-15 23:23:33,976 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:23:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:23:35,786 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:23:35] "GET /admin-panel/appointments?page=3&per_page=20 HTTP/1.1" 200 -
+2022-02-15 23:23:36,040 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:23:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:23:37,672 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:23:37] "GET /admin-panel/appointments?page=4&per_page=20 HTTP/1.1" 200 -
+2022-02-15 23:23:37,694 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:23:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:23:43,617 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:23:43] "GET /admin-panel/appointments?page=5&per_page=20 HTTP/1.1" 200 -
+2022-02-15 23:23:43,868 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:23:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:23:49,072 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:23:49] "GET /admin-panel/appointments?page=4&per_page=20 HTTP/1.1" 200 -
+2022-02-15 23:23:49,093 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:23:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:23:51,788 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:23:51] "GET /admin-panel/appointments?page=5&per_page=20 HTTP/1.1" 200 -
+2022-02-15 23:23:52,053 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:23:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:24:14,857 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:24:14] "GET /admin-panel/doctors/4 HTTP/1.1" 200 -
+2022-02-15 23:24:14,877 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:24:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:24:22,609 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:24:22] "GET /admin-panel/users HTTP/1.1" 200 -
+2022-02-15 23:24:22,888 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:24:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:24:26,949 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:24:26] "GET /profile HTTP/1.1" 200 -
+2022-02-15 23:24:26,972 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:24:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:24:29,565 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:24:29] "[32mGET /logout?next=http%3A%2F%2Flocalhost%3A5000%2Fprofile HTTP/1.1[0m" 302 -
+2022-02-15 23:24:29,874 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:24:29] "GET / HTTP/1.1" 200 -
+2022-02-15 23:24:30,206 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:24:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:24:31,797 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:24:31] "GET /login HTTP/1.1" 200 -
+2022-02-15 23:24:32,108 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:24:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:24:37,436 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:24:37] "[32mPOST /login HTTP/1.1[0m" 302 -
+2022-02-15 23:24:37,441 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:24:37] "GET / HTTP/1.1" 200 -
+2022-02-15 23:24:37,563 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:24:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:24:40,723 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:24:40] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-15 23:24:40,742 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:24:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:24:41,632 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:24:41] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-15 23:24:41,913 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:24:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:25:12,511 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-15 23:25:12,589 INFO werkzeug:  * Restarting with stat
+2022-02-15 23:25:13,134 INFO clinic_app: App initialization
+2022-02-15 23:25:13,647 WARNING werkzeug:  * Debugger is active!
+2022-02-15 23:25:13,650 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-15 23:25:13,691 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-15 23:25:14,113 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:25:14] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-15 23:25:14,217 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:25:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:32:11,288 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\service\\appointment_service.py', reloading
+2022-02-15 23:32:11,361 INFO werkzeug:  * Restarting with stat
+2022-02-15 23:32:11,877 INFO clinic_app: App initialization
+2022-02-15 23:32:12,440 WARNING werkzeug:  * Debugger is active!
+2022-02-15 23:32:12,443 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-15 23:32:12,489 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-15 23:33:08,174 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:33:08] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-15 23:33:08,279 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:33:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:33:08,365 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:33:08] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-15 23:33:25,174 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:33:25] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-15 23:33:25,187 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:33:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:33:25,395 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:33:25] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-15 23:35:01,230 INFO clinic_app: App initialization
+2022-02-15 23:35:01,824 INFO werkzeug:  * Restarting with stat
+2022-02-15 23:35:02,353 INFO clinic_app: App initialization
+2022-02-15 23:35:02,861 WARNING werkzeug:  * Debugger is active!
+2022-02-15 23:35:02,863 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-15 23:35:02,907 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-15 23:35:03,678 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:35:03] "GET /doctor-panel/archived_appointments HTTP/1.1" 200 -
+2022-02-15 23:35:03,786 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:35:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:35:03,865 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:35:03] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-15 23:56:19,295 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-15 23:56:19,382 INFO werkzeug:  * Restarting with stat
+2022-02-15 23:56:19,916 INFO clinic_app: App initialization
+2022-02-15 23:56:20,507 WARNING werkzeug:  * Debugger is active!
+2022-02-15 23:56:20,510 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-15 23:56:20,553 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-15 23:56:22,691 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:22] "[32mGET /logout?next=http%3A%2F%2Flocalhost%3A5000%2Fdoctor-panel%2Farchived_appointments HTTP/1.1[0m" 302 -
+2022-02-15 23:56:22,703 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:22] "GET / HTTP/1.1" 200 -
+2022-02-15 23:56:23,031 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:56:23,351 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:23] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-15 23:56:23,630 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:23] "GET /login HTTP/1.1" 200 -
+2022-02-15 23:56:23,918 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:56:24,237 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:24] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-15 23:56:28,581 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:28] "[32mPOST /login HTTP/1.1[0m" 302 -
+2022-02-15 23:56:28,764 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:28] "GET / HTTP/1.1" 200 -
+2022-02-15 23:56:29,094 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:56:30,242 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:30] "GET /admin-panel/ HTTP/1.1" 200 -
+2022-02-15 23:56:30,543 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:56:31,576 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:31] "GET /admin-panel/appointments HTTP/1.1" 200 -
+2022-02-15 23:56:31,598 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:56:33,114 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:33] "GET /admin-panel/appointments/99 HTTP/1.1" 200 -
+2022-02-15 23:56:33,402 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:56:45,268 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:45] "[35m[1mGET /doctor-panel/appointments/99 HTTP/1.1[0m" 500 -
+2022-02-15 23:56:45,305 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:45] "GET /doctor-panel/appointments/99?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-02-15 23:56:45,505 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:45] "GET /doctor-panel/appointments/99?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-02-15 23:56:45,814 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:45] "GET /doctor-panel/appointments/99?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2022-02-15 23:56:45,815 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:45] "GET /doctor-panel/appointments/99?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-15 23:56:46,079 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:56:46] "GET /doctor-panel/appointments/99?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-15 23:57:01,674 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:57:01] "GET /doctor-panel/appointments/99 HTTP/1.1" 200 -
+2022-02-15 23:57:01,971 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:57:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:58:45,885 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:58:45] "GET /doctor-panel/appointments/99 HTTP/1.1" 200 -
+2022-02-15 23:58:45,897 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:58:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:58:50,839 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:58:50] "GET /admin-panel/ HTTP/1.1" 200 -
+2022-02-15 23:58:51,137 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:58:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:58:52,215 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:58:52] "GET /admin-panel/appointments HTTP/1.1" 200 -
+2022-02-15 23:58:52,241 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:58:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:58:54,473 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:58:54] "GET /admin-panel/appointments?page=2&per_page=20 HTTP/1.1" 200 -
+2022-02-15 23:58:54,740 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:58:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:58:56,243 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:58:56] "GET /admin-panel/appointments?page=3&per_page=20 HTTP/1.1" 200 -
+2022-02-15 23:58:56,261 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:58:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:58:57,238 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:58:57] "GET /admin-panel/appointments?page=4&per_page=20 HTTP/1.1" 200 -
+2022-02-15 23:58:57,504 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:58:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:58:58,949 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:58:58] "GET /admin-panel/appointments?page=5&per_page=20 HTTP/1.1" 200 -
+2022-02-15 23:58:58,970 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:58:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:58:59,967 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:58:59] "GET /admin-panel/appointments?page=6&per_page=20 HTTP/1.1" 200 -
+2022-02-15 23:59:00,232 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:59:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:59:02,880 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:59:02] "GET /admin-panel/appointments/102 HTTP/1.1" 200 -
+2022-02-15 23:59:02,900 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:59:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-15 23:59:08,604 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:59:08] "GET /doctor-panel/appointments/102 HTTP/1.1" 200 -
+2022-02-15 23:59:08,907 INFO werkzeug: 127.0.0.1 - - [15/Feb/2022 23:59:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:01:12,496 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:01:12] "GET /doctor-panel/appointments/102 HTTP/1.1" 200 -
+2022-02-16 00:01:12,514 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:01:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:03:14,274 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:03:14] "GET /doctor-panel/appointments/102 HTTP/1.1" 200 -
+2022-02-16 00:03:14,289 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:03:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:03:16,062 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:03:16] "GET /doctor-panel/appointments/102 HTTP/1.1" 200 -
+2022-02-16 00:03:16,367 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:03:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:03:32,447 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:03:32] "GET /doctor-panel/appointments/102 HTTP/1.1" 200 -
+2022-02-16 00:03:32,459 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:03:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:13:31,603 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:13:31] "GET /doctor-panel/appointments/99 HTTP/1.1" 200 -
+2022-02-16 00:13:31,616 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:13:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:13:31,847 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:13:31] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 00:13:41,190 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:13:41] "POST /doctor-panel/appointments/99 HTTP/1.1" 200 -
+2022-02-16 00:13:41,209 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:13:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:13:45,041 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:13:45] "POST /doctor-panel/appointments/99 HTTP/1.1" 200 -
+2022-02-16 00:13:45,342 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:13:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:13:47,147 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:13:47] "POST /doctor-panel/appointments/99 HTTP/1.1" 200 -
+2022-02-16 00:13:47,164 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:13:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:13:49,322 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:13:49] "POST /doctor-panel/appointments/99 HTTP/1.1" 200 -
+2022-02-16 00:13:49,624 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:13:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:13:54,096 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:13:54] "POST /doctor-panel/appointments/99 HTTP/1.1" 200 -
+2022-02-16 00:13:54,107 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:13:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:13:57,992 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:13:57] "POST /doctor-panel/appointments/99 HTTP/1.1" 200 -
+2022-02-16 00:13:58,302 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:13:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:15:08,652 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:15:08] "POST /doctor-panel/appointments/99 HTTP/1.1" 200 -
+2022-02-16 00:15:08,676 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:15:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:15:10,041 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:15:10] "POST /doctor-panel/appointments/99 HTTP/1.1" 200 -
+2022-02-16 00:15:10,348 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:15:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:15:18,509 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:15:18] "GET /doctor-panel/appointments/99 HTTP/1.1" 200 -
+2022-02-16 00:15:18,523 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:15:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:17:41,706 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:17:41] "POST /doctor-panel/appointments/99 HTTP/1.1" 200 -
+2022-02-16 00:17:41,721 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:17:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:17:58,704 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\utils.py', reloading
+2022-02-16 00:17:58,780 INFO werkzeug:  * Restarting with stat
+2022-02-16 00:17:59,317 INFO clinic_app: App initialization
+2022-02-16 00:17:59,858 WARNING werkzeug:  * Debugger is active!
+2022-02-16 00:17:59,861 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-16 00:17:59,903 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-16 00:18:00,178 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:18:00] "POST /doctor-panel/appointments/99 HTTP/1.1" 200 -
+2022-02-16 00:18:00,481 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:18:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:18:15,633 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\utils.py', reloading
+2022-02-16 00:18:15,699 INFO werkzeug:  * Restarting with stat
+2022-02-16 00:18:16,230 INFO clinic_app: App initialization
+2022-02-16 00:18:16,742 WARNING werkzeug:  * Debugger is active!
+2022-02-16 00:18:16,745 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-16 00:18:16,787 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-16 00:23:21,964 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\utils.py', reloading
+2022-02-16 00:23:22,033 INFO werkzeug:  * Restarting with stat
+2022-02-16 00:23:22,540 INFO clinic_app: App initialization
+2022-02-16 00:23:23,085 WARNING werkzeug:  * Debugger is active!
+2022-02-16 00:23:23,088 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-16 00:23:23,131 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-16 00:23:26,191 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:23:26] "POST /doctor-panel/appointments/99 HTTP/1.1" 200 -
+2022-02-16 00:23:26,306 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:23:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:23:26,406 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:23:26] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 00:23:37,515 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:23:37] "POST /doctor-panel/appointments/99 HTTP/1.1" 200 -
+2022-02-16 00:23:37,532 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:23:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:23:37,771 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:23:37] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 00:23:51,463 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\utils.py', reloading
+2022-02-16 00:23:51,530 INFO werkzeug:  * Restarting with stat
+2022-02-16 00:23:52,056 INFO clinic_app: App initialization
+2022-02-16 00:23:52,603 WARNING werkzeug:  * Debugger is active!
+2022-02-16 00:23:52,605 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-16 00:23:52,647 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-16 00:23:52,761 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:23:52] "POST /doctor-panel/appointments/99 HTTP/1.1" 200 -
+2022-02-16 00:23:52,863 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:23:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:23:52,976 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:23:52] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 00:25:18,117 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:25:18] "POST /doctor-panel/appointments/99 HTTP/1.1" 200 -
+2022-02-16 00:25:18,129 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:25:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:25:18,345 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:25:18] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 00:25:20,395 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:25:20] "[32mPOST /doctor-panel/appointments/99 HTTP/1.1[0m" 302 -
+2022-02-16 00:25:20,403 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:25:20] "GET /doctor-panel/appointments/99 HTTP/1.1" 200 -
+2022-02-16 00:25:20,548 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:25:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:28:09,303 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-16 00:28:09,371 INFO werkzeug:  * Restarting with stat
+2022-02-16 00:28:09,911 INFO clinic_app: App initialization
+2022-02-16 00:28:10,442 WARNING werkzeug:  * Debugger is active!
+2022-02-16 00:28:10,445 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-16 00:28:10,487 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-16 00:30:05,657 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:30:05] "GET /doctor-panel/appointments/99 HTTP/1.1" 200 -
+2022-02-16 00:30:05,773 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:30:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:30:05,869 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:30:05] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 00:35:01,546 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-16 00:35:01,619 INFO werkzeug:  * Restarting with stat
+2022-02-16 00:35:02,556 INFO clinic_app: App initialization
+2022-02-16 00:35:03,059 WARNING werkzeug:  * Debugger is active!
+2022-02-16 00:35:03,072 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-16 00:35:03,115 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-16 00:35:03,418 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:35:03] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 00:35:03,529 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:35:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 00:35:03,623 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 00:35:03] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 18:44:04,291 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-16 18:44:04,360 INFO werkzeug:  * Restarting with stat
+2022-02-16 18:44:05,354 INFO clinic_app: App initialization
+2022-02-16 18:44:05,963 WARNING werkzeug:  * Debugger is active!
+2022-02-16 18:44:05,966 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-16 18:44:06,008 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-16 18:44:08,314 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:44:08] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 18:44:08,426 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:44:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 18:44:08,521 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:44:08] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 18:44:18,417 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:44:18] "GET /admin-panel/ HTTP/1.1" 200 -
+2022-02-16 18:44:18,442 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:44:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 18:44:18,664 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:44:18] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 18:44:20,260 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:44:20] "GET /admin-panel/users HTTP/1.1" 200 -
+2022-02-16 18:44:20,276 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:44:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 18:44:21,608 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:44:21] "GET /admin-panel/patients HTTP/1.1" 200 -
+2022-02-16 18:44:21,897 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:44:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 18:45:24,972 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:45:24] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-16 18:45:24,993 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:45:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 18:45:25,947 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:45:25] "GET /admin-panel/users HTTP/1.1" 200 -
+2022-02-16 18:45:26,248 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:45:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 18:45:27,939 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:45:27] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-16 18:45:27,959 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:45:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 18:45:28,607 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:45:28] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 18:45:28,897 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:45:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 18:46:33,520 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:46:33] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 18:46:33,532 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:46:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 18:46:34,629 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:46:34] "GET /doctor-panel/appointments/101 HTTP/1.1" 200 -
+2022-02-16 18:46:34,920 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:46:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 18:46:41,468 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:46:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 18:51:50,343 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-16 18:51:50,435 INFO werkzeug:  * Restarting with stat
+2022-02-16 18:51:50,977 INFO clinic_app: App initialization
+2022-02-16 18:51:51,530 WARNING werkzeug:  * Debugger is active!
+2022-02-16 18:51:51,533 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-16 18:51:51,576 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-16 18:51:51,634 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:51:51] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 18:51:51,927 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:51:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 18:51:51,935 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:51:51] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 18:52:36,681 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-16 18:52:36,766 INFO werkzeug:  * Restarting with stat
+2022-02-16 18:52:37,294 INFO clinic_app: App initialization
+2022-02-16 18:52:37,810 WARNING werkzeug:  * Debugger is active!
+2022-02-16 18:52:37,813 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-16 18:52:37,855 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-16 18:52:41,069 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:52:41] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 18:52:41,179 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:52:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 18:52:41,270 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:52:41] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 18:53:05,123 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-16 18:53:05,189 INFO werkzeug:  * Restarting with stat
+2022-02-16 18:53:05,717 INFO clinic_app: App initialization
+2022-02-16 18:53:06,239 WARNING werkzeug:  * Debugger is active!
+2022-02-16 18:53:06,242 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-16 18:53:06,285 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-16 18:53:06,413 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:53:06] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 18:53:06,703 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:53:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 18:53:06,712 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:53:06] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 18:53:07,437 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:53:07] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 18:53:07,450 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:53:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 18:53:07,840 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:53:07] "GET /admin-panel/users HTTP/1.1" 200 -
+2022-02-16 18:53:08,130 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:53:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 18:53:09,918 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:53:09] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-16 18:53:09,937 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:53:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 18:53:11,678 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:53:11] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-16 18:53:11,987 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:53:11] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 18:53:12,646 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:53:12] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 18:53:12,668 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 18:53:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 18:58:25,969 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-16 18:58:26,046 INFO werkzeug:  * Restarting with stat
+2022-02-16 18:58:26,604 INFO clinic_app: App initialization
+2022-02-16 18:58:27,201 WARNING werkzeug:  * Debugger is active!
+2022-02-16 18:58:27,204 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-16 18:58:27,246 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-16 19:03:09,147 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-16 19:03:09,212 INFO werkzeug:  * Restarting with stat
+2022-02-16 19:03:09,738 INFO clinic_app: App initialization
+2022-02-16 19:03:10,249 WARNING werkzeug:  * Debugger is active!
+2022-02-16 19:03:10,251 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-16 19:03:10,293 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-16 19:03:11,336 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:03:11] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:03:11,453 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:03:11] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:03:11,519 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:03:11] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:04:08,822 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:08] "GET /admin-panel/users HTTP/1.1" 200 -
+2022-02-16 19:04:08,838 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:04:09,056 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:09] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:04:15,421 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:15] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-16 19:04:15,440 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:04:15,670 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:15] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:04:17,097 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:17] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 19:04:17,118 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:04:19,287 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:19] "GET /doctor-panel/appointments/upcoming HTTP/1.1" 200 -
+2022-02-16 19:04:19,583 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:04:22,033 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:22] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 19:04:22,053 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:04:23,096 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:23] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:04:23,390 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:04:32,957 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:32] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 19:04:32,980 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:04:33,836 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:33] "GET /doctor-panel/appointments/upcoming HTTP/1.1" 200 -
+2022-02-16 19:04:34,127 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:04:47,567 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:47] "[32mPOST /doctor-panel/appointments/upcoming HTTP/1.1[0m" 302 -
+2022-02-16 19:04:47,589 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:47] "GET /doctor-panel/appointments/upcoming?patient_name=ì HTTP/1.1" 200 -
+2022-02-16 19:04:47,816 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:04:50,533 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:50] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 19:04:50,554 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:04:51,596 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:51] "GET /doctor-panel/appointments/upcoming HTTP/1.1" 200 -
+2022-02-16 19:04:51,889 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:04:54,036 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:54] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:04:54,057 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:04:57,747 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:57] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 19:04:58,043 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:04:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:08:35,277 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-16 19:08:35,346 INFO werkzeug:  * Restarting with stat
+2022-02-16 19:08:35,874 INFO clinic_app: App initialization
+2022-02-16 19:08:36,376 WARNING werkzeug:  * Debugger is active!
+2022-02-16 19:08:36,379 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-16 19:08:36,421 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-16 19:08:36,574 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:08:36] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:08:36,688 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:08:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:08:36,762 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:08:36] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:08:38,269 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:08:38] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 19:08:38,292 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:08:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:08:40,172 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:08:40] "GET /doctor-panel/appointments/upcoming HTTP/1.1" 200 -
+2022-02-16 19:08:40,468 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:08:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:08:44,785 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:08:44] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 19:08:44,804 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:08:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:08:46,236 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:08:46] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:08:46,519 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:08:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:10:09,607 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:10:09] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 19:10:09,625 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:10:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:10:10,429 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:10:10] "GET /doctor-panel/appointments/upcoming HTTP/1.1" 200 -
+2022-02-16 19:10:10,731 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:10:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:13:43,002 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:13:43] "GET /doctor-panel/appointments/upcoming HTTP/1.1" 200 -
+2022-02-16 19:13:43,015 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:13:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:13:43,242 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:13:43] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:13:44,778 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:13:44] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 19:13:44,801 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:13:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:13:45,918 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:13:45] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:13:46,213 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:13:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:13:47,373 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:13:47] "GET /doctor-panel/appointments/upcoming HTTP/1.1" 200 -
+2022-02-16 19:13:47,390 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:13:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:16:37,420 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-16 19:16:37,490 INFO werkzeug:  * Restarting with stat
+2022-02-16 19:16:38,048 INFO clinic_app: App initialization
+2022-02-16 19:16:38,566 WARNING werkzeug:  * Debugger is active!
+2022-02-16 19:16:38,569 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-16 19:16:38,612 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-16 19:16:39,675 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:16:39] "[33mGET /doctor-panel/appointments/upcoming HTTP/1.1[0m" 404 -
+2022-02-16 19:16:42,668 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:16:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:16:43,796 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:16:43] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:16:44,055 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:16:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:16:44,380 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:16:44] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:16:44,826 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:16:44] "GET /doctor-panel/appointments/booked HTTP/1.1" 200 -
+2022-02-16 19:16:45,116 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:16:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:16:48,740 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:16:48] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 19:16:48,757 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:16:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:16:56,328 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:16:56] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:16:56,623 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:16:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:16:58,738 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:16:58] "GET /doctor-panel/appointments/101 HTTP/1.1" 200 -
+2022-02-16 19:16:58,762 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:16:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:17:00,694 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:17:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:17:01,300 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:17:01] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 19:17:01,595 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:17:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:17:02,659 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:17:02] "GET /doctor-panel/appointments/4 HTTP/1.1" 200 -
+2022-02-16 19:17:02,686 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:17:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:17:10,134 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:17:10] "[32mPOST /doctor-panel/appointments/4 HTTP/1.1[0m" 302 -
+2022-02-16 19:17:10,422 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:17:10] "GET /doctor-panel/appointments/4 HTTP/1.1" 200 -
+2022-02-16 19:17:10,749 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:17:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:17:12,041 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:17:12] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:17:12,337 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:17:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:17:19,082 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:17:19] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 19:17:19,101 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:17:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:17:21,372 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:17:21] "GET /doctor-panel/appointments/booked HTTP/1.1" 200 -
+2022-02-16 19:17:21,663 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:17:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:17:23,165 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:17:23] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:17:23,184 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:17:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:21:23,829 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-16 19:21:23,901 INFO werkzeug:  * Restarting with stat
+2022-02-16 19:21:24,429 INFO clinic_app: App initialization
+2022-02-16 19:21:24,932 WARNING werkzeug:  * Debugger is active!
+2022-02-16 19:21:24,935 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-16 19:21:24,977 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-16 19:21:25,959 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:21:25] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 19:21:26,082 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:21:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:21:26,163 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:21:26] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:21:27,824 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:21:27] "GET /doctor-panel/appointments/6 HTTP/1.1" 200 -
+2022-02-16 19:21:27,840 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:21:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:21:29,613 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:21:29] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:21:29,898 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:21:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:21:31,620 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:21:31] "GET /doctor-panel/appointments/103 HTTP/1.1" 200 -
+2022-02-16 19:21:31,638 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:21:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:35:09,544 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:35:09] "[35m[1mGET /doctor-panel/appointments/103 HTTP/1.1[0m" 500 -
+2022-02-16 19:35:09,564 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:35:09] "GET /doctor-panel/appointments/103?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-02-16 19:35:09,698 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:35:09] "GET /doctor-panel/appointments/103?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-02-16 19:35:10,013 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:35:10] "GET /doctor-panel/appointments/103?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-16 19:35:10,014 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:35:10] "GET /doctor-panel/appointments/103?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2022-02-16 19:35:10,276 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:35:10] "GET /doctor-panel/appointments/103?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-16 19:38:37,276 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:38:37] "GET /doctor-panel/appointments/103 HTTP/1.1" 200 -
+2022-02-16 19:38:37,288 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:38:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:38:37,506 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:38:37] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:38:40,382 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:38:40] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:38:40,402 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:38:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:38:40,616 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:38:40] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:38:46,948 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:38:46] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 19:38:46,962 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:38:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:38:47,761 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:38:47] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:38:48,044 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:38:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:40:09,829 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:40:09] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:40:09,841 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:40:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:40:11,944 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:40:11] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-16 19:40:12,249 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:40:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:42:03,033 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:42:03] "GET /admin-panel/ HTTP/1.1" 200 -
+2022-02-16 19:42:03,051 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:42:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:42:03,834 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:42:03] "GET /admin-panel/users HTTP/1.1" 200 -
+2022-02-16 19:42:04,131 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:42:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:42:05,215 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:42:05] "GET /admin-panel/patients HTTP/1.1" 200 -
+2022-02-16 19:42:05,237 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:42:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:42:06,227 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:42:06] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-16 19:42:06,525 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:42:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:46:37,376 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-16 19:46:37,476 INFO werkzeug:  * Restarting with stat
+2022-02-16 19:46:38,062 INFO clinic_app: App initialization
+2022-02-16 19:46:38,668 WARNING werkzeug:  * Debugger is active!
+2022-02-16 19:46:38,671 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-16 19:46:38,713 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-16 19:46:38,853 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:46:38] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-16 19:46:39,163 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:46:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:46:39,170 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:46:39] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:47:36,979 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:47:36] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-16 19:47:36,992 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:47:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:47:37,221 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:47:37] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:48:31,956 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:48:31] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-16 19:48:31,968 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:48:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 19:48:32,206 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:48:32] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:49:15,783 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:49:15] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:49:15,802 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:49:15] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-16 19:49:16,014 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:49:16] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:50:19,104 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:50:19] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:50:19,118 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:50:19] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-16 19:50:19,324 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:50:19] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:53:24,160 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:53:24] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:53:24,173 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:53:24] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-16 19:53:24,409 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:53:24] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:53:57,388 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:53:57] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:53:57,401 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:53:57] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-16 19:53:57,625 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:53:57] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:54:12,929 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:54:12] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:54:12,941 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:54:12] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-16 19:54:13,159 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:54:13] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:54:20,332 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:54:20] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:54:20,344 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:54:20] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-16 19:54:20,582 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:54:20] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:54:37,148 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:54:37] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:54:37,160 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:54:37] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-16 19:54:37,383 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:54:37] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:54:56,230 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:54:56] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:54:56,242 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:54:56] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-16 19:54:56,465 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:54:56] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:55:27,612 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:55:27] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:55:27,624 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:55:27] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-16 19:55:27,846 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:55:27] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:55:54,766 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:55:54] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:55:54,779 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:55:54] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-16 19:55:55,002 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:55:55] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:56:46,407 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:56:46] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:56:46,419 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:56:46] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-16 19:56:46,625 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:56:46] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 19:57:18,193 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:57:18] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 19:57:18,206 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:57:18] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-16 19:57:18,427 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 19:57:18] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 20:42:27,488 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:42:27] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 20:42:27,502 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:42:27] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-16 20:42:27,705 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:42:27] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 20:43:23,586 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:43:23] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 20:43:23,607 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:43:23] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-16 20:43:23,821 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:43:23] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 20:43:34,394 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:43:34] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 20:43:34,407 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:43:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 20:43:34,629 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:43:34] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 20:43:44,812 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:43:44] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 20:43:44,826 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:43:44] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-16 20:43:45,049 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:43:45] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 20:43:56,393 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:43:56] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 20:43:56,407 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:43:56] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-16 20:43:56,628 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:43:56] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 20:44:00,904 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:44:00] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 20:44:00,920 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:44:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 20:44:01,152 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:44:01] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 20:44:41,634 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-16 20:44:41,702 INFO werkzeug:  * Restarting with stat
+2022-02-16 20:44:42,236 INFO clinic_app: App initialization
+2022-02-16 20:44:42,826 WARNING werkzeug:  * Debugger is active!
+2022-02-16 20:44:42,829 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-16 20:44:42,872 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-16 20:44:42,968 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:44:42] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 20:44:43,247 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:44:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 20:44:43,254 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:44:43] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 20:45:08,037 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:45:08] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 20:45:08,049 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:45:08] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-16 20:45:08,280 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:45:08] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 20:45:56,772 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:45:56] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 20:45:56,784 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:45:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 20:45:57,017 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:45:57] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 20:46:45,565 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:46:45] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 20:46:45,578 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:46:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 20:46:45,779 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:46:45] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 20:46:54,610 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:46:54] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 20:46:54,623 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:46:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 20:46:54,855 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:46:54] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 20:47:07,913 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:47:07] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 20:47:07,927 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:47:07] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-16 20:47:08,161 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:47:08] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 20:49:07,476 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:49:07] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 20:49:07,488 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:49:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 20:49:07,705 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:49:07] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 20:49:23,761 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-16 20:49:23,830 INFO werkzeug:  * Restarting with stat
+2022-02-16 20:49:24,362 INFO clinic_app: App initialization
+2022-02-16 20:49:24,906 WARNING werkzeug:  * Debugger is active!
+2022-02-16 20:49:24,909 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-16 20:49:24,952 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-16 20:49:25,091 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:49:25] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 20:49:25,197 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:49:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 20:49:25,291 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:49:25] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 20:49:43,811 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-16 20:49:43,902 INFO werkzeug:  * Restarting with stat
+2022-02-16 20:49:44,445 INFO clinic_app: App initialization
+2022-02-16 20:49:45,029 WARNING werkzeug:  * Debugger is active!
+2022-02-16 20:49:45,032 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-16 20:49:45,075 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-16 20:49:45,281 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:49:45] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 20:49:45,387 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:49:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 20:49:45,482 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:49:45] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 20:49:51,779 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:49:51] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 20:49:51,792 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:49:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 20:49:52,012 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:49:52] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 20:49:53,709 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:49:53] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 20:49:53,730 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:49:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 20:49:54,949 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:49:54] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 20:49:55,233 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:49:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 20:52:20,475 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:52:20] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 20:52:20,489 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:52:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 20:53:37,798 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:53:37] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 20:53:37,811 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:53:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 20:53:47,158 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:53:47] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 20:53:47,443 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:53:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 20:53:56,964 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:53:56] "GET /doctor-panel/appointments/booked HTTP/1.1" 200 -
+2022-02-16 20:53:56,981 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:53:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 20:54:01,053 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:54:01] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 20:54:01,343 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:54:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 20:54:03,863 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:54:03] "[32mGET /logout?next=http%3A%2F%2Flocalhost%3A5000%2Fdoctor-panel%2Fappointments%2Funfilled HTTP/1.1[0m" 302 -
+2022-02-16 20:54:03,869 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:54:03] "GET / HTTP/1.1" 200 -
+2022-02-16 20:54:04,114 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:54:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 20:54:04,796 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:54:04] "GET /login HTTP/1.1" 200 -
+2022-02-16 20:54:04,819 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:54:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 20:54:13,051 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:54:13] "[32mPOST /login HTTP/1.1[0m" 302 -
+2022-02-16 20:54:13,228 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:54:13] "GET / HTTP/1.1" 200 -
+2022-02-16 20:54:13,557 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:54:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 20:54:15,571 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:54:15] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-16 20:54:15,875 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:54:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 20:54:17,123 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:54:17] "GET /doctor-panel/appointments/booked HTTP/1.1" 200 -
+2022-02-16 20:54:17,142 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 20:54:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:04:12,727 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:04:12] "GET /doctor-panel/appointments/booked HTTP/1.1" 200 -
+2022-02-16 21:04:12,741 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:04:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:04:12,954 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:04:12] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 21:04:17,022 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:04:17] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 21:04:17,050 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:04:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:04:17,259 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:04:17] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 21:04:19,128 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:04:19] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 21:04:19,145 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:04:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:04:20,483 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:04:20] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 21:04:20,767 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:04:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:04:36,859 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:04:36] "GET /doctor-panel/appointments/booked HTTP/1.1" 200 -
+2022-02-16 21:04:36,878 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:04:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:05:29,339 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:05:29] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 21:05:29,638 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:05:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:05:30,899 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:05:30] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 21:05:30,917 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:05:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:05:31,815 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:05:31] "GET /doctor-panel/appointments/booked HTTP/1.1" 200 -
+2022-02-16 21:05:32,094 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:05:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:07:01,330 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:07:01] "GET /doctor-panel/appointments/booked HTTP/1.1" 200 -
+2022-02-16 21:07:01,344 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:07:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:07:31,700 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:07:31] "GET /doctor-panel/appointments/booked HTTP/1.1" 200 -
+2022-02-16 21:07:31,994 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:07:31] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-16 21:07:32,313 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:07:32] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 21:07:32,883 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:07:32] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 21:07:33,166 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:07:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:07:34,922 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:07:34] "GET /doctor-panel/appointments/booked HTTP/1.1" 200 -
+2022-02-16 21:07:34,949 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:07:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:07:40,922 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:07:40] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 21:07:41,221 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:07:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:07:42,458 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:07:42] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 21:07:42,479 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:07:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:08:19,660 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:08:19] "GET /doctor-panel/appointments/119 HTTP/1.1" 200 -
+2022-02-16 21:08:19,953 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:08:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:08:36,862 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:08:36] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 21:08:36,885 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:08:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:08:37,750 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:08:37] "GET /doctor-panel/appointments/20 HTTP/1.1" 200 -
+2022-02-16 21:08:38,042 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:08:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:11:10,101 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:11:10] "GET /doctor-panel/appointments/20 HTTP/1.1" 200 -
+2022-02-16 21:11:10,115 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:11:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:11:13,111 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:11:13] "[32mPOST /doctor-panel/appointments/20 HTTP/1.1[0m" 302 -
+2022-02-16 21:11:13,344 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:11:13] "GET /doctor-panel/appointments/20 HTTP/1.1" 200 -
+2022-02-16 21:11:13,662 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:11:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:14:22,459 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:14:22] "GET /doctor-panel/appointments/20 HTTP/1.1" 200 -
+2022-02-16 21:14:22,471 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:14:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:16:45,890 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:16:45] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 21:16:45,904 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:16:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:16:48,002 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:16:48] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 21:16:48,296 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:16:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:19:44,947 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:19:44] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 21:19:44,961 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:19:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:19:45,141 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:19:45] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 21:19:48,920 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:19:48] "[32mPOST /doctor-panel/appointments/archived HTTP/1.1[0m" 302 -
+2022-02-16 21:19:48,937 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:19:48] "GET /doctor-panel/appointments/archived?patient_name=hjmhgjk HTTP/1.1" 200 -
+2022-02-16 21:19:49,170 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:19:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:23:05,743 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:23:05] "GET /doctor-panel/appointments/archived?patient_name=hjmhgjk HTTP/1.1" 200 -
+2022-02-16 21:23:05,755 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:23:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:23:34,125 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:23:34] "GET /doctor-panel/appointments/archived?patient_name=hjmhgjk HTTP/1.1" 200 -
+2022-02-16 21:23:34,389 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:23:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:23:37,195 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:23:37] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 21:23:37,211 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:23:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:25:04,547 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:25:04] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 21:25:04,561 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:25:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:28:04,754 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:28:04] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 21:28:04,766 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:28:04] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-16 21:28:04,968 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:28:04] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 21:39:43,172 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:39:43] "[35m[1mGET /doctor-panel/appointments/archived HTTP/1.1[0m" 500 -
+2022-02-16 21:39:43,193 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:39:43] "GET /doctor-panel/appointments/archived?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-02-16 21:39:43,400 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:39:43] "GET /doctor-panel/appointments/archived?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-02-16 21:39:43,717 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:39:43] "GET /doctor-panel/appointments/archived?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2022-02-16 21:39:43,717 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:39:43] "GET /doctor-panel/appointments/archived?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-16 21:39:43,984 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:39:43] "GET /doctor-panel/appointments/archived?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-02-16 21:40:22,689 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:22] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 21:40:22,962 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:40:23,277 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:23] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 21:40:31,189 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:31] "[32mPOST /doctor-panel/appointments/archived HTTP/1.1[0m" 302 -
+2022-02-16 21:40:31,507 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:31] "GET /doctor-panel/appointments/archived?patient_name=dfg HTTP/1.1" 200 -
+2022-02-16 21:40:31,838 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:40:32,106 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:32] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-16 21:40:34,133 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:34] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 21:40:34,423 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:40:37,680 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:37] "[32mGET /logout?next=http%3A%2F%2Flocalhost%3A5000%2Fdoctor-panel%2Fappointments%2Farchived HTTP/1.1[0m" 302 -
+2022-02-16 21:40:37,683 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:37] "GET / HTTP/1.1" 200 -
+2022-02-16 21:40:37,932 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:40:39,386 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:39] "GET /login HTTP/1.1" 200 -
+2022-02-16 21:40:39,407 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:40:44,139 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:44] "[32mPOST /login HTTP/1.1[0m" 302 -
+2022-02-16 21:40:44,339 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:44] "GET / HTTP/1.1" 200 -
+2022-02-16 21:40:44,684 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:40:46,078 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:46] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-16 21:40:46,386 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:40:47,172 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:47] "GET /admin-panel/ HTTP/1.1" 200 -
+2022-02-16 21:40:47,196 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:40:47,969 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:47] "GET /admin-panel/users HTTP/1.1" 200 -
+2022-02-16 21:40:48,254 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:40:50,468 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:50] "GET /admin-panel/appointments HTTP/1.1" 200 -
+2022-02-16 21:40:50,492 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:40:52,645 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:52] "[32mPOST /admin-panel/appointments HTTP/1.1[0m" 302 -
+2022-02-16 21:40:52,962 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:52] "GET /admin-panel/appointments?doctor_name=bfgh HTTP/1.1" 200 -
+2022-02-16 21:40:53,330 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:40:55,529 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:55] "GET /admin-panel/appointments HTTP/1.1" 200 -
+2022-02-16 21:40:55,784 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:40:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:41:07,673 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:41:07] "[32mGET /admin-panel/appointments/new HTTP/1.1[0m" 302 -
+2022-02-16 21:41:07,693 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:41:07] "GET /admin-panel/doctors?act=1 HTTP/1.1" 200 -
+2022-02-16 21:41:07,923 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:41:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:41:12,989 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:41:12] "GET /admin-panel/users HTTP/1.1" 200 -
+2022-02-16 21:41:13,012 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:41:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:41:14,198 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:41:14] "GET /admin-panel/users/new HTTP/1.1" 200 -
+2022-02-16 21:41:14,494 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:41:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:41:24,058 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:41:24] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-16 21:41:24,081 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:41:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:41:26,892 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:41:26] "GET /doctor-panel/appointments/booked HTTP/1.1" 200 -
+2022-02-16 21:41:27,185 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:41:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:41:29,790 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:41:29] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 21:41:29,813 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:41:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 21:41:33,976 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:41:33] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-16 21:41:34,263 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 21:41:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 22:00:51,739 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 22:00:51] "GET /admin-panel/ HTTP/1.1" 200 -
+2022-02-16 22:00:51,760 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 22:00:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 22:00:52,449 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 22:00:52] "GET /admin-panel/appointments HTTP/1.1" 200 -
+2022-02-16 22:00:52,716 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 22:00:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 22:00:54,119 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 22:00:54] "GET /admin-panel/doctors HTTP/1.1" 200 -
+2022-02-16 22:00:54,146 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 22:00:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 22:01:06,124 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 22:01:06] "GET /admin-panel/appointments HTTP/1.1" 200 -
+2022-02-16 22:01:06,390 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 22:01:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 22:01:18,499 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 22:01:18] "GET /admin-panel/ HTTP/1.1" 200 -
+2022-02-16 22:01:18,521 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 22:01:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 22:01:19,795 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 22:01:19] "GET /doctor-panel/ HTTP/1.1" 200 -
+2022-02-16 22:01:20,106 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 22:01:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 22:01:21,747 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 22:01:21] "GET /doctor-panel/appointments/booked HTTP/1.1" 200 -
+2022-02-16 22:01:21,770 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 22:01:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 23:05:43,427 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 23:05:43] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-16 23:05:43,446 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 23:05:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 23:57:40,483 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 23:57:40] "GET /doctor-panel/appointments/booked HTTP/1.1" 200 -
+2022-02-16 23:57:40,502 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 23:57:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-16 23:57:40,718 INFO werkzeug: 127.0.0.1 - - [16/Feb/2022 23:57:40] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-17 00:06:21,543 INFO werkzeug:  * Detected change in 'E:\\Desktop\\programing\\py\\epam\\clinic\\clinic_app\\views\\routes\\doctor.py', reloading
+2022-02-17 00:06:21,639 INFO werkzeug:  * Restarting with stat
+2022-02-17 00:06:22,187 INFO clinic_app: App initialization
+2022-02-17 00:06:22,696 WARNING werkzeug:  * Debugger is active!
+2022-02-17 00:06:22,699 INFO werkzeug:  * Debugger PIN: 134-257-993
+2022-02-17 00:06:22,742 INFO werkzeug:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-02-17 00:06:26,417 INFO werkzeug: 127.0.0.1 - - [17/Feb/2022 00:06:26] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-17 00:06:26,524 INFO werkzeug: 127.0.0.1 - - [17/Feb/2022 00:06:26] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-17 00:06:26,612 INFO werkzeug: 127.0.0.1 - - [17/Feb/2022 00:06:26] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-17 00:06:27,303 INFO werkzeug: 127.0.0.1 - - [17/Feb/2022 00:06:27] "GET /doctor-panel/appointments/unfilled HTTP/1.1" 200 -
+2022-02-17 00:06:27,322 INFO werkzeug: 127.0.0.1 - - [17/Feb/2022 00:06:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-17 00:06:34,964 INFO werkzeug: 127.0.0.1 - - [17/Feb/2022 00:06:34] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-17 00:06:35,240 INFO werkzeug: 127.0.0.1 - - [17/Feb/2022 00:06:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-17 00:07:13,427 INFO werkzeug: 127.0.0.1 - - [17/Feb/2022 00:07:13] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-17 00:07:13,441 INFO werkzeug: 127.0.0.1 - - [17/Feb/2022 00:07:13] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-17 00:07:13,671 INFO werkzeug: 127.0.0.1 - - [17/Feb/2022 00:07:13] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-17 00:07:49,786 INFO werkzeug: 127.0.0.1 - - [17/Feb/2022 00:07:49] "GET /doctor-panel/appointments/archived HTTP/1.1" 200 -
+2022-02-17 00:07:49,798 INFO werkzeug: 127.0.0.1 - - [17/Feb/2022 00:07:49] "GET /static/css/styles.css HTTP/1.1" 200 -
+2022-02-17 00:07:50,033 INFO werkzeug: 127.0.0.1 - - [17/Feb/2022 00:07:50] "[36mGET /static/media/home-button.png HTTP/1.1[0m" 304 -
+2022-02-17 00:07:58,959 INFO werkzeug: 127.0.0.1 - - [17/Feb/2022 00:07:58] "GET /doctor-panel/appointments/booked HTTP/1.1" 200 -
+2022-02-17 00:07:58,981 INFO werkzeug: 127.0.0.1 - - [17/Feb/2022 00:07:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2022-02-17 00:08:30,302 INFO werkzeug: 127.0.0.1 - - [17/Feb/2022 00:08:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -

@@ -71,8 +71,7 @@ app_filters.add_argument('doctor_uuid')
 app_filters.add_argument('patient_uuid')
 app_filters.add_argument('doctor_name')
 app_filters.add_argument('patient_name')
-app_filters.add_argument('date_from', type=date.fromisoformat)
-app_filters.add_argument('date_to', type=date.fromisoformat)
+app_filters.add_argument('date', type=date.fromisoformat)
 
 
 class AppointmentApi(BaseResource):

@@ -101,7 +101,7 @@ class FilterAppointments(FlaskForm):
     patient_name = SearchField('Search by patient\'s name:',
                                validators=[Optional(), Length(max=127)],
                                filters=[lambda x: x or None])
-    date_from = DateField('Filter by date:', validators=[Optional()])
+    date = DateField('Filter by date:', validators=[Optional()])
     submit = SubmitField('Filter')
 
 

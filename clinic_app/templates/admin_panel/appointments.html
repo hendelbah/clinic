@@ -1,6 +1,6 @@
 {%- extends 'admin_panel/base.html' %}
 
-{%- from 'macros.html' import paginated_table, admin_filters %}
+{%- from 'macros.html' import paginated_table, render_filters, render_admin_controls %}
 
 {%- block header -%}
 List of appointments
@@ -8,7 +8,7 @@ List of appointments
 
 {%- block body %}
 
-{%- call admin_filters(form, endpoints)%}
+{%- call render_filters(form, endpoints['item'])%}
 <div class="filters-field">
     {{ form.doctor_name.label() }}
     {{ form.doctor_name() }}
@@ -18,8 +18,8 @@ List of appointments
     {{ form.patient_name() }}
 </div>
 <div class="filters-field">
-    {{ form.date_from.label() }}
-    {{ form.date_from() }}
+    {{ form.date.label() }}
+    {{ form.date() }}
 </div>
 {%- endcall %}
 <div class="income">
@@ -27,7 +27,7 @@ List of appointments
     <label style="font-weight:bold">{{ income }}</label>
 </div>
 {%- set headers =  ('Doctor', 'Patient', 'Date', 'Time', 'Conclusion', 'Prescription', 'Bill') %}
-{%- call(item) paginated_table(data, headers, endpoints, 'time', 'appointment') %}
+{%- call(item) paginated_table(data, headers) %}
 <td class="links">
     <a href="{{ url_for('admin.doctor', uuid=item.doctor.uuid) }}">{{ item.doctor.full_name }}</a>
 </td>
@@ -39,6 +39,7 @@ List of appointments
 <td class="tooltip">{% if item.conclusion %}<div><span>{{ item.conclusion }}</span></div>{% endif %}</td>
 <td class="tooltip">{% if item.prescription %}<div><span>{{ item.prescription }}</span></div>{% endif %}</td>
 <td class="center-text">{% if item.bill %}{{ item.bill }} UAH{% endif %}</td>
+{{ render_admin_controls(item, endpoints, 'time', 'appointment') }}
 {% endcall %}
 
 {% endblock %}

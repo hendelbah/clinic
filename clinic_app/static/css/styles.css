@@ -102,6 +102,11 @@ hr { min-width: 100%; }
   padding-right: 2px;
 }
 
+#side-menu-header {
+  background-color: #A6CB6C;
+  border-width: 3px;
+}
+
 .side-menu-item {
   flex-flow: column;
   align-items: stretch;
@@ -120,6 +125,22 @@ hr { min-width: 100%; }
 }
 
 .side-menu-item a, .side-menu-item label { padding: 20px; }
+
+.booked-counter {
+  border-radius: 10px;
+  border: 2px solid #1AD400;
+  background-color: #ABFF7F;
+  padding: 1px 5px;
+  margin-right: 3px;
+}
+
+.unfilled-counter {
+  border-radius: 10px;
+  border: 2px solid #E28800;
+  background-color: #FFE87F;
+  padding: 1px 5px;
+  margin-right: 3px;
+}
 
 .flashes {
   display: flex;
@@ -262,14 +283,9 @@ hr { min-width: 100%; }
 
 .center-text { text-align: center; }
 
-.admin-controls {
+.filters-block {
   padding: 10px;
   align-items: center;
-}
-
-.admin-header {
-  background-color: #A6CB6C;
-  border-width: 3px;
 }
 
 .new-record {

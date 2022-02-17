@@ -31,6 +31,9 @@ login_manager.login_view = "auth.login"
 
 formatter = logging.Formatter('%(asctime)s %(levelname)s %(name)s: %(message)s')
 log_path = BASE_DIR / 'logs' / 'clinic.log'
+if not log_path.exists():
+    log_path.parent.mkdir(exist_ok=True)
+    log_path.touch()
 file_handler = RotatingFileHandler(log_path, maxBytes=1048576, backupCount=10)
 file_handler.setFormatter(formatter)
 file_handler.setLevel(logging.DEBUG)

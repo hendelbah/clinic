@@ -51,7 +51,10 @@ class TestAllServices(BaseTestCase):
                         pagination = service.get_pagination(**kwargs)
                         modified = service.get_pagination_modified(**kwargs)
                     self.assertIsInstance(pagination, Pagination)
-                    self.assertEqual(pagination.total, total)
+                    if 'upcoming' in kwargs:
+                        self.assertAlmostEqual(pagination.total, total, delta=1)
+                    else:
+                        self.assertEqual(pagination.total, total)
                     self.assertEqual(pagination.filters, kwargs)
                     if total:
                         self.assertIsInstance(modified, datetime)

@@ -141,4 +141,10 @@ localhost:5000/admin-panel/appointments
 localhost:5000/admin-panel/appointments/new
 localhost:5000/admin-panel/appointments/<uuid>
 localhost:5000/admin-panel/appointments/<uuid>/delete
+
+localhost:5000/doctor-panel/
+localhost:5000/doctor-panel/appointments/booked
+localhost:5000/doctor-panel/appointments/unfilled
+localhost:5000/doctor-panel/appointments/archived
+localhost:5000/doctor-panel/appointments/<uuid>
 ```

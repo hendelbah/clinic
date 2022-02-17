@@ -14,6 +14,7 @@ from clinic_app.views.utils import get_pagination_args, parse_filters, \
 doctor_bp = Blueprint('doctor', __name__, url_prefix='/doctor-panel')
 
 
+# pylint: disable=assigning-non-slot
 @doctor_bp.before_request
 @login_required
 def doctors_only():
@@ -65,16 +66,16 @@ def appointments(case: int):
                            active_menu_item=case, income=income)
 
 
-@doctor_bp.route('/appointments/<uuid>', methods=['GET', 'POST'])
-def appointment(uuid):
+@doctor_bp.route('/appointments/<uuid>', methods=['GET', 'POST'], endpoint='appointment')
+def appointment_view(uuid):
     form = EditAppointment()
     if form.validate_on_submit():
         response, _ = process_form_submit(form, AppointmentService, uuid, 'appointment')
         return response
-    appointment_ = AppointmentService.get(uuid)
-    if appointment_ is None:
+    appointment = AppointmentService.get(uuid)
+    if appointment is None:
         abort(404)
-    form = EditAppointment(obj=appointment_)
+    form = EditAppointment(obj=appointment)
     return render_template(
-        'doctor_panel/appointment.html', item=appointment_, form=form,
-        filled=appointment_.bill is not None)
+        'doctor_panel/appointment.html', item=appointment, form=form,
+        filled=appointment.bill is not None)

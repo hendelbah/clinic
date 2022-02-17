@@ -1,13 +1,13 @@
 """
 Doctor panel routes
 """
-from datetime import date
+from datetime import date, datetime
 
 from flask import Blueprint, render_template, abort, redirect, url_for, request, g
 from flask_login import current_user, login_required
 
 from clinic_app.service import AppointmentService
-from clinic_app.views.forms import FilterAppointments, EditAppointment
+from clinic_app.views.forms import FilterAppointments, FillAppointment
 from clinic_app.views.utils import get_pagination_args, parse_filters, \
     extract_filters, process_form_submit
 
@@ -68,14 +68,17 @@ def appointments(case: int):
 
 @doctor_bp.route('/appointments/<uuid>', methods=['GET', 'POST'], endpoint='appointment')
 def appointment_view(uuid):
-    form = EditAppointment()
+    form = FillAppointment()
     if form.validate_on_submit():
         response, _ = process_form_submit(form, AppointmentService, uuid, 'appointment')
         return response
     appointment = AppointmentService.get(uuid)
     if appointment is None:
         abort(404)
-    form = EditAppointment(obj=appointment)
+    if appointment.doctor.full_name != current_user.doctor.full_name:
+        abort(403)
+    form = FillAppointment(obj=appointment)
+    app_datetime = datetime.combine(appointment.date, appointment.time)
+    readonly = app_datetime >= datetime.now() or appointment.bill is not None
     return render_template(
-        'doctor_panel/appointment.html', item=appointment, form=form,
-        filled=appointment.bill is not None)
+        'doctor_panel/appointment.html', item=appointment, form=form, readonly=readonly)

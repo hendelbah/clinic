@@ -15,6 +15,8 @@ from tests.base_test_case import BaseTestCase
 endpoints_bundle = [user_endpoints, doctor_endpoints, patient_endpoints, appointment_endpoints]
 
 
+# pylint: disable=no-member
+@patch.object(BaseTestCase.db.func, 'timestamp', BaseTestCase.db.func.datetime)
 class TestRoutes(BaseTestCase):
     def test_200(self):
         endpoints = ('general.index', 'general.doctors')
@@ -104,7 +106,7 @@ class TestRoutes(BaseTestCase):
             {'search_email': 'asd'},
             {'search_name': 'qwe'},
             {'search_phone': 'aboba', 'search_name': 'bobak'},
-            {'doctor_name': 'amogus', 'date_from': '2012-12-12'},
+            {'doctor_name': 'amogus', 'date': '2012-12-12'},
         )
         i = 0
         for endpoints, data, filters in zip(endpoints_bundle, post_data, filters_data):
@@ -144,6 +146,39 @@ class TestRoutes(BaseTestCase):
         response = self.client.get(url_for('admin.new_appointment', doctor=1, patient=1))
         self.assert200(response)
 
+    def test_doctor_routes(self):
+        data = {'email': 'root', 'pwd': ROOT_PASSWORD, 'remember': False}
+        response = self.client.post(url_for('auth.login'), json=data)
+        self.assertRedirects(response, url_for('general.index'))
+        response = self.client.get(url_for('doctor.index', uuid=99))
+        self.assertStatus(response, 403)
+        response = self.client.get(url_for('auth.logout'))
+        self.assertRedirects(response, url_for('general.index'))
+        data = {'email': 'doctor_004@spam.ua', 'pwd': DOCTORS_PASSWORD, 'remember': False}
+        response = self.client.post(url_for('auth.login'), json=data)
+        self.assertRedirects(response, url_for('general.index'))
+        self.assertMessageFlashed('You successfully logged in', 'success')
+        response = self.client.get(url_for('doctor.index'))
+        self.assert200(response)
+        response = self.client.get(url_for('doctor.appointment', uuid=99))
+        self.assertStatus(response, 403)
+        response = self.client.get(url_for('doctor.appointment', uuid=19))
+        self.assert200(response)
+        response = self.client.get(url_for('doctor.appointment', uuid=0))
+        self.assert404(response)
+        data = {'conclusion': 'is dead'}
+        response = self.client.post(url_for('doctor.appointment', uuid='19'), json=data)
+        self.assertStatus(response, 302)
+        response = self.client.get(url_for('doctor.booked_apps'))
+        self.assert200(response)
+        response = self.client.get(url_for('doctor.unfilled_apps'))
+        self.assert200(response)
+        response = self.client.get(url_for('doctor.archived_apps'))
+        self.assert200(response)
+        filters = {'patient_name': 'qwe'}
+        response = self.client.post(url_for('doctor.archived_apps'), json=filters)
+        self.assertRedirects(response, url_for('doctor.archived_apps', **filters))
+
 
 class TestUtils(BaseTestCase):
     @patch('clinic_app.views.utils.choice', return_value='a')
@@ -178,19 +213,20 @@ class TestUtils(BaseTestCase):
 
     def test_process_form_submit(self):
         user = Mock(uuid='12')
-        for uuid, code in (['new', 201], ['12', 200]):
-            with self.subTest(str(code)):
-                data = {'submit': False,
-                        'csrf_token': 'asd'}
-                form = Mock(data=data)
-                service = Mock(create=lambda d: (user, 201), update=lambda u, d: (user, 200))
-                response, code_ = process_form_submit(form, service, uuid, 'user')
-                self.assertEqual(code_, code)
-                self.assertStatus(response, 302)
-                self.assertEqual(response.location, url_for('admin.user', uuid='12'))
-        form = Mock(data={'submit': False})
-        service = Mock(create=lambda d: ({'errors': {'x': 'c'}}, 422))
-        response, code = process_form_submit(form, service, 'new', 'user')
-        self.assertEqual(code, 422)
-        self.assertStatus(response, 302)
-        self.assertEqual(response.location, url_for('admin.users'))
+        with self.app.test_request_context(path='/admin-panel/'):
+            for uuid, code in (['new', 201], ['12', 200]):
+                with self.subTest(str(code)):
+                    data = {'submit': False,
+                            'csrf_token': 'asd'}
+                    form = Mock(data=data)
+                    service = Mock(create=lambda d: (user, 201), update=lambda u, d: (user, 200))
+                    response, code_ = process_form_submit(form, service, uuid, 'user')
+                    self.assertEqual(code_, code)
+                    self.assertStatus(response, 302)
+                    self.assertEqual(response.location, url_for('admin.user', uuid='12'))
+            form = Mock(data={'submit': False})
+            service = Mock(create=lambda d: ({'errors': {'x': 'c'}}, 422))
+            response, code = process_form_submit(form, service, 'new', 'user')
+            self.assertEqual(code, 422)
+            self.assertStatus(response, 302)
+            self.assertEqual(response.location, url_for('admin.users'))

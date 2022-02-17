@@ -36,8 +36,14 @@ List of appointments
 </td>
 <td class="center-text">{{ item.date }}</td>
 <td class="center-text">{{ item.time }}</td>
-<td class="tooltip">{% if item.conclusion %}<div><span>{{ item.conclusion }}</span></div>{% endif %}</td>
-<td class="tooltip">{% if item.prescription %}<div><span>{{ item.prescription }}</span></div>{% endif %}</td>
+<td class="tooltip">{% if item.conclusion %}
+    <div><span>{{ item.conclusion }}</span></div>
+    {% endif %}
+</td>
+<td class="tooltip">{% if item.prescription %}
+    <div><span>{{ item.prescription }}</span></div>
+    {% endif %}
+</td>
 <td class="center-text">{% if item.bill %}{{ item.bill }} UAH{% endif %}</td>
 {{ render_admin_controls(item, endpoints, 'time', 'appointment') }}
 {% endcall %}

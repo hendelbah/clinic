@@ -40,8 +40,14 @@ Appointments of {{ current_user.doctor.full_name }}
 <td class="center-text">{{ item.date }}</td>
 <td class="center-text">{{ item.time }}</td>
 {%- if action %}
-<td class="tooltip">{% if item.conclusion %}<div><span>{{ item.conclusion }}</span></div>{% endif %}</td>
-<td class="tooltip">{% if item.prescription %}<div><span>{{ item.prescription }}</span></div>{% endif %}</td>
+<td class="tooltip">{% if item.conclusion %}
+    <div><span>{{ item.conclusion }}</span></div>
+    {% endif %}
+</td>
+<td class="tooltip">{% if item.prescription %}
+    <div><span>{{ item.prescription }}</span></div>
+    {% endif %}
+</td>
 <td class="center-text">{% if item.bill %}{{ item.bill }} UAH{% endif %}</td>
 <td class="action controls">
     <div class="actions">

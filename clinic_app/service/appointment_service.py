@@ -17,7 +17,8 @@ class AppointmentService(BaseService):
 
     @classmethod
     def _filter_by(cls, *, doctor_uuid: str = None, patient_uuid: str = None,
-                   doctor_name: str = None, patient_name: str = None, date: date_ = None,
+                   doctor_name: str = None, patient_name: str = None,
+                   date: date_ = None, date_from: date_ = None, date_to: date_ = None,
                    filled: bool = None, upcoming: bool = None, _query=None) -> Query:
         """
         Return query ordered and filtered.
@@ -26,8 +27,11 @@ class AppointmentService(BaseService):
         :param patient_uuid: filter appointments related to patients with this uuid
         :param doctor_name: filter appointments related to doctor with full name like this
         :param patient_name: filter appointments related to patient with full name like this
-        :param date: filter appointments by date
-        :param filled: filter appointments filled by doctor
+        :param date: filter appointments by date, overrides date_from and date_to
+        :param date_from: filter appointments since given date
+        :param date_to: filter appointments up to given date
+        :param filled: filter appointments having defined bill field
+        :param upcoming: filter appointments yet to happen
         :param _query: query to override standard one
         """
         query = cls._order() if _query is None else _query
@@ -49,17 +53,20 @@ class AppointmentService(BaseService):
                                  .filter_by(id=cls.model.patient_id).exists())
         if date is not None:
             query = query.filter_by(date=date)
-        if filled is not None:
-            if filled:
-                query = query.filter(cls.model.bill.is_not(None))
-            else:
-                query = query.filter_by(bill=None)
-        if upcoming is not None:
-            f = cls.db.func
-            if upcoming:
-                query = query.filter(f.timestamp(cls.model.date, cls.model.time) >= f.now())
-            else:
-                query = query.filter(f.timestamp(cls.model.date, cls.model.time) < f.now())
+        else:
+            if date_from is not None:
+                query = query.filter(cls.model.date >= date_from)
+            if date_to is not None:
+                query = query.filter(cls.model.date <= date_to)
+        if filled is True:
+            query = query.filter(cls.model.bill.is_not(None))
+        if filled is False:
+            query = query.filter_by(bill=None)
+        f = cls.db.func
+        if upcoming is True:
+            query = query.filter(f.timestamp(cls.model.date, cls.model.time) >= f.now())
+        if upcoming is False:
+            query = query.filter(f.timestamp(cls.model.date, cls.model.time) < f.now())
         return query
 
     @classmethod

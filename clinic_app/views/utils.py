@@ -78,7 +78,6 @@ def process_form_submit(form, service, uuid, name, **kwargs):
     :param kwargs: additional fields that are absent in form and should be submitted to database.
     :return: redirect response
     """
-    print('asd')
     data = form.data
     data.pop('submit')
     if data.get('csrf_token'):

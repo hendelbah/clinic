@@ -21,7 +21,6 @@
 {%- endmacro -%}
 
 
-
 {%- macro pagination(data) -%}
 <div class="pagination flex-col">
     <div class="pagination-body flex-col">
@@ -31,7 +30,7 @@
         <label style="align-self:center">Nothing...</label>
         {%- endif %}
     </div>
-    <hr />
+    <hr/>
     <div class="pagination-tail controls">
         {% if data.has_prev -%}
         {% if data.page == 2 -%}
@@ -39,7 +38,7 @@
         {%- else -%}
         {% set prev = url_for(request.endpoint, page=data.page - 1, per_page=data.per_page, **data.filters) %}
         {%- endif -%}
-        <a href="{{ prev }}" class="change-page" style="visibility:visible"><< Prev</a>
+        <a class="change-page" href="{{ prev }}" style="visibility:visible"><< Prev</a>
         {%- else -%}
         <a class="change-page" style="visibility:hidden"><< Prev</a>
         {%- endif %}
@@ -49,14 +48,13 @@
         </label>
         {% if data.has_next -%}
         {% set next = url_for(request.endpoint, page=data.page + 1, per_page=data.per_page, **data.filters) -%}
-        <a href="{{ next }}" class="change-page" style="visibility:visible">Next >></a>
+        <a class="change-page" href="{{ next }}" style="visibility:visible">Next >></a>
         {%- else -%}
         <a class="change-page" style="visibility:hidden">Next >></a>
         {%- endif %}
     </div>
 </div>
 {%- endmacro %}
-
 
 
 {%- macro render_admin_controls(item, endpoints, key_attr=None, item_name='', book_params={}) -%}
@@ -84,7 +82,6 @@
 </td>
 
 {%- endmacro %}
-
 
 
 {%- macro paginated_table(data, table_headers, action=True) -%}
@@ -117,7 +114,6 @@
 {%- endmacro %}
 
 
-
 {%- macro side_menu_item(active, name, link) -%}
 
 <div class="side-menu-item{% if active %} side-menu-item-active{% endif %}">
@@ -125,7 +121,6 @@
 </div>
 
 {%- endmacro %}
-
 
 
 {% macro render_filters(form, item_endpoint=None) -%}
@@ -136,16 +131,16 @@
         <a href="{{ url_for(item_endpoint, uuid='new') }}">Create new</a>
     </div>
     {%- endif %}
-    <form method="post" class="filters">
+    <form class="filters" method="post">
         <label class="filters-field" style="font-size:20px">Filters:</label>
         {{ form.hidden_tag() }}
         {{ caller() }}
         <div class="filters-field">
-        {{ form.submit(style='font-weight:bold') }}
+            {{ form.submit(style='font-weight:bold') }}
         </div>
         {%- set act = request.args.get('act') or None %}
         <input type="reset" value="Reset">
-        <a href="{{ url_for(request.endpoint, act=act) }}" class="filters-field">Clear</a>
+        <a class="filters-field" href="{{ url_for(request.endpoint, act=act) }}">Clear</a>
     </form>
 </div>
 

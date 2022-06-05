@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html class="flex-col" lang="en">
+<head>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <title>Admin panel - Appointments</title>
+</head>
+<body class="flex-col">
+<div class="page-header controls">
+    <div class="main-menu">
+        <div class="main-menu-item">
+            <a href="logged_index.html" id="home-breadcrumb"></a>
+        </div>
+        <div class="main-menu-item">
+            <a href="doctors.html">Doctors</a>
+        </div>
+        <div class="main-menu-item">
+            <a href="apps_booked.html">Doctor panel</a>
+        </div>
+        <div class="main-menu-item">
+            <a href="admin_users.html">Admin panel</a>
+        </div>
+    </div>
+    <div class="auth">
+        <div class="profile-link">
+            <a href="profile.html">doctor-admin</a>
+        </div>
+        <div class="log-link" id="logout">
+            <a href="index.html">logout</a>
+        </div>
+    </div>
+</div>
+<div class="page-body">
+    <div class="side-menu flex-col controls">
+        <div class="side-menu-item" id="side-menu-header">
+            <label>Administrator panel</label>
+        </div>
+        <div class="side-menu-item">
+            <a href="admin_users.html">Users</a>
+        </div>
+        <div class="side-menu-item">
+            <a href="admin_doctors.html">Doctors</a>
+        </div>
+        <div class="side-menu-item">
+            <a href="admin_patients.html">Patients</a>
+        </div>
+        <div class="side-menu-item side-menu-item-active">
+            <a href="admin_appointments.html">Appointments</a>
+        </div>
+    </div>
+    <div class="main-container flex-col">
+        <div class="flashes flex-col"></div>
+        <h2>List of appointments</h2>
+        <hr style="margin:0px" width="100%"/>
+        <div class="filters-block controls">
+            <div class="new-record">
+                <a href="">Create new</a>
+            </div>
+            <form class="filters" action="" method="post">
+                <label class="filters-field" style="font-size:20px">Filters:</label>
+                <div class="filters-field">
+                    <label for="doctor_name">Search by doctor&#39;s name:</label>
+                    <input id="doctor_name" maxlength="127" name="doctor_name" type="search" value="">
+                </div>
+                <div class="filters-field">
+                    <label for="patient_name">Search by patient&#39;s name:</label>
+                    <input id="patient_name" maxlength="127" name="patient_name" type="search" value="">
+                </div>
+                <div class="filters-field">
+                    <label for="date">Filter by date:</label>
+                    <input id="date" name="date" type="date" value="">
+                </div>
+                <div class="filters-field">
+                    <input id="submit" name="submit" style="font-weight:bold" type="submit" value="Filter">
+                </div>
+                <input type="reset" value="Reset">
+                <a class="filters-field" href="">Clear</a>
+            </form>
+        </div>
+        <div class="income">
+            <label>Total income for filtered appointments:</label>
+            <label style="font-weight:bold">25250</label>
+        </div>
+        <div class="pagination flex-col">
+            <div class="pagination-body flex-col">
+                <table class="records-table">
+                    <tr class="table-header">
+                        <th>№</th>
+                        <th>Doctor</th>
+                        <th>Patient</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Conclusion</th>
+                        <th>Prescription</th>
+                        <th>Bill</th>
+                        <th>action</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="links">
+                            <a href="">Добровинская Елена Вячеславовна</a>
+                        </td>
+                        <td class="links">
+                            <a href="">Собчак Антонина Тарасовна</a>
+                        </td>
+                        <td class="center-text">2022-08-24</td>
+                        <td class="center-text">11:00:00</td>
+                        <td class="tooltip"></td>
+                        <td class="tooltip"></td>
+                        <td class="center-text"></td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="links">
+                            <a href="">Семёнов Антон Вадимович</a>
+                        </td>
+                        <td class="links">
+                            <a href="">Матвиенко Анастасия Дмитриевна</a>
+                        </td>
+                        <td class="center-text">2022-08-23</td>
+                        <td class="center-text">11:00:00</td>
+                        <td class="tooltip"></td>
+                        <td class="tooltip"></td>
+                        <td class="center-text"></td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="links">
+                            <a href="">Семёнов Антон Вадимович</a>
+                        </td>
+                        <td class="links">
+                            <a href="">Ковальчук Артем Станиславович</a>
+                        </td>
+                        <td class="center-text">2022-08-22</td>
+                        <td class="center-text">11:00:00</td>
+                        <td class="tooltip"></td>
+                        <td class="tooltip"></td>
+                        <td class="center-text"></td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="links">
+                            <a href="">Семёнов Антон Вадимович</a>
+                        </td>
+                        <td class="links">
+                            <a href="">Гузенко Богдан Андреевич</a>
+                        </td>
+                        <td class="center-text">2022-08-21</td>
+                        <td class="center-text">11:00:00</td>
+                        <td class="tooltip"></td>
+                        <td class="tooltip"></td>
+                        <td class="center-text"></td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td class="links">
+                            <a href="">Семёнов Антон Вадимович</a>
+                        </td>
+                        <td class="links">
+                            <a href="">Бутко Соломия Кирилловна</a>
+                        </td>
+                        <td class="center-text">2022-08-20</td>
+                        <td class="center-text">11:00:00</td>
+                        <td class="tooltip"></td>
+                        <td class="tooltip"></td>
+                        <td class="center-text"></td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td class="links">
+                            <a href="">Семёнов Антон Вадимович</a>
+                        </td>
+                        <td class="links">
+                            <a href="">Тимошенко Милана Егоровна</a>
+                        </td>
+                        <td class="center-text">2022-08-19</td>
+                        <td class="center-text">11:00:00</td>
+                        <td class="tooltip"></td>
+                        <td class="tooltip"></td>
+                        <td class="center-text"></td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td class="links">
+                            <a href="">Семёнов Антон Вадимович</a>
+                        </td>
+                        <td class="links">
+                            <a href="">Придиус Егор Тарасович</a>
+                        </td>
+                        <td class="center-text">2022-08-18</td>
+                        <td class="center-text">11:00:00</td>
+                        <td class="tooltip"></td>
+                        <td class="tooltip"></td>
+                        <td class="center-text"></td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td class="links">
+                            <a href="">Петрусь Игорь Васильевич</a>
+                        </td>
+                        <td class="links">
+                            <a href="">Романченко Антонина Егоровна</a>
+                        </td>
+                        <td class="center-text">2022-08-17</td>
+                        <td class="center-text">11:00:00</td>
+                        <td class="tooltip"></td>
+                        <td class="tooltip"></td>
+                        <td class="center-text"></td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td class="links">
+                            <a href="">Петрусь Игорь Васильевич</a>
+                        </td>
+                        <td class="links">
+                            <a href="">Ткаченко Роман Егорович</a>
+                        </td>
+                        <td class="center-text">2022-08-16</td>
+                        <td class="center-text">11:00:00</td>
+                        <td class="tooltip"></td>
+                        <td class="tooltip"></td>
+                        <td class="center-text"></td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td class="links">
+                            <a href="">Петрусь Игорь Васильевич</a>
+                        </td>
+                        <td class="links">
+                            <a href="">Скрипко Александр Денисович</a>
+                        </td>
+                        <td class="center-text">2022-08-15</td>
+                        <td class="center-text">11:00:00</td>
+                        <td class="tooltip"></td>
+                        <td class="tooltip"></td>
+                        <td class="center-text"></td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <hr/>
+            <div class="pagination-tail controls">
+                <a class="change-page" style="visibility:hidden"><< Prev</a>
+                <label id="pages">
+                    Page <b>1</b> of <b>20</b>
+                    (10 of 200 items)
+                </label>
+                <a class="change-page" href=""
+                   style="visibility:visible">Next >></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-tail flex-col">
+    <hr/>
+</div>
+</body>
+</html>

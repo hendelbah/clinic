@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html class="flex-col" lang="en">
+<head>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <title>Clinic - Profile</title>
+</head>
+<body class="flex-col">
+<div class="page-header controls">
+    <div class="main-menu">
+        <div class="main-menu-item">
+            <a href="logged_index.html" id="home-breadcrumb"></a>
+        </div>
+        <div class="main-menu-item">
+            <a href="doctors.html">Doctors</a>
+        </div>
+        <div class="main-menu-item">
+            <a href="apps_booked.html">Doctor panel</a>
+        </div>
+        <div class="main-menu-item">
+            <a href="admin_users.html">Admin panel</a>
+        </div>
+    </div>
+    <div class="auth">
+        <div class="profile-link">
+            <a href="profile.html">doctor-admin</a>
+        </div>
+        <div class="log-link" id="logout">
+            <a href="index.html">logout</a>
+        </div>
+    </div>
+</div>
+
+<div class="page-body">
+    <script>
+        function switch_pass_change() {
+          var pass_form = document.getElementById("change-pass");
+          var pass_button = document.getElementById("change-pass-button");
+          if (pass_form.style.display === "none") {
+            pass_form.style.display = "flex";
+            pass_button.classList.add('side-menu-item-active');
+          }
+          else {
+            pass_form.style.display = "none";
+            pass_button.classList.remove('side-menu-item-active');
+          }
+        }
+    </script>
+    <div class="side-menu flex-col controls">
+        <div class="side-menu-item " id="change-pass-button">
+            <a onclick="switch_pass_change()">Change password</a>
+        </div>
+    </div>
+    <div class="main-container flex-col">
+        <div class="flashes flex-col"></div>
+        <h2>Profile</h2>
+        <hr style="margin:0px" width="100%"/>
+        <div class="info-block flex-col">
+            <div class="info-item">
+                <label>Email: <span style="color:brown">doctor-admin</span></label>
+            </div>
+            <div class="info-item">
+                <label style="color:green">You are an administrator.</label>
+            </div>
+            <div class="info-item">
+                <label>You have related doctor's account:</label>
+                <table class="profile-doctor">
+                    <tr>
+                        <th>Full name:</th>
+                        <td>Держановская Людмила Николаевна</td>
+                    </tr>
+                    <tr>
+                        <th>Experience years:</th>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <th>Speciality:</th>
+                        <td>Врач - акушер-гинеколог, первой категории</td>
+                    </tr>
+                    <tr>
+                        <th>Info:</th>
+                        <td>Людмила Николаевна — врач первой категории — владеет современными методиками диагностики и
+                            лечения заболеваний патологии шейки матки (эрозии, дисплазии, полипы). Ведение беременности
+                            с момента беременности и до родов
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr align="left" width="80%">
+            <div class="info-item" id="change-pass" style="display:none">
+                <form class="common-form" action="" method="post">
+                    <div class="validated-field">
+                        <div class="field-container">
+                            <label for="password">Current password:</label>
+                            <input id="password" maxlength="40" minlength="6" name="password" required type="password"
+                                   value="">
+                        </div>
+                    </div>
+                    <div class="validated-field">
+                        <div class="field-container">
+                            <label for="new_pass">New password:</label>
+                            <input id="new_pass" maxlength="40" minlength="6" name="new_pass" required type="password"
+                                   value="">
+                        </div>
+                    </div>
+                    <div class="validated-field">
+                        <div class="field-container">
+                            <label for="confirm">Confirm password:</label>
+                            <input id="confirm" name="confirm" type="password" value="">
+                        </div>
+                    </div>
+                    <div class="submit-in-end">
+                        <input id="submit" name="submit" type="submit" value="Submit change">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-tail flex-col">
+    <hr/>
+</div>
+</body>
+</html>

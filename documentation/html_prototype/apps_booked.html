@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="flex-col" lang="en">
+<head>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <title>Doctor panel - Appointments</title>
+</head>
+<body class="flex-col">
+<div class="page-header controls">
+    <div class="main-menu">
+        <div class="main-menu-item">
+            <a href="logged_index.html" id="home-breadcrumb"></a>
+        </div>
+        <div class="main-menu-item">
+            <a href="doctors.html">Doctors</a>
+        </div>
+        <div class="main-menu-item">
+            <a href="apps_booked.html">Doctor panel</a>
+        </div>
+        <div class="main-menu-item">
+            <a href="admin_users.html">Admin panel</a>
+        </div>
+    </div>
+    <div class="auth">
+        <div class="profile-link">
+            <a href="profile.html">doctor-admin</a>
+        </div>
+        <div class="log-link" id="logout">
+            <a href="index.html">logout</a>
+        </div>
+    </div>
+</div>
+<div class="page-body">
+    <div class="side-menu flex-col controls">
+        <div class="side-menu-item" id="side-menu-header">
+            <label>Doctor panel</label>
+        </div>
+        <div class="side-menu-item side-menu-item-active">
+            <a href="apps_booked.html"><span class="booked-counter">4</span>Booked appointments</a>
+        </div>
+        <div class="side-menu-item">
+            <a href="apps_unfilled.html"><span class="unfilled-counter">2</span>Unfilled appointments
+            </a>
+        </div>
+        <div class="side-menu-item">
+            <a href="apps_archived.html">Archived appointments</a>
+        </div>
+    </div>
+    <div class="main-container flex-col">
+        <div class="flashes flex-col"></div>
+        <h2>Appointments of Держановская Людмила Николаевна</h2>
+        <hr style="margin:0px" width="100%"/>
+        <div class="filters-block controls">
+            <form class="filters" action="" method="post">
+                <label class="filters-field" style="font-size:20px">Filters:</label>
+                <div class="filters-field">
+                    <label for="patient_name">Search by patient&#39;s name:</label>
+                    <input id="patient_name" maxlength="127" name="patient_name" type="search" value="">
+                </div>
+                <div class="filters-field">
+                    <label for="date">Filter by date:</label>
+                    <input id="date" name="date" type="date" value="">
+                </div>
+                <div class="filters-field">
+                    <input id="submit" name="submit" style="font-weight:bold" type="submit" value="Filter">
+                </div>
+                <input type="reset" value="Reset">
+                <a class="filters-field" href="">Clear</a>
+            </form>
+        </div>
+        <div class="pagination flex-col">
+            <div class="pagination-body flex-col">
+                <table class="records-table">
+                    <tr class="table-header">
+                        <th>№</th>
+                        <th>Patient</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="center-text">Кравец Иван Максимович</td>
+                        <td class="center-text">2022-06-09</td>
+                        <td class="center-text">11:00:00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="center-text">Романченко Анна Романовна</td>
+                        <td class="center-text">2022-06-08</td>
+                        <td class="center-text">11:00:00</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="center-text">Бутко Ирина Богдановна</td>
+                        <td class="center-text">2022-06-07</td>
+                        <td class="center-text">11:00:00</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="center-text">Скрипко Соломия Егоровна</td>
+                        <td class="center-text">2022-06-06</td>
+                        <td class="center-text">11:00:00</td>
+                    </tr>
+                </table>
+            </div>
+            <hr/>
+            <div class="pagination-tail controls">
+                <a class="change-page" style="visibility:hidden"><< Prev</a>
+                <label id="pages">
+                    Page <b>1</b> of <b>1</b>
+                    (4 of 4 items)
+                </label>
+                <a class="change-page" style="visibility:hidden">Next >></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-tail flex-col">
+    <hr/>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="flex-col" lang="en">
+<head>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <title>Clinic - Login</title>
+</head>
+<body class="flex-col">
+<div class="page-header controls">
+    <div class="main-menu">
+        <div class="main-menu-item">
+            <a href="index.html" id="home-breadcrumb"></a>
+        </div>
+        <div class="main-menu-item">
+            <a href="doctors.html">Doctors</a>
+        </div>
+    </div>
+    <div class="auth">
+        <div class="log-link" id="login">
+            <a href="login.html">login</a>
+        </div>
+    </div>
+</div>
+
+<div class="page-body">
+    <div class="side-menu flex-col controls">
+    </div>
+    <div class="main-container flex-col">
+        <div class="flashes flex-col"></div>
+        <h2>Login</h2>
+        <hr style="margin:0px" width="100%"/>
+        <form class="login-form" action="logged_index.html" method="post">
+            <div class="validated-field">
+                <div class="field-container">
+                    <label for="email">Email:</label>
+                    <input id="email" name="email" type="text" value="doctor-admin" readonly>
+                </div>
+            </div>
+            <div class="validated-field">
+                <div class="field-container">
+                    <label for="pwd">Password:</label>
+                    <input id="pwd" maxlength="40" minlength="6" name="pwd" required type="password" value="12345678"
+                           readonly>
+                </div>
+            </div>
+            <div>
+                <label for="remember">Remember me</label>
+                <input id="remember" name="remember" type="checkbox" value="y">
+            </div>
+            <div>
+                <input id="submit" name="submit" type="submit" value="Log in">
+            </div>
+        </form>
+    </div>
+</div>
+<div class="page-tail flex-col">
+    <hr/>
+</div>
+</body>
+</html>

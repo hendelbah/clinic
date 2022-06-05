@@ -3,16 +3,23 @@
 [![Coverage Status](https://coveralls.io/repos/github/hendelbah/clinic/badge.svg?branch=main)](https://coveralls.io/github/hendelbah/clinic?branch=main)
 [![Build Status](https://app.travis-ci.com/hendelbah/clinic.svg?branch=main)](https://app.travis-ci.com/hendelbah/clinic)
 
-#### Web app for managing appointments in a clinic
+#### Web application for managing appointments in a clinic
 
 ## With this app you can:
 
-- #### Log in as an administrator or a doctor
+- ### Display a list of doctors that work in the clinic
+- ### Log in as an administrator or a doctor
+- ### Display your profile and change password
+- ### As an administrator:
 - #### Display a list of users
 - #### Display a list of doctors
 - #### Display a list of patients
 - #### Display a list of appointments and the total income from them
 - #### Change (add / edit / delete) the above data
+- ### As a doctor:
+- #### Display a list of booked, unfilled and archived appointments, related to current doctor's account
+- #### Fill in info for successful (yet unfilled) appointments
+
 
 ## How to build this project:
 
@@ -42,19 +49,19 @@ FLASK_APP=clinic_app
 
 - Database:
 ```
-MYSQL_USER=<your_mysql_user>
-MYSQL_PASSWORD=<your_mysql_user_password>
-MYSQL_SERVER=<your_mysql_server>
-MYSQL_DATABASE=<your_mysql_database_name>
+MYSQL_USER = <your_mysql_user>
+MYSQL_PASSWORD = <your_mysql_user_password>
+MYSQL_SERVER = <your_mysql_server>
+MYSQL_DATABASE = <your_mysql_database_name>
 ```
 
 - Optional:
 ```
-FLASK_SECRET_KEY=<your_secure_key>
-FLASK_CONFIG=[production|development]
+FLASK_SECRET_KEY = <your_secure_key>
+FLASK_CONFIG = [production|development]
 ```
 *You can set these in .env file in the application root directory as the project uses dotenv module to load 
-environment variables(except `FLASK_APP` ofcourse)*
+environment variables(except `FLASK_APP` of course)*
 
 - #### Run migrations to create database infrastructure:
 

@@ -2,7 +2,7 @@
 
 {%- extends 'admin_panel/base.html' %}
 
-{%- from 'macros.html' import paginated_table, admin_filters %}
+{%- from 'macros.html' import paginated_table, render_filters, render_admin_controls %}
 
 {%- block header -%}
 List of doctors{% if doctor %} - Book appointment for patient {{ patient.full_name }}{% endif %}
@@ -10,7 +10,7 @@ List of doctors{% if doctor %} - Book appointment for patient {{ patient.full_na
 
 {%- block body %}
 
-{%- call admin_filters(form, endpoints)%}
+{%- call render_filters(form, endpoints['item'])%}
 <div class="filters-field">
     {{ form.search_name.label() }}
     {{ form.search_name() }}
@@ -18,11 +18,15 @@ List of doctors{% if doctor %} - Book appointment for patient {{ patient.full_na
 {%- endcall %}
 
 {%- set headers =  ('Full name', 'Speciality', 'Experience', 'Info', 'Email') %}
-{%- call(item) paginated_table(data, headers, endpoints, 'full_name', 'doctor', {'patient':patient.uuid or None}) %}
+{%- call(item) paginated_table(data, headers) %}
 <td>{{ item.full_name }}</td>
-<td class="tooltip"><div><span>{{ item.speciality }}</span></div></td>
+<td class="tooltip">
+    <div><span>{{ item.speciality }}</span></div>
+</td>
 <td>{{ item.experience_years }} years</td>
-<td class="tooltip"><div><span>{{ item.info }}</span></div></td>
+<td class="tooltip">
+    <div><span>{{ item.info }}</span></div>
+</td>
 <td class="links">
     {%- if item.user -%}
     <a href="{{ url_for('admin.user', uuid=item.user.uuid) }}">
@@ -30,6 +34,7 @@ List of doctors{% if doctor %} - Book appointment for patient {{ patient.full_na
     </a>
     {%- endif %}
 </td>
+{{ render_admin_controls(item, endpoints, 'full_name', 'doctor', {'patient':patient.uuid or None}) }}
 {% endcall %}
 
 {% endblock %}

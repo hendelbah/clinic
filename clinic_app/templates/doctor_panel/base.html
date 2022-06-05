@@ -7,9 +7,9 @@
 {% block title -%}
 
 {% if title is defined -%}
-Admin panel - {{ title }}
+Doctor panel - {{ title }}
 {%- else -%}
-Admin panel
+Doctor panel
 {%- endif %}
 
 {%- endblock %}
@@ -18,19 +18,24 @@ Admin panel
 {% block side_menu -%}
 
 <div class="side-menu-item" id="side-menu-header">
-    <label>Administrator panel</label>
+    <label>Doctor panel</label>
 </div>
 <div class="side-menu-item{% if active_menu_item == 1 %} side-menu-item-active{% endif %}">
-    <a href="{{ url_for('admin.users') }}">Users</a>
+    <a href="{{ url_for('doctor.booked_apps') }}">
+        <span class="booked-counter">{{ g.booked }}</span>
+        Booked appointments
+    </a>
 </div>
 <div class="side-menu-item{% if active_menu_item == 2 %} side-menu-item-active{% endif %}">
-    <a href="{{ url_for('admin.doctors') }}">Doctors</a>
+    <a href="{{ url_for('doctor.unfilled_apps') }}">
+        {%- if g.unfilled > 0 -%}
+        <span class="unfilled-counter">{{ g.unfilled }}</span>
+        {%- endif -%}
+        Unfilled appointments
+    </a>
 </div>
 <div class="side-menu-item{% if active_menu_item == 3 %} side-menu-item-active{% endif %}">
-    <a href="{{ url_for('admin.patients') }}">Patients</a>
-</div>
-<div class="side-menu-item{% if active_menu_item == 4 %} side-menu-item-active{% endif %}">
-    <a href="{{ url_for('admin.appointments') }}">Appointments</a>
+    <a href="{{ url_for('doctor.archived_apps') }}">Archived appointments</a>
 </div>
 
 {%- endblock %}

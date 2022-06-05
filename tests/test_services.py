@@ -1,5 +1,6 @@
 # pylint: disable=missing-function-docstring, missing-module-docstring, missing-class-docstring
 from datetime import date, datetime, timedelta
+from unittest.mock import patch
 
 from flask_sqlalchemy import Pagination
 from sqlalchemy.orm import Query
@@ -10,7 +11,7 @@ from tests.base_test_case import BaseTestCase
 services = (UserService, DoctorService, PatientService, AppointmentService)
 
 
-# pylint: disable=protected-access
+# pylint: disable=protected-access, no-member
 class TestAllServices(BaseTestCase):
 
     def test_filter_by(self):
@@ -34,20 +35,27 @@ class TestAllServices(BaseTestCase):
              [{'patient_uuid': '4'}, 2],
              [{'doctor_name': 'тарас'}, 0],
              [{'patient_name': 'oao'}, 0],
+             [{'date': today}, 1],
              [{'date_from': today}, 81],
              [{'date_to': today}, 120],
-             [{'date_from': today, 'date_to': today}, 1],
-             [{'unfilled': True}, 20],
+             [{'filled': True}, 100],
+             [{'filled': False}, 100],
+             [{'upcoming': True}, 81],
+             [{'upcoming': False}, 119],
              ),
         )
         for service, bundle in zip(services, cases):
             for kwargs, total in bundle:
                 with self.subTest(f'{service.__name__}:{list(kwargs.keys())[0]}'):
-                    pagination = service.get_pagination(**kwargs)
+                    with patch.object(self.db.func, 'timestamp', self.db.func.datetime):
+                        pagination = service.get_pagination(**kwargs)
+                        modified = service.get_pagination_modified(**kwargs)
                     self.assertIsInstance(pagination, Pagination)
-                    self.assertEqual(pagination.total, total)
+                    if 'upcoming' in kwargs:
+                        self.assertAlmostEqual(pagination.total, total, delta=1)
+                    else:
+                        self.assertEqual(pagination.total, total)
                     self.assertEqual(pagination.filters, kwargs)
-                    modified = service.get_pagination_modified(**kwargs)
                     if total:
                         self.assertIsInstance(modified, datetime)
                     else:

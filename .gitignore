@@ -10,3 +10,4 @@ instance/
 .coverage
 build/
 /.env
+/clinic_app/logs/

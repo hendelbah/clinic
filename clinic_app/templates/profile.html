@@ -28,6 +28,10 @@ function switch_pass_change() {
     pass_button.classList.remove('side-menu-item-active');
   }
 }
+
+
+
+
 </script>
 
 <div class="info-block flex-col">
@@ -62,9 +66,9 @@ function switch_pass_change() {
         </table>
     </div>
     {% endif %}
-    <hr width="80%" align="left">
-    <div class="info-item" {% if not form.is_submitted() %}style="display:none"{% endif %}>
-        <form method="post" class="common-form">
+    <hr align="left" width="80%">
+    <div class="info-item" id="change-pass" style="{% if not form.is_submitted() %}display:none{% endif %}">
+        <form class="common-form" method="post">
             {{ form.hidden_tag() }}
             {{ render_field(form.password) }}
             {{ render_field(form.new_pass) }}

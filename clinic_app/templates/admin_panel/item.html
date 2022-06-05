@@ -9,7 +9,7 @@
 {%- block body %}
 <div class="info-block">
     <div class="info-item">
-        <form method="post" class="common-form">
+        <form class="common-form" method="post">
             {%- if item_name == 'appointment' %}
             <div class="field-container">
                 <label>Doctor's full name:</label>
@@ -28,10 +28,10 @@
             <div class="submit-in-end">{{ form.submit() if item else form.submit(value='Create') }}</div>
             {% if item %}
             <div class="submit-in-end">
-                 <a class="del-link action-link"
-                    onclick="confirmPostEmpty('Delete {{item_name}}?', '{{url_for(endpoints['delete'], uuid=item.uuid)}}')">
-                     delete
-                 </a>
+                <a class="del-link action-link"
+                   onclick="confirmPostEmpty('Delete {{item_name}}?', '{{url_for(endpoints['delete'], uuid=item.uuid)}}')">
+                    delete
+                </a>
             </div>
             {% endif %}
         </form>

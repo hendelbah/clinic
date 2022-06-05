@@ -131,7 +131,7 @@ class BaseService:
 
     @classmethod
     def get_pagination(cls, page: int = 1, per_page: int = 20, **filters) -> t.Optional[Pagination]:
-        """200
+        """
         Return Pagination object, for model instances selected and filtered using kwargs.
 
         :param page: pagination page

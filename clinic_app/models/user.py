@@ -27,7 +27,6 @@ class User(db.Model, UserMixin):
     is_admin = db.Column(db.Boolean, nullable=False)
     last_modified = db.Column(db.TIMESTAMP(timezone=True), default=datetime.utcnow,
                               onupdate=datetime.utcnow)
-
     doctor = db.relationship('Doctor', back_populates='user', lazy='joined')
     doctor_uuid = DoctorUUID()
 

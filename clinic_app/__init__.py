@@ -31,6 +31,9 @@ login_manager.login_view = "auth.login"
 
 formatter = logging.Formatter('%(asctime)s %(levelname)s %(name)s: %(message)s')
 log_path = BASE_DIR / 'logs' / 'clinic.log'
+if not log_path.exists():
+    log_path.parent.mkdir(exist_ok=True)
+    log_path.touch()
 file_handler = RotatingFileHandler(log_path, maxBytes=1048576, backupCount=10)
 file_handler.setFormatter(formatter)
 file_handler.setLevel(logging.DEBUG)
@@ -53,11 +56,12 @@ werkzeug_logger.addHandler(console_handler)
 werkzeug_logger.setLevel(logging.DEBUG)
 
 from clinic_app.rest import api_bp
-from clinic_app.views import general_bp, auth_bp, admin_bp
+from clinic_app.views import general_bp, auth_bp, admin_bp, doctor_bp
 
 app.register_blueprint(api_bp)
 app.register_blueprint(general_bp)
 app.register_blueprint(auth_bp)
 app.register_blueprint(admin_bp)
+app.register_blueprint(doctor_bp)
 
 Swagger(app, template_file='static/openapi.yaml')

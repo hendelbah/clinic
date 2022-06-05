@@ -39,13 +39,12 @@ appointment_endpoints = {
 
 
 @admin_bp.before_request
+@login_required
 def admins_only():
     """
     Checks if user is logged in and has admin privileges
     before all requests for this blueprint.
     """
-    if (response := login_required(lambda: None)()) is not None:
-        return response
     if not current_user.is_admin:
         return abort(403)
     return None
@@ -209,12 +208,11 @@ def delete_patient(uuid):
 def appointments():
     form = FilterAppointments()
     if form.validate_on_submit():
-        filters = extract_filters(['doctor_name', 'patient_name', 'date_from'], form)
+        filters = extract_filters(['doctor_name', 'patient_name', 'date'], form)
         return redirect(url_for('.appointments', **filters))
     kwargs_list = [{'key': 'doctor_name'}, {'key': 'patient_name'},
-                   {'key': 'date_from', 'type': date.fromisoformat}]
+                   {'key': 'date', 'type': date.fromisoformat}]
     filters = parse_filters(kwargs_list, form)
-    filters['date_to'] = filters['date_from']
     pages = get_pagination_args()
     data = AppointmentService.get_pagination(*pages, **filters)
     income = AppointmentService.get_income(**filters)

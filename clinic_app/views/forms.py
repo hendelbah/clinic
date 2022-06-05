@@ -95,20 +95,28 @@ class EditPatient(FlaskForm):
 
 
 class FilterAppointments(FlaskForm):
-    """Form for filtering doctors"""
+    """Form for filtering appointments"""
     doctor_name = SearchField('Search by doctor\'s name:', validators=[Optional(), Length(max=127)],
                               filters=[lambda x: x or None])
     patient_name = SearchField('Search by patient\'s name:',
                                validators=[Optional(), Length(max=127)],
                                filters=[lambda x: x or None])
-    date_from = DateField('Filter by date:', validators=[Optional()])
+    date = DateField('Filter by date:', validators=[Optional()])
     submit = SubmitField('Filter')
 
 
 class EditAppointment(FlaskForm):
-    """Form for updating and creating doctors"""
+    """Form for updating and creating appointments"""
     date = DateField('Date:', validators=[InputRequired()])
     time = TimeField('Time:', validators=[InputRequired()])
+    conclusion = TextAreaField('Conclusion:', validators=[Optional(), Length(max=511)])
+    prescription = TextAreaField('Prescription:', validators=[Optional(), Length(max=511)])
+    bill = IntegerField('Bill:', validators=[Optional(), NumberRange(min=0)])
+    submit = SubmitField('Save changes')
+
+
+class FillAppointment(FlaskForm):
+    """Form for filling out appointment info"""
     conclusion = TextAreaField('Conclusion:', validators=[Optional(), Length(max=511)])
     prescription = TextAreaField('Prescription:', validators=[Optional(), Length(max=511)])
     bill = IntegerField('Bill:', validators=[Optional(), NumberRange(min=0)])

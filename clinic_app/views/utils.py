@@ -91,9 +91,10 @@ def process_form_submit(form, service, uuid, name, **kwargs):
         result, code = service.update(uuid, data)
         if code == 200:
             flash(f'{name.capitalize()} updated successfully', 'success')
-    if code in (200, 201):
-        return redirect(url_for(f'admin.{name}', uuid=result.uuid)), code
-    errors = result.get('errors') and ' ,'.join(
-        f'{key}: {value}' for key, value in result['errors'].items())
-    flash(f'{errors}', 'error')
-    return redirect(url_for(f'admin.{name}s')), code
+    if code not in (200, 201):
+        errors = result.get('errors') and ' ,'.join(
+            f'{key}: {value}' for key, value in result['errors'].items())
+        flash(f'{errors}', 'error')
+        if uuid == 'new':
+            return redirect(url_for(f'.{name}s')), code
+    return redirect(url_for(f'.{name}', uuid=result.uuid)), code

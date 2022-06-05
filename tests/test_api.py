@@ -118,7 +118,6 @@ class TestApi(BaseTestCase):
              ['birthday', 'full_name', 'phone_number']),
             ({'id': 365, 'patient_uuid': '4', 'date': '013-10-10', 'prescription': 'a', 'bill': 5},
              ['date', 'doctor_uuid', 'id', 'time']),
-
         )
         for endpoint, case in zip(self.endpoints_1, cases):
             with self.subTest(endpoint):

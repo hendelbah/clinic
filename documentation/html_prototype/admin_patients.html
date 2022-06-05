@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="flex-col" lang="en">
+<head>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <title>Admin panel - Patients</title>
+</head>
+<body class="flex-col">
+<div class="page-header controls">
+    <div class="main-menu">
+        <div class="main-menu-item">
+            <a href="logged_index.html" id="home-breadcrumb"></a>
+        </div>
+        <div class="main-menu-item">
+            <a href="doctors.html">Doctors</a>
+        </div>
+        <div class="main-menu-item">
+            <a href="apps_booked.html">Doctor panel</a>
+        </div>
+        <div class="main-menu-item">
+            <a href="admin_users.html">Admin panel</a>
+        </div>
+    </div>
+    <div class="auth">
+        <div class="profile-link">
+            <a href="profile.html">doctor-admin</a>
+        </div>
+        <div class="log-link" id="logout">
+            <a href="index.html">logout</a>
+        </div>
+    </div>
+</div>
+<div class="page-body">
+    <div class="side-menu flex-col controls">
+        <div class="side-menu-item" id="side-menu-header">
+            <label>Administrator panel</label>
+        </div>
+        <div class="side-menu-item">
+            <a href="admin_users.html">Users</a>
+        </div>
+        <div class="side-menu-item">
+            <a href="admin_doctors.html">Doctors</a>
+        </div>
+        <div class="side-menu-item side-menu-item-active">
+            <a href="admin_patients.html">Patients</a>
+        </div>
+        <div class="side-menu-item">
+            <a href="admin_appointments.html">Appointments</a>
+        </div>
+    </div>
+    <div class="main-container flex-col">
+        <div class="flashes flex-col"></div>
+        <h2>List of users</h2>
+        <hr style="margin:0px" width="100%"/>
+        <div class="filters-block controls">
+            <div class="new-record">
+                <a href="">Create new</a>
+            </div>
+            <form class="filters" action="" method="post">
+                <label class="filters-field" style="font-size:20px">Filters:</label>
+                <div class="filters-field">
+                    <label for="search_phone">Search by phone number: </label>
+                    <input id="search_phone" maxlength="20" name="search_phone" type="search" value="">
+                </div>
+                <div class="filters-field">
+                    <label for="search_name">Search by full name:</label>
+                    <input id="search_name" maxlength="127" name="search_name" type="search" value="">
+                </div>
+                <div class="filters-field">
+                    <input id="submit" name="submit" style="font-weight:bold" type="submit" value="Filter">
+                </div>
+                <input type="reset" value="Reset">
+                <a class="filters-field" href="">Clear</a>
+            </form>
+        </div>
+        <div class="pagination flex-col">
+            <div class="pagination-body flex-col">
+                <table class="records-table">
+                    <tr class="table-header">
+                        <th>№</th>
+                        <th>Phone number</th>
+                        <th>Full name</th>
+                        <th>Birthday</th>
+                        <th>action</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="center-text">380000000144</td>
+                        <td>Бутко Анастасия Романовна</td>
+                        <td class="center-text">1965-12-10</td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="select-link action-link" href="">book appointment</a>
+                                </div>
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="center-text">380000000195</td>
+                        <td>Бутко Анна Тарасовна</td>
+                        <td class="center-text">1966-05-29</td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="select-link action-link" href="">book appointment</a>
+                                </div>
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="center-text">380000000159</td>
+                        <td>Бутко Богдан Владиславович</td>
+                        <td class="center-text">1966-01-29</td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="select-link action-link" href="">book appointment</a>
+                                </div>
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="center-text">380000000066</td>
+                        <td>Бутко Ирина Богдановна</td>
+                        <td class="center-text">1965-03-25</td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="select-link action-link" href="">book appointment</a>
+                                </div>
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td class="center-text">380000000288</td>
+                        <td>Бутко Соломия Кирилловна</td>
+                        <td class="center-text">1967-04-04</td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="select-link action-link" href="">book appointment</a>
+                                </div>
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td class="center-text">380000000231</td>
+                        <td>Бутко Станислав Данилович</td>
+                        <td class="center-text">1966-09-26</td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="select-link action-link" href="">book appointment</a>
+                                </div>
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td class="center-text">380000000099</td>
+                        <td>Винниченко Андрей Владимирович</td>
+                        <td class="center-text">1965-07-13</td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="select-link action-link" href="">book appointment</a>
+                                </div>
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td class="center-text">380000000048</td>
+                        <td>Винниченко Влад Павлович</td>
+                        <td class="center-text">1965-01-24</td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="select-link action-link" href="">book appointment</a>
+                                </div>
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td class="center-text">380000000006</td>
+                        <td>Винниченко Дарина Владиславовна</td>
+                        <td class="center-text">1964-09-06</td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="select-link action-link" href="">book appointment</a>
+                                </div>
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td class="center-text">380000000021</td>
+                        <td>Винниченко Дмитрий Никитич</td>
+                        <td class="center-text">1964-10-26</td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="select-link action-link" href="">book appointment</a>
+                                </div>
+                                <div>
+                                    <a class="edit-link action-link" href="/admin-panel/patients/7">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr/>
+            <div class="pagination-tail controls">
+                <a class="change-page" style="visibility:hidden"><< Prev</a>
+                <label id="pages">
+                    Page <b>1</b> of <b>10</b>
+                    (10 of 100 items)
+                </label>
+                <a class="change-page" href="" style="visibility:visible">Next >></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-tail flex-col">
+    <hr/>
+</div>
+</body>
+</html>

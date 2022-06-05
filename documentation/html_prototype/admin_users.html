@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="flex-col" lang="en">
+<head>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <title>Admin panel - Users</title>
+</head>
+<body class="flex-col">
+<div class="page-header controls">
+    <div class="main-menu">
+        <div class="main-menu-item">
+            <a href="logged_index.html" id="home-breadcrumb"></a>
+        </div>
+        <div class="main-menu-item">
+            <a href="doctors.html">Doctors</a>
+        </div>
+        <div class="main-menu-item">
+            <a href="apps_booked.html">Doctor panel</a>
+        </div>
+        <div class="main-menu-item">
+            <a href="admin_users.html">Admin panel</a>
+        </div>
+    </div>
+    <div class="auth">
+        <div class="profile-link">
+            <a href="profile.html">doctor-admin</a>
+        </div>
+        <div class="log-link" id="logout">
+            <a href="index.html">logout</a>
+        </div>
+    </div>
+</div>
+<div class="page-body">
+    <div class="side-menu flex-col controls">
+        <div class="side-menu-item" id="side-menu-header">
+            <label>Administrator panel</label>
+        </div>
+        <div class="side-menu-item side-menu-item-active">
+            <a href="admin_users.html">Users</a>
+        </div>
+        <div class="side-menu-item">
+            <a href="admin_doctors.html">Doctors</a>
+        </div>
+        <div class="side-menu-item">
+            <a href="admin_patients.html">Patients</a>
+        </div>
+        <div class="side-menu-item">
+            <a href="admin_appointments.html">Appointments</a>
+        </div>
+    </div>
+    <div class="main-container flex-col">
+        <div class="flashes flex-col"></div>
+        <h2>List of users</h2>
+        <hr style="margin:0px" width="100%"/>
+        <div class="filters-block controls">
+            <div class="new-record">
+                <a href="">Create new</a>
+            </div>
+            <form class="filters" action="" method="post">
+                <label class="filters-field" style="font-size:20px">Filters:</label>
+                <div class="filters-field">
+                    <label for="search_email">Search by email:</label>
+                    <input id="search_email" maxlength="80" name="search_email" type="search" value="">
+                </div>
+                <div class="filters-field">
+                    <input id="submit" name="submit" style="font-weight:bold" type="submit" value="Filter">
+                </div>
+                <input type="reset" value="Reset">
+                <a class="filters-field" href="">Clear</a>
+            </form>
+        </div>
+        <div class="pagination flex-col">
+            <div class="pagination-body flex-col">
+                <table class="records-table">
+                    <tr class="table-header">
+                        <th>№</th>
+                        <th>Email</th>
+                        <th>Is admin</th>
+                        <th>Related doctor</th>
+                        <th>action</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>root</td>
+                        <td class="center-text" style="color:red">True</td>
+                        <td class="links">
+                        </td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>doctor_001@spam.ua</td>
+                        <td class="center-text" style="color:orange">False</td>
+                        <td class="links">
+                            <a href="">Семендяева Лариса Дмитриевна</a>
+                        </td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>doctor_002@spam.ua</td>
+                        <td class="center-text" style="color:orange">False</td>
+                        <td class="links">
+                            <a href="">Аблялимова Альбина Шевкетовна</a>
+                        </td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>doctor_003@spam.ua</td>
+                        <td class="center-text" style="color:orange">False</td>
+                        <td class="links">
+                            <a href="">Бонюк Ирина Владимировна</a>
+                        </td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>doctor-admin</td>
+                        <td class="center-text" style="color:red">True</td>
+                        <td class="links">
+                            <a href="">Держановская Людмила Николаевна</a>
+                        </td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>doctor_005@spam.ua</td>
+                        <td class="center-text" style="color:orange">False</td>
+                        <td class="links">
+                            <a href="">Серветник Лариса Сергеевна</a>
+                        </td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td>7</td>
+
+                        <td>doctor_006@spam.ua</td>
+                        <td class="center-text" style="color:orange">False</td>
+                        <td class="links">
+                            <a href="">Шалюта Алла Григорьевна</a>
+                        </td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>doctor_007@spam.ua</td>
+                        <td class="center-text" style="color:orange">False</td>
+                        <td class="links">
+                            <a href="">Шкута Анатолий Николаевич</a>
+                        </td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>doctor_008@spam.ua</td>
+                        <td class="center-text" style="color:orange">False</td>
+                        <td class="links">
+                            <a href="">Голубец Наталья Валентиновна</a>
+                        </td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+            <hr/>
+            <div class="pagination-tail controls">
+                <a class="change-page" style="visibility:hidden"><< Prev</a>
+                <label id="pages">
+                    Page <b>1</b> of <b>1</b>
+                    (9 of 9 items)
+                </label>
+                <a class="change-page" style="visibility:hidden">Next >></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-tail flex-col">
+    <hr/>
+</div>
+</body>
+</html>

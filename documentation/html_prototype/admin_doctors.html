@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html class="flex-col" lang="en">
+<head>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <title>Admin panel - Doctors</title>
+</head>
+<body class="flex-col">
+<div class="page-header controls">
+    <div class="main-menu">
+        <div class="main-menu-item">
+            <a href="logged_index.html" id="home-breadcrumb"></a>
+        </div>
+        <div class="main-menu-item">
+            <a href="doctors.html">Doctors</a>
+        </div>
+        <div class="main-menu-item">
+            <a href="apps_booked.html">Doctor panel</a>
+        </div>
+        <div class="main-menu-item">
+            <a href="admin_users.html">Admin panel</a>
+        </div>
+    </div>
+    <div class="auth">
+        <div class="profile-link">
+            <a href="profile.html">doctor-admin</a>
+        </div>
+        <div class="log-link" id="logout">
+            <a href="index.html">logout</a>
+        </div>
+    </div>
+</div>
+<div class="page-body">
+    <div class="side-menu flex-col controls">
+        <div class="side-menu-item" id="side-menu-header">
+            <label>Administrator panel</label>
+        </div>
+        <div class="side-menu-item">
+            <a href="admin_users.html">Users</a>
+        </div>
+        <div class="side-menu-item side-menu-item-active">
+            <a href="admin_doctors.html">Doctors</a>
+        </div>
+        <div class="side-menu-item">
+            <a href="admin_patients.html">Patients</a>
+        </div>
+        <div class="side-menu-item">
+            <a href="admin_appointments.html">Appointments</a>
+        </div>
+    </div>
+    <div class="main-container flex-col">
+        <div class="flashes flex-col"></div>
+        <h2>List of doctors</h2>
+        <hr style="margin:0px" width="100%"/>
+        <div class="filters-block controls">
+            <div class="new-record">
+                <a href="">Create new</a>
+            </div>
+            <form class="filters" action="" method="post">
+                <label class="filters-field" style="font-size:20px">Filters:</label>
+                <div class="filters-field">
+                    <label for="search_name">Search by full name:</label>
+                    <input id="search_name" maxlength="127" name="search_name" type="search" value="">
+                </div>
+                <div class="filters-field">
+                    <input id="submit" name="submit" style="font-weight:bold" type="submit" value="Filter">
+                </div>
+                <input type="reset" value="Reset">
+                <a class="filters-field" href="">Clear</a>
+            </form>
+        </div>
+        <div class="pagination flex-col">
+            <div class="pagination-body flex-col">
+                <table class="records-table">
+                    <tr class="table-header">
+                        <th>№</th>
+                        <th>Full name</th>
+                        <th>Speciality</th>
+                        <th>Experience</th>
+                        <th>Info</th>
+                        <th>Email</th>
+                        <th>action</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Аблялимова Альбина Шевкетовна</td>
+                        <td class="tooltip">
+                            <div>
+                                <span>Врач - акушер-гинеколог, врач УЗД</span>
+                            </div>
+                        </td>
+                        <td>13 years</td>
+                        <td class="tooltip">
+                            <div>
+                                <span>Альбина Шевкетовна владеет всеми современными методами диагностики и лечения гинекологических заболеваний: расширенная видеокольпоскопия, прицельная биопсия шейки матки радиоволновым методом, техникой радиоволновой и лазерной деструкции патологий шейки матки (эрозия, дисплазия).</span>
+                            </div>
+                        </td>
+                        <td class="links">
+                            <a href="">doctor_002@spam.ua</a>
+                        </td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="select-link action-link" href="">book appointment</a>
+                                </div>
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Бонюк Ирина Владимировна</td>
+                        <td class="tooltip">
+                            <div>
+                                <span>Врач - акушер-гинеколог высшей категории, врач УЗД, гинеколог-эндокринолог</span>
+                            </div>
+                        </td>
+                        <td>15 years</td>
+                        <td class="tooltip">
+                            <div>
+                                <span>Ирина Владимировна занимается вопросами диагностики и лечения патологий шейки матки, атрофии слизистой влагалища, проводит операции в сфере эстетической гинекологии. Консультирует по вопросам планирования беременности и занимается ее ведением до родов.</span>
+                            </div>
+                        </td>
+                        <td class="links">
+                            <a href="">doctor_003@spam.ua</a>
+                        </td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="select-link action-link" href="">book appointment</a>
+                                </div>
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Гай Ольга Ивановна</td>
+                        <td class="tooltip">
+                            <div>
+                                <span>Врач-кардиолог, кандидат медицинских наук</span>
+                            </div>
+                        </td>
+                        <td>7 years</td>
+                        <td class="tooltip">
+                            <div>
+                                <span>Ольга Ивановна специализируется в области диагностики, лечения и профилактики сердечно-сосудистых заболеваний. Имеет успешную практику лечения пациентов, страдающих аритмии сердца.</span>
+                            </div>
+                        </td>
+                        <td class="links">
+                            <a href="">doctor_011@spam.ua</a>
+                        </td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="select-link action-link" href="">book appointment</a>
+                                </div>
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Голубец Наталья Валентиновна</td>
+                        <td class="tooltip">
+                            <div>
+                                <span>Врач-дерматокосметолог</span>
+                            </div>
+                        </td>
+                        <td>18 years</td>
+                        <td class="tooltip">
+                            <div>
+                                <span>Специализируется на лазерной и классической инъекционной косметологии. Для решения эстетических проблем, Наталья Валентиновна использует такие методы как химический пилинг, мезотерапия, биоревитализация, объемно-контурная коррекция, имплантация нитей, ботулинотерапия. Владеет современными лазерными методиками омоложения лица и тела.</span>
+                            </div>
+                        </td>
+                        <td class="links"><a href="">doctor_008@spam.ua</a>
+                        </td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="select-link action-link" href="">book appointment</a>
+                                </div>
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Держановская Людмила Николаевна</td>
+                        <td class="tooltip">
+                            <div>
+                                <span>Врач - акушер-гинеколог, первой категории</span>
+                            </div>
+                        </td>
+                        <td>14 years</td>
+                        <td class="tooltip">
+                            <div>
+                                <span>Людмила Николаевна — врач первой категории — владеет современными методиками диагностики и лечения заболеваний патологии шейки матки (эрозии, дисплазии, полипы). Ведение беременности с момента беременности и до родов</span>
+                            </div>
+                        </td>
+                        <td class="links">
+                            <a href="">doctor-admin</a>
+                        </td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="select-link action-link" href="">book appointment</a>
+                                </div>
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Добровинская Елена Вячеславовна</td>
+                        <td class="tooltip">
+                            <div>
+                                <span>Врач - эндокринолог, кандидат медицинских наук</span>
+                            </div>
+                        </td>
+                        <td>13 years</td>
+                        <td class="tooltip">
+                            <div>
+                                <span>Доктор успешно занимается вопросами эндокринологии: проводит диагностику и лечение пациентов с нарушением углеводного обмена (сахарный диабет), заболеваниями щитовидной железы (тиреотоксикоз, гипотиреоз, аутоиммунный тиреоидит, узловой зоб, рак щитовидной железы), ожирением и метаболическим синдромом, патологией надпочечников (хроническая почечная недостаточность). Ведет беременных.</span>
+                            </div>
+                        </td>
+                        <td class="links">
+                            <a href="">doctor_017@spam.ua</a>
+                        </td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="select-link action-link" href="">book appointment</a>
+                                </div>
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Кудашова Елена Петровна</td>
+                        <td class="tooltip">
+                            <div>
+                                <span>Врач-лаборант</span>
+                            </div>
+                        </td>
+                        <td>33 years</td>
+                        <td class="tooltip">
+                            <div>
+                                <span>Елена Петровна в совершенстве владеет цитологическими, биохимическими, иммунологическими и общеклиническими методами лабораторного исследования.</span>
+                            </div>
+                        </td>
+                        <td class="links">
+                            <a href="">doctor_012@spam.ua</a>
+                        </td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="select-link action-link" href="">book appointment</a>
+                                </div>
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Науменко Андрей Аркадьевич</td>
+                        <td class="tooltip">
+                            <div>
+                                <span>Врач - дерматовенеролог высшей категории, детский дерматолог, дерматокосметолог</span>
+                            </div>
+                        </td>
+                        <td>25 years</td>
+                        <td class="tooltip">
+                            <div>
+                                <span>Диагностика и лечение различных кожных заболеваний (аллергической, бактериальной, вирусной, грибковой, не уточненной этиологии) у взрослых и детей с грудного возраста, а также заболеваний передающихся половым путем.</span>
+                            </div>
+                        </td>
+                        <td class="links">
+                            <a href="">doctor_009@spam.ua</a>
+                        </td>
+                        <td class="action controls">
+                            <div class="actions">
+                                <div>
+                                    <a class="select-link action-link" href="">book appointment</a>
+                                </div>
+                                <div>
+                                    <a class="edit-link action-link" href="">edit</a>
+                                    <a class="del-link action-link" onclick="">delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr/>
+            <div class="pagination-tail controls">
+                <a class="change-page" style="visibility:hidden"><< Prev</a>
+                <label id="pages">
+                    Page <b>1</b> of <b>1</b>
+                    (8 of 8 items)
+                </label>
+                <a class="change-page" style="visibility:hidden">Next >></a>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div class="page-tail flex-col">
+    <hr/>
+</div>
+</body>
+</html>

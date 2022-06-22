@@ -11,6 +11,7 @@
   - **Display a list of doctors**
   - **Display a list of patients**
   - **Display a list of appointments and the total income from them**
+  - **Manage appointments for doctors and patients**
   - **Change (add / edit / delete) the above data**
 - **As a doctor:**
   - **Display a list of booked, unfilled and archived appointments, related to current doctor's account**
@@ -82,6 +83,7 @@ Also, all collection resources accept `page` and `per_page` GET parameters
 localhost:5000/apidocs/
 ```
 ### Web Application:
+_There is HTML prototype available in `documentation` folder._
 #### After population, to log in you can use following email - password:
 - ##### `root` - `root1234`: admin user
 - ##### `doctor_001@spam.ua` - `doctor1234`: admin and doctor user
